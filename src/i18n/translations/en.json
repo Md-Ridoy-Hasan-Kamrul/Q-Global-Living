@@ -1,0 +1,397 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "listings": "Properties",
+    "buy": "Buy",
+    "rent": "Rent",
+    "sell": "Sell",
+    "services": "Services",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "blog": "Blog",
+    "newDevelopments": "New Developments",
+    "listYourProperty": "List Your Property"
+  },
+  "common": {
+    "search": "Search",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "readMore": "Read More",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "download": "Download",
+    "upload": "Upload",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "home": "Home",
+    "buy": "Buy"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Log in to access your Q Homes account.",
+      "emailOrUsername": "Email or Username",
+      "emailPlaceholder": "Enter your email or username",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "forgotPassword": "Forgot Password?",
+      "loginButton": "Login",
+      "signingIn": "Signing In...",
+      "orDivider": "OR",
+      "continueWithGoogle": "Continue with Google",
+      "continueWithFacebook": "Continue with Facebook",
+      "quickLogin": "Quick Login (Demo)",
+      "loginAsAdmin": "Login as Admin",
+      "loginAsClient": "Login as Client",
+      "loginAsPartner": "Login as Partner",
+      "noAccount": "Don't have an account?",
+      "registerNow": "Register Now",
+      "backToHome": "Back to Home",
+      "errors": {
+        "emailRequired": "Email or username is required",
+        "passwordRequired": "Password is required",
+        "passwordMinLength": "Password must be at least 6 characters",
+        "invalidCredentials": "Invalid email or password",
+        "loginFailed": "Login failed",
+        "socialLoginFailed": "Failed to sign in with {provider}. Please try again."
+      }
+    }
+  },
+  "searchBar": {
+    "buy": "Buy",
+    "rent": "Rent",
+    "cityArea": "City/Area",
+    "priceRange": "Price Range",
+    "bedrooms": "Bedrooms",
+    "propertyType": "Property Type",
+    "search": "Search"
+  },
+  "buy": {
+    "title": "Buy Property in Côte d'Ivoire",
+    "subtitle": "Find your dream property from our curated listings",
+    "filters": "Filters",
+    "sortBy": "Sort By",
+    "priceMinLabel": "Min Price",
+    "priceMaxLabel": "Max Price",
+    "bedroomsLabel": "Bedrooms",
+    "bathroomsLabel": "Bathrooms",
+    "propertyTypeLabel": "Property Type",
+    "locationLabel": "Location",
+    "applyFilters": "Apply Filters",
+    "clearFilters": "Clear Filters",
+    "resultsFound": "properties found",
+    "noResults": "No properties found matching your criteria",
+    "sortByNewest": "Newest First",
+    "sortByPriceAsc": "Price: Low to High",
+    "sortByPriceDesc": "Price: High to Low",
+    "viewDetails": "View Details",
+    "contactAgent": "Contact Agent",
+    "saveProperty": "Save Property",
+    "propertyTypes": {
+      "apartment": "Apartment",
+      "house": "House",
+      "villa": "Villa",
+      "land": "Land",
+      "commercial": "Commercial"
+    },
+    "property": {
+      "title": "Modern 4-Bedroom Villa with Pool",
+      "location": "Cocody - Riviera Palmeraie, Abidjan",
+      "status": "Verified",
+      "description": "This stunning 4-bedroom villa, located in the serene neighborhood of Riviera Palmeraie, offers the perfect blend of modern luxury and family comfort. Designed by the renowned KOF Builders, this home features spacious living areas, high-end finishes, and a private swimming pool, all within a secure and tranquil environment. Enjoy easy access to local amenities whilst residing in one of Cocody's most sought-after locations.",
+      "highlights": {
+        "pool": "Private swimming pool with modern deck",
+        "living": "Spacious open-plan living and dining area",
+        "kitchen": "High-end kitchen with premium appliances",
+        "master": "Master suite with walk-in closet and en-suite bathroom",
+        "security": "24/7 security in gated community",
+        "proximity": "Proximity to international schools and shopping centers"
+      },
+      "interior": {
+        "kitchen": "Modern fitted kitchen",
+        "ac": "Air conditioning throughout",
+        "wardrobes": "Built-in wardrobes in all bedrooms",
+        "flooring": "Marble flooring",
+        "internet": "High-speed internet ready",
+        "generator": "Backup generator"
+      },
+      "exterior": {
+        "pool": "Private swimming pool",
+        "garden": "Landscaped garden",
+        "gated": "Secure gated community",
+        "parking": "Covered parking for 2 vehicles",
+        "entertainment": "Outdoor entertainment area",
+        "cctv": "CCTV security system"
+      },
+      "locationDesc": "Located in the prestigious Riviera Palmeraie neighborhood of Cocody, this property offers excellent connectivity to major business districts, international schools, and shopping centers. The area is known for its secure environment and well-maintained infrastructure.",
+      "developerDesc": "KOF Builders is a renowned construction company in Côte d'Ivoire with over 15 years of experience in delivering high-quality residential and commercial properties. Known for attention to detail and commitment to excellence.",
+      "rental": {
+        "duration": "12 Months (Minimum)",
+        "furnishing": "Unfurnished",
+        "deposit": "2 Months Deposit"
+      },
+      "developedBy": "Developed by:",
+      "priceLabel": "Price :",
+      "approx": "approx.",
+      "bookViewing": "Book a Viewing",
+      "chatWhatsApp": "Chat on WhatsApp",
+      "reserveEscrow": "Reserve with Escrow",
+      "whatsappMessage": "Hi, I'm interested in",
+      "whatsappDetails": "Can you provide more details?",
+      "rentalOverview": "Rental Overview",
+      "rentalDuration": "Rental Duration:",
+      "furnishing": "Furnishing:",
+      "terms": "Terms:",
+      "talkConcierge": "Talk to Concierge",
+      "tabs": {
+        "overview": "Overview",
+        "features": "Features",
+        "location": "Location",
+        "developer": "Developer Info",
+        "payment": "Payment Plan"
+      },
+      "interiorTitle": "Interior",
+      "exteriorTitle": "Exterior",
+      "mapTitle": "Interactive Map - Cocody, Abidjan",
+      "mapComing": "Map integration coming soon",
+      "viewPortfolio": "View Developer Portfolio",
+      "paymentFlexible": "Flexible Payment Options Available",
+      "paymentDown": "Down payment options from 20-30%",
+      "paymentInstallment": "Installment plans up to 24 months",
+      "paymentEscrow": "Secure escrow payment protection",
+      "paymentTalkConcierge": "Talk to Concierge About Payment Options"
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "logout": "Logout",
+    "menu": "Menu",
+    "admin": {
+      "title": "Admin Dashboard",
+      "overview": "Admin Dashboard",
+      "users": "User Management",
+      "blogEditor": "Blog Editor",
+      "mediaLibrary": "Media Library",
+      "auditLogs": "Audit Logs",
+      "seoManagement": "SEO Management",
+      "properties": "Properties Management",
+      "partners": "Partner Management",
+      "conciergeRequests": "Concierge Requests",
+      "eventManagement": "Event Management",
+      "settings": "Settings",
+      "analytics": "Analytics"
+    },
+    "client": {
+      "title": "Client Dashboard",
+      "profile": "Profile Details",
+      "favorites": "Saved Properties",
+      "savedSearches": "Saved Searches",
+      "appointments": "Appointments",
+      "messages": "Messages",
+      "settings": "Settings"
+    },
+    "partner": {
+      "title": "Partner Dashboard",
+      "properties": "Properties",
+      "myListings": "My Listings",
+      "addListing": "Add Listing",
+      "editListing": "Edit Listing",
+      "inquiries": "Inquiries",
+      "profile": "Profile"
+    },
+    "pages": {
+      "adminDashboard": {
+        "title": "Admin Dashboard",
+        "subtitle": "Manage your platform from here",
+        "totalUsers": "Total Users",
+        "totalListings": "Total Listings",
+        "totalRevenue": "Total Revenue",
+        "activePartners": "Active Partners"
+      },
+      "userManagement": {
+        "title": "User Management",
+        "subtitle": "Manage all users on the platform",
+        "addUser": "Add User",
+        "searchUsers": "Search users..."
+      },
+      "blogEditor": {
+        "title": "Blog Editor",
+        "subtitle": "Create and manage blog posts",
+        "newPost": "New Post",
+        "published": "Published",
+        "drafts": "Drafts"
+      },
+      "mediaLibrary": {
+        "title": "Media Library",
+        "subtitle": "Manage all media files",
+        "uploadMedia": "Upload Media",
+        "totalFiles": "Total Files"
+      },
+      "auditLogs": {
+        "title": "Audit Logs",
+        "subtitle": "Track all system activities",
+        "filterByDate": "Filter by Date",
+        "exportLogs": "Export Logs"
+      },
+      "seoManagement": {
+        "title": "SEO Management",
+        "subtitle": "Optimize your site for search engines",
+        "metaTags": "Meta Tags",
+        "keywords": "Keywords"
+      },
+      "propertiesManagement": {
+        "title": "Properties Management",
+        "subtitle": "Manage all property listings",
+        "addProperty": "Add Property",
+        "pendingApproval": "Pending Approval"
+      },
+      "partnerManagement": {
+        "title": "Partner Management",
+        "subtitle": "Manage real estate partners",
+        "addPartner": "Add Partner",
+        "activePartners": "Active Partners"
+      },
+      "conciergeRequests": {
+        "title": "Concierge Requests",
+        "subtitle": "Handle client requests",
+        "pending": "Pending",
+        "completed": "Completed"
+      },
+      "eventManagement": {
+        "title": "Event Management",
+        "subtitle": "Manage property viewing events",
+        "createEvent": "Create Event",
+        "upcomingEvents": "Upcoming Events"
+      },
+      "clientProfile": {
+        "title": "My Profile",
+        "subtitle": "Manage your personal information",
+        "editProfile": "Edit Profile",
+        "changePassword": "Change Password"
+      },
+      "savedProperties": {
+        "title": "Saved Properties",
+        "subtitle": "Properties you've saved for later",
+        "noSaved": "No saved properties yet"
+      },
+      "savedSearches": {
+        "title": "Saved Searches",
+        "subtitle": "Your saved search criteria",
+        "createAlert": "Create Alert"
+      },
+      "appointments": {
+        "title": "My Appointments",
+        "subtitle": "Manage your property viewings",
+        "scheduleNew": "Schedule New",
+        "upcoming": "Upcoming",
+        "past": "Past"
+      },
+      "clientMessages": {
+        "title": "Messages",
+        "subtitle": "Communicate with agents",
+        "newMessage": "New Message",
+        "unread": "Unread"
+      },
+      "partnerProperties": {
+        "title": "My Properties",
+        "subtitle": "Properties you're managing",
+        "addNew": "Add New Property"
+      },
+      "partnerListings": {
+        "title": "My Listings",
+        "subtitle": "All your property listings",
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "partnerInquiries": {
+        "title": "Inquiries",
+        "subtitle": "Client inquiries for your properties",
+        "respond": "Respond",
+        "newInquiries": "New Inquiries"
+      },
+      "partnerProfile": {
+        "title": "Partner Profile",
+        "subtitle": "Manage your business profile",
+        "companyInfo": "Company Information",
+        "verificationStatus": "Verification Status"
+      },
+      "settings": {
+        "title": "Settings",
+        "subtitle": "Configure your preferences",
+        "general": "General",
+        "notifications": "Notifications",
+        "privacy": "Privacy",
+        "security": "Security"
+      }
+    }
+  },
+  "hero": {
+    "title": "Connecting the World to Côte d'Ivoire's Real Estate",
+    "subtitle": "Your trusted gateway to buying, renting, and investing in Ivorian property.",
+    "browseHomes": "Browse Homes",
+    "listProperty": "List Your Property"
+  },
+  "trustBadges": {
+    "verifiedListings": "Verified Listings",
+    "escrowProtection": "Escrow Protection",
+    "multilingualSupport": "Multilingual Support",
+    "conciergeService": "Concierge Service"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "A seamless and secure process from start to finish.",
+    "step1Title": "1. Search & Shortlist",
+    "step1Description": "Browse our curated listings and save your favorite properties.",
+    "step2Title": "2. Verify & View",
+    "step2Description": "We help you verify details and schedule viewings, virtual or in-person.",
+    "step3Title": "3. Reserve with Escrow",
+    "step3Description": "Securely make an offer and close the deal with our protected escrow service."
+  },
+  "diaspora": {
+    "title": "Coming Soon: The Diaspora Hub",
+    "subtitle": "Your dedicated resource for investing and relocating back to Côte d'Ivoire.",
+    "cta": "Join the Waitlist"
+  },
+  "finalCta": {
+    "title": "Ready to Find Your Ivorian Home?",
+    "subtitle": "Let our experts guide you through every step of your real estate journey.",
+    "browseHomes": "Browse Homes",
+    "talkToConcierge": "Talk to a Concierge"
+  },
+  "featuredCollections": {
+    "title": "Featured Collections",
+    "subtitle": "Discover curated properties tailored to your lifestyle and investment goals.",
+    "viewListings": "View Listings"
+  },
+  "testimonials": {
+    "title": "Trusted by Buyers and Sellers Worldwide",
+    "subtitle": "Hear from clients who found their dream property with Q HOMES."
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "aboutUs": "About Us",
+    "faq": "FAQ",
+    "contactUs": "Contact Us",
+    "blog": "Blog",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy",
+    "legalCenter": "Legal Center",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": "© 2024 Q HOMES. All rights reserved."
+  }
+}

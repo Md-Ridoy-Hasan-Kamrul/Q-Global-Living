@@ -1,0 +1,245 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #d4af37;
+  --color-primary-50: #faf8f0;
+  --color-primary-100: #f5f0e0;
+  --color-primary-200: #ebe1c1;
+  --color-primary-300: #e1d2a2;
+  --color-primary-400: #d7c383;
+  --color-primary-500: #d4af37;
+  --color-primary-600: #b8952d;
+  --color-primary-700: #9c7b23;
+  --color-primary-800: #80611a;
+  --color-primary-900: #644710;
+
+  --color-background-light: #fffff0;
+  --color-background-dark: #221d10;
+
+  --color-charcoal: #333333;
+  --color-charcoal-50: #f5f5f5;
+  --color-charcoal-100: #e6e6e6;
+  --color-charcoal-200: #cccccc;
+  --color-charcoal-300: #b3b3b3;
+  --color-charcoal-400: #999999;
+  --color-charcoal-500: #808080;
+  --color-charcoal-600: #666666;
+  --color-charcoal-700: #4d4d4d;
+  --color-charcoal-800: #333333;
+  --color-charcoal-900: #1a1a1a;
+
+  --color-soft-grey: #f5f5f5;
+
+  --font-family-display: Manrope, sans-serif;
+}
+
+/* Material Symbols Configuration */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* Custom Scrollbar Hiding */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Form Input Focus Styles for Enhanced UX */
+.form-input {
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-input:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+  outline: none;
+}
+
+/* Optimized animations for performance */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Performance optimization: GPU acceleration for transforms */
+.backdrop-blur-sm {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Prevent layout shift during font loading */
+body {
+  font-display: swap;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==================================
+   PROFESSIONAL LANGUAGE SWITCHING
+   - Smooth transitions
+   - No visual "shaking"
+   - Zero layout shift (CLS)
+   - Production-grade UX
+   ================================== */
+
+/* Smooth content transitions during language switch */
+main,
+section,
+article,
+div[class*='container'] {
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+/* Prevent layout shift during transitions */
+* {
+  /* Ensure consistent box-sizing */
+  box-sizing: border-box;
+}
+
+/* Fix text reflow issues during language change */
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+a {
+  /* Prevent text from causing layout shifts */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+  /* Smooth text transitions */
+  transition: color 0.15s ease-in-out;
+}
+
+/* Stabilize image dimensions during transitions */
+img {
+  /* Prevent images from causing layout shifts */
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Smooth opacity transitions for better UX */
+[data-transitioning='true'] {
+  opacity: 0.95;
+  transform: translateZ(0);
+  will-change: opacity;
+}
+
+/* GPU acceleration for smooth rendering */
+.language-transition {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform, opacity;
+}
+
+/* Prevent content jump during hydration */
+html {
+  /* Stabilize scroll behavior */
+  scroll-behavior: smooth;
+}
+
+/* Fix Next.js route transitions */
+#__next {
+  /* Ensure smooth transitions between pages */
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Optimize rendering performance */
+@supports (content-visibility: auto) {
+  section,
+  article,
+  .card,
+  .property-card {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+  }
+}
+
+/* Loading state styling */
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Prevent flash of unstyled content (FOUC) */
+.no-fouc {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in forwards;
+  animation-delay: 0.1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Optimize React 18 transitions */
+.react-transition-pending {
+  cursor: wait;
+  pointer-events: none;
+}
+
+/* Professional hover states with smooth transitions */
+button,
+a,
+[role='button'] {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ensure consistent baseline grid (prevents micro-shifts) */
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
