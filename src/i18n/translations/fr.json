@@ -466,5 +466,57 @@
       "exploreButton": "Explorer les Locations",
       "conciergeButton": "En Savoir Plus sur le Concierge"
     }
+  },
+  "newDevelopments": {
+    "meta": {
+      "title": "Nouveaux Développements en Côte d'Ivoire | Q Homes",
+      "description": "Explorez des projets vérifiés sur plan et nouvelles constructions des principaux promoteurs du pays. Équipements modernes, plans de paiement flexibles et forte appréciation du capital."
+    },
+    "hero": {
+      "title": "Découvrez les Maisons du Futur de Côte d'Ivoire",
+      "subtitle": "Explorez une sélection organisée de projets vérifiés sur plan et nouvelles constructions des principaux promoteurs du pays."
+    },
+    "filters": {
+      "cityArea": "Ville/Zone",
+      "developmentStage": "Étape de Développement",
+      "propertyType": "Type de Propriété",
+      "priceRange": "Gamme de Prix"
+    },
+    "section": {
+      "featured": "Nouveaux Développements en Vedette"
+    },
+    "card": {
+      "verifiedByQHomes": "Vérifié par Q Homes",
+      "escrowEligible": "Éligible au Séquestre",
+      "by": "Par",
+      "from": "À partir de",
+      "approx": "Environ",
+      "viewDetails": "Voir les Détails",
+      "inquireNow": "Se Renseigner"
+    },
+    "whyInvest": {
+      "title": "Pourquoi Investir dans les Nouveaux Développements?",
+      "modernAmenities": {
+        "title": "Équipements Modernes",
+        "description": "Profitez des dernières nouveautés en matière de design, technologie et style de vie comme les piscines, les salles de sport et les systèmes de maison intelligente."
+      },
+      "flexiblePayment": {
+        "title": "Plans de Paiement Flexibles",
+        "description": "Bénéficiez de calendriers de paiement structurés offerts par les promoteurs, rendant l'investissement plus accessible."
+      },
+      "highAppreciation": {
+        "title": "Forte Appréciation du Capital",
+        "description": "Investissez tôt dans les zones en croissance pour maximiser la valeur de votre propriété et le retour sur investissement potentiel."
+      },
+      "qualityAssurance": {
+        "title": "Assurance Qualité",
+        "description": "Les nouvelles constructions respectent les derniers codes du bâtiment et normes, garantissant qualité et durabilité."
+      }
+    },
+    "developerCta": {
+      "title": "Êtes-vous un Promoteur?",
+      "subtitle": "Présentez votre projet à un public sélectionné d'acheteurs locaux et internationaux. Associez-vous à Q Homes pour gagner en visibilité et en confiance sans précédent.",
+      "button": "Listez Votre Projet"
+    }
   }
 }

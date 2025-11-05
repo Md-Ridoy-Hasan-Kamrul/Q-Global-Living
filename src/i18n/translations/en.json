@@ -466,5 +466,57 @@
       "exploreButton": "Explore Rentals",
       "conciergeButton": "Learn About Concierge"
     }
+  },
+  "newDevelopments": {
+    "meta": {
+      "title": "New Developments in Côte d'Ivoire | Q Homes",
+      "description": "Explore verified off-plan and new construction projects from the nation's leading developers. Modern amenities, flexible payment plans, and high capital appreciation."
+    },
+    "hero": {
+      "title": "Discover Côte d'Ivoire's Future Homes",
+      "subtitle": "Explore a curated selection of verified off-plan and new construction projects from the nation's leading developers."
+    },
+    "filters": {
+      "cityArea": "City/Area",
+      "developmentStage": "Development Stage",
+      "propertyType": "Property Type",
+      "priceRange": "Price Range"
+    },
+    "section": {
+      "featured": "Featured New Developments"
+    },
+    "card": {
+      "verifiedByQHomes": "Verified by Q Homes",
+      "escrowEligible": "Escrow Eligible",
+      "by": "By",
+      "from": "From",
+      "approx": "Approx.",
+      "viewDetails": "View Details",
+      "inquireNow": "Inquire Now"
+    },
+    "whyInvest": {
+      "title": "Why Invest in New Developments?",
+      "modernAmenities": {
+        "title": "Modern Amenities",
+        "description": "Enjoy the latest in design, technology, and lifestyle features like pools, gyms, and smart home systems."
+      },
+      "flexiblePayment": {
+        "title": "Flexible Payment Plans",
+        "description": "Benefit from structured payment schedules offered by developers, making investment more accessible."
+      },
+      "highAppreciation": {
+        "title": "High Capital Appreciation",
+        "description": "Invest early in growing areas to maximize your property's value and potential return on investment."
+      },
+      "qualityAssurance": {
+        "title": "Quality Assurance",
+        "description": "New constructions adhere to the latest building codes and standards, ensuring quality and durability."
+      }
+    },
+    "developerCta": {
+      "title": "Are You a Developer?",
+      "subtitle": "Showcase your project to a curated audience of local and international buyers. Partner with Q Homes to gain unparalleled visibility and trust.",
+      "button": "List Your Project"
+    }
   }
 }

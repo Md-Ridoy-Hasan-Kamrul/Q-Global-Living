@@ -30,6 +30,12 @@
 
   --color-soft-grey: #f5f5f5;
 
+  /* New Developments Page Colors */
+  --color-accent: #d4af37;
+  --color-navy: #0a1931;
+  --color-navy-light: #101922;
+  --color-background-surface: #f5f7f8;
+
   --font-family-display: Manrope, sans-serif;
 }
 
