@@ -107,7 +107,7 @@ export default function ResidentialPage() {
   };
 
   return (
-    <main className='container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 md:py-12'>
+    <main className='container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8'>
       {/* Hero Section */}
       <section className='w-full mb-8'>
         <div

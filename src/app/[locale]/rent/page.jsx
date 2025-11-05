@@ -340,7 +340,7 @@ export default function RentPage() {
     <main className='w-full'>
       <div className='mx-auto max-w-7xl'>
         {/* Hero Section */}
-        <section className='w-full px-4 sm:px-6 lg:px-8 py-10'>
+        <section className='w-full px-4 sm:px-6 lg:px-8 py-8'>
           <RentHero />
         </section>
 
