@@ -16,6 +16,11 @@ export default function RentalFilters({ onFilterChange, initialFilters = {} }) {
   const { locale } = useLanguage();
   const { t } = useTranslation(locale);
   const [isOpen, setIsOpen] = useState(false);
+  const [openDropdowns, setOpenDropdowns] = useState({
+    city: false,
+    bedrooms: false,
+    duration: false,
+  });
   const [filters, setFilters] = useState({
     city: initialFilters.city || 'abidjan',
     bedrooms: initialFilters.bedrooms || 'any',
@@ -30,6 +35,15 @@ export default function RentalFilters({ onFilterChange, initialFilters = {} }) {
       ...prev,
       [key]: value,
     }));
+  };
+
+  // Handle dropdown open/close
+  const handleDropdownFocus = (key) => {
+    setOpenDropdowns((prev) => ({ ...prev, [key]: true }));
+  };
+
+  const handleDropdownBlur = (key) => {
+    setOpenDropdowns((prev) => ({ ...prev, [key]: false }));
   };
 
   // Apply filters
@@ -107,23 +121,44 @@ export default function RentalFilters({ onFilterChange, initialFilters = {} }) {
             >
               {t('rent.filters.cityLabel')}
             </label>
-            <select
-              id='city-desktop'
-              value={filters.city}
-              onChange={(e) => handleFilterChange('city', e.target.value)}
-              className='w-full h-10 px-3 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary text-sm'
-              aria-label='Select city'
-            >
-              <option value='abidjan'>
-                {t('rent.filters.cities.abidjan')}
-              </option>
-              <option value='assinie'>
-                {t('rent.filters.cities.assinie')}
-              </option>
-              <option value='yamoussoukro'>
-                {t('rent.filters.cities.yamoussoukro')}
-              </option>
-            </select>
+            <div className='relative'>
+              <select
+                id='city-desktop'
+                value={filters.city}
+                onChange={(e) => handleFilterChange('city', e.target.value)}
+                onFocus={() => handleDropdownFocus('city')}
+                onBlur={() => handleDropdownBlur('city')}
+                className='w-full h-10 px-3 pr-10 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary text-sm appearance-none cursor-pointer'
+                aria-label='Select city'
+              >
+                <option value='abidjan'>
+                  {t('rent.filters.cities.abidjan')}
+                </option>
+                <option value='assinie'>
+                  {t('rent.filters.cities.assinie')}
+                </option>
+                <option value='yamoussoukro'>
+                  {t('rent.filters.cities.yamoussoukro')}
+                </option>
+              </select>
+              <div className='absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none'>
+                <svg
+                  className={`w-4 h-4 text-gray-600 dark:text-gray-400 transition-transform duration-200 ${
+                    openDropdowns.city ? 'rotate-180' : ''
+                  }`}
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M19 9l-7 7-7-7'
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
 
           {/* Bedrooms */}
@@ -134,18 +169,41 @@ export default function RentalFilters({ onFilterChange, initialFilters = {} }) {
             >
               {t('rent.filters.bedroomsLabel')}
             </label>
-            <select
-              id='bedrooms-desktop'
-              value={filters.bedrooms}
-              onChange={(e) => handleFilterChange('bedrooms', e.target.value)}
-              className='w-full h-10 px-3 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary text-sm'
-              aria-label='Select number of bedrooms'
-            >
-              <option value='any'>{t('rent.filters.bedrooms.any')}</option>
-              <option value='1'>{t('rent.filters.bedrooms.one')}</option>
-              <option value='2'>{t('rent.filters.bedrooms.two')}</option>
-              <option value='3+'>{t('rent.filters.bedrooms.threePlus')}</option>
-            </select>
+            <div className='relative'>
+              <select
+                id='bedrooms-desktop'
+                value={filters.bedrooms}
+                onChange={(e) => handleFilterChange('bedrooms', e.target.value)}
+                onFocus={() => handleDropdownFocus('bedrooms')}
+                onBlur={() => handleDropdownBlur('bedrooms')}
+                className='w-full h-10 px-3 pr-10 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary text-sm appearance-none cursor-pointer'
+                aria-label='Select number of bedrooms'
+              >
+                <option value='any'>{t('rent.filters.bedrooms.any')}</option>
+                <option value='1'>{t('rent.filters.bedrooms.one')}</option>
+                <option value='2'>{t('rent.filters.bedrooms.two')}</option>
+                <option value='3+'>
+                  {t('rent.filters.bedrooms.threePlus')}
+                </option>
+              </select>
+              <div className='absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none'>
+                <svg
+                  className={`w-4 h-4 text-gray-600 dark:text-gray-400 transition-transform duration-200 ${
+                    openDropdowns.bedrooms ? 'rotate-180' : ''
+                  }`}
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M19 9l-7 7-7-7'
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
 
           {/* Duration */}
@@ -156,21 +214,42 @@ export default function RentalFilters({ onFilterChange, initialFilters = {} }) {
             >
               {t('rent.filters.durationLabel')}
             </label>
-            <select
-              id='duration-desktop'
-              value={filters.duration}
-              onChange={(e) => handleFilterChange('duration', e.target.value)}
-              className='w-full h-10 px-3 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary text-sm'
-              aria-label='Select rental duration'
-            >
-              <option value='any'>{t('rent.filters.duration.any')}</option>
-              <option value='short-term'>
-                {t('rent.filters.duration.shortTerm')}
-              </option>
-              <option value='long-term'>
-                {t('rent.filters.duration.longTerm')}
-              </option>
-            </select>
+            <div className='relative'>
+              <select
+                id='duration-desktop'
+                value={filters.duration}
+                onChange={(e) => handleFilterChange('duration', e.target.value)}
+                onFocus={() => handleDropdownFocus('duration')}
+                onBlur={() => handleDropdownBlur('duration')}
+                className='w-full h-10 px-3 pr-10 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary text-sm appearance-none cursor-pointer'
+                aria-label='Select rental duration'
+              >
+                <option value='any'>{t('rent.filters.duration.any')}</option>
+                <option value='short-term'>
+                  {t('rent.filters.duration.shortTerm')}
+                </option>
+                <option value='long-term'>
+                  {t('rent.filters.duration.longTerm')}
+                </option>
+              </select>
+              <div className='absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none'>
+                <svg
+                  className={`w-4 h-4 text-gray-600 dark:text-gray-400 transition-transform duration-200 ${
+                    openDropdowns.duration ? 'rotate-180' : ''
+                  }`}
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M19 9l-7 7-7-7'
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
 
           {/* Price Range */}
