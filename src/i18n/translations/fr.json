@@ -581,5 +581,62 @@
       "primaryButton": "Parcourir les Maisons Vérifiées",
       "secondaryButton": "Devenir Partenaire"
     }
+  },
+  "contact": {
+    "hero": {
+      "title": "Nous sommes là pour vous aider — Où que vous soyez",
+      "subtitle": "Contactez notre équipe pour toute demande et nous serons ravis de vous aider à trouver votre nouvelle maison en Côte d'Ivoire.",
+      "whatsappButton": "Discuter sur WhatsApp",
+      "messageButton": "Envoyer un Message",
+      "whatsappMessage": "Bonjour, je souhaiterais me renseigner sur les propriétés.",
+      "imageAlt": "Skyline d'Abidjan au crépuscule"
+    },
+    "form": {
+      "title": "Entrer en Contact",
+      "subtitle": "Remplissez le formulaire ci-dessous et notre équipe vous répondra rapidement.",
+      "fullName": "Nom Complet",
+      "fullNamePlaceholder": "Entrez votre nom complet",
+      "email": "Adresse E-mail",
+      "emailPlaceholder": "vous@exemple.com",
+      "phone": "Numéro de Téléphone",
+      "phonePlaceholder": "01 23 45 67 89",
+      "subject": "Sujet",
+      "subjectPlaceholder": "ex: Demande de Propriété",
+      "message": "Message",
+      "messagePlaceholder": "Écrivez votre message ici...",
+      "privacyNote": "Nous respectons votre vie privée. Vos informations sont en sécurité avec nous.",
+      "submitButton": "Soumettre la Demande"
+    },
+    "info": {
+      "title": "Contactez-nous Directement",
+      "subtitle": "Vous préférez la méthode traditionnelle ? Voici nos coordonnées. Nous sommes toujours heureux de vous connecter.",
+      "officeTitle": "Notre Bureau",
+      "officeAddress": "Boulevard Valéry Giscard d'Estaing, Marcory, Abidjan, Côte d'Ivoire",
+      "phoneTitle": "Téléphone",
+      "phoneNumber": "+225 01 23 45 67 89",
+      "emailTitle": "E-mail",
+      "emailAddress": "contact@qhomes.ci",
+      "hoursTitle": "Heures d'Ouverture",
+      "hoursContent": "Lun - Ven: 9h00 - 18h00",
+      "mapTitle": "Emplacement du Bureau Q Homes"
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "subtitle": "Trouvez rapidement des réponses aux questions courantes sur nos services et processus.",
+      "q1": "Quels types de propriétés Q Homes propose-t-il ?",
+      "a1": "Q Homes se spécialise dans une large gamme de propriétés en Côte d'Ivoire, y compris des villas de luxe, des appartements modernes et des espaces commerciaux. Nous répondons à divers besoins, des locations à long terme aux ventes pour les locaux et les expatriés qui s'installent dans le pays.",
+      "q2": "Comment Q Homes vérifie-t-il les annonces de propriétés ?",
+      "a2": "Nous avons un processus de vérification rigoureux. Notre équipe effectue des visites sur site, vérifie la documentation légale et les titres de propriété (ACD - Arrêté de Concession Définitive), et s'assure que toutes les annonces répondent à nos normes élevées de qualité et de sécurité. Cela garantit que vous consultez des propriétés légitimes et de haute qualité.",
+      "q3": "Offrez-vous une assistance à la relocalisation pour les clients internationaux ?",
+      "a3": "Oui, nous fournissons des services complets de relocalisation. Cela comprend l'aide à trouver la maison parfaite, l'assistance avec les formalités administratives et des conseils sur la vie à Abidjan. Notre objectif est de rendre votre déménagement en Côte d'Ivoire aussi simple et sans stress que possible.",
+      "q4": "Quels sont les frais typiques associés à la location ou à l'achat ?",
+      "a4": "Pour les locations, les frais standard incluent généralement un mois de loyer pour les frais d'agence, un dépôt de garantie (généralement 2 mois de loyer) et le premier mois de loyer à l'avance. Pour les achats, les frais comprennent les frais de notaire et notre commission d'agence, qui sont calculés en fonction de la valeur de la propriété. Nous assurons une transparence totale sur tous les coûts dès le départ."
+    },
+    "cta": {
+      "title": "Prêt à Trouver la Maison de vos Rêves ?",
+      "subtitle": "Franchissez la prochaine étape de votre voyage. Notre portefeuille de propriétés exceptionnelles vous attend.",
+      "primaryButton": "Parcourir les Maisons",
+      "secondaryButton": "Réserver une Consultation"
+    }
   }
 }
