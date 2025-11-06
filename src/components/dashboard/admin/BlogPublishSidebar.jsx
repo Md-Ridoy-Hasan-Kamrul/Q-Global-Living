@@ -17,10 +17,10 @@ const BlogPublishSidebar = memo(
     translations,
   }) => {
     return (
-      <div className='space-y-6'>
+      <div className='space-y-4 sm:space-y-6'>
         {/* Publish Controls */}
-        <div className='bg-white border border-gray-200 rounded-lg p-6 space-y-4'>
-          <h3 className='text-lg font-semibold text-gray-900'>
+        <div className='bg-white border border-gray-200 rounded-lg p-4 sm:p-6 space-y-4'>
+          <h3 className='text-base sm:text-lg font-semibold text-gray-900'>
             {translations.publishSidebar.publish}
           </h3>
 
@@ -37,7 +37,7 @@ const BlogPublishSidebar = memo(
                 id='status'
                 value={status}
                 onChange={(e) => onStatusChange(e.target.value)}
-                className='w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#d4af37] focus:border-transparent transition-all duration-200 text-gray-900 appearance-none cursor-pointer pr-10'
+                className='w-full px-3 sm:px-4 py-2 sm:py-2.5 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#d4af37] focus:border-transparent transition-all duration-200 text-sm sm:text-base text-gray-900 appearance-none cursor-pointer pr-10'
               >
                 <option value='draft'>
                   {translations.publishSidebar.statusDraft}
@@ -51,7 +51,7 @@ const BlogPublishSidebar = memo(
               </select>
               <ChevronDown
                 className='absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none'
-                size={20}
+                size={18}
               />
             </div>
           </div>
@@ -61,7 +61,7 @@ const BlogPublishSidebar = memo(
             <label className='block text-sm font-medium text-gray-700 mb-2'>
               {translations.publishSidebar.author}
             </label>
-            <div className='px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900'>
+            <div className='px-3 sm:px-4 py-2 sm:py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm sm:text-base text-gray-900'>
               {author}
             </div>
           </div>
@@ -71,24 +71,24 @@ const BlogPublishSidebar = memo(
             <label className='block text-sm font-medium text-gray-700 mb-2'>
               {translations.publishSidebar.publicationDate}
             </label>
-            <div className='px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-500'>
+            <div className='px-3 sm:px-4 py-2 sm:py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm sm:text-base text-gray-500'>
               {translations.publishSidebar.publicationDateAuto}
             </div>
           </div>
 
           {/* Action Buttons */}
-          <div className='flex gap-3 pt-2'>
+          <div className='flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2'>
             <button
               onClick={onSaveDraft}
               type='button'
-              className='flex-1 px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg font-medium transition-colors duration-200'
+              className='flex-1 px-3 sm:px-4 py-2 sm:py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg text-sm sm:text-base font-medium transition-colors duration-200'
             >
               {translations.saveDraft}
             </button>
             <button
               onClick={onCancel}
               type='button'
-              className='flex-1 px-4 py-2.5 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 rounded-lg font-medium transition-colors duration-200'
+              className='flex-1 px-3 sm:px-4 py-2 sm:py-2.5 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 rounded-lg text-sm sm:text-base font-medium transition-colors duration-200'
             >
               {translations.cancel}
             </button>
@@ -96,8 +96,8 @@ const BlogPublishSidebar = memo(
         </div>
 
         {/* Organization */}
-        <div className='bg-white border border-gray-200 rounded-lg p-6 space-y-4'>
-          <h3 className='text-lg font-semibold text-gray-900'>
+        <div className='bg-white border border-gray-200 rounded-lg p-4 sm:p-6 space-y-4'>
+          <h3 className='text-base sm:text-lg font-semibold text-gray-900'>
             {translations.organization.title}
           </h3>
 
@@ -114,7 +114,7 @@ const BlogPublishSidebar = memo(
                 id='category'
                 value={category}
                 onChange={(e) => onCategoryChange(e.target.value)}
-                className='w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#d4af37] focus:border-transparent transition-all duration-200 text-gray-900 appearance-none cursor-pointer pr-10'
+                className='w-full px-3 sm:px-4 py-2 sm:py-2.5 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#d4af37] focus:border-transparent transition-all duration-200 text-sm sm:text-base text-gray-900 appearance-none cursor-pointer pr-10'
               >
                 <option value=''>
                   {translations.organization.selectCategory}
@@ -134,7 +134,7 @@ const BlogPublishSidebar = memo(
               </select>
               <ChevronDown
                 className='absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none'
-                size={20}
+                size={18}
               />
             </div>
           </div>
@@ -153,7 +153,7 @@ const BlogPublishSidebar = memo(
               value={tags}
               onChange={(e) => onTagsChange(e.target.value)}
               placeholder={translations.organization.tagsPlaceholder}
-              className='w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#d4af37] focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-400'
+              className='w-full px-3 sm:px-4 py-2 sm:py-2.5 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#d4af37] focus:border-transparent transition-all duration-200 text-sm sm:text-base text-gray-900 placeholder-gray-400'
             />
           </div>
         </div>

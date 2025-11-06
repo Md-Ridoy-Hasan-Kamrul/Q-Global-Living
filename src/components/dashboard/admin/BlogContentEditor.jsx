@@ -5,7 +5,7 @@ import { memo } from 'react';
 const BlogContentEditor = memo(
   ({ title, content, onTitleChange, onContentChange, translations }) => {
     return (
-      <div className='space-y-6'>
+      <div className='space-y-4 sm:space-y-6'>
         {/* Post Title Input */}
         <div>
           <label
@@ -20,7 +20,7 @@ const BlogContentEditor = memo(
             value={title}
             onChange={(e) => onTitleChange(e.target.value)}
             placeholder={translations.postTitlePlaceholder}
-            className='w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#d4af37] focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-400'
+            className='w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#d4af37] focus:border-transparent transition-all duration-200 text-sm sm:text-base text-gray-900 placeholder-gray-400'
           />
         </div>
 
@@ -39,11 +39,11 @@ const BlogContentEditor = memo(
               onChange={(e) => onContentChange(e.target.value)}
               placeholder={translations.editorPlaceholder}
               rows={16}
-              className='w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#d4af37] focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-400 resize-none font-normal'
+              className='w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#d4af37] focus:border-transparent transition-all duration-200 text-sm sm:text-base text-gray-900 placeholder-gray-400 resize-none font-normal'
             />
 
             {/* Editor Toolbar Hint */}
-            <div className='absolute bottom-3 right-3 flex gap-2 text-gray-400 text-xs'>
+            <div className='absolute bottom-3 right-3 hidden sm:flex gap-2 text-gray-400 text-xs'>
               <span className='px-2 py-1 bg-gray-50 rounded'>Bold</span>
               <span className='px-2 py-1 bg-gray-50 rounded'>Italic</span>
               <span className='px-2 py-1 bg-gray-50 rounded'>Link</span>

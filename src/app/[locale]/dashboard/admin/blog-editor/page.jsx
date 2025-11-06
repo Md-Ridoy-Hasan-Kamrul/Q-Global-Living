@@ -199,40 +199,44 @@ export default function BlogEditor({ params }) {
   }, [title, content]);
 
   return (
-    <div className='space-y-6'>
+    <div className='space-y-4 md:space-y-6'>
       {/* Header */}
-      <div className='bg-linear-to-r from-[#1e3a5f] to-[#2d5078] rounded-lg p-8 shadow-lg'>
-        <div className='flex items-center justify-between'>
-          <h1 className='text-3xl font-bold text-white'>
+      <div className='bg-linear-to-r from-[#1e3a5f] to-[#2d5078] rounded-lg p-4 sm:p-6 md:p-8 shadow-lg'>
+        <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4'>
+          <h1 className='text-xl sm:text-2xl md:text-3xl font-bold text-white'>
             {blogEditorTranslations.title}
           </h1>
-          <div className='flex gap-3'>
+          <div className='flex flex-wrap gap-2 sm:gap-3 w-full sm:w-auto'>
             <button
               onClick={handlePreview}
               type='button'
-              className='px-6 py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-lg flex items-center gap-2 font-medium transition-all duration-200 border border-white/20'
+              className='flex-1 sm:flex-none px-4 sm:px-6 py-2 sm:py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base font-medium transition-all duration-200 border border-white/20'
             >
-              <Eye size={18} />
-              {blogEditorTranslations.preview}
+              <Eye size={16} className='sm:w-[18px] sm:h-[18px]' />
+              <span className='whitespace-nowrap'>
+                {blogEditorTranslations.preview}
+              </span>
             </button>
             <button
               onClick={handlePublish}
               type='button'
-              className='px-6 py-2.5 bg-[#d4af37] hover:bg-[#c19b2a] text-[#1e3a5f] rounded-lg flex items-center gap-2 font-semibold transition-all duration-200 shadow-lg hover:shadow-xl'
+              className='flex-1 sm:flex-none px-4 sm:px-6 py-2 sm:py-2.5 bg-[#d4af37] hover:bg-[#c19b2a] text-[#1e3a5f] rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base font-semibold transition-all duration-200 shadow-lg hover:shadow-xl'
             >
-              <Send size={18} />
-              {blogEditorTranslations.publish}
+              <Send size={16} className='sm:w-[18px] sm:h-[18px]' />
+              <span className='whitespace-nowrap'>
+                {blogEditorTranslations.publish}
+              </span>
             </button>
           </div>
         </div>
       </div>
 
       {/* Main Content Grid */}
-      <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+      <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6'>
         {/* Left Column - Main Content (2/3) */}
-        <div className='lg:col-span-2 space-y-6'>
+        <div className='lg:col-span-2 space-y-4 md:space-y-6'>
           {/* Content Editor */}
-          <div className='bg-white border border-gray-200 rounded-lg p-6'>
+          <div className='bg-white border border-gray-200 rounded-lg p-4 sm:p-6'>
             <BlogContentEditor
               title={title}
               content={content}
@@ -256,7 +260,7 @@ export default function BlogEditor({ params }) {
         </div>
 
         {/* Right Column - Sidebar (1/3) */}
-        <div className='lg:col-span-1 space-y-6'>
+        <div className='lg:col-span-1 space-y-4 md:space-y-6'>
           <BlogPublishSidebar
             status={status}
             author='Admin User'
