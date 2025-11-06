@@ -247,12 +247,48 @@
     },
     "client": {
       "title": "Tableau de Bord Client",
+      "subtitle": "Voir et modifier vos détails personnels, informations de contact et mot de passe.",
       "profile": "Détails du Profil",
       "favorites": "Propriétés Enregistrées",
       "savedSearches": "Recherches Enregistrées",
       "appointments": "Rendez-vous",
       "messages": "Messages",
-      "settings": "Paramètres"
+      "settings": "Paramètres",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "phone": "Téléphone",
+      "email": "E-mail",
+
+      "personalDetails": {
+        "title": "Détails personnels",
+        "saving": "Enregistrement...",
+        "saveButton": "Enregistrer les modifications",
+        "saved": "Profil enregistré avec succès.",
+        "errors": {
+          "emailInvalid": "Veuillez entrer une adresse e-mail valide.",
+          "saveFailed": "Impossible d'enregistrer le profil. Réessayez."
+        }
+      },
+
+      "password": {
+        "title": "Changer le mot de passe",
+        "currentPassword": "Mot de passe actuel",
+        "newPassword": "Nouveau mot de passe",
+        "confirmPassword": "Confirmer le nouveau mot de passe",
+        "placeholders": {
+          "new": "Entrez le nouveau mot de passe",
+          "confirm": "Confirmez le nouveau mot de passe"
+        },
+        "saving": "Mise à jour...",
+        "updateButton": "Mettre à jour le mot de passe",
+        "updated": "Mot de passe mis à jour avec succès.",
+        "errors": {
+          "currentRequired": "Veuillez entrer votre mot de passe actuel.",
+          "minLength": "Le nouveau mot de passe doit comporter au moins 8 caractères.",
+          "mismatch": "Les nouveaux mots de passe ne correspondent pas.",
+          "updateFailed": "Impossible de mettre à jour le mot de passe. Réessayez."
+        }
+      }
     },
     "partner": {
       "title": "Tableau de Bord Partenaire",
@@ -334,9 +370,16 @@
         "changePassword": "Changer le Mot de Passe"
       },
       "savedProperties": {
-        "title": "Propriétés Enregistrées",
+        "title": "Vos propriétés et recherches enregistrées",
         "subtitle": "Propriétés que vous avez enregistrées pour plus tard",
-        "noSaved": "Aucune propriété enregistrée pour le moment"
+        "noSaved": "Aucune propriété enregistrée pour le moment",
+        "tabsLabel": "Propriétés et recherches enregistrées",
+        "tabs": {
+          "properties": "Propriétés enregistrées",
+          "searches": "Recherches enregistrées"
+        },
+        "noSavedSearches": "Aucune recherche enregistrée pour le moment. Commencez à chercher pour enregistrer vos préférences !",
+        "propertiesRegion": "Liste des propriétés enregistrées"
       },
       "savedSearches": {
         "title": "Recherches Enregistrées",
