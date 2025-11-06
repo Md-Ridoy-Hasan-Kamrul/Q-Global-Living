@@ -65,60 +65,6 @@
         "loginFailed": "Échec de la connexion",
         "socialLoginFailed": "Échec de la connexion avec {provider}. Veuillez réessayer."
       }
-    },
-    "register": {
-      "title": "Créer un Compte",
-      "subtitle": "Inscrivez-vous pour commencer votre parcours immobilier avec Q Homes.",
-      "fullName": "Nom Complet",
-      "fullNamePlaceholder": "Entrez votre nom complet",
-      "email": "Email",
-      "emailPlaceholder": "Entrez votre email",
-      "password": "Mot de Passe",
-      "passwordPlaceholder": "Créez un mot de passe",
-      "confirmPassword": "Confirmer le Mot de Passe",
-      "confirmPasswordPlaceholder": "Confirmez votre mot de passe",
-      "registerButton": "S'inscrire",
-      "registering": "Inscription en cours...",
-      "orDivider": "OU",
-      "continueWithGoogle": "Continuer avec Google",
-      "continueWithFacebook": "Continuer avec Facebook",
-      "haveAccount": "Vous avez déjà un compte?",
-      "loginNow": "Connectez-vous Maintenant",
-      "backToHome": "Retour à l'Accueil",
-      "check1": "J'ai lu et j'accepte les Conditions d'Utilisation",
-      "check2": "Je souhaite recevoir des mises à jour et des offres spéciales par email",
-      "createAccount": "Créer un Compte",
-      "errors": {
-        "fullNameRequired": "Le nom complet est requis",
-        "emailRequired": "L'email est requis",
-        "emailInvalid": "L'email n'est pas valide",
-        "passwordRequired": "Le mot de passe est requis",
-        "passwordMinLength": "Le mot de passe doit contenir au moins 6 caractères",
-        "confirmPasswordRequired": "La confirmation du mot de passe est requise",
-        "passwordsMismatch": "Les mots de passe ne correspondent pas",
-        "registrationFailed": "Échec de l'inscription",
-        "socialLoginFailed": "Échec de la connexion avec {provider}. Veuillez réessayer."
-      }
-    },
-    "forgotPassword": {
-      "title": "Mot de passe oublié ?",
-      "subtitle": "Entrez votre e-mail pour réinitialiser votre mot de passe.",
-      "email": "E-mail",
-      "emailPlaceholder": "Entrez votre e-mail",
-      "submitButton": "Soumettre",
-      "submitting": "Soumission...",
-      "backToLogin": "Retour à la connexion",
-      "backToHome": "Retour à l'accueil",
-      "checkEmail": "Vérifiez votre e-mail",
-      "checkEmailInstructions": "Nous avons envoyé des instructions de réinitialisation du mot de passe à {email}. Veuillez vérifier votre boîte de réception et votre dossier spam.",
-      "returnToLogin": "Retourner à la connexion",
-      "didNotReceiveEmail": "Vous n'avez pas reçu l'e-mail?",
-      "resend": "Renvoyer",
-      "errors": {
-        "emailRequired": "L'e-mail est requis",
-        "emailInvalid": "Veuillez entrer une adresse e-mail valide",
-        "resetFailed": "Échec de l'envoi du lien de réinitialisation. Veuillez réessayer."
-      }
     }
   },
   "searchBar": {
@@ -233,6 +179,8 @@
     "admin": {
       "title": "Tableau de Bord Admin",
       "overview": "Tableau de Bord Admin",
+      "welcome": "Bienvenue sur le Tableau de Bord Admin Q Homes",
+      "subtitle": "Gérez votre plateforme et surveillez les performances",
       "users": "Gestion des Utilisateurs",
       "blogEditor": "Éditeur de Blog",
       "mediaLibrary": "Bibliothèque Média",
@@ -243,7 +191,53 @@
       "conciergeRequests": "Demandes de Conciergerie",
       "eventManagement": "Gestion des Événements",
       "settings": "Paramètres",
-      "analytics": "Analytique"
+      "analytics": "Analytique",
+      "stats": {
+        "totalListings": "Total des Annonces",
+        "newUsers": "Nouveaux Utilisateurs (30j)",
+        "pendingVerifications": "Vérifications en Attente",
+        "activeConciergeRequests": "Demandes de Conciergerie Actives"
+      },
+      "performance": {
+        "title": "Performance de la Plateforme",
+        "subtitle": "Engagement des Utilisateurs",
+        "period": "30 Derniers Jours",
+        "change": "+7.8%",
+        "weeks": {
+          "week1": "Semaine 1",
+          "week2": "Semaine 2",
+          "week3": "Semaine 3",
+          "week4": "Semaine 4"
+        }
+      },
+      "propertiesTable": {
+        "title": "Propriétés Récentes",
+        "addProperty": "Ajouter Propriété",
+        "table": {
+          "propertyTitle": "Titre de la Propriété",
+          "type": "Type",
+          "status": "Statut",
+          "agent": "Agent",
+          "dateAdded": "Date d'Ajout",
+          "actions": "Actions"
+        },
+        "types": {
+          "buy": "Acheter",
+          "rent": "Louer"
+        },
+        "statuses": {
+          "approved": "Approuvé",
+          "pending": "En Attente",
+          "rejected": "Rejeté"
+        },
+        "actions": {
+          "edit": "Modifier"
+        }
+      },
+      "trends": {
+        "positive": "+",
+        "negative": "-"
+      }
     },
     "client": {
       "title": "Tableau de Bord Client",
@@ -571,126 +565,6 @@
       "title": "Êtes-vous un Promoteur?",
       "subtitle": "Présentez votre projet à un public sélectionné d'acheteurs locaux et internationaux. Associez-vous à Q Homes pour gagner en visibilité et en confiance sans précédent.",
       "button": "Listez Votre Projet"
-    }
-  },
-  "about": {
-    "meta": {
-      "title": "À Propos - Connecter les Rêves à la Réalité | Q Homes",
-      "description": "Découvrez la mission de Q Homes de révolutionner l'immobilier en Côte d'Ivoire. Approuvé par la diaspora et les communautés locales pour des propriétés vérifiées et des transactions transparentes."
-    },
-    "hero": {
-      "title": "Notre Histoire: Connecter les Rêves à la Réalité en Côte d'Ivoire",
-      "subtitle": "Relier la diaspora et les communautés locales avec des opportunités immobilières de confiance au cœur de l'Afrique de l'Ouest."
-    },
-    "mission": {
-      "title": "Notre Mission et Vision",
-      "description": "Q Homes s'engage à révolutionner l'expérience immobilière en Côte d'Ivoire. Notre mission est de fournir une plateforme transparente, sécurisée et fluide qui connecte la diaspora ivoirienne mondiale et les investisseurs étrangers avec des propriétés vérifiées et de haute qualité. Nous envisageons un avenir où chacun peut investir en toute confiance dans la maison ou la propriété de ses rêves, soutenu par la confiance et l'excellence."
-    },
-    "whyChoose": {
-      "title": "Pourquoi Choisir Q Homes",
-      "subtitle": "Votre partenaire de confiance dans l'immobilier ivoirien, offrant un service et une sécurité inégalés.",
-      "features": {
-        "verifiedListings": {
-          "title": "Annonces Vérifiées",
-          "description": "Chaque propriété est soigneusement vérifiée pour garantir la qualité, la sécurité et la conformité légale."
-        },
-        "escrowProtection": {
-          "title": "Protection Séquestre",
-          "description": "Sécurisez votre investissement avec notre service de séquestre de confiance, garantissant la sécurité de vos fonds."
-        },
-        "conciergeService": {
-          "title": "Service de Conciergerie",
-          "description": "De la visite à la clôture, notre équipe dévouée fournit un soutien personnalisé à chaque étape."
-        },
-        "multilingualSupport": {
-          "title": "Support Multilingue",
-          "description": "Notre équipe diversifiée parle plusieurs langues pour assister notre clientèle mondiale de manière transparente."
-        }
-      }
-    },
-    "team": {
-      "title": "Rencontrez l'Équipe",
-      "subtitle": "Les professionnels dévoués qui réalisent vos rêves de propriété.",
-      "members": {
-        "jeanClaude": {
-          "name": "Jean-Claude Koffi",
-          "role": "Fondateur et PDG",
-          "bio": "Avec plus de 15 ans d'expérience dans l'immobilier international, la vision de Jean-Claude est de construire le pont immobilier le plus fiable vers la Côte d'Ivoire."
-        },
-        "aissata": {
-          "name": "Aïssata Diop",
-          "role": "Directrice des Ventes",
-          "bio": "Aïssata combine une connaissance approfondie du marché local avec une passion pour aider les clients à trouver leur maison parfaite ou leur propriété d'investissement."
-        },
-        "moussa": {
-          "name": "Moussa Traoré",
-          "role": "Directeur Technologique",
-          "bio": "Moussa dirige notre innovation technologique, garantissant une plateforme transparente, sécurisée et conviviale pour tous nos clients."
-        }
-      }
-    },
-    "cta": {
-      "title": "Prêt à Trouver Votre Maison Ivoirienne?",
-      "subtitle": "Laissez-nous vous guider à travers notre sélection organisée de propriétés vérifiées ou explorez les opportunités de partenariat avec nous.",
-      "primaryButton": "Parcourir les Maisons Vérifiées",
-      "secondaryButton": "Devenir Partenaire"
-    }
-  },
-  "contact": {
-    "hero": {
-      "title": "Nous sommes là pour vous aider — Où que vous soyez",
-      "subtitle": "Contactez notre équipe pour toute demande et nous serons ravis de vous aider à trouver votre nouvelle maison en Côte d'Ivoire.",
-      "whatsappButton": "Discuter sur WhatsApp",
-      "messageButton": "Envoyer un Message",
-      "whatsappMessage": "Bonjour, je souhaiterais me renseigner sur les propriétés.",
-      "imageAlt": "Skyline d'Abidjan au crépuscule"
-    },
-    "form": {
-      "title": "Entrer en Contact",
-      "subtitle": "Remplissez le formulaire ci-dessous et notre équipe vous répondra rapidement.",
-      "fullName": "Nom Complet",
-      "fullNamePlaceholder": "Entrez votre nom complet",
-      "email": "Adresse E-mail",
-      "emailPlaceholder": "vous@exemple.com",
-      "phone": "Numéro de Téléphone",
-      "phonePlaceholder": "01 23 45 67 89",
-      "subject": "Sujet",
-      "subjectPlaceholder": "ex: Demande de Propriété",
-      "message": "Message",
-      "messagePlaceholder": "Écrivez votre message ici...",
-      "privacyNote": "Nous respectons votre vie privée. Vos informations sont en sécurité avec nous.",
-      "submitButton": "Soumettre la Demande"
-    },
-    "info": {
-      "title": "Contactez-nous Directement",
-      "subtitle": "Vous préférez la méthode traditionnelle ? Voici nos coordonnées. Nous sommes toujours heureux de vous connecter.",
-      "officeTitle": "Notre Bureau",
-      "officeAddress": "Boulevard Valéry Giscard d'Estaing, Marcory, Abidjan, Côte d'Ivoire",
-      "phoneTitle": "Téléphone",
-      "phoneNumber": "+225 01 23 45 67 89",
-      "emailTitle": "E-mail",
-      "emailAddress": "contact@qhomes.ci",
-      "hoursTitle": "Heures d'Ouverture",
-      "hoursContent": "Lun - Ven: 9h00 - 18h00",
-      "mapTitle": "Emplacement du Bureau Q Homes"
-    },
-    "faq": {
-      "title": "Questions Fréquemment Posées",
-      "subtitle": "Trouvez rapidement des réponses aux questions courantes sur nos services et processus.",
-      "q1": "Quels types de propriétés Q Homes propose-t-il ?",
-      "a1": "Q Homes se spécialise dans une large gamme de propriétés en Côte d'Ivoire, y compris des villas de luxe, des appartements modernes et des espaces commerciaux. Nous répondons à divers besoins, des locations à long terme aux ventes pour les locaux et les expatriés qui s'installent dans le pays.",
-      "q2": "Comment Q Homes vérifie-t-il les annonces de propriétés ?",
-      "a2": "Nous avons un processus de vérification rigoureux. Notre équipe effectue des visites sur site, vérifie la documentation légale et les titres de propriété (ACD - Arrêté de Concession Définitive), et s'assure que toutes les annonces répondent à nos normes élevées de qualité et de sécurité. Cela garantit que vous consultez des propriétés légitimes et de haute qualité.",
-      "q3": "Offrez-vous une assistance à la relocalisation pour les clients internationaux ?",
-      "a3": "Oui, nous fournissons des services complets de relocalisation. Cela comprend l'aide à trouver la maison parfaite, l'assistance avec les formalités administratives et des conseils sur la vie à Abidjan. Notre objectif est de rendre votre déménagement en Côte d'Ivoire aussi simple et sans stress que possible.",
-      "q4": "Quels sont les frais typiques associés à la location ou à l'achat ?",
-      "a4": "Pour les locations, les frais standard incluent généralement un mois de loyer pour les frais d'agence, un dépôt de garantie (généralement 2 mois de loyer) et le premier mois de loyer à l'avance. Pour les achats, les frais comprennent les frais de notaire et notre commission d'agence, qui sont calculés en fonction de la valeur de la propriété. Nous assurons une transparence totale sur tous les coûts dès le départ."
-    },
-    "cta": {
-      "title": "Prêt à Trouver la Maison de vos Rêves ?",
-      "subtitle": "Franchissez la prochaine étape de votre voyage. Notre portefeuille de propriétés exceptionnelles vous attend.",
-      "primaryButton": "Parcourir les Maisons",
-      "secondaryButton": "Réserver une Consultation"
     }
   }
 }
