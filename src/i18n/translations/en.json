@@ -34,7 +34,11 @@
     "yes": "Yes",
     "no": "No",
     "home": "Home",
-    "buy": "Buy"
+    "buy": "Buy",
+    "showing": "Showing",
+    "to": "to",
+    "of": "of",
+    "results": "results"
   },
   "auth": {
     "login": {

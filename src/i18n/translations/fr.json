@@ -34,7 +34,11 @@
     "yes": "Oui",
     "no": "Non",
     "home": "Accueil",
-    "buy": "Acheter"
+    "buy": "Acheter",
+    "showing": "Affichage",
+    "to": "à",
+    "of": "sur",
+    "results": "résultats"
   },
   "auth": {
     "login": {

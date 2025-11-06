@@ -6,6 +6,7 @@ import { Users, CheckCircle, Clock, FolderOpen } from 'lucide-react';
 import StatsCard from '@/components/dashboard/admin/StatsCard';
 import PartnersFilters from '@/components/dashboard/admin/PartnersFilters';
 import PartnersTable from '@/components/dashboard/admin/PartnersTable';
+import Pagination from '@/components/dashboard/Pagination';
 
 // Mock partners data - deterministic generation based on DB schema
 const generateMockPartners = () => {
@@ -97,6 +98,10 @@ export default function AdminPartnersPage({ params }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [verificationFilter, setVerificationFilter] = useState('all');
   const [paymentFilter, setPaymentFilter] = useState('all');
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Constants
+  const ITEMS_PER_PAGE = 5;
 
   // Memoized translations
   const partnersTranslations = useMemo(
@@ -215,18 +220,45 @@ export default function AdminPartnersPage({ params }) {
     });
   }, [partners, searchTerm, verificationFilter, paymentFilter]);
 
+  // Pagination
+  const totalPages = Math.ceil(filteredPartners.length / ITEMS_PER_PAGE);
+  const paginatedPartners = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredPartners.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [filteredPartners, currentPage]);
+
   // Handlers
   const handleSearchChange = useCallback((value) => {
     setSearchTerm(value);
+    setCurrentPage(1); // Reset to first page on search
   }, []);
 
   const handleVerificationChange = useCallback((value) => {
     setVerificationFilter(value);
+    setCurrentPage(1); // Reset to first page on filter change
   }, []);
 
   const handlePaymentChange = useCallback((value) => {
     setPaymentFilter(value);
+    setCurrentPage(1); // Reset to first page on filter change
   }, []);
+
+  const handlePageChange = useCallback((page) => {
+    setCurrentPage(page);
+  }, []);
+
+  // Pagination translations
+  const paginationTranslations = useMemo(
+    () => ({
+      previous: t('common.previous'),
+      next: t('common.next'),
+      showing: t('common.showing'),
+      to: t('common.to'),
+      of: t('common.of'),
+      results: t('common.results'),
+    }),
+    [t]
+  );
 
   return (
     <div className='space-y-4 md:space-y-6'>
@@ -265,11 +297,21 @@ export default function AdminPartnersPage({ params }) {
         translations={partnersTranslations}
       />
 
-      {/* Partners Table */}
-      <PartnersTable
-        partners={filteredPartners}
-        translations={partnersTranslations}
-      />
+      {/* Partners Table with Pagination */}
+      <div className='rounded-lg bg-white shadow-sm overflow-hidden'>
+        <PartnersTable
+          partners={paginatedPartners}
+          translations={partnersTranslations}
+        />
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          totalItems={filteredPartners.length}
+          itemsPerPage={ITEMS_PER_PAGE}
+          onPageChange={handlePageChange}
+          translations={paginationTranslations}
+        />
+      </div>
     </div>
   );
 }

@@ -80,7 +80,7 @@ const PartnersTable = memo(({ partners, translations }) => {
   };
 
   return (
-    <div className='rounded-lg bg-white shadow-sm overflow-hidden'>
+    <div>
       {/* Desktop Table */}
       <div className='hidden lg:block overflow-x-auto'>
         <table className='w-full'>

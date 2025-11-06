@@ -2,9 +2,10 @@
 
 import { use, useState, useMemo, useCallback } from 'react';
 import { useTranslation } from '@/i18n';
-import { Download, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Download } from 'lucide-react';
 import AuditLogsFilters from '@/components/dashboard/admin/AuditLogsFilters';
 import AuditLogsTable from '@/components/dashboard/admin/AuditLogsTable';
+import Pagination from '@/components/dashboard/Pagination';
 
 // Generate deterministic mock audit logs
 const generateAuditLogs = (count) => {
@@ -136,12 +137,19 @@ export default function AuditLogs({ params }) {
           'dashboard.admin.auditLogs.actions.permissionChanged'
         ),
       },
-      pagination: {
-        showing: t('dashboard.admin.auditLogs.pagination.showing'),
-        to: t('dashboard.admin.auditLogs.pagination.to'),
-        of: t('dashboard.admin.auditLogs.pagination.of'),
-        results: t('dashboard.admin.auditLogs.pagination.results'),
-      },
+    }),
+    [t]
+  );
+
+  // Pagination translations
+  const paginationTranslations = useMemo(
+    () => ({
+      previous: t('common.previous'),
+      next: t('common.next'),
+      showing: t('common.showing'),
+      to: t('common.to'),
+      of: t('common.of'),
+      results: t('common.results'),
     }),
     [t]
   );
@@ -248,107 +256,20 @@ export default function AuditLogs({ params }) {
         translations={auditLogsTranslations}
       />
 
-      {/* Audit Logs Table */}
-      <AuditLogsTable logs={currentLogs} translations={auditLogsTranslations} />
-
-      {/* Pagination */}
-      <div className='bg-white border border-gray-200 rounded-lg'>
-        <div className='flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 px-3 sm:px-6 py-3 sm:py-4'>
-          {/* Results Info */}
-          <p className='text-xs sm:text-sm text-gray-700 text-center sm:text-left'>
-            {auditLogsTranslations.pagination.showing}{' '}
-            <span className='font-medium'>{startIndex + 1}</span>{' '}
-            {auditLogsTranslations.pagination.to}{' '}
-            <span className='font-medium'>
-              {Math.min(endIndex, filteredLogs.length)}
-            </span>{' '}
-            {auditLogsTranslations.pagination.of}{' '}
-            <span className='font-medium'>{filteredLogs.length}</span>{' '}
-            {auditLogsTranslations.pagination.results}
-          </p>
-
-          {/* Pagination Controls */}
-          <div className='flex items-center gap-1 sm:gap-2'>
-            {/* Previous Button */}
-            <button
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-              className={`flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg border transition-all duration-200 ${
-                currentPage === 1
-                  ? 'cursor-not-allowed border-gray-200 bg-gray-50 text-gray-400'
-                  : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50 active:scale-95'
-              }`}
-              aria-label='Previous page'
-            >
-              <ChevronLeft size={16} className='sm:w-[18px] sm:h-[18px]' />
-            </button>
-
-            {/* Page Numbers */}
-            <div className='flex items-center gap-1'>
-              {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => {
-                let pageNumber;
-                if (totalPages <= 5) {
-                  pageNumber = i + 1;
-                } else if (currentPage <= 3) {
-                  pageNumber = i + 1;
-                } else if (currentPage >= totalPages - 2) {
-                  pageNumber = totalPages - 4 + i;
-                } else {
-                  pageNumber = currentPage - 2 + i;
-                }
-
-                if (pageNumber < 1 || pageNumber > totalPages) return null;
-
-                return (
-                  <button
-                    key={pageNumber}
-                    onClick={() => handlePageChange(pageNumber)}
-                    className={`flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 ${
-                      currentPage === pageNumber
-                        ? 'bg-[#d4af37] text-white shadow-sm'
-                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                    }`}
-                    aria-label={`Page ${pageNumber}`}
-                    aria-current={
-                      currentPage === pageNumber ? 'page' : undefined
-                    }
-                  >
-                    {pageNumber}
-                  </button>
-                );
-              })}
-
-              {totalPages > 5 && currentPage < totalPages - 2 && (
-                <>
-                  <span className='hidden sm:flex h-9 w-9 items-center justify-center text-gray-400 text-sm'>
-                    ...
-                  </span>
-                  <button
-                    onClick={() => handlePageChange(totalPages)}
-                    className='hidden sm:flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 transition-all duration-200'
-                    aria-label={`Page ${totalPages}`}
-                  >
-                    {totalPages}
-                  </button>
-                </>
-              )}
-            </div>
-
-            {/* Next Button */}
-            <button
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
-              className={`flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg border transition-all duration-200 ${
-                currentPage === totalPages
-                  ? 'cursor-not-allowed border-gray-200 bg-gray-50 text-gray-400'
-                  : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50 active:scale-95'
-              }`}
-              aria-label='Next page'
-            >
-              <ChevronRight size={16} className='sm:w-[18px] sm:h-[18px]' />
-            </button>
-          </div>
-        </div>
+      {/* Audit Logs Table with Pagination */}
+      <div className='rounded-lg bg-white shadow-sm overflow-hidden'>
+        <AuditLogsTable
+          logs={currentLogs}
+          translations={auditLogsTranslations}
+        />
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          totalItems={filteredLogs.length}
+          itemsPerPage={itemsPerPage}
+          onPageChange={handlePageChange}
+          translations={paginationTranslations}
+        />
       </div>
     </div>
   );

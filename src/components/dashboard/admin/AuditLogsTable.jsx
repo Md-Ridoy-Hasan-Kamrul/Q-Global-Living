@@ -21,7 +21,7 @@ const AuditLogsTable = memo(({ logs, translations }) => {
   };
 
   return (
-    <div className='bg-white border border-gray-200 rounded-lg overflow-hidden'>
+    <div className='overflow-hidden'>
       {/* Table */}
       <div className='overflow-x-auto'>
         <table className='w-full'>
