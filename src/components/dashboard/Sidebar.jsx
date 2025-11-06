@@ -72,7 +72,7 @@ const navigationConfig = {
       icon: Building2,
     },
     {
-      key: 'dashboard.admin.partners',
+      key: 'dashboard.admin.partnersLink',
       href: '/dashboard/admin/partners',
       icon: UserCheck,
     },

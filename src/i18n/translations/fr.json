@@ -187,7 +187,7 @@
       "auditLogsLink": "Journaux d'Audit",
       "seoManagement": "Gestion SEO",
       "propertiesLink": "Gestion des Propriétés",
-      "partners": "Gestion des Partenaires",
+      "partnersLink": "Gestion des Partenaires",
       "conciergeRequests": "Demandes de Conciergerie",
       "eventManagement": "Gestion des Événements",
       "settings": "Paramètres",
@@ -413,6 +413,49 @@
           "apartment": "Appartement",
           "commercial": "Commercial",
           "house": "Maison"
+        }
+      },
+      "partners": {
+        "title": "Gestion des Partenaires",
+        "subtitle": "Gérer et surveiller tous les partenaires et développeurs enregistrés",
+        "addPartner": "Ajouter un Partenaire",
+        "searchPlaceholder": "Rechercher des partenaires...",
+        "allStatus": "Tous les Statuts",
+        "stats": {
+          "totalPartners": "Total des Partenaires",
+          "verified": "Vérifiés",
+          "pending": "En Attente de Vérification",
+          "activeProjects": "Projets Actifs"
+        },
+        "filters": {
+          "verification": "Statut de Vérification",
+          "payment": "Statut de Paiement",
+          "allVerification": "Toute Vérification",
+          "allPayment": "Tout Paiement"
+        },
+        "table": {
+          "company": "Entreprise",
+          "contact": "Personne de Contact",
+          "email": "Email",
+          "phone": "Téléphone",
+          "projects": "Projets",
+          "verification": "Vérification",
+          "payment": "Paiement",
+          "actions": "Actions",
+          "view": "Voir",
+          "edit": "Modifier",
+          "delete": "Supprimer",
+          "joined": "Inscrit"
+        },
+        "verification": {
+          "verified": "Vérifié",
+          "pending": "En Attente",
+          "rejected": "Rejeté"
+        },
+        "payment": {
+          "paid": "Payé",
+          "unpaid": "Non Payé",
+          "partial": "Partiel"
         }
       }
     },

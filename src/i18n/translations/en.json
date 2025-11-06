@@ -187,7 +187,7 @@
       "auditLogsLink": "Audit Logs",
       "seoManagement": "SEO Management",
       "propertiesLink": "Properties Management",
-      "partners": "Partner Management",
+      "partnersLink": "Partner Management",
       "conciergeRequests": "Concierge Requests",
       "eventManagement": "Event Management",
       "settings": "Settings",
@@ -413,6 +413,49 @@
           "apartment": "Apartment",
           "commercial": "Commercial",
           "house": "House"
+        }
+      },
+      "partners": {
+        "title": "Partner Management",
+        "subtitle": "Manage and monitor all registered partners and developers",
+        "addPartner": "Add Partner",
+        "searchPlaceholder": "Search partners...",
+        "allStatus": "All Status",
+        "stats": {
+          "totalPartners": "Total Partners",
+          "verified": "Verified",
+          "pending": "Pending Verification",
+          "activeProjects": "Active Projects"
+        },
+        "filters": {
+          "verification": "Verification Status",
+          "payment": "Payment Status",
+          "allVerification": "All Verification",
+          "allPayment": "All Payment"
+        },
+        "table": {
+          "company": "Company",
+          "contact": "Contact Person",
+          "email": "Email",
+          "phone": "Phone",
+          "projects": "Projects",
+          "verification": "Verification",
+          "payment": "Payment",
+          "actions": "Actions",
+          "view": "View",
+          "edit": "Edit",
+          "delete": "Delete",
+          "joined": "Joined"
+        },
+        "verification": {
+          "verified": "Verified",
+          "pending": "Pending",
+          "rejected": "Rejected"
+        },
+        "payment": {
+          "paid": "Paid",
+          "unpaid": "Unpaid",
+          "partial": "Partial"
         }
       }
     },
