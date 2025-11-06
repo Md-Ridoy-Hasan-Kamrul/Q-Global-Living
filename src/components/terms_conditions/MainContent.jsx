@@ -1,4 +1,4 @@
-const MainContent = ({ privacy }) => {
+const MainContent = ({ terms }) => {
   return (
     <main className="w-full lg:w-3/4 space-y-8 lg:mt-0 md:mt-12 sm:mt-10 mt-8">
       <header>
@@ -18,7 +18,7 @@ const MainContent = ({ privacy }) => {
       </header>
 
       <section className="md:space-y-14 sm:space-y-12 space-y-10">
-        {privacy.map((item) => (
+        {terms.map((item) => (
           <div key={item.id || item.title}>
             <h3 className="text-lg lg:text-xl font-bold tracking-tight mb-3">
               {item.title}

@@ -1,6 +1,6 @@
 "use client";
-import MainContent from "@/components/privacy_policyPage/MainContent";
-import PrivacySidebar from "@/components/privacy_policyPage/PrivacySidebar";
+import MainContent from "@/components/privacy_policy/MainContent";
+import PrivacySidebar from "@/components/privacy_policy/PrivacySidebar";
 import React from "react";
 
 const privacy = [
