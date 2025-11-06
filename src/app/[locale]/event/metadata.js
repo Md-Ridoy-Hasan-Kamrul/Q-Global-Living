@@ -3,14 +3,16 @@ export async function generateMetadata({ params }) {
 
   const metadata = {
     en: {
-      title: 'Exclusive Webinar: Investing in Abidjan\'s Real Estate Market | Q Homes',
+      title:
+        "Exclusive Webinar: Investing in Abidjan's Real Estate Market | Q Homes",
       description:
-        'Join our expert panel to uncover the lucrative opportunities in Côte d\'Ivoire\'s thriving property market. Learn key strategies for successful investment.',
+        "Join our expert panel to uncover the lucrative opportunities in Côte d'Ivoire's thriving property market. Learn key strategies for successful investment.",
     },
     fr: {
-      title: 'Webinaire Exclusif: Investir dans le Marché Immobilier d\'Abidjan | Q Homes',
+      title:
+        "Webinaire Exclusif: Investir dans le Marché Immobilier d'Abidjan | Q Homes",
       description:
-        'Rejoignez notre panel d\'experts pour découvrir les opportunités lucratives dans le marché immobilier florissant de la Côte d\'Ivoire. Apprenez les stratégies clés pour un investissement réussi.',
+        "Rejoignez notre panel d'experts pour découvrir les opportunités lucratives dans le marché immobilier florissant de la Côte d'Ivoire. Apprenez les stratégies clés pour un investissement réussi.",
     },
   };
 
