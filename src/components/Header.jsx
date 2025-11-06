@@ -73,7 +73,7 @@ export default function Header({ locale }) {
             </svg>
           </div>
           <h2 className='text-lg sm:text-xl font-bold tracking-tight text-charcoal dark:text-white whitespace-nowrap'>
-            Q HOMES
+            Q Global Living
           </h2>
         </Link>
 
