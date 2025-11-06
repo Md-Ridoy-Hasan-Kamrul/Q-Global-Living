@@ -77,7 +77,7 @@ const navigationConfig = {
       icon: UserCheck,
     },
     {
-      key: 'dashboard.admin.conciergeRequests',
+      key: 'dashboard.admin.conciergeRequestsLink',
       href: '/dashboard/admin/concierge-requests',
       icon: Bell,
     },

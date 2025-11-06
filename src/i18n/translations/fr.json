@@ -192,7 +192,7 @@
       "seoManagement": "Gestion SEO",
       "propertiesLink": "Gestion des Propriétés",
       "partnersLink": "Gestion des Partenaires",
-      "conciergeRequests": "Demandes de Conciergerie",
+      "conciergeRequestsLink": "Demandes de Conciergerie",
       "eventManagement": "Gestion des Événements",
       "settings": "Paramètres",
       "analytics": "Analytique",
@@ -460,6 +460,44 @@
           "paid": "Payé",
           "unpaid": "Non Payé",
           "partial": "Partiel"
+        }
+      },
+      "conciergeRequests": {
+        "title": "Demandes de Conciergerie",
+        "subtitle": "Gérer et répondre à toutes les demandes de services de conciergerie",
+        "addRequest": "Ajouter une Demande",
+        "searchPlaceholder": "Rechercher par nom du client, email ou service...",
+        "stats": {
+          "totalRequests": "Total des Demandes",
+          "pending": "En Attente",
+          "inProgress": "En Cours",
+          "completed": "Complétées Aujourd'hui"
+        },
+        "filters": {
+          "allStatus": "Tous les Statuts",
+          "allPriority": "Toutes les Priorités"
+        },
+        "status": {
+          "pending": "En Attente",
+          "inProgress": "En Cours",
+          "completed": "Complété",
+          "cancelled": "Annulé"
+        },
+        "priority": {
+          "high": "Élevée",
+          "medium": "Moyenne",
+          "low": "Faible"
+        },
+        "table": {
+          "requestId": "ID de Demande",
+          "client": "Client",
+          "service": "Type de Service",
+          "property": "Propriété",
+          "priority": "Priorité",
+          "status": "Statut",
+          "requestDate": "Date de Demande",
+          "actions": "Actions",
+          "view": "Voir Détails"
         }
       }
     },

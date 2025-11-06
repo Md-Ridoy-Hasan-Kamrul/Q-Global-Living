@@ -192,7 +192,7 @@
       "seoManagement": "SEO Management",
       "propertiesLink": "Properties Management",
       "partnersLink": "Partner Management",
-      "conciergeRequests": "Concierge Requests",
+      "conciergeRequestsLink": "Concierge Requests",
       "eventManagement": "Event Management",
       "settings": "Settings",
       "analytics": "Analytics",
@@ -460,6 +460,44 @@
           "paid": "Paid",
           "unpaid": "Unpaid",
           "partial": "Partial"
+        }
+      },
+      "conciergeRequests": {
+        "title": "Concierge Requests",
+        "subtitle": "Manage and respond to all concierge service requests",
+        "addRequest": "Add Request",
+        "searchPlaceholder": "Search by client name, email, or service...",
+        "stats": {
+          "totalRequests": "Total Requests",
+          "pending": "Pending",
+          "inProgress": "In Progress",
+          "completed": "Completed Today"
+        },
+        "filters": {
+          "allStatus": "All Status",
+          "allPriority": "All Priority"
+        },
+        "status": {
+          "pending": "Pending",
+          "inProgress": "In Progress",
+          "completed": "Completed",
+          "cancelled": "Cancelled"
+        },
+        "priority": {
+          "high": "High",
+          "medium": "Medium",
+          "low": "Low"
+        },
+        "table": {
+          "requestId": "Request ID",
+          "client": "Client",
+          "service": "Service Type",
+          "property": "Property",
+          "priority": "Priority",
+          "status": "Status",
+          "requestDate": "Request Date",
+          "actions": "Actions",
+          "view": "View Details"
         }
       }
     },
