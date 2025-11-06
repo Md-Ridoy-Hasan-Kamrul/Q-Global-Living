@@ -249,7 +249,7 @@ export default function Sidebar({ role = 'admin' }) {
           <Home className='h-6 w-6 text-[#0F1B2E]' />
         </div>
         <div className='flex-1 min-w-0'>
-          <h1 className='text-lg font-semibold text-white'>Q Homes</h1>
+          <h1 className='text-lg font-semibold text-white'>Q Global Living</h1>
           <p className='text-xs text-gray-400 capitalize'>
             {t(`dashboard.${role}.title`)}
           </p>
