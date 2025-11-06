@@ -1,16 +1,14 @@
 'use client';
 
-import { useState, useMemo } from 'react';
-import { usePathname } from 'next/navigation';
+import { use, useState, useMemo, useCallback } from 'react';
 import { Plus } from 'lucide-react';
 import { useTranslation } from '@/i18n';
 import UserFilters from '@/components/dashboard/admin/UserFilters';
 import UsersTable from '@/components/dashboard/admin/UsersTable';
-import Pagination from '@/components/dashboard/admin/Pagination';
+import Pagination from '@/components/dashboard/Pagination';
 
-export default function AdminUsersPage() {
-  const pathname = usePathname();
-  const locale = pathname.split('/')[1] || 'en';
+export default function AdminUsersPage({ params }) {
+  const { locale } = use(params);
   const { t } = useTranslation(locale);
 
   // State management
@@ -114,29 +112,29 @@ export default function AdminUsersPage() {
   }, [filteredUsers, currentPage, itemsPerPage]);
 
   // Reset to page 1 when filters change
-  const handleSearchChange = (value) => {
+  const handleSearchChange = useCallback((value) => {
     setSearchTerm(value);
     setCurrentPage(1);
-  };
+  }, []);
 
-  const handleStatusChange = (value) => {
+  const handleStatusChange = useCallback((value) => {
     setStatusFilter(value);
     setCurrentPage(1);
-  };
+  }, []);
 
-  const handleRoleChange = (value) => {
+  const handleRoleChange = useCallback((value) => {
     setRoleFilter(value);
     setCurrentPage(1);
-  };
+  }, []);
 
-  const handlePageChange = (page) => {
+  const handlePageChange = useCallback((page) => {
     setCurrentPage(page);
-  };
+  }, []);
 
-  const handleActionClick = (action, user) => {
+  const handleActionClick = useCallback((action, user) => {
     // In production, implement actual actions
     console.log(`Action: ${action} on user:`, user);
-  };
+  }, []);
 
   // Get translations object for components
   const userTranslations = useMemo(() => {
@@ -171,12 +169,6 @@ export default function AdminUsersPage() {
         suspended: t('dashboard.admin.users.statuses.suspended'),
         pending: t('dashboard.admin.users.statuses.pending'),
       },
-      pagination: {
-        showing: t('dashboard.admin.users.pagination.showing'),
-        of: t('dashboard.admin.users.pagination.of'),
-        previous: t('dashboard.admin.users.pagination.previous'),
-        next: t('dashboard.admin.users.pagination.next'),
-      },
       actions: {
         view: t('dashboard.admin.users.actions.view'),
         edit: t('dashboard.admin.users.actions.edit'),
@@ -186,6 +178,19 @@ export default function AdminUsersPage() {
       },
     };
   }, [t]);
+
+  // Pagination translations
+  const paginationTranslations = useMemo(
+    () => ({
+      previous: t('common.previous'),
+      next: t('common.next'),
+      showing: t('common.showing'),
+      to: t('common.to'),
+      of: t('common.of'),
+      results: t('common.results'),
+    }),
+    [t]
+  );
 
   return (
     <div className='space-y-6'>
@@ -211,24 +216,24 @@ export default function AdminUsersPage() {
         translations={userTranslations}
       />
 
-      {/* Users Table */}
-      <UsersTable
-        users={paginatedUsers}
-        translations={userTranslations}
-        onActionClick={handleActionClick}
-      />
-
-      {/* Pagination */}
-      {filteredUsers.length > 0 && (
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          totalItems={filteredUsers.length}
-          itemsPerPage={itemsPerPage}
-          onPageChange={handlePageChange}
+      {/* Users Table with Pagination */}
+      <div className='rounded-lg bg-white shadow-sm overflow-hidden'>
+        <UsersTable
+          users={paginatedUsers}
           translations={userTranslations}
+          onActionClick={handleActionClick}
         />
-      )}
+        {filteredUsers.length > 0 && (
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            totalItems={filteredUsers.length}
+            itemsPerPage={itemsPerPage}
+            onPageChange={handlePageChange}
+            translations={paginationTranslations}
+          />
+        )}
+      </div>
     </div>
   );
 }

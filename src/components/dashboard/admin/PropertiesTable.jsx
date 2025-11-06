@@ -39,7 +39,7 @@ export default function PropertiesTable({
   };
 
   return (
-    <div className='overflow-hidden rounded-xl bg-white shadow-lg'>
+    <div className='overflow-hidden'>
       {/* Header */}
       <div className='flex flex-wrap items-center justify-between gap-4 border-b border-gray-100 bg-linear-to-r from-[#1e3a5f] to-[#2d5078] px-6 py-4'>
         <h2 className='text-xl font-bold text-white'>{title}</h2>

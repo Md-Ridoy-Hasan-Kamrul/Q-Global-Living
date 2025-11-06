@@ -6,6 +6,7 @@ import { Building2, Check, Eye, X } from 'lucide-react';
 import StatsCard from '@/components/dashboard/admin/StatsCard';
 import PropertiesFilters from '@/components/dashboard/admin/PropertiesFilters';
 import PropertiesListTable from '@/components/dashboard/admin/PropertiesListTable';
+import Pagination from '@/components/dashboard/Pagination';
 
 // Mock properties data - deterministic generation
 const generateMockProperties = () => {
@@ -98,6 +99,104 @@ const generateMockProperties = () => {
       partner: 'Urban Living CI',
       image: images[4],
     },
+    {
+      id: 6,
+      title: 'Luxury Penthouse - Plateau',
+      location: locations[1],
+      price: 180000000,
+      priceUSD: 300000,
+      status: 'active',
+      type: types[1],
+      bedrooms: 4,
+      area: 280,
+      views: 1580,
+      partner: 'KOF Builders',
+      image: images[1],
+    },
+    {
+      id: 7,
+      title: 'Office Complex - Marcory',
+      location: locations[2],
+      price: 320000000,
+      priceUSD: 533000,
+      status: 'pending',
+      type: types[2],
+      bedrooms: 0,
+      area: 900,
+      views: 980,
+      partner: 'Ivory Coast Realty',
+      image: images[2],
+    },
+    {
+      id: 8,
+      title: 'Family Villa - Cocody',
+      location: locations[0],
+      price: 125000000,
+      priceUSD: 208000,
+      status: 'active',
+      type: types[0],
+      bedrooms: 5,
+      area: 400,
+      views: 2100,
+      partner: 'Coastal Properties',
+      image: images[0],
+    },
+    {
+      id: 9,
+      title: 'Studio Apartment - Yopougon',
+      location: locations[4],
+      price: 25000000,
+      priceUSD: 42000,
+      status: 'inactive',
+      type: types[1],
+      bedrooms: 1,
+      area: 45,
+      views: 320,
+      partner: 'Urban Living CI',
+      image: images[4],
+    },
+    {
+      id: 10,
+      title: 'Beachfront Resort - Grand Bassam',
+      location: locations[3],
+      price: 550000000,
+      priceUSD: 917000,
+      status: 'active',
+      type: types[2],
+      bedrooms: 0,
+      area: 1800,
+      views: 3200,
+      partner: 'Prime Properties CI',
+      image: images[3],
+    },
+    {
+      id: 11,
+      title: '3-Bedroom Townhouse - Plateau',
+      location: locations[1],
+      price: 95000000,
+      priceUSD: 158000,
+      status: 'pending',
+      type: types[3],
+      bedrooms: 3,
+      area: 210,
+      views: 760,
+      partner: 'KOF Builders',
+      image: images[1],
+    },
+    {
+      id: 12,
+      title: 'Commercial Warehouse - Marcory',
+      location: locations[2],
+      price: 275000000,
+      priceUSD: 458000,
+      status: 'active',
+      type: types[2],
+      bedrooms: 0,
+      area: 1500,
+      views: 1100,
+      partner: 'Ivory Coast Realty',
+      image: images[2],
+    },
   ];
 };
 
@@ -108,6 +207,10 @@ export default function PropertiesManagementPage({ params }) {
   // State
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Constants
+  const ITEMS_PER_PAGE = 5;
 
   // Memoized translations
   const propertiesTranslations = useMemo(
@@ -194,14 +297,40 @@ export default function PropertiesManagementPage({ params }) {
     });
   }, [properties, searchTerm, statusFilter]);
 
+  // Pagination
+  const totalPages = Math.ceil(filteredProperties.length / ITEMS_PER_PAGE);
+  const paginatedProperties = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredProperties.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [filteredProperties, currentPage]);
+
   // Handlers
   const handleSearchChange = useCallback((value) => {
     setSearchTerm(value);
+    setCurrentPage(1); // Reset to first page on search
   }, []);
 
   const handleStatusChange = useCallback((value) => {
     setStatusFilter(value);
+    setCurrentPage(1); // Reset to first page on filter change
   }, []);
+
+  const handlePageChange = useCallback((page) => {
+    setCurrentPage(page);
+  }, []);
+
+  // Pagination translations
+  const paginationTranslations = useMemo(
+    () => ({
+      previous: t('common.previous'),
+      next: t('common.next'),
+      showing: t('common.showing'),
+      to: t('common.to'),
+      of: t('common.of'),
+      results: t('common.results'),
+    }),
+    [t]
+  );
 
   return (
     <div className='space-y-4 md:space-y-6'>
@@ -238,11 +367,21 @@ export default function PropertiesManagementPage({ params }) {
         translations={propertiesTranslations}
       />
 
-      {/* Properties Table */}
-      <PropertiesListTable
-        properties={filteredProperties}
-        translations={propertiesTranslations}
-      />
+      {/* Properties Table with Pagination */}
+      <div className='rounded-lg bg-white shadow-sm overflow-hidden'>
+        <PropertiesListTable
+          properties={paginatedProperties}
+          translations={propertiesTranslations}
+        />
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          totalItems={filteredProperties.length}
+          itemsPerPage={ITEMS_PER_PAGE}
+          onPageChange={handlePageChange}
+          translations={paginationTranslations}
+        />
+      </div>
     </div>
   );
 }

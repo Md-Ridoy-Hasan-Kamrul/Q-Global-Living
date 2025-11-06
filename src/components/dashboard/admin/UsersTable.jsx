@@ -44,7 +44,7 @@ export default function UsersTable({
   };
 
   return (
-    <div className='overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm'>
+    <div className='overflow-hidden'>
       {/* Table */}
       <div className='overflow-x-auto'>
         <table className='w-full min-w-[1000px]'>
