@@ -130,7 +130,7 @@ export default function AboutPage() {
       </Head>
 
       <main className='flex flex-col items-center bg-[#FFFFF0] dark:bg-navy-light'>
-        <div className='w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
+        <div className='w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8'>
           {/* Hero Section */}
           <AboutHero {...heroData} />
 

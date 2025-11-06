@@ -10,26 +10,26 @@ const TeamMemberCard = memo(({ image, name, role, bio, alt }) => {
   return (
     <article className='group text-center'>
       {/* Team Member Photo - Responsive size */}
-      <div className='relative mx-auto mb-4 size-40 overflow-hidden rounded-full border-4 border-[#D4AF37]/50 transition-colors duration-300 group-hover:border-[#D4AF37] sm:mb-6 sm:size-48 md:size-56 lg:size-64'>
+      <div className='relative mx-auto mb-3 size-32 overflow-hidden rounded-full border-4 border-[#D4AF37]/50 transition-colors duration-300 group-hover:border-[#D4AF37] sm:mb-4 sm:size-40 md:size-48'>
         <Image
           src={image}
           alt={alt || `Professional headshot of ${name}`}
           fill
-          sizes='(max-width: 640px) 160px, (max-width: 768px) 192px, (max-width: 1024px) 224px, 256px'
+          sizes='(max-width: 640px) 128px, (max-width: 768px) 160px, 192px'
           quality={90}
           className='object-cover'
         />
       </div>
 
       {/* Team Member Info */}
-      <div className='mt-4 sm:mt-6'>
-        <h3 className='text-xl font-bold text-[#0A2240] dark:text-white sm:text-2xl md:text-3xl'>
+      <div className='mt-3 sm:mt-4'>
+        <h3 className='text-[16px] font-bold text-[#0A2240] dark:text-white sm:text-lg md:text-xl'>
           {name}
         </h3>
-        <p className='mt-2 text-base font-medium text-[#D4AF37] sm:text-lg md:text-xl'>
+        <p className='mt-1 text-[13px] font-medium text-[#D4AF37] sm:text-sm md:text-base'>
           {role}
         </p>
-        <p className='mt-3 text-sm leading-relaxed text-[#111418] dark:text-[#f0f2f4]/90 sm:text-base md:text-lg'>
+        <p className='mt-2 text-[13px] leading-relaxed text-[#111418] dark:text-[#f0f2f4]/90 sm:text-sm'>
           {bio}
         </p>
       </div>
@@ -45,24 +45,24 @@ TeamMemberCard.displayName = 'TeamMemberCard';
 const TeamSection = memo(({ title, subtitle, team }) => {
   return (
     <section
-      className='py-12 sm:py-16 md:py-20 lg:py-24'
+      className='w-full py-8 sm:py-12 md:py-16'
       aria-labelledby='team-section-title'
     >
       {/* Section Header */}
-      <div className='mb-12 text-center sm:mb-16'>
+      <div className='mb-8 text-center sm:mb-10'>
         <h2
           id='team-section-title'
-          className='text-2xl font-bold leading-tight tracking-tight text-[#0A2240] dark:text-white sm:text-3xl md:text-4xl lg:text-5xl'
+          className='font-heading text-[24px] font-bold text-[#0A2240] dark:text-white sm:text-[28px] md:text-[32px] lg:text-[36px]'
         >
           {title}
         </h2>
-        <p className='mx-auto mt-4 max-w-3xl text-base font-normal leading-relaxed text-[#111418] dark:text-[#f0f2f4]/90 sm:mt-6 sm:text-lg md:text-xl'>
+        <p className='mx-auto mt-3 max-w-2xl text-[14px] font-normal text-[#111418] dark:text-[#f0f2f4]/90 sm:mt-4 sm:text-[15px] md:text-base'>
           {subtitle}
         </p>
       </div>
 
       {/* Team Grid */}
-      <div className='grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3 lg:gap-16'>
+      <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3'>
         {team.map((member, index) => (
           <TeamMemberCard
             key={`team-member-${index}`}

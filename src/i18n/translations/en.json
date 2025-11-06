@@ -879,5 +879,128 @@
       "submit": "Register Now",
       "shareEvent": "Share this exclusive event"
     }
+  },
+  "about": {
+    "meta": {
+      "title": "About Us - Q Homes | Your Trusted Real Estate Partner",
+      "description": "Learn about Q Homes mission and team"
+    },
+    "hero": {
+      "title": "Your Trusted Partner in Côte d'Ivoire Real Estate",
+      "subtitle": "Connecting you with exceptional properties and seamless service across Abidjan and beyond."
+    },
+    "mission": {
+      "title": "Our Mission & Vision",
+      "description": "At Q Homes, we believe that finding the perfect home should be transparent, secure, and stress-free. Our mission is to revolutionize the real estate experience in Côte d'Ivoire by providing verified listings, escrow-protected transactions, and personalized concierge services. We envision a future where every client — whether local or from the diaspora — can invest and live with complete confidence."
+    },
+    "whyChoose": {
+      "title": "Why Choose Q Homes?",
+      "subtitle": "We go beyond traditional real estate services to deliver unmatched value and peace of mind.",
+      "features": {
+        "verifiedListings": {
+          "title": "100% Verified Listings",
+          "description": "Every property is thoroughly vetted to ensure authenticity and quality."
+        },
+        "escrowProtection": {
+          "title": "Escrow Protection",
+          "description": "Secure transactions with our trusted escrow service for your peace of mind."
+        },
+        "conciergeService": {
+          "title": "Dedicated Concierge",
+          "description": "From property search to move-in, our team handles every detail for you."
+        },
+        "multilingualSupport": {
+          "title": "Multilingual Support",
+          "description": "Fluent assistance in English, French, and local languages to serve you better."
+        }
+      }
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "subtitle": "Experienced professionals dedicated to making your real estate journey seamless.",
+      "members": {
+        "jeanClaude": {
+          "name": "Jean-Claude Koffi",
+          "role": "Founder & CEO",
+          "bio": "With over 15 years in Ivorian real estate, Jean-Claude leads our vision of transparent, client-first service."
+        },
+        "aissata": {
+          "name": "Aïssata Diop",
+          "role": "Head of Concierge Services",
+          "bio": "Aïssata ensures every client receives personalized support throughout their property journey."
+        },
+        "moussa": {
+          "name": "Moussa Traoré",
+          "role": "Legal & Compliance Officer",
+          "bio": "Moussa safeguards all transactions with expert legal guidance and regulatory compliance."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Find Your Dream Home?",
+      "subtitle": "Explore our verified listings and experience the Q Homes difference today.",
+      "primaryButton": "Browse Properties",
+      "secondaryButton": "Contact Us"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact Us - Q Homes | Get in Touch",
+      "description": "Have questions? Reach out to our team for expert assistance with your real estate needs."
+    },
+    "hero": {
+      "title": "Get in Touch with Q Homes",
+      "subtitle": "Our team is here to answer your questions and guide you through every step of your real estate journey.",
+      "whatsappButton": "WhatsApp Us",
+      "messageButton": "Send Message",
+      "whatsappMessage": "Hello, I have a question about Q Homes services."
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Fill out the form below and we'll get back to you within 24 hours.",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+225 01 23 45 67 89",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help you?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us more about your inquiry...",
+      "privacyNote": "We respect your privacy. Your information will never be shared.",
+      "submitButton": "Send Message"
+    },
+    "info": {
+      "title": "Contact Information",
+      "subtitle": "Reach us through any of these channels.",
+      "officeTitle": "Our Office",
+      "officeAddress": "Plateau, Abidjan, Côte d'Ivoire",
+      "phoneTitle": "Phone",
+      "phoneNumber": "+225 01 23 45 67 89",
+      "emailTitle": "Email",
+      "emailAddress": "hello@qhomes.ci",
+      "hoursTitle": "Business Hours",
+      "hoursContent": "Mon - Fri: 8:00 AM - 6:00 PM WAT\nSat: 9:00 AM - 2:00 PM\nSun: Closed",
+      "mapTitle": "Find Us on the Map"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Quick answers to common questions about our services.",
+      "q1": "How do I schedule a property viewing?",
+      "a1": "You can schedule a viewing directly through our website by clicking 'Book Viewing' on any property listing, or contact our concierge team via WhatsApp or email.",
+      "q2": "What areas do you serve?",
+      "a2": "We primarily serve Abidjan and surrounding areas, including Plateau, Cocody, Marcory, and emerging neighborhoods. We also assist with properties in Assinie and Grand-Bassam.",
+      "q3": "Do you offer property management services?",
+      "a3": "Yes, we provide comprehensive property management services for landlords, including tenant screening, rent collection, maintenance coordination, and regular property inspections.",
+      "q4": "How does your escrow service work?",
+      "a4": "Our escrow service acts as a neutral third party holding funds during the transaction. Money is only released when all contract conditions are met, ensuring security for both buyers and sellers."
+    },
+    "cta": {
+      "title": "Prefer to Talk Directly?",
+      "subtitle": "Schedule a call with one of our experts to discuss your real estate needs in detail.",
+      "primaryButton": "Schedule a Call",
+      "secondaryButton": "Browse FAQs"
+    }
   }
 }

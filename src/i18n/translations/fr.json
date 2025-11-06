@@ -879,5 +879,128 @@
       "submit": "S'inscrire Maintenant",
       "shareEvent": "Partagez cet événement exclusif"
     }
+  },
+  "about": {
+    "meta": {
+      "title": "À Propos - Q Homes | Votre Partenaire Immobilier de Confiance",
+      "description": "Découvrez la mission et l'équipe de Q Homes"
+    },
+    "hero": {
+      "title": "Votre Partenaire de Confiance dans l'Immobilier Ivoirien",
+      "subtitle": "Nous vous connectons avec des propriétés exceptionnelles et un service sans faille à travers Abidjan et au-delà."
+    },
+    "mission": {
+      "title": "Notre Mission & Vision",
+      "description": "Chez Q Homes, nous croyons que trouver la maison parfaite devrait être transparent, sécurisé et sans stress. Notre mission est de révolutionner l'expérience immobilière en Côte d'Ivoire en fournissant des annonces vérifiées, des transactions protégées par séquestre et des services de conciergerie personnalisés. Nous envisageons un avenir où chaque client — qu'il soit local ou de la diaspora — peut investir et vivre en toute confiance."
+    },
+    "whyChoose": {
+      "title": "Pourquoi Choisir Q Homes?",
+      "subtitle": "Nous allons au-delà des services immobiliers traditionnels pour offrir une valeur et une tranquillité d'esprit inégalées.",
+      "features": {
+        "verifiedListings": {
+          "title": "Annonces 100% Vérifiées",
+          "description": "Chaque propriété est minutieusement vérifiée pour garantir authenticité et qualité."
+        },
+        "escrowProtection": {
+          "title": "Protection par Séquestre",
+          "description": "Transactions sécurisées avec notre service de séquestre de confiance pour votre tranquillité d'esprit."
+        },
+        "conciergeService": {
+          "title": "Conciergerie Dédiée",
+          "description": "De la recherche de propriété au déménagement, notre équipe gère chaque détail pour vous."
+        },
+        "multilingualSupport": {
+          "title": "Support Multilingue",
+          "description": "Assistance fluide en anglais, français et langues locales pour mieux vous servir."
+        }
+      }
+    },
+    "team": {
+      "title": "Rencontrez Notre Équipe",
+      "subtitle": "Des professionnels expérimentés dédiés à rendre votre parcours immobilier fluide.",
+      "members": {
+        "jeanClaude": {
+          "name": "Jean-Claude Koffi",
+          "role": "Fondateur & PDG",
+          "bio": "Avec plus de 15 ans dans l'immobilier ivoirien, Jean-Claude dirige notre vision d'un service transparent et axé sur le client."
+        },
+        "aissata": {
+          "name": "Aïssata Diop",
+          "role": "Responsable des Services de Conciergerie",
+          "bio": "Aïssata garantit que chaque client reçoit un soutien personnalisé tout au long de son parcours immobilier."
+        },
+        "moussa": {
+          "name": "Moussa Traoré",
+          "role": "Responsable Juridique & Conformité",
+          "bio": "Moussa protège toutes les transactions avec des conseils juridiques experts et la conformité réglementaire."
+        }
+      }
+    },
+    "cta": {
+      "title": "Prêt à Trouver la Maison de Vos Rêves?",
+      "subtitle": "Explorez nos annonces vérifiées et découvrez la différence Q Homes dès aujourd'hui.",
+      "primaryButton": "Parcourir les Propriétés",
+      "secondaryButton": "Contactez-Nous"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contactez-Nous - Q Homes | Entrez en Contact",
+      "description": "Vous avez des questions? Contactez notre équipe pour une assistance experte avec vos besoins immobiliers."
+    },
+    "hero": {
+      "title": "Entrez en Contact avec Q Homes",
+      "subtitle": "Notre équipe est là pour répondre à vos questions et vous guider à travers chaque étape de votre parcours immobilier.",
+      "whatsappButton": "WhatsApp",
+      "messageButton": "Envoyer un Message",
+      "whatsappMessage": "Bonjour, j'ai une question sur les services de Q Homes."
+    },
+    "form": {
+      "title": "Envoyez-Nous un Message",
+      "subtitle": "Remplissez le formulaire ci-dessous et nous vous répondrons dans les 24 heures.",
+      "fullName": "Nom Complet",
+      "fullNamePlaceholder": "Jean Dupont",
+      "email": "Adresse Email",
+      "emailPlaceholder": "vous@exemple.com",
+      "phone": "Numéro de Téléphone",
+      "phonePlaceholder": "+225 01 23 45 67 89",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Comment pouvons-nous vous aider?",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-nous de votre demande...",
+      "privacyNote": "Nous respectons votre vie privée. Vos informations ne seront jamais partagées.",
+      "submitButton": "Envoyer le Message"
+    },
+    "info": {
+      "title": "Informations de Contact",
+      "subtitle": "Contactez-nous via l'un de ces canaux.",
+      "officeTitle": "Notre Bureau",
+      "officeAddress": "Plateau, Abidjan, Côte d'Ivoire",
+      "phoneTitle": "Téléphone",
+      "phoneNumber": "+225 01 23 45 67 89",
+      "emailTitle": "Email",
+      "emailAddress": "hello@qhomes.ci",
+      "hoursTitle": "Heures d'Ouverture",
+      "hoursContent": "Lun - Ven: 8h00 - 18h00 WAT\nSam: 9h00 - 14h00\nDim: Fermé",
+      "mapTitle": "Trouvez-Nous sur la Carte"
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "subtitle": "Réponses rapides aux questions courantes sur nos services.",
+      "q1": "Comment puis-je planifier une visite de propriété?",
+      "a1": "Vous pouvez planifier une visite directement sur notre site web en cliquant sur 'Réserver une Visite' sur n'importe quelle annonce de propriété, ou contacter notre équipe de conciergerie via WhatsApp ou email.",
+      "q2": "Quelles zones desservez-vous?",
+      "a2": "Nous desservons principalement Abidjan et les environs, y compris Plateau, Cocody, Marcory et les quartiers émergents. Nous aidons également avec les propriétés à Assinie et Grand-Bassam.",
+      "q3": "Proposez-vous des services de gestion immobilière?",
+      "a3": "Oui, nous fournissons des services complets de gestion immobilière pour les propriétaires, y compris le filtrage des locataires, la collecte des loyers, la coordination de l'entretien et les inspections régulières de propriété.",
+      "q4": "Comment fonctionne votre service de séquestre?",
+      "a4": "Notre service de séquestre agit comme un tiers neutre détenant les fonds pendant la transaction. L'argent n'est libéré que lorsque toutes les conditions du contrat sont remplies, assurant la sécurité pour les acheteurs et les vendeurs."
+    },
+    "cta": {
+      "title": "Préférez Parler Directement?",
+      "subtitle": "Planifiez un appel avec l'un de nos experts pour discuter de vos besoins immobiliers en détail.",
+      "primaryButton": "Planifier un Appel",
+      "secondaryButton": "Parcourir les FAQ"
+    }
   }
 }

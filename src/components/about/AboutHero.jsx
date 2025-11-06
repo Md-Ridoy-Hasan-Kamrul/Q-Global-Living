@@ -30,14 +30,14 @@ const AboutHero = memo(({ title, subtitle }) => {
 
         {/* Content */}
         <div className='relative z-10 flex h-full flex-col items-center justify-center px-4 text-center sm:px-6'>
-          <div className='max-w-4xl space-y-4 sm:space-y-6'>
+          <div className='max-w-4xl space-y-4'>
             <h1
               id='about-hero-title'
-              className='text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl'
+              className='text-[28px] font-black leading-[1.2] tracking-[-0.015em] text-white sm:text-[36px] md:text-[48px] lg:text-[64px]'
             >
               {title}
             </h1>
-            <p className='text-base font-normal leading-relaxed text-gray-200 sm:text-lg md:text-xl lg:text-2xl'>
+            <p className='text-sm font-normal leading-relaxed text-gray-200 sm:text-base md:text-lg'>
               {subtitle}
             </p>
           </div>
