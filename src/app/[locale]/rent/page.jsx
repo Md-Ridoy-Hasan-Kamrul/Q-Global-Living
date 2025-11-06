@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useState, useMemo, useEffect } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { useTranslation } from '@/i18n';
-import RentHero from '@/components/rent/RentHero';
-import RentalFilters from '@/components/rent/RentalFilters';
-import RentalPropertyCard from '@/components/rent/RentalPropertyCard';
-import { PartnerCTA, FinalCTA } from '@/components/rent/RentCTA';
+import { useState, useMemo, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "@/i18n";
+import RentHero from "@/components/rent/RentHero";
+import RentalFilters from "@/components/rent/RentalFilters";
+import RentalPropertyCard from "@/components/rent/RentalPropertyCard";
+import { PartnerCTA, FinalCTA } from "@/components/rent/RentCTA";
 
 /**
  * RentPage Component
@@ -20,185 +20,185 @@ const MOCK_PROPERTIES = [
   {
     id: 1,
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDSV_mXKw_VVOBCsRqP6JuFtM-tFEw5_dgVNeZOPD_fbD7HKWrsJasL9C0-Se93rYXNjNFBtRTNmTS3au64zMsDinmBEO0AGO4zITkBOvA0-grtq41wCo9_UAtSz2HtRHHDTDG1ZxmN4E9vxhr1wi9_jI2QCZUqQAY56jCbZoS9ZFal6P77u5Lh6ZcPlgO4HFsENDevHFLPTsBOA3WwAJjtU82LvTDUm5PYOBB-e5Cda0UPUpRiDfIi10TCzjwiSCIqwPRvr26Y5EA',
-    imageAlt: 'Modern apartment exterior with balcony',
-    location: 'Abidjan, Cocody',
-    title: 'Modern Apartment in Cocody',
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDSV_mXKw_VVOBCsRqP6JuFtM-tFEw5_dgVNeZOPD_fbD7HKWrsJasL9C0-Se93rYXNjNFBtRTNmTS3au64zMsDinmBEO0AGO4zITkBOvA0-grtq41wCo9_UAtSz2HtRHHDTDG1ZxmN4E9vxhr1wi9_jI2QCZUqQAY56jCbZoS9ZFal6P77u5Lh6ZcPlgO4HFsENDevHFLPTsBOA3WwAJjtU82LvTDUm5PYOBB-e5Cda0UPUpRiDfIi10TCzjwiSCIqwPRvr26Y5EA",
+    imageAlt: "Modern apartment exterior with balcony",
+    location: "Abidjan, Cocody",
+    title: "Modern Apartment in Cocody",
     priceXOF: 1500000,
     priceUSD: 2500,
     isVerified: true,
-    duration: 'short-term',
+    duration: "short-term",
     isFurnished: true,
     bedrooms: 2,
     bathrooms: 2,
-    city: 'abidjan',
+    city: "abidjan",
   },
   {
     id: 2,
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAxfLyTLwQhMPFhfmTIwgGw0mgClhtLnLjKjJ8K5d3xcf-DfLIA1BcxgRBMhYILatY9AW8j3BYgHN09EOMshMZTW4B8iqMTOYm1eZkJtMIsS8MHQl0AZhU-FMr6KR1iymlfnGtc32binXcXJa7ONVC6lfOR2kv2AyNW335mdqzHPrSUE1m3zi8iaws5VxyywLpjSfydFhxTqYjGh6jkKq7lJLLQY0Wo-Xy8afbaD7o0jgJf39hdZCLUSGDAmDqrsZcJjlBZFrmME7Q',
-    imageAlt: 'Luxury seaside villa with swimming pool',
-    location: 'Assinie-Mafia',
-    title: 'Seaside Villa in Assinie',
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAxfLyTLwQhMPFhfmTIwgGw0mgClhtLnLjKjJ8K5d3xcf-DfLIA1BcxgRBMhYILatY9AW8j3BYgHN09EOMshMZTW4B8iqMTOYm1eZkJtMIsS8MHQl0AZhU-FMr6KR1iymlfnGtc32binXcXJa7ONVC6lfOR2kv2AyNW335mdqzHPrSUE1m3zi8iaws5VxyywLpjSfydFhxTqYjGh6jkKq7lJLLQY0Wo-Xy8afbaD7o0jgJf39hdZCLUSGDAmDqrsZcJjlBZFrmME7Q",
+    imageAlt: "Luxury seaside villa with swimming pool",
+    location: "Assinie-Mafia",
+    title: "Seaside Villa in Assinie",
     priceXOF: 3000000,
     priceUSD: 5000,
     isVerified: true,
-    duration: 'long-term',
+    duration: "long-term",
     isFurnished: true,
     bedrooms: 4,
     bathrooms: 3,
-    city: 'assinie',
+    city: "assinie",
   },
   {
     id: 3,
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAsaxBScuFqS7z1QQY--r-HDUrNwJ12_OeNQGRHoIChXy8mcFy2t-l9nBX-edtmYBz14QfMi04f6ifkcvJvGdXD37GYrANRHp4fy5v0TConYi95At36Z32hnava3pJp11sfKWUL3ibCW6l4deIqdpJh_jVLWp6vKWgtrsx9MhtTqpLbGPiIHpHct_pRyWtsOObMnzX71Hkh5e9XsktPg5ygsEARhiMRhOIpsaQUNJHhO2thOM4URis69ipdzRRKZsSHEi5qC2YXM9Y',
-    imageAlt: 'Chic loft apartment with high ceilings',
-    location: 'Abidjan, Plateau',
-    title: 'Chic Loft in Plateau',
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAsaxBScuFqS7z1QQY--r-HDUrNwJ12_OeNQGRHoIChXy8mcFy2t-l9nBX-edtmYBz14QfMi04f6ifkcvJvGdXD37GYrANRHp4fy5v0TConYi95At36Z32hnava3pJp11sfKWUL3ibCW6l4deIqdpJh_jVLWp6vKWgtrsx9MhtTqpLbGPiIHpHct_pRyWtsOObMnzX71Hkh5e9XsktPg5ygsEARhiMRhOIpsaQUNJHhO2thOM4URis69ipdzRRKZsSHEi5qC2YXM9Y",
+    imageAlt: "Chic loft apartment with high ceilings",
+    location: "Abidjan, Plateau",
+    title: "Chic Loft in Plateau",
     priceXOF: 2000000,
     priceUSD: 3300,
     isVerified: false,
-    duration: 'long-term',
+    duration: "long-term",
     isFurnished: false,
     bedrooms: 3,
     bathrooms: 2,
-    city: 'abidjan',
+    city: "abidjan",
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',
-    imageAlt: 'Elegant apartment with modern finishes',
-    location: 'Yamoussoukro',
-    title: 'Elegant Residence in Yamoussoukro',
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+    imageAlt: "Elegant apartment with modern finishes",
+    location: "Yamoussoukro",
+    title: "Elegant Residence in Yamoussoukro",
     priceXOF: 1200000,
     priceUSD: 2000,
     isVerified: true,
-    duration: 'short-term',
+    duration: "short-term",
     isFurnished: true,
     bedrooms: 3,
     bathrooms: 2,
-    city: 'yamoussoukro',
+    city: "yamoussoukro",
   },
   {
     id: 5,
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800',
-    imageAlt: 'Spacious family home with garden',
-    location: 'Abidjan, Marcory',
-    title: 'Family Home in Marcory',
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800",
+    imageAlt: "Spacious family home with garden",
+    location: "Abidjan, Marcory",
+    title: "Family Home in Marcory",
     priceXOF: 1800000,
     priceUSD: 3000,
     isVerified: true,
-    duration: 'long-term',
+    duration: "long-term",
     isFurnished: false,
     bedrooms: 4,
     bathrooms: 3,
-    city: 'abidjan',
+    city: "abidjan",
   },
   {
     id: 6,
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800',
-    imageAlt: 'Contemporary studio apartment',
-    location: 'Abidjan, Zone 4',
-    title: 'Contemporary Studio in Zone 4',
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+    imageAlt: "Contemporary studio apartment",
+    location: "Abidjan, Zone 4",
+    title: "Contemporary Studio in Zone 4",
     priceXOF: 800000,
     priceUSD: 1300,
     isVerified: false,
-    duration: 'short-term',
+    duration: "short-term",
     isFurnished: true,
     bedrooms: 1,
     bathrooms: 1,
-    city: 'abidjan',
+    city: "abidjan",
   },
   {
     id: 7,
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800',
-    imageAlt: 'Luxury penthouse with city views',
-    location: 'Abidjan, Cocody',
-    title: 'Luxury Penthouse in Cocody',
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800",
+    imageAlt: "Luxury penthouse with city views",
+    location: "Abidjan, Cocody",
+    title: "Luxury Penthouse in Cocody",
     priceXOF: 4500000,
     priceUSD: 7500,
     isVerified: true,
-    duration: 'long-term',
+    duration: "long-term",
     isFurnished: true,
     bedrooms: 5,
     bathrooms: 4,
-    city: 'abidjan',
+    city: "abidjan",
   },
   {
     id: 8,
-    image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800',
-    imageAlt: 'Cozy apartment near beach',
-    location: 'Assinie-Mafia',
-    title: 'Beachfront Apartment in Assinie',
+    image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800",
+    imageAlt: "Cozy apartment near beach",
+    location: "Assinie-Mafia",
+    title: "Beachfront Apartment in Assinie",
     priceXOF: 2500000,
     priceUSD: 4200,
     isVerified: true,
-    duration: 'short-term',
+    duration: "short-term",
     isFurnished: true,
     bedrooms: 3,
     bathrooms: 2,
-    city: 'assinie',
+    city: "assinie",
   },
   {
     id: 9,
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800',
-    imageAlt: 'Modern villa with garden',
-    location: 'Yamoussoukro',
-    title: 'Garden Villa in Yamoussoukro',
+    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800",
+    imageAlt: "Modern villa with garden",
+    location: "Yamoussoukro",
+    title: "Garden Villa in Yamoussoukro",
     priceXOF: 1600000,
     priceUSD: 2700,
     isVerified: true,
-    duration: 'long-term',
+    duration: "long-term",
     isFurnished: false,
     bedrooms: 4,
     bathrooms: 3,
-    city: 'yamoussoukro',
+    city: "yamoussoukro",
   },
   {
     id: 10,
-    image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800',
-    imageAlt: 'Spacious townhouse',
-    location: 'Abidjan, Marcory',
-    title: 'Modern Townhouse in Marcory',
+    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800",
+    imageAlt: "Spacious townhouse",
+    location: "Abidjan, Marcory",
+    title: "Modern Townhouse in Marcory",
     priceXOF: 2200000,
     priceUSD: 3700,
     isVerified: true,
-    duration: 'long-term',
+    duration: "long-term",
     isFurnished: true,
     bedrooms: 4,
     bathrooms: 3,
-    city: 'abidjan',
+    city: "abidjan",
   },
   {
     id: 11,
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800',
-    imageAlt: 'Charming bungalow',
-    location: 'Abidjan, Riviera',
-    title: 'Charming Bungalow in Riviera',
+    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800",
+    imageAlt: "Charming bungalow",
+    location: "Abidjan, Riviera",
+    title: "Charming Bungalow in Riviera",
     priceXOF: 1400000,
     priceUSD: 2300,
     isVerified: false,
-    duration: 'short-term',
+    duration: "short-term",
     isFurnished: true,
     bedrooms: 2,
     bathrooms: 2,
-    city: 'abidjan',
+    city: "abidjan",
   },
   {
     id: 12,
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800',
-    imageAlt: 'Executive apartment',
-    location: 'Abidjan, Plateau',
-    title: 'Executive Suite in Plateau',
+    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800",
+    imageAlt: "Executive apartment",
+    location: "Abidjan, Plateau",
+    title: "Executive Suite in Plateau",
     priceXOF: 3500000,
     priceUSD: 5800,
     isVerified: true,
-    duration: 'long-term',
+    duration: "long-term",
     isFurnished: true,
     bedrooms: 3,
     bathrooms: 3,
-    city: 'abidjan',
+    city: "abidjan",
   },
 ];
 
@@ -206,40 +206,40 @@ export default function RentPage() {
   const { locale } = useLanguage();
   const { t } = useTranslation(locale);
   const [filters, setFilters] = useState({
-    city: 'abidjan',
-    bedrooms: 'any',
-    duration: 'any',
+    city: "abidjan",
+    bedrooms: "any",
+    duration: "any",
     priceRange: 50,
     verifiedOnly: true,
   });
-  const [sortBy, setSortBy] = useState('newest');
+  const [sortBy, setSortBy] = useState("newest");
   const [displayCount, setDisplayCount] = useState(3);
   const [sortDropdownOpen, setSortDropdownOpen] = useState(false);
 
   // Inject structured data for SEO
   useEffect(() => {
     const structuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
+      "@context": "https://schema.org",
+      "@type": "WebPage",
       name:
-        locale === 'en'
+        locale === "en"
           ? "Rent Property in Côte d'Ivoire"
           : "Louer une Propriété en Côte d'Ivoire",
       description:
-        locale === 'en'
+        locale === "en"
           ? "Find verified rental properties in Côte d'Ivoire"
           : "Trouvez des propriétés de location vérifiées en Côte d'Ivoire",
       url: `https://qhomes.ci/${locale}/rent`,
-      inLanguage: locale === 'en' ? 'en-US' : 'fr-FR',
+      inLanguage: locale === "en" ? "en-US" : "fr-FR",
     };
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
     script.text = JSON.stringify(structuredData);
-    script.id = 'rent-page-structured-data';
+    script.id = "rent-page-structured-data";
 
     // Remove existing script if present
-    const existing = document.getElementById('rent-page-structured-data');
+    const existing = document.getElementById("rent-page-structured-data");
     if (existing) {
       existing.remove();
     }
@@ -248,7 +248,7 @@ export default function RentPage() {
 
     return () => {
       const scriptToRemove = document.getElementById(
-        'rent-page-structured-data'
+        "rent-page-structured-data"
       );
       if (scriptToRemove) {
         scriptToRemove.remove();
@@ -261,13 +261,13 @@ export default function RentPage() {
     let filtered = [...MOCK_PROPERTIES];
 
     // Apply city filter
-    if (filters.city !== 'all') {
+    if (filters.city !== "all") {
       filtered = filtered.filter((property) => property.city === filters.city);
     }
 
     // Apply bedrooms filter
-    if (filters.bedrooms !== 'any') {
-      if (filters.bedrooms === '3+') {
+    if (filters.bedrooms !== "any") {
+      if (filters.bedrooms === "3+") {
         filtered = filtered.filter((property) => property.bedrooms >= 3);
       } else {
         filtered = filtered.filter(
@@ -277,7 +277,7 @@ export default function RentPage() {
     }
 
     // Apply duration filter
-    if (filters.duration !== 'any') {
+    if (filters.duration !== "any") {
       filtered = filtered.filter(
         (property) => property.duration === filters.duration
       );
@@ -290,19 +290,19 @@ export default function RentPage() {
 
     // Apply sorting
     switch (sortBy) {
-      case 'priceLow':
+      case "priceLow":
         filtered.sort((a, b) => a.priceXOF - b.priceXOF);
         break;
-      case 'priceHigh':
+      case "priceHigh":
         filtered.sort((a, b) => b.priceXOF - a.priceXOF);
         break;
-      case 'bedrooms':
+      case "bedrooms":
         filtered.sort((a, b) => b.bedrooms - a.bedrooms);
         break;
-      case 'furnished':
+      case "furnished":
         filtered = filtered.filter((property) => property.isFurnished);
         break;
-      case 'unfurnished':
+      case "unfurnished":
         filtered = filtered.filter((property) => !property.isFurnished);
         break;
       default:
@@ -337,17 +337,17 @@ export default function RentPage() {
   const hasMore = displayCount < filteredAndSortedProperties.length;
 
   return (
-    <main className='w-full'>
-      <div className='mx-auto max-w-7xl'>
+    <main className="w-full">
+      <div className="mx-auto max-w-7xl">
         {/* Hero Section */}
-        <section className='w-full px-4 sm:px-6 lg:px-8 py-8'>
+        <section className="w-full px-4 sm:px-6 lg:px-8 py-8">
           <RentHero />
         </section>
 
         {/* Filters Section */}
         <section
-          className='w-full px-4 sm:px-6 lg:px-8 pb-10'
-          aria-label='Property filters'
+          className="w-full px-4 sm:px-6 lg:px-8 pb-10"
+          aria-label="Property filters"
         >
           <RentalFilters
             onFilterChange={handleFilterChange}
@@ -357,64 +357,64 @@ export default function RentPage() {
 
         {/* Listings Section */}
         <section
-          className='w-full px-4 sm:px-6 lg:px-8 pb-10'
-          aria-label='Rental property listings'
+          className="w-full px-4 sm:px-6 lg:px-8 pb-10"
+          aria-label="Rental property listings"
         >
           {/* Header with Sort */}
-          <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6'>
-            <h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
-              {t('rent.listings.title')}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+              {t("rent.listings.title")}
             </h2>
-            <div className='flex items-center gap-3'>
+            <div className="flex items-center gap-3">
               <label
-                htmlFor='sort-by'
-                className='text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap'
+                htmlFor="sort-by"
+                className="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap"
               >
-                {t('rent.listings.sortBy')}
+                {t("rent.listings.sortBy")}
               </label>
-              <div className='relative'>
+              <div className="relative">
                 <select
-                  id='sort-by'
+                  id="sort-by"
                   value={sortBy}
                   onChange={handleSortChange}
                   onFocus={() => setSortDropdownOpen(true)}
                   onBlur={() => setSortDropdownOpen(false)}
-                  className='appearance-none rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-card-dark shadow-sm focus:border-primary focus:ring-2 focus:ring-primary text-sm pl-4 pr-10 py-2 cursor-pointer min-w-[180px]'
-                  aria-label='Sort properties'
+                  className="appearance-none rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-card-dark shadow-sm focus:border-primary focus:ring-2 focus:ring-primary text-sm pl-4 pr-10 py-2 cursor-pointer min-w-[180px]"
+                  aria-label="Sort properties"
                 >
-                  <option value='newest'>
-                    {t('rent.listings.sortOptions.newest')}
+                  <option value="newest">
+                    {t("rent.listings.sortOptions.newest")}
                   </option>
-                  <option value='priceLow'>
-                    {t('rent.listings.sortOptions.priceLow')}
+                  <option value="priceLow">
+                    {t("rent.listings.sortOptions.priceLow")}
                   </option>
-                  <option value='priceHigh'>
-                    {t('rent.listings.sortOptions.priceHigh')}
+                  <option value="priceHigh">
+                    {t("rent.listings.sortOptions.priceHigh")}
                   </option>
-                  <option value='bedrooms'>
-                    {t('rent.listings.sortOptions.bedrooms')}
+                  <option value="bedrooms">
+                    {t("rent.listings.sortOptions.bedrooms")}
                   </option>
-                  <option value='furnished'>
-                    {t('rent.listings.sortOptions.furnished')}
+                  <option value="furnished">
+                    {t("rent.listings.sortOptions.furnished")}
                   </option>
-                  <option value='unfurnished'>
-                    {t('rent.listings.sortOptions.unfurnished')}
+                  <option value="unfurnished">
+                    {t("rent.listings.sortOptions.unfurnished")}
                   </option>
                 </select>
-                <div className='absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none'>
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
                   <svg
                     className={`w-4 h-4 text-gray-600 dark:text-gray-400 transition-transform duration-200 ${
-                      sortDropdownOpen ? 'rotate-180' : ''
+                      sortDropdownOpen ? "rotate-180" : ""
                     }`}
-                    fill='none'
-                    stroke='currentColor'
-                    viewBox='0 0 24 24'
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
                     <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       strokeWidth={2}
-                      d='M19 9l-7 7-7-7'
+                      d="M19 9l-7 7-7-7"
                     />
                   </svg>
                 </div>
@@ -425,7 +425,7 @@ export default function RentPage() {
           {/* Property Grid */}
           {displayedProperties.length > 0 ? (
             <>
-              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {displayedProperties.map((property) => (
                   <RentalPropertyCard key={property.id} property={property} />
                 ))}
@@ -433,47 +433,47 @@ export default function RentPage() {
 
               {/* Load More Button */}
               {hasMore && (
-                <div className='mt-10 text-center'>
+                <div className="mt-10 text-center">
                   <button
                     onClick={handleLoadMore}
-                    className='bg-[#D4AF37] hover:bg-[#B8941F] text-black font-semibold text-base py-3 px-10 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 shadow-md'
-                    aria-label='Load more properties'
+                    className="bg-[#D4AF37] hover:bg-[#B8941F] text-black font-semibold text-base py-3 px-10 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 shadow-md"
+                    aria-label="Load more properties"
                   >
-                    {t('rent.listings.loadMore')}
+                    {t("rent.listings.loadMore")}
                   </button>
                 </div>
               )}
             </>
           ) : (
-            <div className='text-center py-16'>
+            <div className="text-center py-16">
               <svg
-                className='mx-auto h-16 w-16 text-gray-400'
-                fill='none'
-                viewBox='0 0 24 24'
-                stroke='currentColor'
-                aria-hidden='true'
+                className="mx-auto h-16 w-16 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
               >
                 <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   strokeWidth={2}
-                  d='M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
                 />
               </svg>
-              <h3 className='mt-4 text-lg font-medium text-gray-900 dark:text-white'>
-                {t('rent.listings.noResults')}
+              <h3 className="mt-4 text-lg font-medium text-gray-900 dark:text-white">
+                {t("rent.listings.noResults")}
               </h3>
             </div>
           )}
         </section>
 
         {/* Partner CTA Section */}
-        <section className='w-full px-4 sm:px-6 lg:px-8 pb-10'>
+        <section className="w-full px-4 sm:px-6 lg:px-8 pb-10">
           <PartnerCTA />
         </section>
 
         {/* Final CTA Section */}
-        <section className='w-full px-4 sm:px-6 lg:px-8 pb-10'>
+        <section className="w-full px-4 sm:px-6 lg:px-8 pb-10">
           <FinalCTA />
         </section>
       </div>
