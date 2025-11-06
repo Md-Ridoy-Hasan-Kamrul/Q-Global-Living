@@ -828,5 +828,56 @@
       "subtitle": "Showcase your project to a curated audience of local and international buyers. Partner with Q Homes to gain unparalleled visibility and trust.",
       "button": "List Your Project"
     }
+  },
+  "event": {
+    "meta": {
+      "title": "Exclusive Webinar: Investing in Abidjan's Real Estate Market | Q Homes",
+      "description": "Join our expert panel to uncover the lucrative opportunities in Côte d'Ivoire's thriving property market. Learn key strategies for successful investment."
+    },
+    "hero": {
+      "title": "Exclusive Webinar: Investing in Abidjan's Real Estate Market",
+      "subtitle": "Join our expert panel to uncover the lucrative opportunities in Côte d'Ivoire's thriving property market. Learn key strategies for successful investment and get your questions answered live.",
+      "cta": "Confirm Your Spot"
+    },
+    "countdown": {
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds"
+    },
+    "about": {
+      "title": "About The Event",
+      "description": "This exclusive webinar is designed for savvy investors looking to capitalize on the dynamic and rapidly growing real estate market in Abidjan. Whether you are a seasoned investor or new to the Ivorian market, our panel of experts will provide you with invaluable insights, data-driven analysis, and actionable strategies to maximize your returns and navigate the local landscape with confidence.",
+      "dateTimeLabel": "Date & Time",
+      "dateTime": "October 26, 2026 at 7:00 PM GMT",
+      "locationLabel": "Location",
+      "location": "Live on Zoom"
+    },
+    "learning": {
+      "title": "What You'll Learn",
+      "point1": "Market analysis: Key growth drivers in Abidjan's property sector.",
+      "point2": "Investment hotspots: Identifying the most promising neighborhoods.",
+      "point3": "Legal framework: Navigating property acquisition and ownership laws.",
+      "point4": "Financing options: Securing local and international funding."
+    },
+    "speakers": {
+      "title": "Meet The Speakers",
+      "speaker1Name": "Jean-Luc Bamba",
+      "speaker1Role": "Real Estate Analyst",
+      "speaker2Name": "Aminata Koné",
+      "speaker2Role": "Investment Strategist"
+    },
+    "registration": {
+      "title": "Save Your Seat",
+      "subtitle": "Register for free to get the access link.",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "phone": "Phone Number (Optional)",
+      "phonePlaceholder": "+1 (555) 123-4567",
+      "submit": "Register Now",
+      "shareEvent": "Share this exclusive event"
+    }
   }
 }

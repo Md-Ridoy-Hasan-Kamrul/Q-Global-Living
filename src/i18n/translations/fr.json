@@ -828,5 +828,56 @@
       "subtitle": "Présentez votre projet à un public sélectionné d'acheteurs locaux et internationaux. Associez-vous à Q Homes pour gagner en visibilité et en confiance sans précédent.",
       "button": "Listez Votre Projet"
     }
+  },
+  "event": {
+    "meta": {
+      "title": "Webinaire Exclusif: Investir dans le Marché Immobilier d'Abidjan | Q Homes",
+      "description": "Rejoignez notre panel d'experts pour découvrir les opportunités lucratives dans le marché immobilier florissant de la Côte d'Ivoire. Apprenez les stratégies clés pour un investissement réussi."
+    },
+    "hero": {
+      "title": "Webinaire Exclusif: Investir dans le Marché Immobilier d'Abidjan",
+      "subtitle": "Rejoignez notre panel d'experts pour découvrir les opportunités lucratives dans le marché immobilier florissant de la Côte d'Ivoire. Apprenez les stratégies clés pour un investissement réussi et obtenez des réponses à vos questions en direct.",
+      "cta": "Confirmez Votre Place"
+    },
+    "countdown": {
+      "days": "Jours",
+      "hours": "Heures",
+      "minutes": "Minutes",
+      "seconds": "Secondes"
+    },
+    "about": {
+      "title": "À Propos de l'Événement",
+      "description": "Ce webinaire exclusif est conçu pour les investisseurs avisés cherchant à capitaliser sur le marché immobilier dynamique et en pleine croissance à Abidjan. Que vous soyez un investisseur chevronné ou nouveau sur le marché ivoirien, notre panel d'experts vous fournira des informations inestimables, des analyses basées sur les données et des stratégies exploitables pour maximiser vos rendements et naviguer dans le paysage local en toute confiance.",
+      "dateTimeLabel": "Date & Heure",
+      "dateTime": "26 Octobre 2026 à 19h00 GMT",
+      "locationLabel": "Lieu",
+      "location": "En Direct sur Zoom"
+    },
+    "learning": {
+      "title": "Ce Que Vous Apprendrez",
+      "point1": "Analyse du marché: Principaux moteurs de croissance du secteur immobilier d'Abidjan.",
+      "point2": "Points chauds d'investissement: Identifier les quartiers les plus prometteurs.",
+      "point3": "Cadre juridique: Naviguer dans les lois d'acquisition et de propriété immobilière.",
+      "point4": "Options de financement: Sécuriser un financement local et international."
+    },
+    "speakers": {
+      "title": "Rencontrez les Intervenants",
+      "speaker1Name": "Jean-Luc Bamba",
+      "speaker1Role": "Analyste Immobilier",
+      "speaker2Name": "Aminata Koné",
+      "speaker2Role": "Stratège en Investissement"
+    },
+    "registration": {
+      "title": "Réservez Votre Place",
+      "subtitle": "Inscrivez-vous gratuitement pour obtenir le lien d'accès.",
+      "fullName": "Nom Complet",
+      "fullNamePlaceholder": "Entrez votre nom complet",
+      "email": "Adresse Email",
+      "emailPlaceholder": "vous@exemple.com",
+      "phone": "Numéro de Téléphone (Optionnel)",
+      "phonePlaceholder": "+225 07 12 34 56 78",
+      "submit": "S'inscrire Maintenant",
+      "shareEvent": "Partagez cet événement exclusif"
+    }
   }
 }

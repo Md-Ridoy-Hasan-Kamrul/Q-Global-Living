@@ -99,7 +99,7 @@ export default function Header({ locale }) {
             Sign In
           </Link>
           <Link
-            href={`/${locale}/sell`}
+            href={`/${locale}/event`}
             className='flex items-center justify-center h-10 px-4 rounded-lg bg-primary text-sm font-semibold text-white transition-all hover:bg-primary/90 hover:shadow-md whitespace-nowrap'
           >
             {t('nav.listYourProperty')}
@@ -151,7 +151,7 @@ export default function Header({ locale }) {
                 Sign In
               </Link>
               <Link
-                href={`/${locale}/sell`}
+                href={`/${locale}/event`}
                 onClick={() => setMobileMenuOpen(false)}
                 className='flex items-center justify-center w-full h-12 px-4 rounded-lg bg-primary text-base font-semibold text-white hover:bg-primary/90 transition-colors'
               >
