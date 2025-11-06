@@ -12,7 +12,7 @@ import { getCollections, getTestimonials } from '../lib/data';
 export default async function HomePage({ params }) {
   const { locale } = await params;
 
-  // সার্ভার কম্পোনেন্টে ডেটা ফেচ করা (বা mock data লোড করা)
+  // fetch data from mock functions
   const collections = getCollections();
   const testimonials = getTestimonials();
 

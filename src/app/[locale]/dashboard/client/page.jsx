@@ -1,27 +1,29 @@
+
+import PersonalDetailsForm from "../../../../components/dashboard/client/PersonalDetailsForm";
+import ChangePasswordForm from "../../../../components/dashboard/client/ChangePasswordForm";
+
 export const metadata = {
   title: 'Profile Details - Client Dashboard',
   description: 'View and manage your profile',
 };
-
 export default function ClientDashboardPage() {
+  
   return (
-    <div className='space-y-6'>
-      <div className='rounded-lg bg-white p-8 shadow-sm'>
-        <h2 className='mb-4 text-3xl font-bold text-gray-900'>Hello Client</h2>
-        <p className='text-gray-600'>
-          Welcome to your Q Homes dashboard. Manage your properties and profile
-          here.
+    <div className="space-y-6  px-8 py-2">
+      {/* Page header */}
+      <header className="rounded-lg ">
+        <h1 className="text-4xl font-bold text-slate-900">Profile Information</h1>
+        <p className="mt-3 text-slate-500 text-lg max-w-2xl">
+          View and edit your personal details, contact information, and password.
         </p>
-      </div>
+      </header>
+      {/* Components: personal details and change password (client-side) */}
+      <div className="space-y-6">
+        {/* Personal details client component */}
+        <PersonalDetailsForm />
 
-      {/* Profile Overview */}
-      <div className='rounded-lg bg-white p-6 shadow-sm'>
-        <h3 className='mb-4 text-lg font-semibold text-gray-900'>
-          Profile Details
-        </h3>
-        <div className='text-center py-12 text-gray-500'>
-          Profile details interface will be displayed here.
-        </div>
+        {/* Change password client component */}
+        <ChangePasswordForm />
       </div>
     </div>
   );

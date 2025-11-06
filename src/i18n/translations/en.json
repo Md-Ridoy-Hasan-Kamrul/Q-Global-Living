@@ -65,6 +65,61 @@
         "loginFailed": "Login failed",
         "socialLoginFailed": "Failed to sign in with {provider}. Please try again."
       }
+    },
+    "register": {
+      "title": "Create an Account",
+      "subtitle": "Sign up to start your journey with Q Homes.",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Enter your full name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Create a password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Re-enter your password",
+      "registerButton": "Register",
+      "registering": "Registering...",
+      "backToLogin": "Back to Login",
+      "orDivider": "OR",
+      "continueWithGoogle": "Continue with Google",
+      "continueWithFacebook": "Continue with Facebook",
+      "haveAccount": "Already have an account?",
+      "loginNow": "Login Now",
+      "backToHome": "Back to Home",
+      "check1": "I agree to the Terms &amp; Conditions",
+      "check2": " have read the Privacy Policy",
+      "createAccount": "Create Account",
+
+      "errors": {
+        "fullNameRequired": "Full name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "passwordRequired": "Password is required",
+        "confirmPasswordRequired": "Please confirm your password",
+        "passwordMinLength": "Password must be at least 6 characters",
+        "passwordsMismatch": "Passwords do not match",
+        "registrationFailed": "Registration failed. Please try again."
+      }
+    },
+    "forgotPassword": {
+      "title": "Forgot Your Password?",
+      "subtitle": "Enter your email to reset your password.",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "submitButton": "Submit",
+      "submitting": "Submitting...",
+      "backToLogin": "Back to Login",
+      "backToHome": "Back to Home",
+      "checkEmail": "Check Your Email",
+      "checkEmailInstructions": "We've sent password reset instructions to {{email}}. Please check your inbox and spam folder.",
+      "returnToLogin": "Return to Login",
+      "didNotReceiveEmail": "Didn't receive the email?",
+      "resend": "Resend",
+      "errors": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "resetFailed": "Failed to send reset link. Please try again."
+      }
     }
   },
   "searchBar": {

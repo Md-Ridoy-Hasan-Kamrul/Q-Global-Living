@@ -1,8 +1,8 @@
-// এটি একটি Server Component, কারণ কোনো state নেই।
+
 export default function WhatsAppButton() {
   return (
     <a
-      href='https' // আপনার WhatsApp লিঙ্ক এখানে দিন
+      href='https'
       target='_blank'
       rel='noopener noreferrer'
       className='fixed bottom-5 right-5 z-40 flex h-14 w-14 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110'

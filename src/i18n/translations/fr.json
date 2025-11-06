@@ -65,6 +65,60 @@
         "loginFailed": "Échec de la connexion",
         "socialLoginFailed": "Échec de la connexion avec {provider}. Veuillez réessayer."
       }
+    },
+    "register": {
+      "title": "Créer un Compte",
+      "subtitle": "Inscrivez-vous pour commencer votre parcours immobilier avec Q Homes.",
+      "fullName": "Nom Complet",
+      "fullNamePlaceholder": "Entrez votre nom complet",
+      "email": "Email",
+      "emailPlaceholder": "Entrez votre email",
+      "password": "Mot de Passe",
+      "passwordPlaceholder": "Créez un mot de passe",
+      "confirmPassword": "Confirmer le Mot de Passe",
+      "confirmPasswordPlaceholder": "Confirmez votre mot de passe",
+      "registerButton": "S'inscrire",
+      "registering": "Inscription en cours...",
+      "orDivider": "OU",
+      "continueWithGoogle": "Continuer avec Google",
+      "continueWithFacebook": "Continuer avec Facebook",
+      "haveAccount": "Vous avez déjà un compte?",
+      "loginNow": "Connectez-vous Maintenant",
+      "backToHome": "Retour à l'Accueil",
+      "check1": "J'ai lu et j'accepte les Conditions d'Utilisation",
+      "check2": "Je souhaite recevoir des mises à jour et des offres spéciales par email",
+      "createAccount": "Créer un Compte",
+      "errors": {
+        "fullNameRequired": "Le nom complet est requis",
+        "emailRequired": "L'email est requis",
+        "emailInvalid": "L'email n'est pas valide",
+        "passwordRequired": "Le mot de passe est requis",
+        "passwordMinLength": "Le mot de passe doit contenir au moins 6 caractères",
+        "confirmPasswordRequired": "La confirmation du mot de passe est requise",
+        "passwordsMismatch": "Les mots de passe ne correspondent pas",
+        "registrationFailed": "Échec de l'inscription",
+        "socialLoginFailed": "Échec de la connexion avec {provider}. Veuillez réessayer."
+      }
+    },
+    "forgotPassword": {
+      "title": "Mot de passe oublié ?",
+      "subtitle": "Entrez votre e-mail pour réinitialiser votre mot de passe.",
+      "email": "E-mail",
+      "emailPlaceholder": "Entrez votre e-mail",
+      "submitButton": "Soumettre",
+      "submitting": "Soumission...",
+      "backToLogin": "Retour à la connexion",
+      "backToHome": "Retour à l'accueil",
+      "checkEmail": "Vérifiez votre e-mail",
+      "checkEmailInstructions": "Nous avons envoyé des instructions de réinitialisation du mot de passe à {email}. Veuillez vérifier votre boîte de réception et votre dossier spam.",
+      "returnToLogin": "Retourner à la connexion",
+      "didNotReceiveEmail": "Vous n'avez pas reçu l'e-mail?",
+      "resend": "Renvoyer",
+      "errors": {
+        "emailRequired": "L'e-mail est requis",
+        "emailInvalid": "Veuillez entrer une adresse e-mail valide",
+        "resetFailed": "Échec de l'envoi du lien de réinitialisation. Veuillez réessayer."
+      }
     }
   },
   "searchBar": {
