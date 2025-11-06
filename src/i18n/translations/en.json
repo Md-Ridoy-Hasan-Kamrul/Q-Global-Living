@@ -186,7 +186,7 @@
       "mediaLibrary": "Media Library",
       "auditLogsLink": "Audit Logs",
       "seoManagement": "SEO Management",
-      "properties": "Properties Management",
+      "propertiesLink": "Properties Management",
       "partners": "Partner Management",
       "conciergeRequests": "Concierge Requests",
       "eventManagement": "Event Management",
@@ -372,6 +372,47 @@
           "to": "to",
           "of": "of",
           "results": "results"
+        }
+      },
+      "properties": {
+        "title": "Properties Management",
+        "subtitle": "Manage and monitor all property listings",
+        "addProperty": "Add Property",
+        "searchPlaceholder": "Search properties...",
+        "allStatus": "All Status",
+        "stats": {
+          "totalListings": "Total Listings",
+          "active": "Active",
+          "pending": "Pending Approval",
+          "inactive": "Inactive"
+        },
+        "filters": {
+          "status": "Status",
+          "type": "Property Type",
+          "allTypes": "All Types"
+        },
+        "table": {
+          "property": "Property",
+          "location": "Location",
+          "price": "Price",
+          "status": "Status",
+          "views": "Views",
+          "actions": "Actions",
+          "beds": "beds",
+          "view": "View",
+          "edit": "Edit",
+          "delete": "Delete"
+        },
+        "status": {
+          "active": "Active",
+          "pending": "Pending",
+          "inactive": "Inactive"
+        },
+        "types": {
+          "villa": "Villa",
+          "apartment": "Apartment",
+          "commercial": "Commercial",
+          "house": "House"
         }
       }
     },

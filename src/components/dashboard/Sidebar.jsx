@@ -67,7 +67,7 @@ const navigationConfig = {
     //   icon: Search,
     // },
     {
-      key: 'dashboard.admin.properties',
+      key: 'dashboard.admin.propertiesLink',
       href: '/dashboard/admin/properties',
       icon: Building2,
     },

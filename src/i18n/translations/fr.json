@@ -186,7 +186,7 @@
       "mediaLibrary": "Bibliothèque Média",
       "auditLogsLink": "Journaux d'Audit",
       "seoManagement": "Gestion SEO",
-      "properties": "Gestion des Propriétés",
+      "propertiesLink": "Gestion des Propriétés",
       "partners": "Gestion des Partenaires",
       "conciergeRequests": "Demandes de Conciergerie",
       "eventManagement": "Gestion des Événements",
@@ -372,6 +372,47 @@
           "to": "à",
           "of": "sur",
           "results": "résultats"
+        }
+      },
+      "properties": {
+        "title": "Gestion des Propriétés",
+        "subtitle": "Gérer et surveiller toutes les annonces immobilières",
+        "addProperty": "Ajouter une Propriété",
+        "searchPlaceholder": "Rechercher des propriétés...",
+        "allStatus": "Tous les Statuts",
+        "stats": {
+          "totalListings": "Total des Annonces",
+          "active": "Actif",
+          "pending": "En Attente d'Approbation",
+          "inactive": "Inactif"
+        },
+        "filters": {
+          "status": "Statut",
+          "type": "Type de Propriété",
+          "allTypes": "Tous les Types"
+        },
+        "table": {
+          "property": "Propriété",
+          "location": "Emplacement",
+          "price": "Prix",
+          "status": "Statut",
+          "views": "Vues",
+          "actions": "Actions",
+          "beds": "chambres",
+          "view": "Voir",
+          "edit": "Modifier",
+          "delete": "Supprimer"
+        },
+        "status": {
+          "active": "Actif",
+          "pending": "En Attente",
+          "inactive": "Inactif"
+        },
+        "types": {
+          "villa": "Villa",
+          "apartment": "Appartement",
+          "commercial": "Commercial",
+          "house": "Maison"
         }
       }
     },
