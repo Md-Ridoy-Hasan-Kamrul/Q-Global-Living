@@ -29,7 +29,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
             className={`flex w-10 h-10 items-center justify-center rounded-full transition-colors
               ${
                 page === currentPage
-                  ? "font-bold text-white dark:text-primary bg-primary dark:bg-accent-gold"
+                  ? "font-bold text-white dark:text-white bg-primary dark:bg-accent-gold"
                   : "font-normal text-black dark:text-primary hover:bg-primary/10 dark:hover:bg-primary/30"
               }`}
             onClick={() => onPageChange(page)}

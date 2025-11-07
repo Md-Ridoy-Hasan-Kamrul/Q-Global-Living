@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React from "react";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { CiVideoOn } from "react-icons/ci";
 
 export default function MainContent({ learnData, speakers }) {
   return (
@@ -20,9 +22,7 @@ export default function MainContent({ learnData, speakers }) {
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 border-t border-solid border-black/10 dark:border-white/10">
             <div className="flex items-start gap-3 py-4 pr-2 border-b border-solid border-black/10 dark:border-white/10 sm:border-b-0">
-              <span className="material-symbols-outlined text-primary mt-1">
-                calendar_month
-              </span>
+              <FaRegCalendarAlt className="material-symbols-outlined text-primary mt-1" />
               <div className="flex flex-col gap-1">
                 <p className="text-text-light/70 dark:text-text-dark/70 text-sm font-normal leading-normal">
                   Date &amp; Time
@@ -33,9 +33,7 @@ export default function MainContent({ learnData, speakers }) {
               </div>
             </div>
             <div className="flex items-start gap-3 py-4 sm:pl-2">
-              <span className="material-symbols-outlined text-primary mt-1">
-                videocam
-              </span>
+              <CiVideoOn className="material-symbols-outlined text-primary mt-1" />
               <div className="flex flex-col gap-1">
                 <p className="text-text-light/70 dark:text-text-dark/70 text-sm font-normal leading-normal">
                   Location
@@ -56,9 +54,6 @@ export default function MainContent({ learnData, speakers }) {
           <ul className="space-y-3">
             {learnData.map((text, idx) => (
               <li key={idx} className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary mt-1">
-                  check_circle
-                </span>
                 <span className="text-text-light dark:text-text-dark/90">
                   {text}
                 </span>
