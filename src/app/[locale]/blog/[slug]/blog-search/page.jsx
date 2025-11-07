@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+import { useState } from "react";
+import CardBanner from "@/components/blog_search/CardBanner";
+import Pagination from "@/components/blog_search/Pagination";
 
 const initialData = [
   {
@@ -67,31 +70,21 @@ const initialData = [
     alt: "Stylishly decorated modern living room",
     url: "#",
   },
-  // Add more items to test pagination...
-  {
-    id: 7,
-    title: "A Seventh Home Listing in Abidjan",
-    date: "Sep 10, 2023",
-    snippet: "Another fantastic modern listing...",
-    image: "http://googleusercontent.com/profile/picture/6",
-    alt: "Another home listing",
-    url: "#",
-  },
-  {
-    id: 8,
-    title: "Eighth Luxury Abidjan Property",
-    date: "Sep 01, 2023",
-    snippet: "The eighth most luxurious property you can find...",
-    image: "http://googleusercontent.com/profile/picture/7",
-    alt: "Eighth luxury property",
-    url: "#",
-  },
 ];
 
 export default function BlogSearchPage() {
+  const [currentPage, setCurrentPage] = useState(1);
+
   return (
     <main className="min-h-screen bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
-      <div className="mx-auto max-w-7xl px-6 py-10"></div>
+      <div className="mx-auto max-w-7xl px-6 py-10">
+        <CardBanner initialData={initialData} />
+        <Pagination
+          currentPage={currentPage}
+          totalPages={10}
+          onPageChange={(page) => setCurrentPage(page)}
+        />
+      </div>
     </main>
   );
 }
