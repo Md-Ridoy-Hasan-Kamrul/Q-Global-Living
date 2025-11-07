@@ -59,6 +59,7 @@ const terms = [
     title: "8. Contact Information",
     description:
       "If you have any queries regarding any of our terms, please contact us. You can reach us via our Contact Page.",
+    contact: "Contact Page.",
     short_Description: "",
   },
 ];

@@ -65,7 +65,8 @@ const privacy = [
     id: 9,
     title: "Contact Us",
     description:
-      "If you have any questions or concerns about this Privacy Policy, please contact us at privacy@qhomes.com.",
+      "If you have any questions or concerns about this Privacy Policy, please contact us at",
+    email: "privacy@qhomes.com.",
     short_Description: "",
   },
 ];

@@ -47,9 +47,20 @@ const MainContent = ({ privacy, items }) => {
                 {item.title}
               </h3>
               <hr className="text-gray-300 w-full my-2" />
+
               <p className="font-normal text-sm sm:text-base text-charcoal/90 dark:text-soft-grey/90 mb-3">
                 {item.description}
+
+                {item.email && (
+                  <a
+                    className="font-semibold text-yellow-200 dark:text-yellow-200 hover:underline ml-2"
+                    href={`mailto:${item.email.replace(/\.$/, "")}`}
+                  >
+                    {item.email}
+                  </a>
+                )}
               </p>
+
               {item.short_Description && (
                 <p className="font-normal text-sm sm:text-base text-charcoal/90 dark:text-soft-grey/90">
                   {item.short_Description}

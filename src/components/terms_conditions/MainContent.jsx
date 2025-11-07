@@ -1,3 +1,6 @@
+import Link from "next/link";
+import React from "react";
+
 const MainContent = ({ terms, items }) => {
   return (
     <main className="w-full lg:w-3/4 space-y-8 lg:mt-0 md:mt-12 sm:mt-10 mt-8">
@@ -31,7 +34,26 @@ const MainContent = ({ terms, items }) => {
                 {item.title}
               </h3>
               <p className="font-normal text-sm sm:text-base text-charcoal/90 dark:text-soft-grey/90 mb-3">
-                {item.description}
+                {item.description
+                  ? item.description
+                      .split(item.contact)
+                      .map((part, index, array) => (
+                        <React.Fragment key={index}>
+                          {part}
+                          {index < array.length - 1 && item.contact && (
+                            <Link
+                              href="/contact"
+                              className="font-semibold text-yellow-200 dark:text-yellow-200 hover:underline"
+                            >
+                              {item.contact.replace(/\.$/, "")}
+                            </Link>
+                          )}
+                          {index < array.length - 1 &&
+                            item.contact.endsWith(".") &&
+                            "."}
+                        </React.Fragment>
+                      ))
+                  : null}
               </p>
               {item.short_Description && (
                 <p className="font-normal text-sm sm:text-base text-charcoal/90 dark:text-soft-grey/90">

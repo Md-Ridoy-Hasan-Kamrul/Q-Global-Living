@@ -2,7 +2,7 @@ import CookieMainContent from "@/components/cookie_policy/CookieMainContent";
 
 const cookie = {
   policy_title: "Cookie Policy",
-  last_updated: "October 26, 2024",
+  last_updated: "October 26, 2023",
   introduction:
     "This Cookie Policy explains what cookies are and how we use them. You should read this policy to understand what cookies are, how we use them, the types of cookies we use, the information we collect using cookies, how that information is used, and how to control your cookie preferences. For further information on how we use, store, and keep your personal data secure, see our Privacy Policy.",
   table_of_contents: [

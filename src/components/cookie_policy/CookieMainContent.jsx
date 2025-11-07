@@ -31,7 +31,7 @@ export default function CookieMainContent({ cookie }) {
         <main className="flex flex-col space-y-12 px-4 text-lg leading-relaxed">
           <div className="flex flex-wrap justify-between gap-3">
             <div className="flex min-w-72 flex-col gap-3">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-3">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-2">
                 {policy_title || "Cookie Policy"}
               </h1>
               <p className="font-normal text-sm sm:text-base text-charcoal/90 dark:text-soft-grey/90">
@@ -40,12 +40,8 @@ export default function CookieMainContent({ cookie }) {
             </div>
           </div>
 
-          <p className="font-normal text-sm sm:text-base text-charcoal/90 dark:text-soft-grey/90 mb-3">
+          <p className="font-normal text-sm sm:text-base text-charcoal/90 dark:text-soft-grey/90 md:mb-8 mb-6">
             {introduction || "Introduction text not available."}
-            <Link href="/privacy-policy" className="text-brand-gold underline">
-              Privacy Policy
-            </Link>
-            .
           </p>
 
           <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-6 bg-white/50 dark:bg-background-dark/50">
@@ -73,6 +69,8 @@ export default function CookieMainContent({ cookie }) {
                 <section
                   key={section.heading}
                   id={createAnchorId(section.heading)}
+                  // 1. স্ক্রলিং ফিক্স: fixed navbar এর জন্য একটি টপ গ্যাপ তৈরি করা
+                  className="scroll-mt-24"
                 >
                   <h2 className="text-xl lg:text-2xl font-bold tracking-tight mb-3">
                     {section.heading}
@@ -108,7 +106,8 @@ export default function CookieMainContent({ cookie }) {
                             {part}
                             {index < array.length - 1 && (
                               <a
-                                className="text-brand-gold underline"
+                                // 2. ইমেইল কালার ফিক্স: bold, কালার এবং hover:underline যোগ করা হলো
+                                className="font-semibold text-yellow-200 dark:text-yellow-200 hover:underline"
                                 href={`mailto:${section.email}`}
                               >
                                 {section.email}
