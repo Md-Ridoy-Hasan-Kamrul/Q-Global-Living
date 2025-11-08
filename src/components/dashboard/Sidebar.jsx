@@ -86,11 +86,11 @@ const navigationConfig = {
       href: '/dashboard/admin/event-management',
       icon: Calendar,
     },
-    {
-      key: 'dashboard.admin.settings',
-      href: '/dashboard/admin/settings',
-      icon: Settings,
-    },
+    // {
+    //   key: 'dashboard.admin.settings',
+    //   href: '/dashboard/admin/settings',
+    //   icon: Settings,
+    // },
   ],
   client: [
     {

@@ -580,9 +580,32 @@
       },
       "eventManagement": {
         "title": "Gestion des Événements",
-        "subtitle": "Gérer les événements de visite de propriété",
+        "subtitle": "Créer et gérer les événements de visite de propriété et webinaires",
         "createEvent": "Créer Événement",
-        "upcomingEvents": "Événements à Venir"
+        "upcomingEvents": "Événements à Venir",
+        "searchPlaceholder": "Rechercher des événements...",
+        "filters": {
+          "all": "Tous les Événements",
+          "upcoming": "À Venir",
+          "ongoing": "En Cours",
+          "completed": "Terminé",
+          "draft": "Brouillon",
+          "cancelled": "Annulé"
+        },
+        "status": {
+          "upcoming": "À Venir",
+          "ongoing": "En Cours",
+          "completed": "Terminé",
+          "draft": "Brouillon",
+          "cancelled": "Annulé"
+        },
+        "registered": "inscrits",
+        "moreOptions": "Plus d'options",
+        "editEvent": "Modifier l'événement",
+        "deleteEvent": "Supprimer l'événement",
+        "noEvents": "Aucun événement trouvé",
+        "noEventsDescription": "Commencez par créer votre premier événement",
+        "createFirstEvent": "Créer Premier Événement"
       },
       "clientProfile": {
         "title": "Mon Profil",
@@ -828,6 +851,108 @@
       "title": "Êtes-vous un Promoteur?",
       "subtitle": "Présentez votre projet à un public sélectionné d'acheteurs locaux et internationaux. Associez-vous à Q Homes pour gagner en visibilité et en confiance sans précédent.",
       "button": "Listez Votre Projet"
+    }
+  },
+  "concierge": {
+    "hero": {
+      "title": "Votre Déménagement, Simplifié.",
+      "subtitle": "Un accompagnement complet de bout en bout pour une expérience de relocalisation fluide et sans stress en Côte d'Ivoire.",
+      "bookConsultation": "Réserver une Consultation",
+      "talkToConcierge": "Parler à un Concierge"
+    },
+    "support": {
+      "title": "Accompagnement Personnalisé, à Chaque Étape",
+      "subtitle": "Notre équipe dévouée est là pour gérer les détails, afin que vous puissiez vous concentrer sur le début de votre nouveau chapitre.",
+      "propertyMatchmaking": {
+        "title": "Recherche de Propriété",
+        "description": "Trouver votre maison parfaite en fonction de votre style de vie et de vos besoins uniques."
+      },
+      "relocationPlanning": {
+        "title": "Planification de la Relocalisation",
+        "description": "Gérer la logistique de votre déménagement du début à la fin pour une transition en douceur."
+      },
+      "settlingServices": {
+        "title": "Services d'Installation",
+        "description": "Vous aider à vous sentir chez vous avec une configuration essentielle et une intégration locale."
+      }
+    },
+    "packages": {
+      "title": "Nos Forfaits de Conciergerie",
+      "subtitle": "Choisissez le niveau de soutien qui vous convient. Chaque forfait est conçu pour vous offrir une tranquillité d'esprit.",
+      "mostPopular": "Plus Populaire",
+      "essentials": {
+        "name": "Essentiel",
+        "description": "Idéal pour le déménageur indépendant qui a besoin d'un expert local pour gérer les arrangements clés.",
+        "features": [
+          "Visite d'orientation du quartier",
+          "Assistance à la recherche de logement",
+          "Négociation de bail"
+        ],
+        "button": "Choisir le Forfait"
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Notre forfait le plus populaire pour une relocalisation complète et sans stress du début à la fin.",
+        "features": [
+          "Tout dans Essentiel, plus:",
+          "Recherche et inscription à l'école",
+          "Configuration des services publics (eau, électricité, internet)",
+          "Assistance à l'ouverture de compte bancaire"
+        ],
+        "button": "Choisir le Forfait"
+      },
+      "bespoke": {
+        "name": "Sur Mesure",
+        "description": "Un service entièrement personnalisé et haut de gamme adapté à vos exigences et préférences exactes.",
+        "features": [
+          "Tout dans Premium, plus:",
+          "Demandes personnalisées (par ex., relocalisation d'animaux)",
+          "Shopping personnel et décoration intérieure",
+          "Concierge dédié 24/7"
+        ],
+        "button": "Choisir le Forfait"
+      }
+    },
+    "howItWorks": {
+      "title": "Comment Ça Marche",
+      "subtitle": "Un processus simple en quatre étapes pour vous installer dans votre nouvelle maison en toute simplicité.",
+      "steps": [
+        {
+          "title": "Consultation Initiale",
+          "description": "Nous écoutons vos besoins, préférences et calendrier pour comprendre votre situation unique."
+        },
+        {
+          "title": "Plan Personnalisé",
+          "description": "Nous créons une stratégie de relocalisation sur mesure et une sélection de propriétés rien que pour vous."
+        },
+        {
+          "title": "Exécution Sans Faille",
+          "description": "Nous gérons toute la logistique, des visites aux documents et à la logistique."
+        },
+        {
+          "title": "Bienvenue Chez Vous",
+          "description": "Nous nous assurons que vous êtes confortablement installé et fournissons un soutien local continu."
+        }
+      ]
+    },
+    "addOns": {
+      "title": "Options Supplémentaires de Conciergerie",
+      "subtitle": "Améliorez votre relocalisation avec nos services à la carte.",
+      "schoolSearch": "Recherche d'École",
+      "petRelocation": "Relocalisation d'Animaux",
+      "utilitySetup": "Configuration des Services",
+      "languageCourses": "Cours de Langues",
+      "carImport": "Import/Achat de Voiture"
+    },
+    "contact": {
+      "title": "Prêt à Faire Votre Déménagement?",
+      "subtitle": "Remplissez le formulaire pour réserver une consultation gratuite avec l'un de nos spécialistes de relocalisation. Discutons de la façon dont nous pouvons rendre votre déménagement en Côte d'Ivoire fluide et réussi.",
+      "fullName": "Nom Complet",
+      "email": "Adresse Email",
+      "phone": "Numéro de Téléphone",
+      "preferredDate": "Date et Heure Préférées",
+      "message": "Message",
+      "submit": "Réserver Ma Consultation"
     }
   },
   "event": {

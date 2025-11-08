@@ -580,9 +580,32 @@
       },
       "eventManagement": {
         "title": "Event Management",
-        "subtitle": "Manage property viewing events",
+        "subtitle": "Create and manage property viewing events and webinars",
         "createEvent": "Create Event",
-        "upcomingEvents": "Upcoming Events"
+        "upcomingEvents": "Upcoming Events",
+        "searchPlaceholder": "Search events...",
+        "filters": {
+          "all": "All Events",
+          "upcoming": "Upcoming",
+          "ongoing": "Ongoing",
+          "completed": "Completed",
+          "draft": "Draft",
+          "cancelled": "Cancelled"
+        },
+        "status": {
+          "upcoming": "Upcoming",
+          "ongoing": "Ongoing",
+          "completed": "Completed",
+          "draft": "Draft",
+          "cancelled": "Cancelled"
+        },
+        "registered": "registered",
+        "moreOptions": "More options",
+        "editEvent": "Edit event",
+        "deleteEvent": "Delete event",
+        "noEvents": "No events found",
+        "noEventsDescription": "Get started by creating your first event",
+        "createFirstEvent": "Create First Event"
       },
       "clientProfile": {
         "title": "My Profile",
@@ -828,6 +851,108 @@
       "title": "Are You a Developer?",
       "subtitle": "Showcase your project to a curated audience of local and international buyers. Partner with Q Homes to gain unparalleled visibility and trust.",
       "button": "List Your Project"
+    }
+  },
+  "concierge": {
+    "hero": {
+      "title": "Your Move, Simplified.",
+      "subtitle": "Comprehensive, end-to-end support for a seamless and stress-free relocation experience in Côte d'Ivoire.",
+      "bookConsultation": "Book a Consultation",
+      "talkToConcierge": "Talk to a Concierge"
+    },
+    "support": {
+      "title": "Personalized Support, Every Step of the Way",
+      "subtitle": "Our dedicated team is here to manage the details, so you can focus on starting your new chapter.",
+      "propertyMatchmaking": {
+        "title": "Property Matchmaking",
+        "description": "Finding your perfect home based on your unique lifestyle and needs."
+      },
+      "relocationPlanning": {
+        "title": "Relocation Planning",
+        "description": "Managing the logistics of your move from start to finish for a smooth transition."
+      },
+      "settlingServices": {
+        "title": "Settling-In Services",
+        "description": "Helping you feel at home with essential setup and local integration."
+      }
+    },
+    "packages": {
+      "title": "Our Concierge Packages",
+      "subtitle": "Choose the level of support that's right for you. Each package is designed to provide peace of mind.",
+      "mostPopular": "Most Popular",
+      "essentials": {
+        "name": "Essentials",
+        "description": "Ideal for the independent mover who needs a local expert to handle the key arrangements.",
+        "features": [
+          "Area orientation tour",
+          "Home search assistance",
+          "Lease negotiation"
+        ],
+        "button": "Choose Plan"
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Our most popular package for a comprehensive, stress-free relocation from start to finish.",
+        "features": [
+          "Everything in Essentials, plus:",
+          "School search & enrollment",
+          "Utility setup (water, electric, internet)",
+          "Bank account opening assistance"
+        ],
+        "button": "Choose Plan"
+      },
+      "bespoke": {
+        "name": "Bespoke",
+        "description": "A fully customized, white-glove service tailored to your exact requirements and preferences.",
+        "features": [
+          "Everything in Premium, plus:",
+          "Custom requests (e.g., pet relocation)",
+          "Personal shopping & home styling",
+          "24/7 dedicated concierge"
+        ],
+        "button": "Choose Plan"
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "A simple, four-step process to get you settled into your new home with ease.",
+      "steps": [
+        {
+          "title": "Initial Consultation",
+          "description": "We listen to your needs, preferences and timeline to understand your unique situation."
+        },
+        {
+          "title": "Personalized Plan",
+          "description": "We create a tailored relocation strategy and property shortlist just for you."
+        },
+        {
+          "title": "Seamless Execution",
+          "description": "We handle all the logistics, from viewings to paperwork and logistics."
+        },
+        {
+          "title": "Welcome Home",
+          "description": "We ensure you are comfortably settled in and provide ongoing local support."
+        }
+      ]
+    },
+    "addOns": {
+      "title": "Concierge Add-Ons",
+      "subtitle": "Enhance your relocation with our à la carte services.",
+      "schoolSearch": "School Search",
+      "petRelocation": "Pet Relocation",
+      "utilitySetup": "Utility Setup",
+      "languageCourses": "Language Courses",
+      "carImport": "Car Import/Purchase"
+    },
+    "contact": {
+      "title": "Ready to Make Your Move?",
+      "subtitle": "Fill out the form to book a complimentary consultation with one of our relocation specialists. Let's discuss how we can make your move to Côte d'Ivoire seamless and successful.",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "preferredDate": "Preferred Date & Time",
+      "message": "Message",
+      "submit": "Book My Consultation"
     }
   },
   "event": {
