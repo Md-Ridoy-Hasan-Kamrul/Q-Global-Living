@@ -12,7 +12,8 @@
     "register": "S'inscrire",
     "blog": "Blog",
     "newDevelopments": "Nouveaux Développements",
-    "listYourProperty": "Listez Votre Propriété"
+    "concierge": "Conciergerie",
+    "listYourProperty": "Inscription à l'Événement"
   },
   "common": {
     "search": "Rechercher",
@@ -34,7 +35,11 @@
     "yes": "Oui",
     "no": "Non",
     "home": "Accueil",
-    "buy": "Acheter"
+    "buy": "Acheter",
+    "showing": "Affichage",
+    "to": "à",
+    "of": "sur",
+    "results": "résultats"
   },
   "auth": {
     "login": {
@@ -64,60 +69,6 @@
         "invalidCredentials": "Email ou mot de passe invalide",
         "loginFailed": "Échec de la connexion",
         "socialLoginFailed": "Échec de la connexion avec {provider}. Veuillez réessayer."
-      }
-    },
-    "register": {
-      "title": "Créer un Compte",
-      "subtitle": "Inscrivez-vous pour commencer votre parcours immobilier avec Q Homes.",
-      "fullName": "Nom Complet",
-      "fullNamePlaceholder": "Entrez votre nom complet",
-      "email": "Email",
-      "emailPlaceholder": "Entrez votre email",
-      "password": "Mot de Passe",
-      "passwordPlaceholder": "Créez un mot de passe",
-      "confirmPassword": "Confirmer le Mot de Passe",
-      "confirmPasswordPlaceholder": "Confirmez votre mot de passe",
-      "registerButton": "S'inscrire",
-      "registering": "Inscription en cours...",
-      "orDivider": "OU",
-      "continueWithGoogle": "Continuer avec Google",
-      "continueWithFacebook": "Continuer avec Facebook",
-      "haveAccount": "Vous avez déjà un compte?",
-      "loginNow": "Connectez-vous Maintenant",
-      "backToHome": "Retour à l'Accueil",
-      "check1": "J'ai lu et j'accepte les Conditions d'Utilisation",
-      "check2": "Je souhaite recevoir des mises à jour et des offres spéciales par email",
-      "createAccount": "Créer un Compte",
-      "errors": {
-        "fullNameRequired": "Le nom complet est requis",
-        "emailRequired": "L'email est requis",
-        "emailInvalid": "L'email n'est pas valide",
-        "passwordRequired": "Le mot de passe est requis",
-        "passwordMinLength": "Le mot de passe doit contenir au moins 6 caractères",
-        "confirmPasswordRequired": "La confirmation du mot de passe est requise",
-        "passwordsMismatch": "Les mots de passe ne correspondent pas",
-        "registrationFailed": "Échec de l'inscription",
-        "socialLoginFailed": "Échec de la connexion avec {provider}. Veuillez réessayer."
-      }
-    },
-    "forgotPassword": {
-      "title": "Mot de passe oublié ?",
-      "subtitle": "Entrez votre e-mail pour réinitialiser votre mot de passe.",
-      "email": "E-mail",
-      "emailPlaceholder": "Entrez votre e-mail",
-      "submitButton": "Soumettre",
-      "submitting": "Soumission...",
-      "backToLogin": "Retour à la connexion",
-      "backToHome": "Retour à l'accueil",
-      "checkEmail": "Vérifiez votre e-mail",
-      "checkEmailInstructions": "Nous avons envoyé des instructions de réinitialisation du mot de passe à {email}. Veuillez vérifier votre boîte de réception et votre dossier spam.",
-      "returnToLogin": "Retourner à la connexion",
-      "didNotReceiveEmail": "Vous n'avez pas reçu l'e-mail?",
-      "resend": "Renvoyer",
-      "errors": {
-        "emailRequired": "L'e-mail est requis",
-        "emailInvalid": "Veuillez entrer une adresse e-mail valide",
-        "resetFailed": "Échec de l'envoi du lien de réinitialisation. Veuillez réessayer."
       }
     }
   },
@@ -233,17 +184,323 @@
     "admin": {
       "title": "Tableau de Bord Admin",
       "overview": "Tableau de Bord Admin",
-      "users": "Gestion des Utilisateurs",
-      "blogEditor": "Éditeur de Blog",
+      "welcome": "Bienvenue sur le Tableau de Bord Admin Q Homes",
+      "subtitle": "Gérez votre plateforme et surveillez les performances",
+      "usersLink": "Gestion des Utilisateurs",
+      "blogEditorLink": "Éditeur de Blog",
       "mediaLibrary": "Bibliothèque Média",
-      "auditLogs": "Journaux d'Audit",
+      "auditLogsLink": "Journaux d'Audit",
       "seoManagement": "Gestion SEO",
-      "properties": "Gestion des Propriétés",
-      "partners": "Gestion des Partenaires",
-      "conciergeRequests": "Demandes de Conciergerie",
+      "propertiesLink": "Gestion des Propriétés",
+      "partnersLink": "Gestion des Partenaires",
+      "conciergeRequestsLink": "Demandes de Conciergerie",
       "eventManagement": "Gestion des Événements",
       "settings": "Paramètres",
-      "analytics": "Analytique"
+      "analytics": "Analytique",
+      "stats": {
+        "totalListings": "Total des Annonces",
+        "newUsers": "Nouveaux Utilisateurs (30j)",
+        "pendingVerifications": "Vérifications en Attente",
+        "activeConciergeRequests": "Demandes de Conciergerie Actives"
+      },
+      "performance": {
+        "title": "Performance de la Plateforme",
+        "subtitle": "Engagement des Utilisateurs",
+        "period": "30 Derniers Jours",
+        "change": "+7.8%",
+        "weeks": {
+          "week1": "Semaine 1",
+          "week2": "Semaine 2",
+          "week3": "Semaine 3",
+          "week4": "Semaine 4"
+        }
+      },
+      "propertiesTable": {
+        "title": "Propriétés Récentes",
+        "addProperty": "Ajouter Propriété",
+        "table": {
+          "propertyTitle": "Titre de la Propriété",
+          "type": "Type",
+          "status": "Statut",
+          "agent": "Agent",
+          "dateAdded": "Date d'Ajout",
+          "actions": "Actions"
+        },
+        "types": {
+          "buy": "Acheter",
+          "rent": "Louer"
+        },
+        "statuses": {
+          "approved": "Approuvé",
+          "pending": "En Attente",
+          "rejected": "Rejeté"
+        },
+        "actions": {
+          "edit": "Modifier"
+        }
+      },
+      "trends": {
+        "positive": "+",
+        "negative": "-"
+      },
+      "users": {
+        "title": "Gestion des Comptes Utilisateurs",
+        "searchPlaceholder": "Rechercher par ID, Nom ou Email...",
+        "addUser": "Ajouter Utilisateur",
+        "filters": {
+          "status": "Statut",
+          "statusAll": "Tous",
+          "role": "Rôle",
+          "roleAll": "Tous",
+          "lastActivity": "Dernière Activité"
+        },
+        "table": {
+          "userId": "ID Utilisateur",
+          "name": "Nom",
+          "email": "Email",
+          "role": "Rôle",
+          "registrationDate": "Date d'Inscription",
+          "status": "Statut",
+          "actions": "Actions"
+        },
+        "roles": {
+          "buyer": "Acheteur",
+          "developer": "Développeur",
+          "concierge": "Concierge",
+          "admin": "Administrateur",
+          "partner": "Partenaire",
+          "agent": "Agent"
+        },
+        "statuses": {
+          "active": "Actif",
+          "inactive": "Inactif",
+          "suspended": "Suspendu",
+          "pending": "En Attente"
+        },
+        "pagination": {
+          "showing": "Affichage",
+          "of": "de",
+          "previous": "Précédent",
+          "next": "Suivant"
+        },
+        "actions": {
+          "view": "Voir Détails",
+          "edit": "Modifier",
+          "suspend": "Suspendre",
+          "activate": "Activer",
+          "delete": "Supprimer"
+        }
+      },
+      "blogEditor": {
+        "title": "Créer un Nouvel Article",
+        "editTitle": "Modifier l'Article",
+        "preview": "Aperçu",
+        "publish": "Publier",
+        "saveDraft": "Enregistrer le Brouillon",
+        "cancel": "Annuler",
+        "postTitle": "Titre de l'Article",
+        "postTitlePlaceholder": "Entrez le titre de l'article ici",
+        "articleContent": "Contenu de l'Article",
+        "editorPlaceholder": "Un éditeur WYSIWYG puissant pour le contenu principal de l'article, prenant en charge les titres, paragraphes, listes, gras/italique, liens et médias intégrés.",
+        "seoMetadata": "Métadonnées SEO",
+        "metaTitle": "Titre Meta",
+        "metaTitlePlaceholder": "Entrez le titre meta",
+        "metaDescription": "Description Meta",
+        "metaDescriptionPlaceholder": "Entrez la description meta",
+        "urlSlug": "Slug URL",
+        "urlSlugPlaceholder": "slug-auto-généré",
+        "regenerate": "Régénérer",
+        "publishSidebar": {
+          "publish": "Publier",
+          "status": "Statut",
+          "statusDraft": "Brouillon",
+          "statusPublished": "Publié",
+          "statusScheduled": "Programmé",
+          "author": "Auteur",
+          "publicationDate": "Date de Publication",
+          "publicationDateAuto": "(Auto)"
+        },
+        "organization": {
+          "title": "Organisation",
+          "categories": "Catégories",
+          "selectCategory": "Sélectionner une catégorie",
+          "realEstateNews": "Actualités Immobilières",
+          "buyingGuide": "Guide d'Achat",
+          "sellingTips": "Conseils de Vente",
+          "marketTrends": "Tendances du Marché",
+          "tags": "Tags",
+          "tagsPlaceholder": "Ajouter des tags (séparés par des virgules)"
+        },
+        "featuredImage": {
+          "title": "Image à la Une",
+          "uploadText": "Cliquez pour télécharger ou glissez-déposez",
+          "supportedFormats": "SVG, PNG, JPG (Max. 800x400px)",
+          "altText": "Texte Alt",
+          "altTextPlaceholder": "Décrivez l'image"
+        }
+      },
+      "auditLogs": {
+        "title": "Journaux d'Audit",
+        "exportCsv": "Exporter CSV",
+        "searchPlaceholder": "Rechercher par utilisateur, action, IP...",
+        "dateRange": "Plage de Dates",
+        "userActor": "Utilisateur / Acteur",
+        "actionType": "Type d'Action",
+        "allDates": "Toutes les Dates",
+        "allUsers": "Tous les Utilisateurs",
+        "allActions": "Toutes les Actions",
+        "last7Days": "7 Derniers Jours",
+        "last30Days": "30 Derniers Jours",
+        "last90Days": "90 Derniers Jours",
+        "customRange": "Plage Personnalisée",
+        "table": {
+          "dateTime": "DATE & HEURE",
+          "userActor": "UTILISATEUR / ACTEUR",
+          "actionPerformed": "ACTION EFFECTUÉE",
+          "itemAffected": "ÉLÉMENT AFFECTÉ",
+          "ipAddress": "ADRESSE IP"
+        },
+        "actions": {
+          "propertyApproved": "Propriété Approuvée",
+          "userSuspended": "Utilisateur Suspendu",
+          "settingsChanged": "Paramètres Modifiés",
+          "passwordReset": "Réinitialisation du Mot de Passe",
+          "propertyRejected": "Propriété Rejetée",
+          "userCreated": "Utilisateur Créé",
+          "loginSuccess": "Connexion Réussie",
+          "loginFailed": "Échec de Connexion",
+          "dataExported": "Données Exportées",
+          "permissionChanged": "Permission Modifiée"
+        },
+        "pagination": {
+          "showing": "Affichage de",
+          "to": "à",
+          "of": "sur",
+          "results": "résultats"
+        }
+      },
+      "properties": {
+        "title": "Gestion des Propriétés",
+        "subtitle": "Gérer et surveiller toutes les annonces immobilières",
+        "addProperty": "Ajouter une Propriété",
+        "searchPlaceholder": "Rechercher des propriétés...",
+        "allStatus": "Tous les Statuts",
+        "stats": {
+          "totalListings": "Total des Annonces",
+          "active": "Actif",
+          "pending": "En Attente d'Approbation",
+          "inactive": "Inactif"
+        },
+        "filters": {
+          "status": "Statut",
+          "type": "Type de Propriété",
+          "allTypes": "Tous les Types"
+        },
+        "table": {
+          "property": "Propriété",
+          "location": "Emplacement",
+          "price": "Prix",
+          "status": "Statut",
+          "views": "Vues",
+          "actions": "Actions",
+          "beds": "chambres",
+          "view": "Voir",
+          "edit": "Modifier",
+          "delete": "Supprimer"
+        },
+        "status": {
+          "active": "Actif",
+          "pending": "En Attente",
+          "inactive": "Inactif"
+        },
+        "types": {
+          "villa": "Villa",
+          "apartment": "Appartement",
+          "commercial": "Commercial",
+          "house": "Maison"
+        }
+      },
+      "partners": {
+        "title": "Gestion des Partenaires",
+        "subtitle": "Gérer et surveiller tous les partenaires et développeurs enregistrés",
+        "addPartner": "Ajouter un Partenaire",
+        "searchPlaceholder": "Rechercher des partenaires...",
+        "allStatus": "Tous les Statuts",
+        "stats": {
+          "totalPartners": "Total des Partenaires",
+          "verified": "Vérifiés",
+          "pending": "En Attente de Vérification",
+          "activeProjects": "Projets Actifs"
+        },
+        "filters": {
+          "verification": "Statut de Vérification",
+          "payment": "Statut de Paiement",
+          "allVerification": "Toute Vérification",
+          "allPayment": "Tout Paiement"
+        },
+        "table": {
+          "company": "Entreprise",
+          "contact": "Personne de Contact",
+          "email": "Email",
+          "phone": "Téléphone",
+          "projects": "Projets",
+          "verification": "Vérification",
+          "payment": "Paiement",
+          "actions": "Actions",
+          "view": "Voir",
+          "edit": "Modifier",
+          "delete": "Supprimer",
+          "joined": "Inscrit"
+        },
+        "verification": {
+          "verified": "Vérifié",
+          "pending": "En Attente",
+          "rejected": "Rejeté"
+        },
+        "payment": {
+          "paid": "Payé",
+          "unpaid": "Non Payé",
+          "partial": "Partiel"
+        }
+      },
+      "conciergeRequests": {
+        "title": "Demandes de Conciergerie",
+        "subtitle": "Gérer et répondre à toutes les demandes de services de conciergerie",
+        "addRequest": "Ajouter une Demande",
+        "searchPlaceholder": "Rechercher par nom du client, email ou service...",
+        "stats": {
+          "totalRequests": "Total des Demandes",
+          "pending": "En Attente",
+          "inProgress": "En Cours",
+          "completed": "Complétées Aujourd'hui"
+        },
+        "filters": {
+          "allStatus": "Tous les Statuts",
+          "allPriority": "Toutes les Priorités"
+        },
+        "status": {
+          "pending": "En Attente",
+          "inProgress": "En Cours",
+          "completed": "Complété",
+          "cancelled": "Annulé"
+        },
+        "priority": {
+          "high": "Élevée",
+          "medium": "Moyenne",
+          "low": "Faible"
+        },
+        "table": {
+          "requestId": "ID de Demande",
+          "client": "Client",
+          "service": "Type de Service",
+          "property": "Propriété",
+          "priority": "Priorité",
+          "status": "Statut",
+          "requestDate": "Date de Demande",
+          "actions": "Actions",
+          "view": "Voir Détails"
+        }
+      }
     },
     "client": {
       "title": "Tableau de Bord Client",
@@ -573,124 +830,178 @@
       "button": "Listez Votre Projet"
     }
   },
-  "about": {
+  "event": {
     "meta": {
-      "title": "À Propos - Connecter les Rêves à la Réalité | Q Homes",
-      "description": "Découvrez la mission de Q Homes de révolutionner l'immobilier en Côte d'Ivoire. Approuvé par la diaspora et les communautés locales pour des propriétés vérifiées et des transactions transparentes."
+      "title": "Webinaire Exclusif: Investir dans le Marché Immobilier d'Abidjan | Q Homes",
+      "description": "Rejoignez notre panel d'experts pour découvrir les opportunités lucratives dans le marché immobilier florissant de la Côte d'Ivoire. Apprenez les stratégies clés pour un investissement réussi."
     },
     "hero": {
-      "title": "Notre Histoire: Connecter les Rêves à la Réalité en Côte d'Ivoire",
-      "subtitle": "Relier la diaspora et les communautés locales avec des opportunités immobilières de confiance au cœur de l'Afrique de l'Ouest."
+      "title": "Webinaire Exclusif: Investir dans le Marché Immobilier d'Abidjan",
+      "subtitle": "Rejoignez notre panel d'experts pour découvrir les opportunités lucratives dans le marché immobilier florissant de la Côte d'Ivoire. Apprenez les stratégies clés pour un investissement réussi et obtenez des réponses à vos questions en direct.",
+      "cta": "Confirmez Votre Place"
+    },
+    "countdown": {
+      "days": "Jours",
+      "hours": "Heures",
+      "minutes": "Minutes",
+      "seconds": "Secondes"
+    },
+    "about": {
+      "title": "À Propos de l'Événement",
+      "description": "Ce webinaire exclusif est conçu pour les investisseurs avisés cherchant à capitaliser sur le marché immobilier dynamique et en pleine croissance à Abidjan. Que vous soyez un investisseur chevronné ou nouveau sur le marché ivoirien, notre panel d'experts vous fournira des informations inestimables, des analyses basées sur les données et des stratégies exploitables pour maximiser vos rendements et naviguer dans le paysage local en toute confiance.",
+      "dateTimeLabel": "Date & Heure",
+      "dateTime": "26 Octobre 2026 à 19h00 GMT",
+      "locationLabel": "Lieu",
+      "location": "En Direct sur Zoom"
+    },
+    "learning": {
+      "title": "Ce Que Vous Apprendrez",
+      "point1": "Analyse du marché: Principaux moteurs de croissance du secteur immobilier d'Abidjan.",
+      "point2": "Points chauds d'investissement: Identifier les quartiers les plus prometteurs.",
+      "point3": "Cadre juridique: Naviguer dans les lois d'acquisition et de propriété immobilière.",
+      "point4": "Options de financement: Sécuriser un financement local et international."
+    },
+    "speakers": {
+      "title": "Rencontrez les Intervenants",
+      "speaker1Name": "Jean-Luc Bamba",
+      "speaker1Role": "Analyste Immobilier",
+      "speaker2Name": "Aminata Koné",
+      "speaker2Role": "Stratège en Investissement"
+    },
+    "registration": {
+      "title": "Réservez Votre Place",
+      "subtitle": "Inscrivez-vous gratuitement pour obtenir le lien d'accès.",
+      "fullName": "Nom Complet",
+      "fullNamePlaceholder": "Entrez votre nom complet",
+      "email": "Adresse Email",
+      "emailPlaceholder": "vous@exemple.com",
+      "phone": "Numéro de Téléphone (Optionnel)",
+      "phonePlaceholder": "+225 07 12 34 56 78",
+      "submit": "S'inscrire Maintenant",
+      "shareEvent": "Partagez cet événement exclusif"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "À Propos - Q Homes | Votre Partenaire Immobilier de Confiance",
+      "description": "Découvrez la mission et l'équipe de Q Homes"
+    },
+    "hero": {
+      "title": "Votre Partenaire de Confiance dans l'Immobilier Ivoirien",
+      "subtitle": "Nous vous connectons avec des propriétés exceptionnelles et un service sans faille à travers Abidjan et au-delà."
     },
     "mission": {
-      "title": "Notre Mission et Vision",
-      "description": "Q Homes s'engage à révolutionner l'expérience immobilière en Côte d'Ivoire. Notre mission est de fournir une plateforme transparente, sécurisée et fluide qui connecte la diaspora ivoirienne mondiale et les investisseurs étrangers avec des propriétés vérifiées et de haute qualité. Nous envisageons un avenir où chacun peut investir en toute confiance dans la maison ou la propriété de ses rêves, soutenu par la confiance et l'excellence."
+      "title": "Notre Mission & Vision",
+      "description": "Chez Q Homes, nous croyons que trouver la maison parfaite devrait être transparent, sécurisé et sans stress. Notre mission est de révolutionner l'expérience immobilière en Côte d'Ivoire en fournissant des annonces vérifiées, des transactions protégées par séquestre et des services de conciergerie personnalisés. Nous envisageons un avenir où chaque client — qu'il soit local ou de la diaspora — peut investir et vivre en toute confiance."
     },
     "whyChoose": {
-      "title": "Pourquoi Choisir Q Homes",
-      "subtitle": "Votre partenaire de confiance dans l'immobilier ivoirien, offrant un service et une sécurité inégalés.",
+      "title": "Pourquoi Choisir Q Homes?",
+      "subtitle": "Nous allons au-delà des services immobiliers traditionnels pour offrir une valeur et une tranquillité d'esprit inégalées.",
       "features": {
         "verifiedListings": {
-          "title": "Annonces Vérifiées",
-          "description": "Chaque propriété est soigneusement vérifiée pour garantir la qualité, la sécurité et la conformité légale."
+          "title": "Annonces 100% Vérifiées",
+          "description": "Chaque propriété est minutieusement vérifiée pour garantir authenticité et qualité."
         },
         "escrowProtection": {
-          "title": "Protection Séquestre",
-          "description": "Sécurisez votre investissement avec notre service de séquestre de confiance, garantissant la sécurité de vos fonds."
+          "title": "Protection par Séquestre",
+          "description": "Transactions sécurisées avec notre service de séquestre de confiance pour votre tranquillité d'esprit."
         },
         "conciergeService": {
-          "title": "Service de Conciergerie",
-          "description": "De la visite à la clôture, notre équipe dévouée fournit un soutien personnalisé à chaque étape."
+          "title": "Conciergerie Dédiée",
+          "description": "De la recherche de propriété au déménagement, notre équipe gère chaque détail pour vous."
         },
         "multilingualSupport": {
           "title": "Support Multilingue",
-          "description": "Notre équipe diversifiée parle plusieurs langues pour assister notre clientèle mondiale de manière transparente."
+          "description": "Assistance fluide en anglais, français et langues locales pour mieux vous servir."
         }
       }
     },
     "team": {
-      "title": "Rencontrez l'Équipe",
-      "subtitle": "Les professionnels dévoués qui réalisent vos rêves de propriété.",
+      "title": "Rencontrez Notre Équipe",
+      "subtitle": "Des professionnels expérimentés dédiés à rendre votre parcours immobilier fluide.",
       "members": {
         "jeanClaude": {
           "name": "Jean-Claude Koffi",
-          "role": "Fondateur et PDG",
-          "bio": "Avec plus de 15 ans d'expérience dans l'immobilier international, la vision de Jean-Claude est de construire le pont immobilier le plus fiable vers la Côte d'Ivoire."
+          "role": "Fondateur & PDG",
+          "bio": "Avec plus de 15 ans dans l'immobilier ivoirien, Jean-Claude dirige notre vision d'un service transparent et axé sur le client."
         },
         "aissata": {
           "name": "Aïssata Diop",
-          "role": "Directrice des Ventes",
-          "bio": "Aïssata combine une connaissance approfondie du marché local avec une passion pour aider les clients à trouver leur maison parfaite ou leur propriété d'investissement."
+          "role": "Responsable des Services de Conciergerie",
+          "bio": "Aïssata garantit que chaque client reçoit un soutien personnalisé tout au long de son parcours immobilier."
         },
         "moussa": {
           "name": "Moussa Traoré",
-          "role": "Directeur Technologique",
-          "bio": "Moussa dirige notre innovation technologique, garantissant une plateforme transparente, sécurisée et conviviale pour tous nos clients."
+          "role": "Responsable Juridique & Conformité",
+          "bio": "Moussa protège toutes les transactions avec des conseils juridiques experts et la conformité réglementaire."
         }
       }
     },
     "cta": {
-      "title": "Prêt à Trouver Votre Maison Ivoirienne?",
-      "subtitle": "Laissez-nous vous guider à travers notre sélection organisée de propriétés vérifiées ou explorez les opportunités de partenariat avec nous.",
-      "primaryButton": "Parcourir les Maisons Vérifiées",
-      "secondaryButton": "Devenir Partenaire"
+      "title": "Prêt à Trouver la Maison de Vos Rêves?",
+      "subtitle": "Explorez nos annonces vérifiées et découvrez la différence Q Homes dès aujourd'hui.",
+      "primaryButton": "Parcourir les Propriétés",
+      "secondaryButton": "Contactez-Nous"
     }
   },
   "contact": {
+    "meta": {
+      "title": "Contactez-Nous - Q Homes | Entrez en Contact",
+      "description": "Vous avez des questions? Contactez notre équipe pour une assistance experte avec vos besoins immobiliers."
+    },
     "hero": {
-      "title": "Nous sommes là pour vous aider — Où que vous soyez",
-      "subtitle": "Contactez notre équipe pour toute demande et nous serons ravis de vous aider à trouver votre nouvelle maison en Côte d'Ivoire.",
-      "whatsappButton": "Discuter sur WhatsApp",
+      "title": "Entrez en Contact avec Q Homes",
+      "subtitle": "Notre équipe est là pour répondre à vos questions et vous guider à travers chaque étape de votre parcours immobilier.",
+      "whatsappButton": "WhatsApp",
       "messageButton": "Envoyer un Message",
-      "whatsappMessage": "Bonjour, je souhaiterais me renseigner sur les propriétés.",
-      "imageAlt": "Skyline d'Abidjan au crépuscule"
+      "whatsappMessage": "Bonjour, j'ai une question sur les services de Q Homes."
     },
     "form": {
-      "title": "Entrer en Contact",
-      "subtitle": "Remplissez le formulaire ci-dessous et notre équipe vous répondra rapidement.",
+      "title": "Envoyez-Nous un Message",
+      "subtitle": "Remplissez le formulaire ci-dessous et nous vous répondrons dans les 24 heures.",
       "fullName": "Nom Complet",
-      "fullNamePlaceholder": "Entrez votre nom complet",
-      "email": "Adresse E-mail",
+      "fullNamePlaceholder": "Jean Dupont",
+      "email": "Adresse Email",
       "emailPlaceholder": "vous@exemple.com",
       "phone": "Numéro de Téléphone",
-      "phonePlaceholder": "01 23 45 67 89",
+      "phonePlaceholder": "+225 01 23 45 67 89",
       "subject": "Sujet",
-      "subjectPlaceholder": "ex: Demande de Propriété",
+      "subjectPlaceholder": "Comment pouvons-nous vous aider?",
       "message": "Message",
-      "messagePlaceholder": "Écrivez votre message ici...",
-      "privacyNote": "Nous respectons votre vie privée. Vos informations sont en sécurité avec nous.",
-      "submitButton": "Soumettre la Demande"
+      "messagePlaceholder": "Parlez-nous de votre demande...",
+      "privacyNote": "Nous respectons votre vie privée. Vos informations ne seront jamais partagées.",
+      "submitButton": "Envoyer le Message"
     },
     "info": {
-      "title": "Contactez-nous Directement",
-      "subtitle": "Vous préférez la méthode traditionnelle ? Voici nos coordonnées. Nous sommes toujours heureux de vous connecter.",
+      "title": "Informations de Contact",
+      "subtitle": "Contactez-nous via l'un de ces canaux.",
       "officeTitle": "Notre Bureau",
-      "officeAddress": "Boulevard Valéry Giscard d'Estaing, Marcory, Abidjan, Côte d'Ivoire",
+      "officeAddress": "Plateau, Abidjan, Côte d'Ivoire",
       "phoneTitle": "Téléphone",
       "phoneNumber": "+225 01 23 45 67 89",
-      "emailTitle": "E-mail",
-      "emailAddress": "contact@qhomes.ci",
+      "emailTitle": "Email",
+      "emailAddress": "hello@qhomes.ci",
       "hoursTitle": "Heures d'Ouverture",
-      "hoursContent": "Lun - Ven: 9h00 - 18h00",
-      "mapTitle": "Emplacement du Bureau Q Homes"
+      "hoursContent": "Lun - Ven: 8h00 - 18h00 WAT\nSam: 9h00 - 14h00\nDim: Fermé",
+      "mapTitle": "Trouvez-Nous sur la Carte"
     },
     "faq": {
       "title": "Questions Fréquemment Posées",
-      "subtitle": "Trouvez rapidement des réponses aux questions courantes sur nos services et processus.",
-      "q1": "Quels types de propriétés Q Homes propose-t-il ?",
-      "a1": "Q Homes se spécialise dans une large gamme de propriétés en Côte d'Ivoire, y compris des villas de luxe, des appartements modernes et des espaces commerciaux. Nous répondons à divers besoins, des locations à long terme aux ventes pour les locaux et les expatriés qui s'installent dans le pays.",
-      "q2": "Comment Q Homes vérifie-t-il les annonces de propriétés ?",
-      "a2": "Nous avons un processus de vérification rigoureux. Notre équipe effectue des visites sur site, vérifie la documentation légale et les titres de propriété (ACD - Arrêté de Concession Définitive), et s'assure que toutes les annonces répondent à nos normes élevées de qualité et de sécurité. Cela garantit que vous consultez des propriétés légitimes et de haute qualité.",
-      "q3": "Offrez-vous une assistance à la relocalisation pour les clients internationaux ?",
-      "a3": "Oui, nous fournissons des services complets de relocalisation. Cela comprend l'aide à trouver la maison parfaite, l'assistance avec les formalités administratives et des conseils sur la vie à Abidjan. Notre objectif est de rendre votre déménagement en Côte d'Ivoire aussi simple et sans stress que possible.",
-      "q4": "Quels sont les frais typiques associés à la location ou à l'achat ?",
-      "a4": "Pour les locations, les frais standard incluent généralement un mois de loyer pour les frais d'agence, un dépôt de garantie (généralement 2 mois de loyer) et le premier mois de loyer à l'avance. Pour les achats, les frais comprennent les frais de notaire et notre commission d'agence, qui sont calculés en fonction de la valeur de la propriété. Nous assurons une transparence totale sur tous les coûts dès le départ."
+      "subtitle": "Réponses rapides aux questions courantes sur nos services.",
+      "q1": "Comment puis-je planifier une visite de propriété?",
+      "a1": "Vous pouvez planifier une visite directement sur notre site web en cliquant sur 'Réserver une Visite' sur n'importe quelle annonce de propriété, ou contacter notre équipe de conciergerie via WhatsApp ou email.",
+      "q2": "Quelles zones desservez-vous?",
+      "a2": "Nous desservons principalement Abidjan et les environs, y compris Plateau, Cocody, Marcory et les quartiers émergents. Nous aidons également avec les propriétés à Assinie et Grand-Bassam.",
+      "q3": "Proposez-vous des services de gestion immobilière?",
+      "a3": "Oui, nous fournissons des services complets de gestion immobilière pour les propriétaires, y compris le filtrage des locataires, la collecte des loyers, la coordination de l'entretien et les inspections régulières de propriété.",
+      "q4": "Comment fonctionne votre service de séquestre?",
+      "a4": "Notre service de séquestre agit comme un tiers neutre détenant les fonds pendant la transaction. L'argent n'est libéré que lorsque toutes les conditions du contrat sont remplies, assurant la sécurité pour les acheteurs et les vendeurs."
     },
     "cta": {
-      "title": "Prêt à Trouver la Maison de vos Rêves ?",
-      "subtitle": "Franchissez la prochaine étape de votre voyage. Notre portefeuille de propriétés exceptionnelles vous attend.",
-      "primaryButton": "Parcourir les Maisons",
-      "secondaryButton": "Réserver une Consultation"
+      "title": "Préférez Parler Directement?",
+      "subtitle": "Planifiez un appel avec l'un de nos experts pour discuter de vos besoins immobiliers en détail.",
+      "primaryButton": "Planifier un Appel",
+      "secondaryButton": "Parcourir les FAQ"
     }
   }
 }

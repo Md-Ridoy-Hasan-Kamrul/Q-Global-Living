@@ -10,16 +10,16 @@ const FeatureCard = memo(({ icon, title, description }) => {
     <article className='flex flex-col items-center p-4 text-center sm:p-6'>
       {/* Icon Container - Gold accent background */}
       <div
-        className='mb-3 flex size-10 items-center justify-center rounded-full bg-[#D4AF37]/20 sm:mb-4 sm:size-12'
+        className='mb-3 flex size-12 items-center justify-center rounded-full bg-[#D4AF37]/20 sm:mb-4 sm:size-14'
         aria-hidden='true'
       >
-        <span className='material-symbols-outlined text-[24px] text-[#D4AF37] sm:text-[32px]'>
+        <span className='material-symbols-outlined text-[28px] text-[#D4AF37] sm:text-[32px]'>
           {icon}
         </span>
       </div>
 
       {/* Title */}
-      <h3 className='mb-1.5 text-[15px] font-bold leading-tight text-[#0A2240] dark:text-white sm:mb-2 sm:text-lg'>
+      <h3 className='mb-2 text-[15px] font-bold leading-tight text-[#0A2240] dark:text-white sm:text-base md:text-lg'>
         {title}
       </h3>
 
@@ -39,18 +39,18 @@ FeatureCard.displayName = 'FeatureCard';
 const WhyChooseUs = memo(({ title, subtitle, features }) => {
   return (
     <section
-      className='py-8 sm:py-12 md:py-16'
+      className='w-full py-8 sm:py-12 md:py-16'
       aria-labelledby='why-choose-title'
     >
       {/* Section Header */}
-      <div className='mb-8 text-center sm:mb-12'>
+      <div className='mb-8 text-center sm:mb-10'>
         <h2
           id='why-choose-title'
-          className='text-[24px] font-bold leading-tight tracking-[-0.015em] text-[#0A2240] dark:text-white sm:text-[28px] md:text-[32px] lg:text-[40px]'
+          className='font-heading text-[24px] font-bold text-[#0A2240] dark:text-white sm:text-[28px] md:text-[32px] lg:text-[36px]'
         >
           {title}
         </h2>
-        <p className='mx-auto mt-3 max-w-2xl text-[14px] font-normal text-[#111418] dark:text-[#f0f2f4]/90 sm:mt-4 sm:text-[15px] md:text-base lg:text-lg'>
+        <p className='mx-auto mt-3 max-w-2xl text-[14px] font-normal text-[#111418] dark:text-[#f0f2f4]/90 sm:mt-4 sm:text-[15px] md:text-base'>
           {subtitle}
         </p>
       </div>

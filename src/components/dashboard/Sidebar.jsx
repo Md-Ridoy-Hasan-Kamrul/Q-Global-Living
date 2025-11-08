@@ -42,42 +42,42 @@ const navigationConfig = {
       icon: LayoutDashboard,
     },
     {
-      key: 'dashboard.admin.users',
+      key: 'dashboard.admin.usersLink',
       href: '/dashboard/admin/users',
       icon: Users,
     },
     {
-      key: 'dashboard.admin.blogEditor',
+      key: 'dashboard.admin.blogEditorLink',
       href: '/dashboard/admin/blog-editor',
       icon: FileText,
     },
+    // {
+    //   key: 'dashboard.admin.mediaLibrary',
+    //   href: '/dashboard/admin/media-library',
+    //   icon: Image,
+    // },
     {
-      key: 'dashboard.admin.mediaLibrary',
-      href: '/dashboard/admin/media-library',
-      icon: Image,
-    },
-    {
-      key: 'dashboard.admin.auditLogs',
+      key: 'dashboard.admin.auditLogsLink',
       href: '/dashboard/admin/audit-logs',
       icon: ScrollText,
     },
+    // {
+    //   key: 'dashboard.admin.seoManagement',
+    //   href: '/dashboard/admin/seo-management',
+    //   icon: Search,
+    // },
     {
-      key: 'dashboard.admin.seoManagement',
-      href: '/dashboard/admin/seo-management',
-      icon: Search,
-    },
-    {
-      key: 'dashboard.admin.properties',
+      key: 'dashboard.admin.propertiesLink',
       href: '/dashboard/admin/properties',
       icon: Building2,
     },
     {
-      key: 'dashboard.admin.partners',
+      key: 'dashboard.admin.partnersLink',
       href: '/dashboard/admin/partners',
       icon: UserCheck,
     },
     {
-      key: 'dashboard.admin.conciergeRequests',
+      key: 'dashboard.admin.conciergeRequestsLink',
       href: '/dashboard/admin/concierge-requests',
       icon: Bell,
     },
@@ -249,7 +249,7 @@ export default function Sidebar({ role = 'admin' }) {
           <Home className='h-6 w-6 text-[#0F1B2E]' />
         </div>
         <div className='flex-1 min-w-0'>
-          <h1 className='text-lg font-semibold text-white'>Q Homes</h1>
+          <h1 className='text-lg font-semibold text-white'>Q Global Living</h1>
           <p className='text-xs text-gray-400 capitalize'>
             {t(`dashboard.${role}.title`)}
           </p>

@@ -29,8 +29,8 @@ const AboutHero = memo(({ title, subtitle }) => {
         <div className='absolute inset-0 bg-[#0A2240]/70' aria-hidden='true' />
 
         {/* Content */}
-        <div className='relative z-10 flex h-full flex-col items-center justify-center px-4 text-center'>
-          <div className='max-w-3xl space-y-4'>
+        <div className='relative z-10 flex h-full flex-col items-center justify-center px-4 text-center sm:px-6'>
+          <div className='max-w-4xl space-y-4'>
             <h1
               id='about-hero-title'
               className='text-[28px] font-black leading-[1.2] tracking-[-0.015em] text-white sm:text-[36px] md:text-[48px] lg:text-[64px]'

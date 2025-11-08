@@ -26,7 +26,7 @@ const TeamMemberCard = memo(({ image, name, role, bio, alt }) => {
         <h3 className='text-[16px] font-bold text-[#0A2240] dark:text-white sm:text-lg md:text-xl'>
           {name}
         </h3>
-        <p className='mt-1 text-[13px] font-medium text-[#D4AF37] sm:text-sm'>
+        <p className='mt-1 text-[13px] font-medium text-[#D4AF37] sm:text-sm md:text-base'>
           {role}
         </p>
         <p className='mt-2 text-[13px] leading-relaxed text-[#111418] dark:text-[#f0f2f4]/90 sm:text-sm'>
@@ -45,18 +45,18 @@ TeamMemberCard.displayName = 'TeamMemberCard';
 const TeamSection = memo(({ title, subtitle, team }) => {
   return (
     <section
-      className='py-8 sm:py-12 md:py-16'
+      className='w-full py-8 sm:py-12 md:py-16'
       aria-labelledby='team-section-title'
     >
       {/* Section Header */}
-      <div className='mb-8 text-center sm:mb-12'>
+      <div className='mb-8 text-center sm:mb-10'>
         <h2
           id='team-section-title'
-          className='text-[24px] font-bold leading-tight tracking-[-0.015em] text-[#0A2240] dark:text-white sm:text-[28px] md:text-[32px] lg:text-[40px]'
+          className='font-heading text-[24px] font-bold text-[#0A2240] dark:text-white sm:text-[28px] md:text-[32px] lg:text-[36px]'
         >
           {title}
         </h2>
-        <p className='mx-auto mt-3 max-w-2xl text-[14px] font-normal text-[#111418] dark:text-[#f0f2f4]/90 sm:mt-4 sm:text-[15px] md:text-base lg:text-lg'>
+        <p className='mx-auto mt-3 max-w-2xl text-[14px] font-normal text-[#111418] dark:text-[#f0f2f4]/90 sm:mt-4 sm:text-[15px] md:text-base'>
           {subtitle}
         </p>
       </div>

@@ -1,348 +1,386 @@
 'use client';
 
-import { useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { use, useState, useMemo, useCallback } from 'react';
 import { useTranslation } from '@/i18n';
-import {
-  Building2,
-  MapPin,
-  DollarSign,
-  Eye,
-  Edit,
-  Trash2,
-  Check,
-  X,
-  Search,
-} from 'lucide-react';
+import { Building2, Check, Eye, X } from 'lucide-react';
+import StatsCard from '@/components/dashboard/admin/StatsCard';
+import PropertiesFilters from '@/components/dashboard/admin/PropertiesFilters';
+import PropertiesListTable from '@/components/dashboard/admin/PropertiesListTable';
+import Pagination from '@/components/dashboard/Pagination';
 
-export default function PropertiesManagementPage() {
-  const pathname = usePathname();
-  const locale = pathname.split('/')[1] || 'en';
-  const { t } = useTranslation(locale);
+// Mock properties data - deterministic generation
+const generateMockProperties = () => {
+  const locations = [
+    'Cocody - Riviera Palmeraie, Abidjan',
+    'Plateau, Abidjan',
+    'Marcory, Abidjan',
+    'Grand-Bassam',
+    'Yopougon, Abidjan',
+  ];
 
-  const [searchTerm, setSearchTerm] = useState('');
-  const [statusFilter, setStatusFilter] = useState('all');
+  const types = ['Villa', 'Apartment', 'Commercial', 'House'];
+  const statuses = ['active', 'pending', 'inactive'];
+  const images = [
+    'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=300&h=200&fit=crop',
+    'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=300&h=200&fit=crop',
+    'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&h=200&fit=crop',
+    'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=300&h=200&fit=crop',
+    'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&h=200&fit=crop',
+  ];
 
-  // Mock properties data
-  const properties = [
+  return [
     {
       id: 1,
       title: 'Modern 4-Bedroom Villa with Pool',
-      location: 'Cocody - Riviera Palmeraie, Abidjan',
+      location: locations[0],
       price: 150000000,
       priceUSD: 250000,
       status: 'active',
-      type: 'Villa',
+      type: types[0],
       bedrooms: 4,
       area: 350,
       views: 1250,
       partner: 'KOF Builders',
-      image:
-        'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=300&h=200&fit=crop',
+      image: images[0],
     },
     {
       id: 2,
       title: 'Luxury 3-Bedroom Apartment',
-      location: 'Plateau, Abidjan',
+      location: locations[1],
       price: 85000000,
       priceUSD: 142000,
       status: 'pending',
-      type: 'Apartment',
+      type: types[1],
       bedrooms: 3,
       area: 180,
       views: 890,
       partner: 'Prime Properties CI',
-      image:
-        'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=300&h=200&fit=crop',
+      image: images[1],
     },
     {
       id: 3,
       title: 'Commercial Building - Downtown',
-      location: 'Marcory, Abidjan',
+      location: locations[2],
       price: 450000000,
       priceUSD: 750000,
       status: 'active',
-      type: 'Commercial',
+      type: types[2],
       bedrooms: 0,
       area: 1200,
       views: 2340,
       partner: 'Ivory Coast Realty',
-      image:
-        'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&h=200&fit=crop',
+      image: images[2],
     },
     {
       id: 4,
       title: 'Beach House - Grand Bassam',
-      location: 'Grand-Bassam',
+      location: locations[3],
       price: 200000000,
       priceUSD: 333000,
       status: 'active',
-      type: 'House',
+      type: types[3],
       bedrooms: 5,
       area: 420,
       views: 1890,
       partner: 'Coastal Properties',
-      image:
-        'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=300&h=200&fit=crop',
+      image: images[3],
     },
     {
       id: 5,
       title: '2-Bedroom Apartment - Yopougon',
-      location: 'Yopougon, Abidjan',
+      location: locations[4],
       price: 35000000,
       priceUSD: 58000,
       status: 'inactive',
-      type: 'Apartment',
+      type: types[1],
       bedrooms: 2,
       area: 95,
       views: 450,
       partner: 'Urban Living CI',
-      image:
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&h=200&fit=crop',
+      image: images[4],
+    },
+    {
+      id: 6,
+      title: 'Luxury Penthouse - Plateau',
+      location: locations[1],
+      price: 180000000,
+      priceUSD: 300000,
+      status: 'active',
+      type: types[1],
+      bedrooms: 4,
+      area: 280,
+      views: 1580,
+      partner: 'KOF Builders',
+      image: images[1],
+    },
+    {
+      id: 7,
+      title: 'Office Complex - Marcory',
+      location: locations[2],
+      price: 320000000,
+      priceUSD: 533000,
+      status: 'pending',
+      type: types[2],
+      bedrooms: 0,
+      area: 900,
+      views: 980,
+      partner: 'Ivory Coast Realty',
+      image: images[2],
+    },
+    {
+      id: 8,
+      title: 'Family Villa - Cocody',
+      location: locations[0],
+      price: 125000000,
+      priceUSD: 208000,
+      status: 'active',
+      type: types[0],
+      bedrooms: 5,
+      area: 400,
+      views: 2100,
+      partner: 'Coastal Properties',
+      image: images[0],
+    },
+    {
+      id: 9,
+      title: 'Studio Apartment - Yopougon',
+      location: locations[4],
+      price: 25000000,
+      priceUSD: 42000,
+      status: 'inactive',
+      type: types[1],
+      bedrooms: 1,
+      area: 45,
+      views: 320,
+      partner: 'Urban Living CI',
+      image: images[4],
+    },
+    {
+      id: 10,
+      title: 'Beachfront Resort - Grand Bassam',
+      location: locations[3],
+      price: 550000000,
+      priceUSD: 917000,
+      status: 'active',
+      type: types[2],
+      bedrooms: 0,
+      area: 1800,
+      views: 3200,
+      partner: 'Prime Properties CI',
+      image: images[3],
+    },
+    {
+      id: 11,
+      title: '3-Bedroom Townhouse - Plateau',
+      location: locations[1],
+      price: 95000000,
+      priceUSD: 158000,
+      status: 'pending',
+      type: types[3],
+      bedrooms: 3,
+      area: 210,
+      views: 760,
+      partner: 'KOF Builders',
+      image: images[1],
+    },
+    {
+      id: 12,
+      title: 'Commercial Warehouse - Marcory',
+      location: locations[2],
+      price: 275000000,
+      priceUSD: 458000,
+      status: 'active',
+      type: types[2],
+      bedrooms: 0,
+      area: 1500,
+      views: 1100,
+      partner: 'Ivory Coast Realty',
+      image: images[2],
     },
   ];
+};
 
-  const stats = [
-    {
-      label:
-        t('dashboard.pages.propertiesManagement.totalListings') ||
-        'Total Listings',
-      value: '247',
-      icon: Building2,
-      color: 'bg-blue-500',
-    },
-    {
-      label: t('dashboard.pages.propertiesManagement.active') || 'Active',
-      value: '189',
-      icon: Check,
-      color: 'bg-green-500',
-    },
-    {
-      label:
-        t('dashboard.pages.propertiesManagement.pendingApproval') || 'Pending',
-      value: '23',
-      icon: Eye,
-      color: 'bg-yellow-500',
-    },
-    {
-      label: 'Inactive',
-      value: '35',
-      icon: X,
-      color: 'bg-gray-500',
-    },
-  ];
+export default function PropertiesManagementPage({ params }) {
+  const { locale } = use(params);
+  const { t } = useTranslation(locale);
 
-  const getStatusBadge = (status) => {
-    const badges = {
-      active: 'bg-green-100 text-green-800',
-      pending: 'bg-yellow-100 text-yellow-800',
-      inactive: 'bg-gray-100 text-gray-800',
-    };
-    const labels = {
-      active: locale === 'fr' ? 'Actif' : 'Active',
-      pending: locale === 'fr' ? 'En Attente' : 'Pending',
-      inactive: locale === 'fr' ? 'Inactif' : 'Inactive',
-    };
-    return (
-      <span
-        className={`px-2 py-1 rounded-full text-xs font-medium ${badges[status]}`}
-      >
-        {labels[status]}
-      </span>
-    );
-  };
+  // State
+  const [searchTerm, setSearchTerm] = useState('');
+  const [statusFilter, setStatusFilter] = useState('all');
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const filteredProperties = properties.filter((property) => {
-    const matchesSearch =
-      property.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      property.location.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesStatus =
-      statusFilter === 'all' || property.status === statusFilter;
-    return matchesSearch && matchesStatus;
-  });
+  // Constants
+  const ITEMS_PER_PAGE = 5;
+
+  // Memoized translations
+  const propertiesTranslations = useMemo(
+    () => ({
+      title: t('dashboard.admin.properties.title'),
+      subtitle: t('dashboard.admin.properties.subtitle'),
+      addProperty: t('dashboard.admin.properties.addProperty'),
+      searchPlaceholder: t('dashboard.admin.properties.searchPlaceholder'),
+      allStatus: t('dashboard.admin.properties.allStatus'),
+      stats: {
+        totalListings: t('dashboard.admin.properties.stats.totalListings'),
+        active: t('dashboard.admin.properties.stats.active'),
+        pending: t('dashboard.admin.properties.stats.pending'),
+        inactive: t('dashboard.admin.properties.stats.inactive'),
+      },
+      table: {
+        property: t('dashboard.admin.properties.table.property'),
+        location: t('dashboard.admin.properties.table.location'),
+        price: t('dashboard.admin.properties.table.price'),
+        status: t('dashboard.admin.properties.table.status'),
+        views: t('dashboard.admin.properties.table.views'),
+        actions: t('dashboard.admin.properties.table.actions'),
+        beds: t('dashboard.admin.properties.table.beds'),
+        view: t('dashboard.admin.properties.table.view'),
+        edit: t('dashboard.admin.properties.table.edit'),
+        delete: t('dashboard.admin.properties.table.delete'),
+      },
+      status: {
+        active: t('dashboard.admin.properties.status.active'),
+        pending: t('dashboard.admin.properties.status.pending'),
+        inactive: t('dashboard.admin.properties.status.inactive'),
+      },
+    }),
+    [t]
+  );
+
+  // Mock properties data
+  const properties = useMemo(() => generateMockProperties(), []);
+
+  // Stats configuration
+  const stats = useMemo(
+    () => [
+      {
+        label: propertiesTranslations.stats.totalListings,
+        value: '247',
+        trend: '+12.5%',
+        icon: Building2,
+        variant: 'primary',
+      },
+      {
+        label: propertiesTranslations.stats.active,
+        value: '189',
+        trend: '+8.2%',
+        icon: Check,
+        variant: 'success',
+      },
+      {
+        label: propertiesTranslations.stats.pending,
+        value: '23',
+        trend: '-3.1%',
+        icon: Eye,
+        variant: 'warning',
+      },
+      {
+        label: propertiesTranslations.stats.inactive,
+        value: '35',
+        trend: '+5.4%',
+        icon: X,
+        variant: 'info',
+      },
+    ],
+    [propertiesTranslations]
+  );
+
+  // Filter properties
+  const filteredProperties = useMemo(() => {
+    return properties.filter((property) => {
+      const matchesSearch =
+        property.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        property.location.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesStatus =
+        statusFilter === 'all' || property.status === statusFilter;
+      return matchesSearch && matchesStatus;
+    });
+  }, [properties, searchTerm, statusFilter]);
+
+  // Pagination
+  const totalPages = Math.ceil(filteredProperties.length / ITEMS_PER_PAGE);
+  const paginatedProperties = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredProperties.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [filteredProperties, currentPage]);
+
+  // Handlers
+  const handleSearchChange = useCallback((value) => {
+    setSearchTerm(value);
+    setCurrentPage(1); // Reset to first page on search
+  }, []);
+
+  const handleStatusChange = useCallback((value) => {
+    setStatusFilter(value);
+    setCurrentPage(1); // Reset to first page on filter change
+  }, []);
+
+  const handlePageChange = useCallback((page) => {
+    setCurrentPage(page);
+  }, []);
+
+  // Pagination translations
+  const paginationTranslations = useMemo(
+    () => ({
+      previous: t('common.previous'),
+      next: t('common.next'),
+      showing: t('common.showing'),
+      to: t('common.to'),
+      of: t('common.of'),
+      results: t('common.results'),
+    }),
+    [t]
+  );
 
   return (
-    <div className='space-y-6'>
+    <div className='space-y-4 md:space-y-6'>
       {/* Header */}
-      <div className='rounded-lg bg-white p-6 shadow-sm'>
-        <h2 className='mb-2 text-3xl font-bold text-gray-900'>
-          {t('dashboard.pages.propertiesManagement.title')}
-        </h2>
-        <p className='text-gray-600'>
-          {t('dashboard.pages.propertiesManagement.subtitle')}
+      <div className='bg-linear-to-r from-[#1e3a5f] to-[#2d5078] rounded-lg p-4 sm:p-6 md:p-8 shadow-lg'>
+        <h1 className='text-2xl sm:text-3xl font-bold text-white mb-2'>
+          {propertiesTranslations.title}
+        </h1>
+        <p className='text-sm sm:text-base text-white/80'>
+          {propertiesTranslations.subtitle}
         </p>
       </div>
 
       {/* Stats Cards */}
-      <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4'>
-        {stats.map((stat, index) => {
-          const Icon = stat.icon;
-          return (
-            <div key={index} className='rounded-lg bg-white p-6 shadow-sm'>
-              <div className='flex items-center justify-between'>
-                <div>
-                  <p className='text-sm font-medium text-gray-600'>
-                    {stat.label}
-                  </p>
-                  <p className='mt-2 text-3xl font-bold text-gray-900'>
-                    {stat.value}
-                  </p>
-                </div>
-                <div className={`${stat.color} rounded-lg p-3`}>
-                  <Icon className='h-6 w-6 text-white' />
-                </div>
-              </div>
-            </div>
-          );
-        })}
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6'>
+        {stats.map((stat, index) => (
+          <StatsCard
+            key={index}
+            label={stat.label}
+            value={stat.value}
+            trend={stat.trend}
+            icon={stat.icon}
+            variant={stat.variant}
+          />
+        ))}
       </div>
 
-      {/* Filters and Actions */}
-      <div className='rounded-lg bg-white p-6 shadow-sm'>
-        <div className='flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between'>
-          {/* Search */}
-          <div className='relative flex-1 max-w-md'>
-            <Search className='absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400' />
-            <input
-              type='text'
-              placeholder={
-                locale === 'fr'
-                  ? 'Rechercher des propriétés...'
-                  : 'Search properties...'
-              }
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className='w-full rounded-lg border border-gray-300 py-2 pl-10 pr-4 focus:border-[#E6B325] focus:outline-none focus:ring-2 focus:ring-[#E6B325]/20'
-            />
-          </div>
+      {/* Filters */}
+      <PropertiesFilters
+        searchTerm={searchTerm}
+        statusFilter={statusFilter}
+        onSearchChange={handleSearchChange}
+        onStatusChange={handleStatusChange}
+        translations={propertiesTranslations}
+      />
 
-          {/* Status Filter */}
-          <div className='flex items-center gap-4'>
-            <select
-              value={statusFilter}
-              onChange={(e) => setStatusFilter(e.target.value)}
-              className='rounded-lg border border-gray-300 px-4 py-2 focus:border-[#E6B325] focus:outline-none focus:ring-2 focus:ring-[#E6B325]/20'
-            >
-              <option value='all'>
-                {locale === 'fr' ? 'Tous' : 'All Status'}
-              </option>
-              <option value='active'>
-                {locale === 'fr' ? 'Actif' : 'Active'}
-              </option>
-              <option value='pending'>
-                {locale === 'fr' ? 'En Attente' : 'Pending'}
-              </option>
-              <option value='inactive'>
-                {locale === 'fr' ? 'Inactif' : 'Inactive'}
-              </option>
-            </select>
-
-            <button className='flex items-center gap-2 rounded-lg bg-[#E6B325] px-4 py-2 text-sm font-medium text-[#0F1B2E] hover:bg-[#d4a520] transition-colors'>
-              <Building2 className='h-4 w-4' />
-              {t('dashboard.pages.propertiesManagement.addProperty')}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Properties Table */}
+      {/* Properties Table with Pagination */}
       <div className='rounded-lg bg-white shadow-sm overflow-hidden'>
-        <div className='overflow-x-auto'>
-          <table className='w-full'>
-            <thead className='bg-gray-50 border-b border-gray-200'>
-              <tr>
-                <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
-                  {locale === 'fr' ? 'Propriété' : 'Property'}
-                </th>
-                <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
-                  {locale === 'fr' ? 'Emplacement' : 'Location'}
-                </th>
-                <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
-                  {locale === 'fr' ? 'Prix' : 'Price'}
-                </th>
-                <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
-                  {locale === 'fr' ? 'Statut' : 'Status'}
-                </th>
-                <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
-                  {locale === 'fr' ? 'Vues' : 'Views'}
-                </th>
-                <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
-                  {locale === 'fr' ? 'Actions' : 'Actions'}
-                </th>
-              </tr>
-            </thead>
-            <tbody className='divide-y divide-gray-200 bg-white'>
-              {filteredProperties.map((property) => (
-                <tr key={property.id} className='hover:bg-gray-50'>
-                  <td className='px-6 py-4'>
-                    <div className='flex items-center gap-3'>
-                      <img
-                        src={property.image}
-                        alt={property.title}
-                        className='h-12 w-16 rounded object-cover'
-                      />
-                      <div>
-                        <div className='font-medium text-gray-900'>
-                          {property.title}
-                        </div>
-                        <div className='text-sm text-gray-500'>
-                          {property.type} • {property.bedrooms}{' '}
-                          {locale === 'fr' ? 'chambres' : 'beds'} •{' '}
-                          {property.area}m²
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td className='px-6 py-4'>
-                    <div className='flex items-center gap-1 text-sm text-gray-900'>
-                      <MapPin className='h-4 w-4 text-gray-400' />
-                      {property.location}
-                    </div>
-                  </td>
-                  <td className='px-6 py-4'>
-                    <div className='text-sm font-medium text-gray-900'>
-                      ${property.priceUSD.toLocaleString()}
-                    </div>
-                    <div className='text-xs text-gray-500'>
-                      {property.price.toLocaleString()} FCFA
-                    </div>
-                  </td>
-                  <td className='px-6 py-4'>
-                    {getStatusBadge(property.status)}
-                  </td>
-                  <td className='px-6 py-4'>
-                    <div className='flex items-center gap-1 text-sm text-gray-900'>
-                      <Eye className='h-4 w-4 text-gray-400' />
-                      {property.views.toLocaleString()}
-                    </div>
-                  </td>
-                  <td className='px-6 py-4'>
-                    <div className='flex items-center gap-2'>
-                      <button
-                        className='rounded p-1 hover:bg-gray-100'
-                        title={locale === 'fr' ? 'Voir' : 'View'}
-                      >
-                        <Eye className='h-4 w-4 text-gray-600' />
-                      </button>
-                      <button
-                        className='rounded p-1 hover:bg-gray-100'
-                        title={locale === 'fr' ? 'Modifier' : 'Edit'}
-                      >
-                        <Edit className='h-4 w-4 text-blue-600' />
-                      </button>
-                      <button
-                        className='rounded p-1 hover:bg-gray-100'
-                        title={locale === 'fr' ? 'Supprimer' : 'Delete'}
-                      >
-                        <Trash2 className='h-4 w-4 text-red-600' />
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <PropertiesListTable
+          properties={paginatedProperties}
+          translations={propertiesTranslations}
+        />
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          totalItems={filteredProperties.length}
+          itemsPerPage={ITEMS_PER_PAGE}
+          onPageChange={handlePageChange}
+          translations={paginationTranslations}
+        />
       </div>
     </div>
   );
