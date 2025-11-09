@@ -81,28 +81,27 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
       <div className="mx-auto max-w-7xl px-6 py-10">
-        <div className="flex flex-col gap-6 md:gap-8 mb-8 px-4">
+        <div className="flex flex-col gap-6 md:gap-8 md:mb-8 sm:mb-7 mb-6">
           <h1 className="text-text-light dark:text-text-dark text-4xl lg:text-5xl font-bold font-display tracking-tight min-w-72">
             Search Results for: Modern Abidjan Homes
           </h1>
-
-          <label className="w-full !h-10 md:max-w-[40%]">
-            <div className="flex w-full flex-1 items-stretch rounded-lg h-full">
-              <div className="text-subtle-text-light dark:text-subtle-text-dark flex bg-primary/10 dark:bg-primary/30 items-center justify-center pl-3 rounded-l-lg">
-                <span className="material-symbols-outlined text-xl">
-                  search
-                </span>
+          <div className="max-w-2xl h-10">
+            <label className="w-full !h-10 md:w-[20%]">
+              <div className="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+                <div className="text-text-muted-light dark:text-text-muted-dark flex bg-white dark:bg-primary/50 items-center justify-center pl-4 rounded-l-xl border-y border-l border-primary/20 dark:border-accent/20">
+                  <span className="material-symbols-outlined">search</span>
+                </div>
+                <input
+                  className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-accent border-y border-r border-primary/20 dark:border-accent/20 bg-white dark:bg-primary/50 focus:border-accent h-full placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  placeholder="Search by partner name..."
+                  value={searchQuery}
+                  onChange={handleChange}
+                  type="text"
+                  name="heading"
+                />
               </div>
-              <input
-                type="text"
-                name="heading"
-                className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border-none bg-primary/10 dark:bg-primary/30 h-full placeholder:text-subtle-text-light dark:placeholder:text-subtle-text-dark px-4 rounded-l-none pl-2 text-sm font-normal"
-                placeholder="Search"
-                value={searchQuery}
-                onChange={handleChange}
-              />
-            </div>
-          </label>
+            </label>
+          </div>
         </div>
 
         <BlogCard initialData={initialData} searchQuery={searchQuery} />
