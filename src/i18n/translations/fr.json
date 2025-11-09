@@ -843,6 +843,38 @@
       "bookViewing": "Réserver une Visite",
       "whatsapp": "WhatsApp"
     },
+    "property": {
+      "manager": "QHomes Locations",
+      "title": "Appartement Moderne Meublé avec Balcon",
+      "location": "Cocody - Riviera, Abidjan",
+      "status": "Vérifié",
+      "description": "Un élégant appartement meublé de 3 chambres offrant des espaces lumineux, une cuisine moderne, une vue depuis le balcon et une sécurité fiable — idéal pour les séjours de courte durée comme pour le confort à long terme au cœur d'Abidjan.",
+      "highlights": {
+        "security": "Sécurité 24h/24 dans résidence fermée",
+        "furnished": "Intérieur entièrement meublé",
+        "internet": "Internet haut débit prêt",
+        "parking": "Place de parking réservée"
+      },
+      "interior": {
+        "ac": "Climatisation partout",
+        "kitchen": "Cuisine moderne équipée",
+        "wardrobes": "Placards intégrés",
+        "internet": "Fibre optique disponible"
+      },
+      "exterior": {
+        "gated": "Résidence sécurisée",
+        "parking": "Parking sur place",
+        "security": "CCTV & vigile de nuit",
+        "entertainment": "Cafés & loisirs à proximité"
+      },
+      "locationDesc": "Situé dans un quartier prisé de Cocody avec un accès rapide aux quartiers d'affaires, supermarchés, écoles et loisirs.",
+      "managerDesc": "Géré professionnellement pour assurer un support réactif, une propreté irréprochable et une expérience locataire fluide.",
+      "rental": {
+        "duration": "Flexible (Court / Long Terme)",
+        "furnishing": "Entièrement Meublé",
+        "deposit": "2 Mois de Dépôt"
+      }
+    },
     "cta": {
       "partnerTitle": "Partenariat Avec Q Homes",
       "partnerSubtitle": "Atteignez un public premium de locataires et d'acheteurs vérifiés. Listez votre propriété avec nous pour un service et une exposition inégalés.",
