@@ -1,5 +1,8 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import { Plus } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslation } from '@/i18n';
 import AppointmentsHeader from '../../../../../components/dashboard/client/AppointmentsHeader';
 import AppointmentsTable from '../../../../../components/dashboard/client/AppointmentsTable';
 import AppointmentDetailModal from '../../../../../components/dashboard/client/AppointmentDetailModal';
@@ -31,6 +34,61 @@ export default function AppointmentsPage() {
     },
     {
       id: 3,
+      full_name: 'Fatema Khan',
+      email: 'fatema@example.com',
+      phone: '01800000002',
+      appointment_type: 'Consultation',
+      preferred_date: '2025-11-16',
+      preferred_time: '02:00 PM',
+      status: 'pending',
+      notes: 'Wants to learn about loan facilities'
+    },
+    {
+      id: 4,
+      full_name: 'Fatema Khan',
+      email: 'fatema@example.com',
+      phone: '01800000002',
+      appointment_type: 'Consultation',
+      preferred_date: '2025-11-16',
+      preferred_time: '02:00 PM',
+      status: 'pending',
+      notes: 'Wants to learn about loan facilities'
+    },
+    {
+      id: 5,
+      full_name: 'Fatema Khan',
+      email: 'fatema@example.com',
+      phone: '01800000002',
+      appointment_type: 'Consultation',
+      preferred_date: '2025-11-16',
+      preferred_time: '02:00 PM',
+      status: 'pending',
+      notes: 'Wants to learn about loan facilities'
+    },
+    {
+      id: 6,
+      full_name: 'Fatema Khan',
+      email: 'fatema@example.com',
+      phone: '01800000002',
+      appointment_type: 'Consultation',
+      preferred_date: '2025-11-16',
+      preferred_time: '02:00 PM',
+      status: 'pending',
+      notes: 'Wants to learn about loan facilities'
+    },
+    {
+      id: 2,
+      full_name: 'Fatema Khan',
+      email: 'fatema@example.com',
+      phone: '01800000002',
+      appointment_type: 'Consultation',
+      preferred_date: '2025-11-16',
+      preferred_time: '02:00 PM',
+      status: 'pending',
+      notes: 'Wants to learn about loan facilities'
+    },
+    {
+      id: 7,
       full_name: 'Karim Saheb',
       email: 'karim@example.com',
       phone: '01900000003',
@@ -45,6 +103,7 @@ export default function AppointmentsPage() {
   const [selectedAppointment, setSelectedAppointment] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [showNewModal, setShowNewModal] = useState(false);
+  const [query, setQuery] = useState('');
   const [formData, setFormData] = useState({
     full_name: '',
     email: '',
@@ -120,18 +179,43 @@ export default function AppointmentsPage() {
     };
   }, [showModal, showNewModal]);
 
+  const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
+
   return (
     <div className="min-h-screen bg-gray-50 space-y-6">
+      <div className="flex items-start justify-between gap-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{t('dashboard.client.appointments') || 'All Appointments'}</h1>
 
-      <AppointmentsHeader count={appointments.length} onNew={() => setShowNewModal(true)} />
+        {/* Green-marked area: New button placed at top-right */}
+        <div className="shrink-0">
+          <button
+            onClick={() => setShowNewModal(true)}
+            className="bg-primary text-white px-4 py-2 md:px-6 md:py-2 rounded-lg flex items-center gap-2 transition text-sm md:text-base"
+          >
+            <Plus size={16} />
+            {t('dashboard.client.newAppointment') || '+ New Appointment'}
+          </button>
+        </div>
+      </div>
 
-      <AppointmentsTable
-        appointments={appointments}
-        onView={(apt) => { setSelectedAppointment(apt); setShowModal(true); }}
-        onEdit={(id) => { /* implement edit navigation or modal */ }}
-        onDelete={handleDelete}
-        onStatusChange={handleStatusChange}
-      />
+      <div className="bg-white rounded-lg shadow p-6">
+        <AppointmentsHeader
+          count={appointments.length}
+          query={query}
+          onQueryChange={(q) => setQuery(q)}
+        />
+
+        <AppointmentsTable
+          appointments={appointments}
+          query={query}
+          onQueryChange={(q) => setQuery(q)}
+          onView={(apt) => { setSelectedAppointment(apt); setShowModal(true); }}
+          onEdit={(id) => { /* implement edit navigation or modal */ }}
+          onDelete={handleDelete}
+          onStatusChange={handleStatusChange}
+        />
+      </div>
 
 
       <AppointmentDetailModal

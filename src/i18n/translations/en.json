@@ -563,7 +563,7 @@
       "profile": "Profile Details",
       "favorites": "Saved Properties",
       "savedSearches": "Saved Searches",
-      "appointments": "Appointments",
+      "appointments": "All Appointments",
       "messages": "Messages",
       "settings": "Settings",
       "firstName": "First Name",
@@ -715,7 +715,7 @@
         "changePassword": "Change Password"
       },
       "savedProperties": {
-        "title": "Your Saved Properties & Searches",
+        "title": "Your Saved Properties ",
         "subtitle": "Properties you've saved for later",
         "noSaved": "No saved properties yet",
         "tabsLabel": "Saved properties and searches",
