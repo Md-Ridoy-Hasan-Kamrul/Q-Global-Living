@@ -30,7 +30,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useMemo, useState, useEffect } from 'react';
+import { useMemo, useState, useEffect, useRef } from 'react';
 import { useTranslation } from '@/i18n';
 
 /**
@@ -173,6 +173,7 @@ export default function Sidebar({ role = 'admin' }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [prevPathname, setPrevPathname] = useState(pathname);
   const [showLangDropdown, setShowLangDropdown] = useState(false);
+  const dropdownRef = useRef(null);
 
   // Memoize navigation items to prevent unnecessary re-renders
   const navigationItems = useMemo(() => navigationConfig[role] || [], [role]);
@@ -194,6 +195,23 @@ export default function Sidebar({ role = 'admin' }) {
       document.body.style.overflow = 'unset';
     };
   }, [isMobileMenuOpen]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowLangDropdown(false);
+      }
+    };
+
+    if (showLangDropdown) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showLangDropdown]);
 
   /**
    * Check if link is active
@@ -319,7 +337,7 @@ export default function Sidebar({ role = 'admin' }) {
       {/* User Section */}
       <div className='border-t border-gray-700/50 p-4'>
         {/* User Info with Dropdown */}
-        <div className='relative'>
+        <div className='relative' ref={dropdownRef}>
           <button
             onClick={() => setShowLangDropdown(!showLangDropdown)}
             className='mb-3 flex w-full items-center gap-3 rounded-lg bg-[#1A2B42] px-3 py-2.5 hover:bg-[#1E3A5F] transition-colors'
