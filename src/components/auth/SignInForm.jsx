@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 import FormInput from './FormInput';
 import SocialButton from './SocialButton';
 import Divider from './Divider';
@@ -142,7 +143,7 @@ const SignInForm = () => {
           type='text'
           name='emailOrUsername'
           placeholder={t('auth.login.emailPlaceholder')}
-          icon='person'
+          icon='User'
           value={formData.emailOrUsername}
           onChange={handleChange}
           error={errors.emailOrUsername}
@@ -156,7 +157,7 @@ const SignInForm = () => {
           type='password'
           name='password'
           placeholder={t('auth.login.passwordPlaceholder')}
-          icon='lock'
+          icon='Lock'
           value={formData.password}
           onChange={handleChange}
           error={errors.password}
@@ -272,9 +273,7 @@ const SignInForm = () => {
           className='text-charcoal-500 dark:text-charcoal-300 text-sm font-normal hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded inline-flex items-center gap-1'
           tabIndex={isLoading ? -1 : 0}
         >
-          <span className='material-symbols-outlined text-base'>
-            arrow_back
-          </span>
+          <ArrowLeft className='h-4 w-4' />
           {t('auth.login.backToHome')}
         </Link>
       </div>
