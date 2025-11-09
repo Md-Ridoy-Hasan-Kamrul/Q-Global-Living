@@ -15,7 +15,7 @@ export default function RentHero() {
 
   return (
     <section
-      className='relative w-full min-h-[480px] flex flex-col items-center justify-center rounded-xl overflow-hidden'
+      className='relative w-full sm:min-h-[480px] flex flex-col items-center justify-center rounded-xl overflow-hidden p-6'
       aria-label='Rent properties hero section'
     >
       {/* Background Image */}
@@ -37,11 +37,11 @@ export default function RentHero() {
       </div>
 
       {/* Content */}
-      <div className='relative z-10 flex flex-col gap-4 px-4 text-center max-w-4xl mx-auto'>
-        <h1 className='text-white text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight'>
+      <div className='relative z-10 flex flex-col gap-4 text-center max-w-3xl mx-auto'>
+        <h1 className='text-white text-2xl sm:text-3xl font-black leading-tight tracking-[-0.033em] lg:text-5xl'>
           {t('rent.hero.title')}
         </h1>
-        <p className='text-gray-100 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl mx-auto'>
+        <p className='text-gray-200 text-sm sm:text-base font-normal leading-normal lg:text-lg'>
           {t('rent.hero.subtitle')}
         </p>
       </div>

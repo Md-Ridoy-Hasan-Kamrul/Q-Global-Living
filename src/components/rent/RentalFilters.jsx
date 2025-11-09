@@ -58,7 +58,7 @@ export default function RentalFilters({ onFilterChange, initialFilters = {} }) {
         {/* Mobile: Stacked Layout */}
         <div className='flex flex-col gap-3 lg:hidden'>
           {/* Row 1: City, Bedrooms, Duration */}
-          <div className='grid grid-cols-3 gap-2'>
+          <div className='grid grid-cols- gap-2'>
             {/* City */}
             <div className='flex flex-col'>
               <label
@@ -406,7 +406,7 @@ export default function RentalFilters({ onFilterChange, initialFilters = {} }) {
           </div>
 
           {/* Price Range */}
-          <div className='flex-1 min-w-[200px]'>
+          <div className='flex-1 min-w-[150px]'>
             <label
               htmlFor='price-desktop'
               className='text-xs font-semibold uppercase text-gray-500 dark:text-gray-400 block mb-2'

@@ -229,7 +229,7 @@ export default function BuyFilters({ onFilterChange, initialFilters = {} }) {
           </div>
 
           {/* Property Type */}
-          <div className='shrink-0 w-[180px]'>
+          <div className='shrink-0 w-[150px]'>
             <label htmlFor='type-desktop' className='text-xs font-semibold uppercase text-gray-500 dark:text-gray-400 block mb-2'>
               {t('buy.filters.propertyTypeLabel')}
             </label>
@@ -256,7 +256,7 @@ export default function BuyFilters({ onFilterChange, initialFilters = {} }) {
           </div>
 
           {/* Price Range */}
-          <div className='flex-1 min-w-[200px]'>
+          <div className='flex-1 min-w-[150px]'>
             <label htmlFor='price-desktop' className='text-xs font-semibold uppercase text-gray-500 dark:text-gray-400 block mb-2'>
               {t('buy.filters.priceRangeLabel', 'Price Range (XOF)')}
             </label>

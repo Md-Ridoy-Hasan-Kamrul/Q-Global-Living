@@ -178,7 +178,7 @@ export default function RentPage() {
         >
           {/* Header with Sort */}
           <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6'>
-            <h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
+            <h2 className='text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white'>
               {t('rent.listings.title')}
             </h2>
             <div className='flex items-center gap-3'>
@@ -241,7 +241,7 @@ export default function RentPage() {
           {/* Property Grid */}
           {displayedProperties.length > 0 ? (
             <>
-              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+              <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 xl:gap-6'>
                 {displayedProperties.map((property) => (
                   <RentalPropertyCard key={property.id} property={property} />
                 ))}
@@ -249,10 +249,10 @@ export default function RentPage() {
 
               {/* Load More Button */}
               {hasMore && (
-                <div className='mt-10 text-center'>
+                <div className='mt-8 sm:mt-10 text-center'>
                   <button
                     onClick={handleLoadMore}
-                    className='bg-[#D4AF37] hover:bg-[#B8941F] text-black font-semibold text-base py-3 px-10 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 shadow-md'
+                    className='inline-flex items-center justify-center bg-[#D4AF37] hover:bg-[#B8941F] text-black font-semibold text-sm sm:text-base py-2.5 sm:py-3 px-6 sm:px-10 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 shadow-md'
                     aria-label='Load more properties'
                   >
                     {t('rent.listings.loadMore')}

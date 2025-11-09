@@ -54,7 +54,7 @@ export default function BuyPropertyCard({ property }) {
       aria-label={`${title} property for sale`}
     >
       {/* Property Image */}
-      <div className='relative w-full aspect-4/3 bg-gray-200 dark:bg-gray-700 overflow-hidden'>
+      <div className='relative w-full aspect-5/3 bg-gray-200 dark:bg-gray-700 overflow-hidden'>
         <Image
           src={image}
           alt={imageAlt || title}
@@ -110,18 +110,18 @@ export default function BuyPropertyCard({ property }) {
       {/* Property Details */}
       <div className='p-4 flex flex-col grow'>
         {/* Location */}
-        <p className='text-gray-500 dark:text-gray-400 text-sm font-normal line-clamp-1'>
+        <p className='text-gray-500 dark:text-gray-400 text-xs sm:text-sm font-normal line-clamp-1'>
           {location}
         </p>
 
         {/* Title */}
-        <h3 className='text-lg font-bold leading-normal mt-1 line-clamp-2 text-gray-900 dark:text-white'>
+        <h3 className='text-xl lg:text-2xl font-bold leading-snug mt-1 line-clamp-1 text-gray-900 dark:text-white'>
           {title}
         </h3>
 
         {/* Property Features */}
         {(bedrooms || bathrooms || area) && (
-          <div className='flex items-center gap-3 mt-2 text-sm text-gray-600 dark:text-gray-300'>
+          <div className='flex items-center gap-2 sm:gap-3 mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-300'>
             {bedrooms && (
               <div className='flex items-center gap-1'>
                 <svg
@@ -173,35 +173,35 @@ export default function BuyPropertyCard({ property }) {
         )}
 
         {/* Price */}
-        <div className='mt-3'>
-          <p className='text-[#D4AF37] text-2xl font-bold'>
+        <div className='mt-2 sm:mt-3'>
+          <p className='text-[#D4AF37] text-xl  font-bold'>
             {formatPrice(priceXOF)} XOF
           </p>
-          <p className='text-gray-500 dark:text-gray-400 text-sm font-normal'>
+          <p className='text-gray-500 dark:text-gray-400 text-xs sm:text-sm font-normal'>
             {t('buy.propertyCard.approx', '~')} ${formatPrice(priceUSD)}{' '}
             {t('buy.propertyCard.usd', 'USD')}
           </p>
         </div>
 
         {/* Action Buttons */}
-        <div className='mt-4 pt-4 border-t border-gray-100 dark:border-border-dark grid grid-cols-3 gap-2'>
+        <div className='mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-100 dark:border-border-dark grid grid-cols-3 gap-1.5 sm:gap-2'>
           <Link
             href={`/${locale}/buy/${id}`}
-            className='text-sm font-semibold text-gray-700 dark:text-gray-300 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
+            className='text-xs sm:text-sm lg:text-base font-semibold text-gray-700 dark:text-gray-300 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 whitespace-nowrap'
             aria-label={`View details for ${title}`}
           >
             {t('buy.propertyCard.viewDetails', 'View Details')}
           </Link>
           <Link
             href={`/${locale}/book-visit?property=${id}`}
-            className='text-sm font-semibold text-gray-700 dark:text-gray-300 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
+            className='text-xs sm:text-sm lg:text-base font-semibold text-gray-700 dark:text-gray-300 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 whitespace-nowrap'
             aria-label={`Book viewing for ${title}`}
           >
             {t('buy.propertyCard.bookViewing', 'Book Viewing')}
           </Link>
           <button
             onClick={handleWhatsAppClick}
-            className='text-sm font-semibold p-2 rounded-lg text-[#25D366] hover:bg-[#25D366]/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2'
+            className='text-xs sm:text-sm lg:text-base font-semibold p-2 rounded-lg text-[#25D366] hover:bg-[#25D366]/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 truncate'
             aria-label={`Contact via WhatsApp about ${title}`}
           >
             {t('buy.propertyCard.whatsapp', 'WhatsApp')}

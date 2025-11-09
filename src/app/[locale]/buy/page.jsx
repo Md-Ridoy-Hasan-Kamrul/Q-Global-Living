@@ -144,7 +144,7 @@ export default function BuyPage() {
         >
           {/* Results Header */}
           <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6'>
-            <h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
+            <h2 className='text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white'>
               {t('buy.results.title', 'Available Properties')}
             </h2>
             <div className='flex items-center gap-3'>
@@ -201,7 +201,7 @@ export default function BuyPage() {
           {/* Properties Grid */}
           {displayedProperties.length > 0 ? (
             <>
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+              <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 xl:gap-6'>
                 {displayedProperties.map((property) => (
                   <BuyPropertyCard key={property.id} property={property} />
                 ))}
@@ -209,10 +209,10 @@ export default function BuyPage() {
 
               {/* Load More Button */}
               {hasMore && (
-                <div className='flex justify-center mt-12'>
+                <div className='mt-8 sm:mt-12 flex justify-center'>
                   <button
                     onClick={handleLoadMore}
-                    className='px-8 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg'
+                    className='inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 bg-primary hover:bg-primary-dark text-white font-semibold text-sm sm:text-base rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
                   >
                     {t('buy.results.loadMore', 'Load More Properties')}
                   </button>
@@ -247,12 +247,12 @@ export default function BuyPage() {
 
         {/* CTA Section */}
         <section className='w-full px-4 sm:px-6 lg:px-8 pb-16'>
-          <div className='p-8 rounded-2xl bg-[#fafafa] dark:from-primary/20 dark:to-secondary/20 border border-primary/20 dark:border-primary/30'>
-            <div className='text-center'>
-              <h3 className='text-2xl font-bold text-gray-900 dark:text-white mb-4'>
+          <div className='p-6 sm:p-8 rounded-2xl bg-[#fafafa] dark:from-primary/20 dark:to-secondary/20 border border-primary/20 dark:border-primary/30'>
+            <div className='text-center max-w-3xl mx-auto'>
+              <h3 className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4'>
                 {t('buy.cta.title', "Can't find what you're looking for?")}
               </h3>
-              <p className='text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto'>
+              <p className='text-gray-600 dark:text-gray-400 mb-5 sm:mb-6 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed'>
                 {t(
                   'buy.cta.description',
                   'Our team can help you find the perfect property. Contact us for personalized assistance.'
@@ -260,7 +260,7 @@ export default function BuyPage() {
               </p>
               <a
                 href={`/${locale}/contact`}
-                className='inline-block px-8 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg'
+                className='inline-flex items-center justify-center min-w-[140px] px-6 sm:px-8 py-2.5 sm:py-3 bg-primary hover:bg-primary-dark text-white font-semibold text-sm sm:text-base rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
               >
                 {t('buy.cta.button', 'Contact Us')}
               </a>
