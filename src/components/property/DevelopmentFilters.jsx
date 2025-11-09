@@ -46,7 +46,7 @@ export default function DevelopmentFilters({ onFilterChange }) {
 
   return (
     <div
-      className='flex flex-wrap items-center gap-3 p-3 my-8 bg-white dark:bg-navy/20 rounded-xl shadow-sm'
+      className='flex flex-wrap items-center gap-3 p-3 my-8 bg-[#fffff7] border border-gray-200 dark:bg-navy/20 rounded-xl shadow-xs'
       role='group'
       aria-label='Property filters'
     >
@@ -54,7 +54,7 @@ export default function DevelopmentFilters({ onFilterChange }) {
         <button
           key={filter.id}
           onClick={() => handleFilterClick(filter.id)}
-          className='flex h-10 flex-1 sm:flex-none shrink-0 items-center justify-center gap-x-2 rounded-lg bg-soft-grey dark:bg-navy-light pl-4 pr-3 text-charcoal dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors'
+          className='flex h-10 flex-1 sm:flex-none shrink-0 items-center justify-center gap-x-2 rounded-lg bg-soft-grey dark:bg-navy-light pl-4 pr-3 text-charcoal dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors whitespace-nowrap'
           aria-label={`Filter by ${filter.label}`}
           aria-haspopup='true'
         >

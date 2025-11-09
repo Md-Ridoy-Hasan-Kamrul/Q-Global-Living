@@ -50,7 +50,7 @@ export default function BuyPropertyCard({ property }) {
 
   return (
     <article
-      className='flex flex-col gap-3 rounded-xl bg-white dark:bg-card-dark shadow-md border border-gray-100 dark:border-border-dark overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-1'
+      className='flex flex-col gap-3 rounded-xl bg-[#fafafa] dark:bg-card-dark shadow-md border border-[#d4af37]/20 dark:border-border-dark overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-1'
       aria-label={`${title} property for sale`}
     >
       {/* Property Image */}

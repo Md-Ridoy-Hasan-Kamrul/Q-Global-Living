@@ -94,7 +94,20 @@
       "bedroomsLabel": "Bedrooms",
       "propertyTypeLabel": "Type",
       "verifiedOnly": "Verified Only",
-      "any": "Any"
+      "any": "Any",
+      "priceRangeLabel": "Price Range (XOF)",
+      "search": "Search",
+      "cities": {
+        "abidjan": "Abidjan",
+        "assinie": "Assinie-Mafia",
+        "yamoussoukro": "Yamoussoukro"
+      },
+      "bedrooms": {
+        "any": "Any",
+        "one": "1",
+        "two": "2",
+        "threePlus": "3+"
+      }
     },
     "propertyTypes": {
       "villa": "Villa",
@@ -105,11 +118,13 @@
     },
     "results": {
       "title": "Available Properties",
-      "sortBy": "Sort by",
-      "featured": "Featured",
-      "priceLowToHigh": "Price: Low to High",
-      "priceHighToLow": "Price: High to Low",
-      "newest": "Newest",
+      "sortBy": "Sort by:",
+      "sortOptions": {
+        "newest": "Newest Listings",
+        "priceLow": "Price (Low to High)",
+        "priceHigh": "Price (High to Low)",
+        "bedrooms": "Most Bedrooms"
+      },
   "loadMore": "Load More",
       "noResults": "No Properties Found",
       "noResultsMessage": "Try adjusting your filters to see more properties"

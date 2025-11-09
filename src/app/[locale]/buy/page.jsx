@@ -21,7 +21,8 @@ export default function BuyPage() {
   });
 
   // Sort and display state
-  const [sortBy, setSortBy] = useState('featured');
+  const [sortBy, setSortBy] = useState('newest');
+  const [sortDropdownOpen, setSortDropdownOpen] = useState(false);
   const [displayCount, setDisplayCount] = useState(3);
 
   // Inject structured data for SEO (match rent page behavior)
@@ -92,13 +93,14 @@ export default function BuyPage() {
     const sorted = [...filteredProperties];
 
     switch (sortBy) {
-      case 'price-low':
+      case 'priceLow':
         return sorted.sort((a, b) => a.priceXOF - b.priceXOF);
-      case 'price-high':
+      case 'priceHigh':
         return sorted.sort((a, b) => b.priceXOF - a.priceXOF);
+      case 'bedrooms':
+        return sorted.sort((a, b) => b.bedrooms - a.bedrooms);
       case 'newest':
         return sorted.sort((a, b) => b.id - a.id);
-      case 'featured':
       default:
         return sorted;
     }
@@ -141,27 +143,58 @@ export default function BuyPage() {
           aria-label='Buy property listings'
         >
           {/* Results Header */}
-          <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4'>
+          <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6'>
             <h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
               {t('buy.results.title', 'Available Properties')}
             </h2>
-
-            {/* Sort Dropdown */}
-            <div className='flex items-center gap-2'>
-              <label htmlFor='sort' className='text-sm font-medium text-gray-700 dark:text-gray-300'>
-                {t('buy.results.sortBy', 'Sort by')}:
-              </label>
-              <select
-                id='sort'
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className='px-3 py-2 rounded-lg border border-gray-300 dark:border-border-dark bg-white dark:bg-card-dark focus:ring-2 focus:ring-primary focus:border-primary text-sm'
+            <div className='flex items-center gap-3'>
+              <label
+                htmlFor='sort-by'
+                className='text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap'
               >
-                <option value='featured'>{t('buy.results.featured', 'Featured')}</option>
-                <option value='price-low'>{t('buy.results.priceLowToHigh', 'Price: Low to High')}</option>
-                <option value='price-high'>{t('buy.results.priceHighToLow', 'Price: High to Low')}</option>
-                <option value='newest'>{t('buy.results.newest', 'Newest')}</option>
-              </select>
+                {t('buy.results.sortBy', 'Sort by:')}
+              </label>
+              <div className='relative'>
+                <select
+                  id='sort-by'
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  onFocus={() => setSortDropdownOpen(true)}
+                  onBlur={() => setSortDropdownOpen(false)}
+                  className='appearance-none rounded-lg border border-gray-300 dark:border-gray-600 bg-[#fafafa] dark:bg-card-dark shadow-sm focus:border-primary focus:ring-2 focus:ring-primary text-sm pl-4 pr-10 py-2 cursor-pointer min-w-[180px]'
+                  aria-label='Sort properties'
+                >
+                  <option value='newest'>
+                    {t('buy.results.sortOptions.newest', 'Newest Listings')}
+                  </option>
+                  <option value='priceLow'>
+                    {t('buy.results.sortOptions.priceLow', 'Price (Low to High)')}
+                  </option>
+                  <option value='priceHigh'>
+                    {t('buy.results.sortOptions.priceHigh', 'Price (High to Low)')}
+                  </option>
+                  <option value='bedrooms'>
+                    {t('buy.results.sortOptions.bedrooms', 'Most Bedrooms')}
+                  </option>
+                </select>
+                <div className='absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none'>
+                  <svg
+                    className={`w-4 h-4 text-gray-600 dark:text-gray-400 transition-transform duration-200 ${
+                      sortDropdownOpen ? 'rotate-180' : ''
+                    }`}
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth={2}
+                      d='M19 9l-7 7-7-7'
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -214,7 +247,7 @@ export default function BuyPage() {
 
         {/* CTA Section */}
         <section className='w-full px-4 sm:px-6 lg:px-8 pb-16'>
-          <div className='p-8 rounded-2xl bg-linear-to-r from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 border border-primary/20 dark:border-primary/30'>
+          <div className='p-8 rounded-2xl bg-[#fafafa] dark:from-primary/20 dark:to-secondary/20 border border-primary/20 dark:border-primary/30'>
             <div className='text-center'>
               <h3 className='text-2xl font-bold text-gray-900 dark:text-white mb-4'>
                 {t('buy.cta.title', "Can't find what you're looking for?")}

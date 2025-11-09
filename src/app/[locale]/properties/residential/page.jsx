@@ -109,19 +109,19 @@ export default function ResidentialPage() {
   return (
     <main className='container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8'>
       {/* Hero Section */}
-      <section className='w-full mb-8'>
+      <section className='w-full sm:mb-8'>
         <div
-          className='flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-6 text-center'
+          className='flex sm:min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-6 text-center'
           style={{
             backgroundImage: `linear-gradient(rgba(10, 25, 49, 0.6) 0%, rgba(10, 25, 49, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9OD-HKYMCUrHYqizPl6bZVRzjkCy4ioyz484ZdQU0212i6RhwyfXTHRWEgiFpL0cLaTwyJNcJ0jSLl2EJyNToBOLg-JxeaLzyZOWlVb8saYJYGBzFOFJIt3GgpCa9HGRmWcxJaqglsWkHwgVwVJz_TF0uHjDASh_quW1mQqfRvqBMLqzpBNBHDBefNUc5HA8BbIoAUvXd4fNObIkob6Y7wIhqEZpLUNZzi1SH2tC2LFMqeowpe_pj0gy6aSKEJF0yvYgTe4lg9Ko")`,
           }}
           role='banner'
         >
           <div className='flex flex-col gap-4 max-w-3xl'>
-            <h1 className='text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl'>
+            <h1 className='text-white text-2xl sm:text-3xl font-black leading-tight tracking-[-0.033em] lg:text-5xl'>
               {t('newDevelopments.hero.title')}
             </h1>
-            <p className='text-gray-200 text-base font-normal leading-normal sm:text-lg'>
+            <p className='text-gray-200 text-sm sm:text-base font-normal leading-normal lg:text-lg'>
               {t('newDevelopments.hero.subtitle')}
             </p>
           </div>
@@ -135,13 +135,13 @@ export default function ResidentialPage() {
       <section aria-labelledby='featured-developments'>
         <h2
           id='featured-developments'
-          className='text-navy dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5'
+          className='text-navy dark:text-white text-2xl sm:text-3xl font-bold leading-tight tracking-[-0.015em]  pb-3 sm:pt-5'
         >
           {t('newDevelopments.section.featured')}
         </h2>
 
         {/* Development Cards Grid */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 xl:gap-6 my-1.5'>
           {developments.map((development) => (
             <DevelopmentCard
               key={development.id}
@@ -155,17 +155,17 @@ export default function ResidentialPage() {
 
       {/* Why Invest Section */}
       <section
-        className='my-16 py-12 bg-white dark:bg-navy/20 rounded-xl'
+        className='lg:my-16 my-4 py-6 sm:py-12 dark:bg-navy/20 rounded-xl'
         aria-labelledby='why-invest'
       >
         <h2
           id='why-invest'
-          className='text-navy dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-8 text-center'
+          className='text-navy dark:text-white text-2xl sm:text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-4 lg:pb-8 text-center'
         >
           {t('newDevelopments.whyInvest.title')}
         </h2>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 xl:gap-6'>
           {investmentBenefits.map((benefit, index) => (
             <WhyInvestCard
               key={index}
