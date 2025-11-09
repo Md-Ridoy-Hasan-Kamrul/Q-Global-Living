@@ -17,7 +17,7 @@ const SocialButton = ({ provider, onClick, disabled = false, children }) => {
       case 'google':
         return (
           <svg
-            className='h-5 w-5'
+            className='h-4 w-4 sm:h-5 sm:w-5'
             viewBox='0 0 24 24'
             xmlns='http://www.w3.org/2000/svg'
             aria-hidden='true'
@@ -44,7 +44,7 @@ const SocialButton = ({ provider, onClick, disabled = false, children }) => {
       case 'facebook':
         return (
           <svg
-            className='h-6 w-6'
+            className='h-5 w-5 sm:h-6 sm:w-6'
             fill='currentColor'
             viewBox='0 0 24 24'
             xmlns='http://www.w3.org/2000/svg'
@@ -64,9 +64,9 @@ const SocialButton = ({ provider, onClick, disabled = false, children }) => {
       onClick={onClick}
       disabled={disabled}
       className={`
-        flex w-full items-center justify-center gap-3
-        rounded-lg h-12 px-6
-        text-base font-medium
+        flex w-full items-center justify-center gap-2 sm:gap-3
+        rounded-lg h-11 sm:h-12 px-4 sm:px-6
+        text-sm sm:text-base font-medium
         transition-all duration-200
         focus:outline-none focus:ring-2 focus:ring-offset-2
         focus:ring-offset-background-light dark:focus:ring-offset-background-dark
@@ -75,8 +75,8 @@ const SocialButton = ({ provider, onClick, disabled = false, children }) => {
       `}
       aria-label={`Continue with ${provider}`}
     >
-      {getProviderIcon()}
-      <span>{children}</span>
+      <span className='shrink-0'>{getProviderIcon()}</span>
+      <span className='truncate'>{children}</span>
     </button>
   );
 };
