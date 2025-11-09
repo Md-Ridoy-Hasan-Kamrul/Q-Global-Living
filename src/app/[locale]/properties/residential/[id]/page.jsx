@@ -1,64 +1,38 @@
+'use client';
+
 import React from 'react';
+import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { MapPin, Download, Phone, CheckCircle, Shield, TrendingUp, Calendar, Building, Home, Waves, Dumbbell, TreePine, Smile } from 'lucide-react';
 import Link from 'next/link';
+import { getResidentialPropertyById } from '@/lib/residentialProperties';
+import { useLanguage } from '@/contexts/LanguageContext';
 
-const page = () => {
-  const propertyData = {
-    name: "Abidjan Heights",
-    location: "Cocody, Abidjan, Côte d'Ivoire",
-    developer: "Q Homes Development",
-    verifiedBy: "Q Homes",
-    escrowEligible: true,
-    description: "Discover Abidjan Heights, a new pinnacle of luxury living in the vibrant heart of Cocody. This exclusive development offers a harmonious blend of modern architecture, sophisticated design, and unparalleled amenities, creating an oasis of comfort and elegance. Designed for those who appreciate the finer things in life, Abidjan Heights is more than a residence—it's a lifestyle statement.",
-    overview: {
-      unitTypes: "2-4 BR Villas, Penthouses",
-      startingPrice: "XOF 150,000,000",
-      completion: "Q4 2025"
-    },
-    investmentHighlights: [
-      {
-        icon: TrendingUp,
-        text: "High potential for capital appreciation in a prime location."
-      },
-      {
-        icon: Building,
-        text: "Strong rental yield prospects due to high demand."
-      },
-      {
-        icon: Shield,
-        text: "Secure, gated community with premium amenities."
-      }
-    ],
-    units: [
-      {
-        name: "2 Bedroom Villa",
-        size: "150 sqm",
-        price: "Starts from XOF 150,000,000",
-        image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500&q=80"
-      },
-      {
-        name: "4 Bedroom Penthouse",
-        size: "320 sqm",
-        price: "Price on Request",
-        image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&q=80"
-      }
-    ],
-    amenities: [
-      { icon: Waves, name: "Swimming Pool" },
-      { icon: Dumbbell, name: "Gymnasium" },
-      { icon: Shield, name: "24/7 Security" },
-      { icon: Building, name: "Clubhouse" },
-      { icon: TreePine, name: "Landscaped Gardens" },
-      { icon: Smile, name: "Children's Play Area" }
-    ],
-    paymentPlan: [
-      { step: 1, title: "Reservation", detail: "10% on booking" },
-      { step: 2, title: "Construction Milestone 1", detail: "20% on foundation completion" },
-      { step: 3, title: "Construction Milestone 2", detail: "20% on structural completion" },
-      { step: 4, title: "Handover", detail: "50% on completion & key handover" }
-    ]
-  };
+const PropertyDetailPage = () => {
+  const params = useParams();
+  const { locale } = useLanguage();
+  const propertyId = params?.id;
+
+  // Fetch property data based on ID
+  const propertyData = getResidentialPropertyById(propertyId);
+
+  // Handle property not found
+  if (!propertyData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#fffff7] dark:bg-gray-900">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold mb-4 dark:text-white">Property Not Found</h1>
+          <p className="text-gray-600 dark:text-gray-400 mb-6">The property you&apos;re looking for doesn&apos;t exist.</p>
+          <Link 
+            href={`/${locale}/properties/residential`}
+            className="text-[#C5A572] hover:text-[#C5A572]/80 font-medium"
+          >
+            ← Back to Residential Properties
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#fffff7] dark:bg-gray-900">
@@ -66,7 +40,7 @@ const page = () => {
       <div 
         className="relative h-[400px] bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80')"
+          backgroundImage: `url('${propertyData.heroImage || propertyData.image}')`
         }}
       >
   <div className="absolute inset-0 bg-linear-to-b from-black/40 to-black/60" />
@@ -313,4 +287,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default PropertyDetailPage;

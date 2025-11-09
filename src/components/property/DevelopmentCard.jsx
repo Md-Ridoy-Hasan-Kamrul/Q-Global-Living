@@ -1,9 +1,9 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/i18n';
-import { useParams } from 'next/navigation';
 
 /**
  * DevelopmentCard Component
@@ -33,11 +33,6 @@ export default function DevelopmentCard({
 }) {
   const { locale } = useLanguage();
   const { t } = useTranslation(locale);
-  const {id}= useParams()
-
-  const handleViewDetails = () => {
-    onViewDetails?.(development.id);
-  };
 
   const handleInquire = () => {
     onInquire?.(development.id);
@@ -135,15 +130,15 @@ export default function DevelopmentCard({
 
         {/* Action Buttons */}
         <div className='flex gap-2 mt-2'>
-          <button
-            onClick={handleViewDetails}
+          <Link
+            href={`/${locale}/properties/residential/${development.id}`}
             className='flex flex-1 min-w-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-accent text-navy sm:text-sm text-xs font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity'
             aria-label={`View details of ${development.title}`}
           >
             <span className='truncate'>
               {t('newDevelopments.card.viewDetails')}
             </span>
-          </button>
+          </Link>
           <button
             onClick={handleInquire}
             className='flex flex-1 min-w-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-navy text-white sm:text-sm text-xs font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-opacity'
