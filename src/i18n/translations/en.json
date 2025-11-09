@@ -504,12 +504,58 @@
     },
     "client": {
       "title": "Client Dashboard",
+      "subtitle": "View and edit your personal details, contact information, and password.",
       "profile": "Profile Details",
       "favorites": "Saved Properties",
       "savedSearches": "Saved Searches",
       "appointments": "Appointments",
       "messages": "Messages",
-      "settings": "Settings"
+      "settings": "Settings",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "updateDetails": "save changes",
+      "changePassword": "Update Password",
+      "mySavedSearches": "My Saved Searches",
+      "saveChanges": "Save Changes",
+      "resetToDefault": "Reset to Default",
+      "totalAppointments": "Total Appointments",
+      "newAppointment": "New Appointment",
+      "yourNotifications": "Your Notifications",
+      "notificationSubtitle": "Here are your latest property alerts and updates.",
+      "markallRead": "Mark all as read",
+
+      "personalDetails": {
+        "title": "Personal Details",
+        "saving": "Saving...",
+        "saveButton": "Save Changes",
+        "saved": "Profile saved successfully.",
+        "errors": {
+          "emailInvalid": "Please enter a valid email address.",
+          "saveFailed": "Unable to save profile. Try again."
+        }
+      },
+
+      "password": {
+        "title": "Change Password",
+        "currentPassword": "Current Password",
+        "newPassword": "New Password",
+        "confirmPassword": "Confirm New Password",
+        "placeholders": {
+          "new": "Enter new password",
+          "confirm": "Confirm new password"
+        },
+        "saving": "Updating...",
+        "updateButton": "Update Password",
+        "updated": "Password updated successfully.",
+        "errors": {
+          "currentRequired": "Please enter your current password.",
+          "minLength": "New password must be at least 8 characters.",
+          "mismatch": "New passwords do not match.",
+          "updateFailed": "Unable to update password. Try again."
+        }
+      }
     },
     "partner": {
       "title": "Partner Dashboard",
@@ -614,9 +660,16 @@
         "changePassword": "Change Password"
       },
       "savedProperties": {
-        "title": "Saved Properties",
+        "title": "Your Saved Properties & Searches",
         "subtitle": "Properties you've saved for later",
-        "noSaved": "No saved properties yet"
+        "noSaved": "No saved properties yet",
+        "tabsLabel": "Saved properties and searches",
+        "tabs": {
+          "properties": "Saved Properties",
+          "searches": "Saved Searches"
+        },
+        "noSavedSearches": "No saved searches yet. Start searching to save your preferences!",
+        "propertiesRegion": "Saved properties list"
       },
       "savedSearches": {
         "title": "Saved Searches",

@@ -27,15 +27,15 @@ export default function PropertyCard({ property, onToggleLike }) {
 
                 <div className="mt-4 border-t pt-3 text-lg text-slate-500 flex items-center gap-6">
                     <div className="flex items-center gap-2">
-                        <Bed size={16} className="text-slate-400 " w-5 h-5 />
+                        <Bed size={16} className="text-slate-400 w-5 h-5" />
                         <span >{property.beds}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <Bath size={16} className="text-slate-400" w-5 h-5 />
+                        <Bath size={16} className="text-slate-400 w-5 h-5 " />
                         <span>{property.baths}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <span className="text-slate-400" w-5 h-5>📐</span>
+                        <span className="text-slate-400 w-5 h-5">📐</span>
                         <span>{property.area} m²</span>
                     </div>
                 </div>
