@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,16 +5,6 @@ import Link from "next/link";
 export default function ArticleHeader({ articleData }) {
   return (
     <>
-      <Head>
-        <title>{articleData.title} | Q Homes</title>
-        <meta name="description" content={articleData.subtitle} />
-        <meta name="author" content={articleData.author} />
-        <meta property="og:title" content={articleData.title} />
-        <meta property="og:description" content={articleData.subtitle} />
-        <meta property="og:image" content={articleData.heroImage} />
-        <meta property="og:type" content="article" />
-      </Head>
-
       {/* Breadcrumb */}
       <div className="flex flex-wrap gap-2 px-4 pb-6">
         <Link

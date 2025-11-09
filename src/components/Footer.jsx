@@ -23,6 +23,11 @@ export default function Footer({ locale }) {
         label: t("Concierge Service"),
         key: "concierge",
       },
+      {
+        href: `/${locale}/cookie-policy`,
+        label: t("Cookie Policy"),
+        key: "cookie",
+      },
     ],
     // legal: [
     //   {
