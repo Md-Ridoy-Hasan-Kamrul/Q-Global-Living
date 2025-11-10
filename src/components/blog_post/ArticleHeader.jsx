@@ -6,7 +6,7 @@ export default function ArticleHeader({ articleData }) {
   return (
     <>
       {/* Breadcrumb */}
-      <div className="flex flex-wrap gap-2 px-4 pb-6">
+      <div className="flex flex-wrap gap-2 px-2 pb-6">
         <Link
           href="/"
           className="text-gray-500 dark:text-gray-400 text-sm font-medium hover:text-accent"
@@ -44,7 +44,7 @@ export default function ArticleHeader({ articleData }) {
 
       {/* Article Header */}
       <article className="max-w-7xl mx-auto w-full">
-        <h1 className="text-text-light dark:text-text-dark font-display tracking-tight text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-left pb-3">
+        <h1 className="text-text-light dark:text-text-dark font-display tracking-tight text-2xl md:text-4xl  font-bold leading-tight text-left pb-3">
           {articleData.title}
         </h1>
         <h2 className="text-gray-600 dark:text-gray-300 text-lg md:text-xl font-body leading-relaxed text-left pb-4">
@@ -59,14 +59,14 @@ export default function ArticleHeader({ articleData }) {
         <div className="prose prose-lg dark:prose-invert max-w-none font-body text-text-light dark:text-text-dark pt-8 space-y-6">
           {articleData.sections.map((section, idx) => (
             <section key={idx}>
-              <h3 className="font-display font-bold text-2xl !mt-10 !mb-4">
+              <h3 className="font-display font-bold text-2xl !mt-2 !mb-2">
                 {section.heading}
               </h3>
               <p>{section.content}</p>
 
               {/* Optional Blockquote */}
               {section.blockquote && (
-                <blockquote className="border-l-4 border-accent bg-subtle-light dark:bg-subtle-dark/50 p-4 rounded-r-lg my-6">
+                <blockquote className="border-l-4 border-accent bg-gray-100 dark:bg-subtle-dark/50 p-4 rounded-r-lg my-6">
                   <p className="italic text-gray-700 dark:text-gray-300">
                     {section.blockquote}
                   </p>
@@ -75,14 +75,17 @@ export default function ArticleHeader({ articleData }) {
 
               {/* Optional Image */}
               {section.image && (
-                <figure>
-                  <Image
-                    src={section.image}
-                    alt={section.heading}
-                    className="rounded-lg w-full"
-                    width={800}
-                    height={500}
-                  />
+                <figure className="w-full">
+                  {/* responsive heights: small screens shorter, large screens ~300px */}
+                  <div className="relative w-full h-48 sm:h-64 md:h-72 lg:h-[700px] rounded-lg overflow-hidden">
+                    <Image
+                      src={section.image}
+                      alt={section.heading}
+                      fill
+                      className="object-cover"
+                      priority={false}
+                    />
+                  </div>
                   <figcaption className="text-center text-sm text-gray-500 dark:text-gray-400 mt-2">
                     {section.heading}
                   </figcaption>

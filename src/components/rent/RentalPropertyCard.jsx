@@ -55,7 +55,7 @@ export default function RentalPropertyCard({ property }) {
     >
       {/* Property Image */}
       <div className='relative w-full aspect-5/3 bg-gray-200 dark:bg-gray-700 overflow-hidden'>
-        <Image
+        <Image 
           src={image}
           alt={imageAlt || title}
           fill

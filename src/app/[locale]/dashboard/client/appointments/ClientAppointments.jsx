@@ -89,9 +89,9 @@ export default function ClientAppointments() {
                 </Suspense>
             </div>
 
-            <Suspense fallback={null}>
+            {/* <Suspense fallback={null}>
                 <AppointmentDetailModal appointment={selectedAppointment} show={showModal} onClose={() => setShowModal(false)} getStatusColor={getStatusColor} getStatusLabel={getStatusLabel} />
-            </Suspense>
+            </Suspense> */}
 
             <Suspense fallback={null}>
                 <NewAppointmentModal show={showNewModal} onClose={() => setShowNewModal(false)} formData={formData} setFormData={setFormData} onCreate={handleCreateAppointment} />

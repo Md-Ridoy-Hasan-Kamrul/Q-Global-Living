@@ -68,7 +68,7 @@ export default function CookieMainContent({ cookie }) {
                 <section
                   key={section.heading}
                   id={createAnchorId(section.heading)}
-                  // 1. স্ক্রলিং ফিক্স: fixed navbar এর জন্য একটি টপ গ্যাপ তৈরি করা
+                 
                   className="scroll-mt-24"
                 >
                   <h2 className="text-xl lg:text-2xl font-bold tracking-tight mb-3">
@@ -105,7 +105,7 @@ export default function CookieMainContent({ cookie }) {
                             {part}
                             {index < array.length - 1 && (
                               <a
-                                // 2. ইমেইল কালার ফিক্স: bold, কালার এবং hover:underline যোগ করা হলো
+                                
                                 className="font-semibold text-yellow-200 dark:text-yellow-200 hover:underline"
                                 href={`mailto:${section.email}`}
                               >
