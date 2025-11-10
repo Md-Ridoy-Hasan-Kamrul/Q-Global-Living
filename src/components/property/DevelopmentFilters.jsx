@@ -93,7 +93,7 @@ export default function DevelopmentFilters({ onFilterChange }) {
 
   return (
     <div
-      className='flex flex-wrap items-center gap-3 p-3 my-8 bg-background-light border border-[#f6efcb] dark:bg-navy/20 rounded-xl shadow-xs'
+      className='flex flex-wrap items-center gap-3 p-3 my-8 bg-[#fafafa] border border-gray-200 dark:bg-navy/20 rounded-xl shadow-xs'
       role='group'
       aria-label='Property filters'
     >
@@ -101,7 +101,7 @@ export default function DevelopmentFilters({ onFilterChange }) {
         <div key={filter.id} className='relative flex-1 sm:flex-none'>
           <button
             onClick={() => handleFilterClick(filter.id)}
-            className='flex h-10 w-full sm:w-auto shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#fafafa] border border-gray-100 dark:bg-navy-light pl-4 pr-3 text-charcoal dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors whitespace-nowrap'
+            className='flex h-10 w-full sm:w-auto shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-light border border-gray-200 dark:bg-navy-light pl-4 pr-3 text-charcoal dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors whitespace-nowrap'
             aria-label={`Filter by ${filter.label}`}
             aria-haspopup='true'
             aria-expanded={openDropdown === filter.id}
