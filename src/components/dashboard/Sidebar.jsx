@@ -274,18 +274,20 @@ export default function Sidebar({ role = "admin" }) {
   const renderSidebarContent = () => (
     <div className="flex h-full flex-col">
       {/* Logo Section */}
-      <div className='flex h-20 items-center gap-3 border-b border-gray-700/50 px-6'>
-        <div className='flex h-10 w-10 items-center justify-center rounded-full bg-[#E6B325]'>
-          <Home className='h-6 w-6 text-[#0F1B2E]' />
-          <Link href={'/'}>
-          <Image src='/logo.png' alt='Logo' className='w-10 h-10' />
-          </Link>
+      <div className='flex  items-center justify-between lg:justify-center gap-1 mt-1  border-b border-gray-700/50 px-6'>
+        <Link className="flex items-center " href={'/'}>
+        <div className='flex items-center justify-center rounded-full -my-3'>
+          
+         
+          <img src='/logo.png' alt='Logo' className='w-[85px] h-[85px]' />
+         
         </div>
-        <div className='flex-1 min-w-0'>
+        {/* <div className='flex-1 min-w-0'>
           <p className='text-base font-semibold text-gray-400 capitalize'>
             {t(`dashboard.${role}.title`)}
           </p>
-        </div>
+        </div> */}
+        </Link>
         {/* Close button for mobile */}
         <button
           onClick={() => setIsMobileMenuOpen(false)}
