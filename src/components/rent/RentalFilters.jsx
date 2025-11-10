@@ -54,11 +54,11 @@ export default function RentalFilters({ onFilterChange, initialFilters = {} }) {
   return (
     <>
       {/* Mobile & Desktop Unified Filter */}
-      <div className='p-4 rounded-xl bg-white dark:bg-card-dark shadow-sm border border-gray-200 dark:border-border-dark'>
+      <div className='p-4 rounded-xl bg-[#fafafa] dark:bg-card-dark shadow-sm border border-gray-200 dark:border-border-dark'>
         {/* Mobile: Stacked Layout */}
         <div className='flex flex-col gap-3 lg:hidden'>
           {/* Row 1: City, Bedrooms, Duration */}
-          <div className='grid grid-cols-3 gap-2'>
+          <div className='grid grid-cols- gap-2'>
             {/* City */}
             <div className='flex flex-col'>
               <label
@@ -281,7 +281,7 @@ export default function RentalFilters({ onFilterChange, initialFilters = {} }) {
                 onChange={(e) => handleFilterChange('city', e.target.value)}
                 onFocus={() => handleDropdownFocus('city')}
                 onBlur={() => handleDropdownBlur('city')}
-                className='w-full h-10 px-3 pr-10 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary text-sm appearance-none cursor-pointer'
+                className='w-full h-10 px-3 pr-10 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-1 focus:ring-primary focus:border-primary text-sm appearance-none cursor-pointer outline-none'
                 aria-label='Select city'
               >
                 <option value='abidjan'>
@@ -329,7 +329,7 @@ export default function RentalFilters({ onFilterChange, initialFilters = {} }) {
                 onChange={(e) => handleFilterChange('bedrooms', e.target.value)}
                 onFocus={() => handleDropdownFocus('bedrooms')}
                 onBlur={() => handleDropdownBlur('bedrooms')}
-                className='w-full h-10 px-3 pr-10 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary text-sm appearance-none cursor-pointer'
+                className='w-full h-10 px-3 pr-10 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark outline-none focus:ring-1 focus:ring-primary focus:border-primary text-sm appearance-none cursor-pointer'
                 aria-label='Select number of bedrooms'
               >
                 <option value='any'>{t('rent.filters.bedrooms.any')}</option>
@@ -374,7 +374,7 @@ export default function RentalFilters({ onFilterChange, initialFilters = {} }) {
                 onChange={(e) => handleFilterChange('duration', e.target.value)}
                 onFocus={() => handleDropdownFocus('duration')}
                 onBlur={() => handleDropdownBlur('duration')}
-                className='w-full h-10 px-3 pr-10 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary text-sm appearance-none cursor-pointer'
+                className='w-full h-10 px-3 pr-10 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-1 outline-none focus:ring-primary focus:border-primary text-sm appearance-none cursor-pointer'
                 aria-label='Select rental duration'
               >
                 <option value='any'>{t('rent.filters.duration.any')}</option>
@@ -406,7 +406,7 @@ export default function RentalFilters({ onFilterChange, initialFilters = {} }) {
           </div>
 
           {/* Price Range */}
-          <div className='flex-1 min-w-[200px]'>
+          <div className='flex-1 min-w-[150px]'>
             <label
               htmlFor='price-desktop'
               className='text-xs font-semibold uppercase text-gray-500 dark:text-gray-400 block mb-2'

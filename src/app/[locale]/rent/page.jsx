@@ -7,6 +7,7 @@ import RentHero from '@/components/rent/RentHero';
 import RentalFilters from '@/components/rent/RentalFilters';
 import RentalPropertyCard from '@/components/rent/RentalPropertyCard';
 import { PartnerCTA, FinalCTA } from '@/components/rent/RentCTA';
+import { RENT_PROPERTIES } from '@/lib/rentProperties';
 
 /**
  * RentPage Component
@@ -15,192 +16,7 @@ import { PartnerCTA, FinalCTA } from '@/components/rent/RentCTA';
  * SEO-optimized with proper semantic HTML and ARIA labels
  */
 
-// Mock rental properties data (in production, fetch from API)
-const MOCK_PROPERTIES = [
-  {
-    id: 1,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDSV_mXKw_VVOBCsRqP6JuFtM-tFEw5_dgVNeZOPD_fbD7HKWrsJasL9C0-Se93rYXNjNFBtRTNmTS3au64zMsDinmBEO0AGO4zITkBOvA0-grtq41wCo9_UAtSz2HtRHHDTDG1ZxmN4E9vxhr1wi9_jI2QCZUqQAY56jCbZoS9ZFal6P77u5Lh6ZcPlgO4HFsENDevHFLPTsBOA3WwAJjtU82LvTDUm5PYOBB-e5Cda0UPUpRiDfIi10TCzjwiSCIqwPRvr26Y5EA',
-    imageAlt: 'Modern apartment exterior with balcony',
-    location: 'Abidjan, Cocody',
-    title: 'Modern Apartment in Cocody',
-    priceXOF: 1500000,
-    priceUSD: 2500,
-    isVerified: true,
-    duration: 'short-term',
-    isFurnished: true,
-    bedrooms: 2,
-    bathrooms: 2,
-    city: 'abidjan',
-  },
-  {
-    id: 2,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAxfLyTLwQhMPFhfmTIwgGw0mgClhtLnLjKjJ8K5d3xcf-DfLIA1BcxgRBMhYILatY9AW8j3BYgHN09EOMshMZTW4B8iqMTOYm1eZkJtMIsS8MHQl0AZhU-FMr6KR1iymlfnGtc32binXcXJa7ONVC6lfOR2kv2AyNW335mdqzHPrSUE1m3zi8iaws5VxyywLpjSfydFhxTqYjGh6jkKq7lJLLQY0Wo-Xy8afbaD7o0jgJf39hdZCLUSGDAmDqrsZcJjlBZFrmME7Q',
-    imageAlt: 'Luxury seaside villa with swimming pool',
-    location: 'Assinie-Mafia',
-    title: 'Seaside Villa in Assinie',
-    priceXOF: 3000000,
-    priceUSD: 5000,
-    isVerified: true,
-    duration: 'long-term',
-    isFurnished: true,
-    bedrooms: 4,
-    bathrooms: 3,
-    city: 'assinie',
-  },
-  {
-    id: 3,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAsaxBScuFqS7z1QQY--r-HDUrNwJ12_OeNQGRHoIChXy8mcFy2t-l9nBX-edtmYBz14QfMi04f6ifkcvJvGdXD37GYrANRHp4fy5v0TConYi95At36Z32hnava3pJp11sfKWUL3ibCW6l4deIqdpJh_jVLWp6vKWgtrsx9MhtTqpLbGPiIHpHct_pRyWtsOObMnzX71Hkh5e9XsktPg5ygsEARhiMRhOIpsaQUNJHhO2thOM4URis69ipdzRRKZsSHEi5qC2YXM9Y',
-    imageAlt: 'Chic loft apartment with high ceilings',
-    location: 'Abidjan, Plateau',
-    title: 'Chic Loft in Plateau',
-    priceXOF: 2000000,
-    priceUSD: 3300,
-    isVerified: false,
-    duration: 'long-term',
-    isFurnished: false,
-    bedrooms: 3,
-    bathrooms: 2,
-    city: 'abidjan',
-  },
-  {
-    id: 4,
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',
-    imageAlt: 'Elegant apartment with modern finishes',
-    location: 'Yamoussoukro',
-    title: 'Elegant Residence in Yamoussoukro',
-    priceXOF: 1200000,
-    priceUSD: 2000,
-    isVerified: true,
-    duration: 'short-term',
-    isFurnished: true,
-    bedrooms: 3,
-    bathrooms: 2,
-    city: 'yamoussoukro',
-  },
-  {
-    id: 5,
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800',
-    imageAlt: 'Spacious family home with garden',
-    location: 'Abidjan, Marcory',
-    title: 'Family Home in Marcory',
-    priceXOF: 1800000,
-    priceUSD: 3000,
-    isVerified: true,
-    duration: 'long-term',
-    isFurnished: false,
-    bedrooms: 4,
-    bathrooms: 3,
-    city: 'abidjan',
-  },
-  {
-    id: 6,
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800',
-    imageAlt: 'Contemporary studio apartment',
-    location: 'Abidjan, Zone 4',
-    title: 'Contemporary Studio in Zone 4',
-    priceXOF: 800000,
-    priceUSD: 1300,
-    isVerified: false,
-    duration: 'short-term',
-    isFurnished: true,
-    bedrooms: 1,
-    bathrooms: 1,
-    city: 'abidjan',
-  },
-  {
-    id: 7,
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800',
-    imageAlt: 'Luxury penthouse with city views',
-    location: 'Abidjan, Cocody',
-    title: 'Luxury Penthouse in Cocody',
-    priceXOF: 4500000,
-    priceUSD: 7500,
-    isVerified: true,
-    duration: 'long-term',
-    isFurnished: true,
-    bedrooms: 5,
-    bathrooms: 4,
-    city: 'abidjan',
-  },
-  {
-    id: 8,
-    image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800',
-    imageAlt: 'Cozy apartment near beach',
-    location: 'Assinie-Mafia',
-    title: 'Beachfront Apartment in Assinie',
-    priceXOF: 2500000,
-    priceUSD: 4200,
-    isVerified: true,
-    duration: 'short-term',
-    isFurnished: true,
-    bedrooms: 3,
-    bathrooms: 2,
-    city: 'assinie',
-  },
-  {
-    id: 9,
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800',
-    imageAlt: 'Modern villa with garden',
-    location: 'Yamoussoukro',
-    title: 'Garden Villa in Yamoussoukro',
-    priceXOF: 1600000,
-    priceUSD: 2700,
-    isVerified: true,
-    duration: 'long-term',
-    isFurnished: false,
-    bedrooms: 4,
-    bathrooms: 3,
-    city: 'yamoussoukro',
-  },
-  {
-    id: 10,
-    image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800',
-    imageAlt: 'Spacious townhouse',
-    location: 'Abidjan, Marcory',
-    title: 'Modern Townhouse in Marcory',
-    priceXOF: 2200000,
-    priceUSD: 3700,
-    isVerified: true,
-    duration: 'long-term',
-    isFurnished: true,
-    bedrooms: 4,
-    bathrooms: 3,
-    city: 'abidjan',
-  },
-  {
-    id: 11,
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800',
-    imageAlt: 'Charming bungalow',
-    location: 'Abidjan, Riviera',
-    title: 'Charming Bungalow in Riviera',
-    priceXOF: 1400000,
-    priceUSD: 2300,
-    isVerified: false,
-    duration: 'short-term',
-    isFurnished: true,
-    bedrooms: 2,
-    bathrooms: 2,
-    city: 'abidjan',
-  },
-  {
-    id: 12,
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800',
-    imageAlt: 'Executive apartment',
-    location: 'Abidjan, Plateau',
-    title: 'Executive Suite in Plateau',
-    priceXOF: 3500000,
-    priceUSD: 5800,
-    isVerified: true,
-    duration: 'long-term',
-    isFurnished: true,
-    bedrooms: 3,
-    bathrooms: 3,
-    city: 'abidjan',
-  },
-];
+// Data now imported from shared module RENT_PROPERTIES
 
 export default function RentPage() {
   const { locale } = useLanguage();
@@ -258,7 +74,7 @@ export default function RentPage() {
 
   // Filter and sort properties based on current filters
   const filteredAndSortedProperties = useMemo(() => {
-    let filtered = [...MOCK_PROPERTIES];
+  let filtered = [...RENT_PROPERTIES];
 
     // Apply city filter
     if (filters.city !== 'all') {
@@ -362,7 +178,7 @@ export default function RentPage() {
         >
           {/* Header with Sort */}
           <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6'>
-            <h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
+            <h2 className='text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white'>
               {t('rent.listings.title')}
             </h2>
             <div className='flex items-center gap-3'>
@@ -379,7 +195,7 @@ export default function RentPage() {
                   onChange={handleSortChange}
                   onFocus={() => setSortDropdownOpen(true)}
                   onBlur={() => setSortDropdownOpen(false)}
-                  className='appearance-none rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-card-dark shadow-sm focus:border-primary focus:ring-2 focus:ring-primary text-sm pl-4 pr-10 py-2 cursor-pointer min-w-[180px]'
+                  className='appearance-none rounded-lg border border-gray-300 dark:border-gray-600 bg-[#fafafa] dark:bg-card-dark shadow-sm focus:border-primary focus:ring-2 focus:ring-primary text-sm pl-4 pr-10 py-0.5 sm:py-2 cursor-pointer w-[110px] sm:min-w-[150px] md:min-w-[180px]'
                   aria-label='Sort properties'
                 >
                   <option value='newest'>
@@ -425,7 +241,7 @@ export default function RentPage() {
           {/* Property Grid */}
           {displayedProperties.length > 0 ? (
             <>
-              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+              <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 xl:gap-6'>
                 {displayedProperties.map((property) => (
                   <RentalPropertyCard key={property.id} property={property} />
                 ))}
@@ -433,10 +249,10 @@ export default function RentPage() {
 
               {/* Load More Button */}
               {hasMore && (
-                <div className='mt-10 text-center'>
+                <div className='mt-8 sm:mt-10 text-center'>
                   <button
                     onClick={handleLoadMore}
-                    className='bg-[#D4AF37] hover:bg-[#B8941F] text-black font-semibold text-base py-3 px-10 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 shadow-md'
+                    className='inline-flex items-center justify-center bg-[#D4AF37] hover:bg-[#B8941F] text-black font-semibold text-sm sm:text-base py-2.5 sm:py-3 px-6 sm:px-10 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 shadow-md'
                     aria-label='Load more properties'
                   >
                     {t('rent.listings.loadMore')}

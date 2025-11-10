@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/i18n';
 
@@ -33,17 +34,13 @@ export default function DevelopmentCard({
   const { locale } = useLanguage();
   const { t } = useTranslation(locale);
 
-  const handleViewDetails = () => {
-    onViewDetails?.(development.id);
-  };
-
   const handleInquire = () => {
     onInquire?.(development.id);
   };
 
   return (
     <article
-      className='flex flex-col gap-3 rounded-xl bg-white dark:bg-navy/20 shadow-md overflow-hidden group'
+      className='flex flex-col gap-3 rounded-xl bg-background-light border border-[#f6efcb] dark:bg-navy/20 shadow-md overflow-hidden group'
       role='article'
       aria-labelledby={`development-title-${development.id}`}
     >
@@ -121,7 +118,7 @@ export default function DevelopmentCard({
           <p className='text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal'>
             {development.propertyType}
           </p>
-          <p className='text-accent text-lg font-bold leading-normal'>
+          <p className='text-accent text-base sm:text-lg font-bold leading-normal'>
             {t('newDevelopments.card.from')} XOF{' '}
             {development.priceXOF.toLocaleString()}
           </p>
@@ -133,18 +130,18 @@ export default function DevelopmentCard({
 
         {/* Action Buttons */}
         <div className='flex gap-2 mt-2'>
-          <button
-            onClick={handleViewDetails}
-            className='flex flex-1 min-w-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-accent text-navy text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity'
+          <Link
+            href={`/${locale}/properties/residential/${development.id}`}
+            className='flex flex-1 min-w-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-accent text-navy sm:text-sm text-xs font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity'
             aria-label={`View details of ${development.title}`}
           >
             <span className='truncate'>
               {t('newDevelopments.card.viewDetails')}
             </span>
-          </button>
+          </Link>
           <button
             onClick={handleInquire}
-            className='flex flex-1 min-w-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-navy text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-opacity'
+            className='flex flex-1 min-w-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-navy text-white sm:text-sm text-xs font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-opacity'
             aria-label={`Inquire about ${development.title}`}
           >
             <span className='truncate'>

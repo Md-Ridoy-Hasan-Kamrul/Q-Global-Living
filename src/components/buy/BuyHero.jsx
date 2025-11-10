@@ -5,24 +5,24 @@ import { useTranslation } from '@/i18n';
 import Image from 'next/image';
 
 /**
- * RentHero Component
- * Hero section for rent page with background image and text overlay
+ * BuyHero Component
+ * Hero section for buy page with background image and text overlay
  * Optimized for performance with Next.js Image
  */
-export default function RentHero() {
+export default function BuyHero() {
   const { locale } = useLanguage();
   const { t } = useTranslation(locale);
 
   return (
     <section
       className='relative w-full sm:min-h-[480px] flex flex-col items-center justify-center rounded-xl overflow-hidden p-6'
-      aria-label='Rent properties hero section'
+      aria-label='Buy properties hero section'
     >
       {/* Background Image */}
       <div className='absolute inset-0 z-0'>
         <Image
-          src='https://lh3.googleusercontent.com/aida-public/AB6AXuCfQeWBsMCX24T5y8UC_SdE6VyZCBj_FHDttPWx4ACjmfkqrkwJw_4USgp4hkSQcdxPblErwgOUoWudHt_Yf-Ob8YUL9krrCkhCAN1ybSJbBIOYq3yrntBMrHmSwtJ3QnOkWkpr8kttiV8VVWudv5jLPzy6uFEwsvc1VcosxJWIYpuEnTn36DehB2ZCS_wizLxC8AuLPgNTAITIgRgu0wxTTMLDR7L_-OJxi2sKrG4FSeWNPyPdUKaSK5sY4h816Q1GVxizqwsooR8'
-          alt='Modern living room with city skyline view'
+          src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&h=800&fit=crop'
+          alt='Luxury property exterior with modern architecture'
           fill
           sizes='100vw'
           className='object-cover'
@@ -39,10 +39,10 @@ export default function RentHero() {
       {/* Content */}
       <div className='relative z-10 flex flex-col gap-4 text-center max-w-3xl mx-auto'>
         <h1 className='text-white text-2xl sm:text-3xl font-black leading-tight tracking-[-0.033em] lg:text-5xl'>
-          {t('rent.hero.title')}
+          {t('buy.hero.title', "Find Your Dream Home in Côte d'Ivoire")}
         </h1>
         <p className='text-gray-200 text-sm sm:text-base font-normal leading-normal lg:text-lg'>
-          {t('rent.hero.subtitle')}
+          {t('buy.hero.subtitle', 'Discover verified, high-quality properties for sale across Abidjan and beyond.')}
         </p>
       </div>
     </section>
