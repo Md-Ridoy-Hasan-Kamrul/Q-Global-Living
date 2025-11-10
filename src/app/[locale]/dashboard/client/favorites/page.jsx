@@ -110,19 +110,11 @@ export default function SavedProperties() {
             </div>
 
             <div className="ml-auto flex items-center gap-3">
-              <select
-                aria-label="Filter by status"
-                className="rounded border border-gray-200 bg-white px-3 py-2 text-sm"
-              >
-                <option>All Status</option>
-                <option>Available</option>
-                <option>Rented</option>
-                <option>Sold</option>
-              </select>
 
               <button
                 type="button"
-                className="bg-primary text-white px-4 py-2 rounded shadow text-sm"
+                className="bg-[#E6B325] text-white px-4 py-2 rounded shadow text-base
+                "
               // TODO: wire add property action
               >
                 {'Add Property'}
