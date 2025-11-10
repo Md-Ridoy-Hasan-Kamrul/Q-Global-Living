@@ -85,7 +85,7 @@ export default function SavedProperties() {
       <div>
         {/* Header */}
         
-        <div className="bg-gradient-to-r from-[#1e3a5f] to-[#2d5078] rounded-lg p-6 shadow-lg mb-4">
+        <div className="bg-gradient-to-r from-[#1e3a5f] to-[#2d5078] rounded-lg p-6 shadow-lg mb-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">{t('dashboard.pages.savedProperties.title')}</h1>
           <p className="text-sm sm:text-base text-white/80">{t('dashboard.pages.savedProperties.subtitle')}</p>
         </div>

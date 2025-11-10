@@ -185,7 +185,7 @@ export default function NotificationSettings() {
       className="min-h-screen bg-gray-50 space-y-6"
       role="main"
     >
-      <header className="bg-gradient-to-r from-[#1e3a5f] to-[#2d5078] rounded-lg p-6 shadow-lg ">
+      <header className="bg-gradient-to-r from-[#1e3a5f] to-[#2d5078] rounded-lg p-6 shadow-sm mb-6 ">
         <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">
           Saved Searches and Settings
         </h1>

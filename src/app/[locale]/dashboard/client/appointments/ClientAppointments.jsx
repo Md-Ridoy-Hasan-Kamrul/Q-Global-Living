@@ -59,7 +59,7 @@ export default function ClientAppointments() {
 
     return (
         <div className="min-h-screen bg-gray-50 space-y-6">
-            <div className='bg-linear-to-r from-[#1e3a5f] to-[#2d5078] rounded-lg p-4 sm:p-6 md:p-8 shadow-lg'>
+            <div className='bg-linear-to-r from-[#1e3a5f] to-[#2d5078] rounded-lg p-4 sm:p-6 md:p-8 shadow-sm mb-6'>
                 <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4'>
                     <h1 className='text-xl sm:text-2xl md:text-3xl font-bold text-white'>
                         {t('dashboard.client.appointments') || 'All Appointments'}
