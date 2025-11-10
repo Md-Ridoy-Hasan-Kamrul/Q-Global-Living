@@ -1,8 +1,6 @@
 
 "use client";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { useTranslation } from "@/i18n";
-import React, { useState } from "react";
+import React, { useState, useCallback, useId } from "react";
 
 const title = "Hotel Buying FAQs";
 const subtitle =
@@ -42,13 +40,12 @@ const faqs = [
 ];
 
 const ContactFAQ = React.memo(() => {
-   const { locale } = useLanguage();
-      const { t } = useTranslation(locale);
-  const [openIndex, setOpenIndex] = useState(0);
+  const baseId = useId();
+  const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  const toggleFAQ = useCallback((index) => {
+    setOpenIndex((prev) => (prev === index ? null : index));
+  }, []);
 
   return (
     <section className="w-full py-10 sm:py-16  px-4">
@@ -63,47 +60,59 @@ const ContactFAQ = React.memo(() => {
           </p>
         </div>
 
-        {/* Accordion */}
-        <div className="w-full space-y-4 ">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="rounded-xl bg-white p-4 sm:p-6 shadow-sm dark:bg-navy-light transition-all duration-300"
-            >
-              {/* Question */}
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="flex w-full items-center justify-between cursor-pointer"
-              >
-                <h3 className="text-base sm:text-lg font-semibold text-navy dark:text-[#FFFFF0] text-left">
-                  {faq.question}
-                </h3>
-                <span
-                  className={`material-symbols-outlined text-[#D4AF37] transform transition-transform duration-500 ${
-                    openIndex === index ? "rotate-180" : "rotate-0"
-                  }`}
-                >
-                  expand_more
-                </span>
-              </button>
+        {/* Accordion (semantic dl/dt/dd) */}
+        <dl className="w-full space-y-4">
+          {faqs.map((faq, index) => {
+            const headerId = `${baseId}-header-${index}`;
+            const contentId = `${baseId}-content-${index}`;
+            const isOpen = openIndex === index;
 
-              {/* Animated Answer */}
+            return (
               <div
-                className={`grid transition-all duration-300 ease-in-out overflow-hidden ${
-                  openIndex === index
-                    ? "grid-rows-[1fr] opacity-100 mt-3"
-                    : "grid-rows-[0fr] opacity-0 mt-0"
-                }`}
+                key={index}
+                className="rounded-xl bg-white p-4 sm:p-6 shadow-sm dark:bg-navy-light transition-all duration-300"
               >
-                <div className="overflow-hidden">
-                  <p className="text-sm sm:text-base text-navy/70 dark:text-[#FFFFF0]/70">
-                    {faq.answer}
-                  </p>
-                </div>
+                <dt>
+                  <button
+                    type="button"
+                    id={headerId}
+                    aria-controls={contentId}
+                    aria-expanded={isOpen}
+                    onClick={() => toggleFAQ(index)}
+                    className="flex w-full items-center justify-between cursor-pointer text-left"
+                  >
+                    <h3 className="text-base sm:text-lg font-semibold text-navy dark:text-[#FFFFF0]">
+                      {faq.question}
+                    </h3>
+                    <svg
+                      className={`w-6 h-6 text-[#D4AF37] transform transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"
+                        }`}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+                </dt>
+
+                <dd
+                  id={contentId}
+                  role="region"
+                  aria-labelledby={headerId}
+                  className={`text-sm sm:text-base text-navy/70 dark:text-[#FFFFF0]/70 overflow-hidden transition-[max-height,opacity,margin] duration-300 ease-in-out ${isOpen ? "max-h-96 opacity-100 mt-3" : "max-h-0 opacity-0 mt-0"
+                    }`}
+                >
+                  <div>
+                    <p className="leading-relaxed">{faq.answer}</p>
+                  </div>
+                </dd>
               </div>
-            </div>
-          ))}
-        </div>
+            );
+          })}
+        </dl>
       </div>
     </section>
   );

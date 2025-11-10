@@ -75,14 +75,17 @@ export default function ArticleHeader({ articleData }) {
 
               {/* Optional Image */}
               {section.image && (
-                <figure>
-                  <Image
-                    src={section.image}
-                    alt={section.heading}
-                    className="rounded-lg w-full"
-                    width={800}
-                    height={500}
-                  />
+                <figure className="w-full">
+                  {/* responsive heights: small screens shorter, large screens ~300px */}
+                  <div className="relative w-full h-48 sm:h-64 md:h-72 lg:h-[800px] rounded-lg overflow-hidden">
+                    <Image
+                      src={section.image}
+                      alt={section.heading}
+                      fill
+                      className="object-cover"
+                      priority={false}
+                    />
+                  </div>
                   <figcaption className="text-center text-sm text-gray-500 dark:text-gray-400 mt-2">
                     {section.heading}
                   </figcaption>
