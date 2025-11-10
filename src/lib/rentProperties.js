@@ -4,8 +4,7 @@
 export const RENT_PROPERTIES = [
   {
     id: 1,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDSV_mXKw_VVOBCsRqP6JuFtM-tFEw5_dgVNeZOPD_fbD7HKWrsJasL9C0-Se93rYXNjNFBtRTNmTS3au64zMsDinmBEO0AGO4zITkBOvA0-grtq41wCo9_UAtSz2HtRHHDTDG1ZxmN4E9vxhr1wi9_jI2QCZUqQAY56jCbZoS9ZFal6P77u5Lh6ZcPlgO4HFsENDevHFLPTsBOA3WwAJjtU82LvTDUm5PYOBB-e5Cda0UPUpRiDfIi10TCzjwiSCIqwPRvr26Y5EA',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800',
     imageAlt: 'Modern apartment exterior with balcony',
     location: 'Abidjan, Cocody',
     title: 'Modern Apartment in Cocody',
@@ -20,8 +19,7 @@ export const RENT_PROPERTIES = [
   },
   {
     id: 2,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAxfLyTLwQhMPFhfmTIwgGw0mgClhtLnLjKjJ8K5d3xcf-DfLIA1BcxgRBMhYILatY9AW8j3BYgHN09EOMshMZTW4B8iqMTOYm1eZkJtMIsS8MHQl0AZhU-FMr6KR1iymlfnGtc32binXcXJa7ONVC6lfOR2kv2AyNW335mdqzHPrSUE1m3zi8iaws5VxyywLpjSfydFhxTqYjGh6jkKq7lJLLQY0Wo-Xy8afbaD7o0jgJf39hdZCLUSGDAmDqrsZcJjlBZFrmME7Q',
+    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800',
     imageAlt: 'Luxury seaside villa with swimming pool',
     location: 'Assinie-Mafia',
     title: 'Seaside Villa in Assinie',
@@ -36,8 +34,7 @@ export const RENT_PROPERTIES = [
   },
   {
     id: 3,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAsaxBScuFqS7z1QQY--r-HDUrNwJ12_OeNQGRHoIChXy8mcFy2t-l9nBX-edtmYBz14QfMi04f6ifkcvJvGdXD37GYrANRHp4fy5v0TConYi95At36Z32hnava3pJp11sfKWUL3ibCW6l4deIqdpJh_jVLWp6vKWgtrsx9MhtTqpLbGPiIHpHct_pRyWtsOObMnzX71Hkh5e9XsktPg5ygsEARhiMRhOIpsaQUNJHhO2thOM4URis69ipdzRRKZsSHEi5qC2YXM9Y',
+    image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800',
     imageAlt: 'Chic loft apartment with high ceilings',
     location: 'Abidjan, Plateau',
     title: 'Chic Loft in Plateau',

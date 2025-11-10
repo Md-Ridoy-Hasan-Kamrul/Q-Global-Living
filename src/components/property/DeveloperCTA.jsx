@@ -25,7 +25,7 @@ export default function DeveloperCTA({ onListProject }) {
       <div
         className='flex flex-col md:flex-row lg:min-h-[280px] gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-between p-8 md:p-12 text-center md:text-left'
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(10, 25, 49, 0.95) 0%, rgba(10, 25, 49, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDL0RbtXqwGZMxwaJkGseMSOhmCE0ahmf8rkU8thL1tHq6H2iNoNY4v-6GUo0fvkVtXuT0NCwRtn1Ms2ct5iK-6qbS0uwRG0GjvO_scd1RiFuS4j1L9WHaEOfIa4dSBjdQPC4cQqmnuYeg4wa5b3z3leoCwe2R6Rcy7MSPr5zG7_STPpdvAK-AxMQ2-y7pGRAAgC14Fg3tuO1Xbkmwc8wjJvyJZKqHU9Mp-jRmYF_agxe_qfMcjYtPjIq7z-tmsphfnpYHSNICjjGI")`,
+          backgroundImage: `linear-gradient(to right, rgba(10, 25, 49, 0.95) 0%, rgba(10, 25, 49, 0.7) 100%), url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80")`,
         }}
         role='region'
         aria-label='Developer call to action'

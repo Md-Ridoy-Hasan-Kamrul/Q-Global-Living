@@ -190,7 +190,7 @@ export default function RentalPropertyCard({ property }) {
           <p className='text-[#D4AF37] text-xl font-bold'>
             {formatPrice(priceXOF)} XOF{' '}
             <span className='text-gray-500 dark:text-gray-400 text-sm font-normal'>
-               {t('rent.propertyCard.perMonth')}
+              {t('rent.propertyCard.perMonth')}
             </span>
           </p>
           <p className='text-gray-500 dark:text-gray-400 text-xs sm:text-sm font-normal'>

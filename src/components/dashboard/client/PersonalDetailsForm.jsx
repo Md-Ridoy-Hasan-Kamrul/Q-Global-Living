@@ -113,7 +113,7 @@ export default function PersonalDetailsForm() {
                     type="submit"
                     form="personal-details-form"
                     disabled={saving}
-                    className="inline-flex items-center rounded-md bg-primary px-5 py-2 text-base font-medium text-white hover:text-black cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-300 disabled:opacity-60"
+                    className="inline-flex items-center rounded-md bg-[#d4af37] hover:bg-[#c19b2a] px-5 py-2 text-base font-medium text-white hover:text-black cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-300 disabled:opacity-60"
                 >
                     {saving ? t("dashboard.client.personalDetails.saving") : t("dashboard.client.personalDetails.saveButton")}
                 </button>

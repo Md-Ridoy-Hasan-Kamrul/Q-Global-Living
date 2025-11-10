@@ -205,13 +205,13 @@ const SignInForm = () => {
           {t('auth.login.continueWithGoogle')}
         </SocialButton>
 
-        <SocialButton
+        {/* <SocialButton
           provider='facebook'
           onClick={() => handleSocialLogin('facebook')}
           disabled={isLoading}
         >
           {t('auth.login.continueWithFacebook')}
-        </SocialButton>
+        </SocialButton> */}
       </div>
 
       {/* Quick Login Demo Section */}

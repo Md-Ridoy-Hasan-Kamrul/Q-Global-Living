@@ -70,7 +70,63 @@
         "loginFailed": "Échec de la connexion",
         "socialLoginFailed": "Échec de la connexion avec {provider}. Veuillez réessayer."
       }
-    }
+    },
+    "register": {
+  "title": "Créer un compte",
+  "subtitle": "Inscrivez-vous pour commencer votre aventure avec Q Homes.",
+  "fullName": "Nom complet",
+  "fullNamePlaceholder": "Entrez votre nom complet",
+  "email": "E-mail",
+  "emailPlaceholder": "Entrez votre adresse e-mail",
+  "password": "Mot de passe",
+  "passwordPlaceholder": "Créez un mot de passe",
+  "confirmPassword": "Confirmez le mot de passe",
+  "confirmPasswordPlaceholder": "Ressaisissez votre mot de passe",
+  "registerButton": "S'inscrire",
+  "registering": "Inscription en cours...",
+  "backToLogin": "Retour à la connexion",
+  "orDivider": "OU",
+  "continueWithGoogle": "Continuer avec Google",
+  "continueWithFacebook": "Continuer avec Facebook",
+  "haveAccount": "Vous avez déjà un compte ?",
+  "loginNow": "Connectez-vous maintenant",
+  "backToHome": "Retour à l'accueil",
+  "check1": "J'accepte les Termes et Conditions",
+  "check2": "J'ai lu la Politique de confidentialité",
+  "createAccount": "Créer un compte",
+
+  "errors": {
+    "fullNameRequired": "Le nom complet est requis",
+    "emailRequired": "L'e-mail est requis",
+    "emailInvalid": "Veuillez entrer une adresse e-mail valide",
+    "passwordRequired": "Le mot de passe est requis",
+    "confirmPasswordRequired": "Veuillez confirmer votre mot de passe",
+    "passwordMinLength": "Le mot de passe doit contenir au moins 6 caractères",
+    "passwordsMismatch": "Les mots de passe ne correspondent pas",
+    "registrationFailed": "Échec de l'inscription. Veuillez réessayer."
+  }
+},
+"forgotPassword": {
+  "title": "Mot de passe oublié ?",
+  "subtitle": "Entrez votre adresse e-mail pour réinitialiser votre mot de passe.",
+  "email": "E-mail",
+  "emailPlaceholder": "Entrez votre adresse e-mail",
+  "submitButton": "Envoyer",
+  "submitting": "Envoi en cours...",
+  "backToLogin": "Retour à la connexion",
+  "backToHome": "Retour à l'accueil",
+  "checkEmail": "Vérifiez votre e-mail",
+  "checkEmailInstructions": "Nous avons envoyé les instructions de réinitialisation du mot de passe à {{email}}. Veuillez vérifier votre boîte de réception et votre dossier spam.",
+  "returnToLogin": "Retour à la connexion",
+  "didNotReceiveEmail": "Vous n'avez pas reçu l'e-mail ?",
+  "resend": "Renvoyer",
+  "errors": {
+    "emailRequired": "L'e-mail est requis",
+    "emailInvalid": "Veuillez entrer une adresse e-mail valide",
+    "resetFailed": "Échec de l'envoi du lien de réinitialisation. Veuillez réessayer."
+  }
+}
+
   },
   "searchBar": {
     "buy": "Acheter",
@@ -559,6 +615,7 @@
       "yourNotifications": "Vos Notifications",
       "notificationSubtitle": "Voici vos dernières alertes et mises à jour de propriétés.",
       "markallRead": "Tout marquer comme lu",
+      "tickets": "Tickets de Support",
       "personalDetails": {
         "title": "Détails personnels",
         "saving": "Enregistrement...",

@@ -49,7 +49,7 @@ export function FinalCTA() {
     <section
       className='relative w-full rounded-xl overflow-hidden p-5 sm:p-10 text-center text-white min-h-[280px] sm:min-h-[300px] flex flex-col items-center justify-center'
       style={{
-        backgroundImage: `linear-gradient(to right, rgba(10, 25, 49, 0.9), rgba(10, 25, 49, 0.7)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7Ufcx2x_BF-AITtkpS-URPMLgN6OyHwkqzzPPaPxqEmqkoGqUAqj9IYBU_cZvbMj8K9lJ1SqBllkIfI2yoYo2UifRGNtsbZO12iW3z9VIItckSN38TG9732fjcitNq5Q0mrWNvCAEde560c9CZpV2VU3n1TCj1tbQl0Ua5UGxNQBJr9LMlpHoWstwjHfn0zJ57VouNYrYE4hD5IxMW5RVlsSOSrjJqpx8ZoA91sAjwThZbEm47S-8_jseyJJu1_5qdwf-7HbUbaE')`,
+        backgroundImage: `linear-gradient(to right, rgba(10, 25, 49, 0.9), rgba(10, 25, 49, 0.7)), url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&q=80')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
