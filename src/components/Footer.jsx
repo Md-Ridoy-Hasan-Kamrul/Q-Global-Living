@@ -28,13 +28,13 @@ export default function Footer({ locale }) {
         label: t("Cookie Policy"),
         key: "cookie",
       },
+      {
+        href: `/${locale}/legal-center`,
+        label: t("Legal Center"),
+        key: "legal",
+      },
     ],
     // legal: [
-    //   {
-    //     href: `/${locale}/cookie-policy`,
-    //     label: t("Cookie Policy"),
-    //     key: "cookie",
-    //   },
     //   {
     //     href: `/${locale}/cookie-preferences`,
     //     label: t("Cookie Preferences"),
@@ -49,11 +49,6 @@ export default function Footer({ locale }) {
     //     href: `/${locale}/accessibility`,
     //     label: t("Accessibility"),
     //     key: "accessibility",
-    //   },
-    //   {
-    //     href: `/${locale}/legal-center`,
-    //     label: t("Legal Center"),
-    //     key: "legal",
     //   },
     // ],
     // legal: [

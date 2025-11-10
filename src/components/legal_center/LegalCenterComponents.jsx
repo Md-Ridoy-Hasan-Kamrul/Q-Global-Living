@@ -37,7 +37,7 @@ export default function LegalCenterComponents({ legalDocuments }) {
                 {legalDocuments.map((doc) => (
                   <a
                     key={doc.title}
-                    href={doc.href}
+                    // href={doc.href}
                     className="group flex items-center gap-4 rounded-lg bg-white dark:bg-gray-700 p-4 min-h-[72px] justify-between border border-transparent transition-all hover:border-primary/50 hover:shadow-lg dark:hover:bg-gray-600"
                   >
                     <div className="flex items-center gap-4 md:gap-5">
