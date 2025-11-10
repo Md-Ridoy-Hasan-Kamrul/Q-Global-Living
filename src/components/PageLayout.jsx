@@ -16,7 +16,7 @@ export default function PageLayout({ children, locale }) {
   return (
     <div className='relative flex min-h-screen flex-col'>
       <Header locale={locale} />
-      <main className='grow'>{children}</main>
+      <main className='grow bg-accent'>{children}</main>
       <Footer locale={locale} />
       <WhatsAppButton />
     </div>
