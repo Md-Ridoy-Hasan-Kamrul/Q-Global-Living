@@ -21,7 +21,7 @@ export default function RentHero() {
       {/* Background Image */}
       <div className='absolute inset-0 z-0'>
         <Image
-          src='https://lh3.googleusercontent.com/aida-public/AB6AXuCfQeWBsMCX24T5y8UC_SdE6VyZCBj_FHDttPWx4ACjmfkqrkwJw_4USgp4hkSQcdxPblErwgOUoWudHt_Yf-Ob8YUL9krrCkhCAN1ybSJbBIOYq3yrntBMrHmSwtJ3QnOkWkpr8kttiV8VVWudv5jLPzy6uFEwsvc1VcosxJWIYpuEnTn36DehB2ZCS_wizLxC8AuLPgNTAITIgRgu0wxTTMLDR7L_-OJxi2sKrG4FSeWNPyPdUKaSK5sY4h816Q1GVxizqwsooR8'
+          src='https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&q=80'
           alt='Modern living room with city skyline view'
           fill
           sizes='100vw'

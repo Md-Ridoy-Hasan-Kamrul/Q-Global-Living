@@ -4,8 +4,10 @@ import RegisterForm from '@/components/auth/RegisterForm';
 
 export const metadata = {
   title: "Register | Q Homes - Your Gateway to Côte d'Ivoire Real Estate",
-  description: "Create a Q Homes account to save listings, manage visits, and access personalized services in Côte d'Ivoire.",
-  keywords: 'Q Homes register, sign up, Côte d\'Ivoire real estate, create account',
+  description:
+    "Create a Q Homes account to save listings, manage visits, and access personalized services in Côte d'Ivoire.",
+  keywords:
+    "Q Homes register, sign up, Côte d'Ivoire real estate, create account",
   openGraph: {
     title: 'Register | Q Homes',
     description: 'Create your Q Homes account',
@@ -31,11 +33,11 @@ export default function RegisterPage() {
     <main className='relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden'>
       <div
         className='absolute inset-0 z-0 h-full w-full bg-center bg-no-repeat bg-cover'
-        role="img"
+        role='img'
         aria-label="Luxurious home in Côte d'Ivoire"
       >
         <Image
-          src='https://lh3.googleusercontent.com/aida-public/AB6AXuB2RYaCRA7poFljSM_JwoPSJlEEqOxYDqB8cHJL_NxZrZilTRqZO8b15yOJyq5E_l8dmrXMDspudSzvzSRMQof-5lf4bGPZrUj9fCXQnxdPp91ZOlFDHMLU2O_Nu58LvAjEqZo1fpskQ6Fcbfmol8D6e5PIkDtF5XD0eSdK2QNudYh7sKJ1u_6qnnqAyhYrzegFUpWbyi-nLjZVBzB7-jPfR-tNRBdzx7sDMY7fq6Kxx9ucGDkFBd9ex00Hmg3yuMJXP91EQM2iKrc'
+          src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80'
           alt="Modern luxurious home in Côte d'Ivoire at dusk"
           fill
           priority
