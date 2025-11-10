@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import initialData from "@/lib/blogData";
 
-export default function RelatedArticles({ relatedArticles }) {
+export default function RelatedArticles({ relatedArticles, locale }) {
   const list = Array.isArray(relatedArticles) && relatedArticles.length > 0 ? relatedArticles : initialData;
+  const base = locale ? `/${locale}` : "";
 
   return (
     <div className="w-full mt-16">
@@ -24,7 +25,7 @@ export default function RelatedArticles({ relatedArticles }) {
                 alt={article.alt || article.title}
                 fill
                 className="object-cover rounded-t-xl"
-                priority={true}
+                priority={false}
               />
             </div>
             <div className="p-4 flex flex-col flex-grow">
@@ -37,7 +38,7 @@ export default function RelatedArticles({ relatedArticles }) {
               <p className="text-text-light dark:text-text-dark flex-grow">
                 {article.snippet}
               </p>
-              <Link href={`/blog/product/${article.id}`} className="mt-4 inline-block text-accent hover:underline">
+              <Link href={`${base}/blog/product/${article.id}?id=${article.id}`} className="mt-4 inline-block text-accent hover:underline">
                 Read More
               </Link>
             </div>

@@ -67,7 +67,8 @@ export const initialData = [
         blockquote:
           "The growth in Angré has been phenomenal. It perfectly blends residential tranquility with commercial vibrancy, making it a prime spot for both families and young professionals.",
         image:
-          "https://lh3.googleusercontent.com/aida-public/AB6AXuD3TfmGBSyBzPyyfiR84-AngIMNSX1kL595o93KElzBVsScPMNKcNqEchZ0CduT4ZaT_If6OMKvZOXMAB1bNF3XI1KWEcW5RWMjc3YFk8kgjeBDO-UmMs7OtG4C1Nq9447Ua7q_j47J835PezkLEfEIVIwHhY0V3gSKh1vPSVtLMqERD5zRTUz9LObacwuwaDvUhKQixT0xCJsNqTT2LyZ0WBysUPg5v5CiCB2yC94D9inntJ7RL_3Zi43F-llKSRVkHPZcXC4FahU",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuB5pOdZhhFtCfoNEYqyOBiPRFGJtg6mouHqOMIymbPY1eXSg3Ggu6DzT_BYm2vel_3D1as9fDwV4grKUGr6SEU_Zd5CduX3zI3A1YbQC6UYwD20mgnHXrtV0G8U2Gh0RuUBvRGPzfPeGr_Z-A5CjK1X7mherWHpkCj0r545axzDPrW4CRZT2F1ut9v3tTkq7A_mAHxm74VQGPuelQa7CVLjW7S4Kca4ijzCx1yOIBjymThDXvJQ9XZTfym-e77udDuJmJG4KI075gc",
+    alt: "Luxury apartment interior with a view of a city skyline",
       },
       {
         heading: "2. Zone 4 - Biétry",
@@ -114,7 +115,7 @@ export const initialData = [
         blockquote:
           "The growth in Angré has been phenomenal. It perfectly blends residential tranquility with commercial vibrancy, making it a prime spot for both families and young professionals.",
         image:
-          "https://lh3.googleusercontent.com/aida-public/AB6AXuD3TfmGBSyBzPyyfiR84-AngIMNSX1kL595o93KElzBVsScPMNKcNqEchZ0CduT4ZaT_If6OMKvZOXMAB1bNF3XI1KWEcW5RWMjc3YFk8kgjeBDO-UmMs7OtG4C1Nq9447Ua7q_j47J835PezkLEfEIVIwHhY0V3gSKh1vPSVtLMqERD5zRTUz9LObacwuwaDvUhKQixT0xCJsNqTT2LyZ0WBysUPg5v5CiCB2yC94D9inntJ7RL_3Zi43F-llKSRVkHPZcXC4FahU",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuCEbGASMEpG8MBAhKABvXOWP66f25QZWwVEwXzT9xH5W1r2x3J0N_9cu_x0lfeJBBzOhJL0DSlUsN9CrWHmcKuX2WORz0zllV2xTOOEmGSLYWDuMz1Ad6dc64i7Qd6NeN2e46PdB2TtM9mt2szHzXVqMgEnXRcTI38sJ4-0z9MA-GshfWclq-6BWMbXO37qjsQyTed19j-aduMrLFoUe6gvr-hEtgCtIg73ZHPUto6rnYSwVxvXZPu3pLweiObp6cfmjnp2dR_9BOo",
       },
       {
         heading: "2. Zone 4 - Biétry",
@@ -161,7 +162,7 @@ export const initialData = [
         blockquote:
           "The growth in Angré has been phenomenal. It perfectly blends residential tranquility with commercial vibrancy, making it a prime spot for both families and young professionals.",
         image:
-          "https://lh3.googleusercontent.com/aida-public/AB6AXuD3TfmGBSyBzPyyfiR84-AngIMNSX1kL595o93KElzBVsScPMNKcNqEchZ0CduT4ZaT_If6OMKvZOXMAB1bNF3XI1KWEcW5RWMjc3YFk8kgjeBDO-UmMs7OtG4C1Nq9447Ua7q_j47J835PezkLEfEIVIwHhY0V3gSKh1vPSVtLMqERD5zRTUz9LObacwuwaDvUhKQixT0xCJsNqTT2LyZ0WBysUPg5v5CiCB2yC94D9inntJ7RL_3Zi43F-llKSRVkHPZcXC4FahU",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuD_dubFT_4oMCFU_pR1TRx2dMHcQQrEnDavMjHK7JD1vQaVOpgnm6ecGDC-QyUudBOV8DmIEZfLBtGZEpnv4aI_R1Ka5eBoFrqe3RN1Cr8PUXCeHyqTG1O-3Vmi6CxXtGuFO_hjQJiUmZoff1akT1XTOj2TvGTU4YiAy4vKMpL2OMJ4drWYsN2uYjhRuEm7W8hkqrHsrGbqzbJ5BVRY7RoPQNjI0D7yMLohCtOvpZVaJMmXhCiJFoCYz_FV4p8gLxCJwYgqA1CuriM",
       },
       {
         heading: "2. Zone 4 - Biétry",
@@ -208,7 +209,7 @@ export const initialData = [
         blockquote:
           "The growth in Angré has been phenomenal. It perfectly blends residential tranquility with commercial vibrancy, making it a prime spot for both families and young professionals.",
         image:
-          "https://lh3.googleusercontent.com/aida-public/AB6AXuD3TfmGBSyBzPyyfiR84-AngIMNSX1kL595o93KElzBVsScPMNKcNqEchZ0CduT4ZaT_If6OMKvZOXMAB1bNF3XI1KWEcW5RWMjc3YFk8kgjeBDO-UmMs7OtG4C1Nq9447Ua7q_j47J835PezkLEfEIVIwHhY0V3gSKh1vPSVtLMqERD5zRTUz9LObacwuwaDvUhKQixT0xCJsNqTT2LyZ0WBysUPg5v5CiCB2yC94D9inntJ7RL_3Zi43F-llKSRVkHPZcXC4FahU",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuAvETtEqNKy7HyY5Xj0teYXd1D6uOuv-3oze_xKNeNdvjjCDd8-8JlSmCyBjcP-_ChIywTvWkfK9p_hkdQOJNTtPje3ov8tcK7HW652qoNQhWKj9hu4HzoIUV53UJGvPqrJHLddpn704JeGhLL6Pe3Ok1vZGKjsZayfQ-W6GfonCKJntEML3hM9buE4ZZsXEGeSV72wzLpIOIqEiU2cTTpdhBalAJpWABa7CYnOP_EFy6fKZ6i-DxlBXP2WpPKPDKG2GLJtp6ylggY",
       },
       {
         heading: "2. Zone 4 - Biétry",
@@ -255,7 +256,7 @@ export const initialData = [
         blockquote:
           "The growth in Angré has been phenomenal. It perfectly blends residential tranquility with commercial vibrancy, making it a prime spot for both families and young professionals.",
         image:
-          "https://lh3.googleusercontent.com/aida-public/AB6AXuD3TfmGBSyBzPyyfiR84-AngIMNSX1kL595o93KElzBVsScPMNKcNqEchZ0CduT4ZaT_If6OMKvZOXMAB1bNF3XI1KWEcW5RWMjc3YFk8kgjeBDO-UmMs7OtG4C1Nq9447Ua7q_j47J835PezkLEfEIVIwHhY0V3gSKh1vPSVtLMqERD5zRTUz9LObacwuwaDvUhKQixT0xCJsNqTT2LyZ0WBysUPg5v5CiCB2yC94D9inntJ7RL_3Zi43F-llKSRVkHPZcXC4FahU",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuC-nFeNRvvAyDdYQmgQGbBMoD5VmH0xoTcGKfZOvroiSAcmpNrTiNghyKfAHbdsI1Gs7IbzdXvr5JFnIZ7MEM80nWfzY0Jer0BgCP9GGJSAVlzcEYqDIXskzz49oYTDe8JttrUHk7LvKNSS81ZodLYLVKNLUcJ0Yt2WBcfcX1HSYUTMQ5eWclP3vssiWCcl4wpsY1Ygyq84z1FipugHadYqSuOt3nBLihlVhqbqFpvk3idDaLQx87knDk0Wi9crALCoaKLsVEIcg5I",
       },
       {
         heading: "2. Zone 4 - Biétry",

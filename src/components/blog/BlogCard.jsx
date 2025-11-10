@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function BlogCard({ initialData, searchQuery }) {
   const filteredData = initialData.filter((blog) =>
@@ -15,6 +16,10 @@ export default function BlogCard({ initialData, searchQuery }) {
     );
   }
 
+  const pathname = usePathname() || "";
+  const parts = pathname.split("/").filter(Boolean);
+  const locale = parts.length > 0 ? parts[0] : "";
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {filteredData.map((blog) => (
@@ -28,7 +33,7 @@ export default function BlogCard({ initialData, searchQuery }) {
               alt={blog.alt}
               fill
               className="object-cover rounded-t-xl"
-              priority={true}
+              priority={false}
             />
           </div>
           <div className="p-4 flex flex-col flex-grow">
@@ -42,7 +47,7 @@ export default function BlogCard({ initialData, searchQuery }) {
               {blog.snippet}
             </p>
             <Link
-              href={`/blog/product/${blog.id}`}
+              href={`/${locale}/blog/product/${blog.id}?id=${blog.id}`}
               className="mt-4 inline-block text-accent hover:underline"
             >
               Read More
