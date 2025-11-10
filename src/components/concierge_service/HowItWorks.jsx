@@ -28,7 +28,7 @@ export default function HowItWorks() {
         A Simple Path to Your New Home
       </h2>
 
-      <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 py-4">
+      <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 py-2 md:py-4">
         {/* Horizontal connecting line */}
         <div className="absolute top-1/2 left-0 w-full h-0.5 bg-subtle-light dark:bg-subtle-dark hidden md:block"></div>
 

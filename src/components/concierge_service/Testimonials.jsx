@@ -139,10 +139,10 @@ export default function TestimonialsSection() {
             {testimonials.map((item) => (
               <article
                 key={item.id}
-                className="flex w-[85%] sm:w-[70%] md:w-[45%] lg:w-[calc(33.333%-1rem)] shrink-0 snap-start flex-col justify-between rounded-2xl border border-primary/20 dark:border-accent/20 bg-white dark:bg-charcoal p-8 shadow-sm hover:shadow-lg transition-shadow duration-300"
+                className="flex w-[85%] sm:w-[70%] md:w-[45%] lg:w-[calc(33.333%-1rem)] shrink-0 snap-start flex-col justify-between rounded-2xl border border-primary/20 dark:border-accent/20 bg-background-light dark:bg-charcoal p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Quote */}
-                <blockquote className="text-sm sm:text-base leading-relaxed text-charcoal dark:text-soft-grey mb-8">
+                <blockquote className="text-sm sm:text-base leading-relaxed text-charcoal dark:text-soft-grey ">
                   <span className="text-4xl text-primary dark:text-accent opacity-40 leading-none">
                     &ldquo;
                   </span>
