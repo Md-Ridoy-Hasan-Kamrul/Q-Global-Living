@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useMemo } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/i18n';
 import DevelopmentCard from '@/components/property/DevelopmentCard';
@@ -17,15 +18,23 @@ import DeveloperCTA from '@/components/property/DeveloperCTA';
 export default function ResidentialPage() {
   const { locale } = useLanguage();
   const { t } = useTranslation(locale);
+  const [filters, setFilters] = useState({
+    cityArea: 'all',
+    developmentStage: 'all',
+    propertyType: 'all',
+    priceRange: 'all'
+  });
 
   // Mock data for developments - Replace with API call in production
-  const developments = [
+  const allDevelopments = useMemo(() => [
     {
       id: '1',
       title: 'Azure Residences',
       developer: 'Riviera Developers',
       location: 'Abidjan, Riviera',
-      propertyType: '2-3 BR Apartments',
+      city: 'abidjan',
+      propertyType: 'apartment',
+      stage: 'construction',
       priceXOF: 85000000,
       priceUSD: 140000,
       image:
@@ -38,7 +47,9 @@ export default function ResidentialPage() {
       title: 'The Pearl of Cocody',
       developer: 'Prestige Homes',
       location: 'Abidjan, Cocody',
-      propertyType: '3-5 BR Penthouses',
+      city: 'abidjan',
+      propertyType: 'penthouse',
+      stage: 'completion',
       priceXOF: 120000000,
       priceUSD: 197000,
       image:
@@ -51,7 +62,9 @@ export default function ResidentialPage() {
       title: 'Baie des Milliardaires Villas',
       developer: 'Assinie Luxury',
       location: 'Assinie-Mafia',
-      propertyType: '4-6 BR Villas',
+      city: 'assinie',
+      propertyType: 'villa',
+      stage: 'planning',
       priceXOF: 350000000,
       priceUSD: 575000,
       image:
@@ -59,7 +72,48 @@ export default function ResidentialPage() {
       verified: true,
       escrowEligible: true,
     },
-  ];
+  ], []);
+
+  // Filter developments based on selected filters
+  const filteredDevelopments = useMemo(() => {
+    return allDevelopments.filter((dev) => {
+      // City filter
+      if (filters.cityArea !== 'all' && dev.city !== filters.cityArea) {
+        return false;
+      }
+
+      // Property type filter
+      if (filters.propertyType !== 'all' && dev.propertyType !== filters.propertyType) {
+        return false;
+      }
+
+      // Development stage filter
+      if (filters.developmentStage !== 'all' && dev.stage !== filters.developmentStage) {
+        return false;
+      }
+
+      // Price range filter
+      if (filters.priceRange !== 'all') {
+        const price = dev.priceXOF;
+        switch (filters.priceRange) {
+          case 'under100m':
+            if (price >= 100000000) return false;
+            break;
+          case '100m-200m':
+            if (price < 100000000 || price >= 200000000) return false;
+            break;
+          case '200m-500m':
+            if (price < 200000000 || price >= 500000000) return false;
+            break;
+          case 'over500m':
+            if (price < 500000000) return false;
+            break;
+        }
+      }
+
+      return true;
+    });
+  }, [filters, allDevelopments]);
 
   // Investment benefits data
   const investmentBenefits = [
@@ -96,9 +150,8 @@ export default function ResidentialPage() {
     // Open inquiry form or modal
   };
 
-  const handleFilterChange = (filterId) => {
-    console.log('Filter changed:', filterId);
-    // Implement filter logic
+  const handleFilterChange = (newFilters) => {
+    setFilters(newFilters);
   };
 
   const handleListProject = () => {
@@ -142,14 +195,22 @@ export default function ResidentialPage() {
 
         {/* Development Cards Grid */}
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 xl:gap-6 my-1.5'>
-          {developments.map((development) => (
-            <DevelopmentCard
-              key={development.id}
-              development={development}
-              onViewDetails={handleViewDetails}
-              onInquire={handleInquire}
-            />
-          ))}
+          {filteredDevelopments.length > 0 ? (
+            filteredDevelopments.map((development) => (
+              <DevelopmentCard
+                key={development.id}
+                development={development}
+                onViewDetails={handleViewDetails}
+                onInquire={handleInquire}
+              />
+            ))
+          ) : (
+            <div className='col-span-full text-center py-12'>
+              <p className='text-gray-500 dark:text-gray-400 text-lg'>
+                {t('newDevelopments.noResults', 'No developments found matching your criteria.')}
+              </p>
+            </div>
+          )}
         </div>
       </section>
 

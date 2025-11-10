@@ -933,7 +933,37 @@
       "cityArea": "City/Area",
       "developmentStage": "Development Stage",
       "propertyType": "Property Type",
-      "priceRange": "Price Range"
+      "priceRange": "Price Range",
+      "allTypes": "All Types",
+      "types": {
+        "apartment": "Apartment",
+        "villa": "Villa",
+        "penthouse": "Penthouse",
+        "townhouse": "Townhouse",
+        "duplex": "Duplex"
+      },
+      "allCities": "All Cities",
+      "cities": {
+        "abidjan": "Abidjan",
+        "grandBassam": "Grand-Bassam",
+        "assinie": "Assinie",
+        "sanPedro": "San-Pédro"
+      },
+      "allStages": "All Stages",
+      "stages": {
+        "planning": "Planning",
+        "construction": "Under Construction",
+        "completion": "Near Completion",
+        "readyToMove": "Ready to Move",
+        "selling": "Selling"
+      },
+      "allPrices": "All Prices",
+      "prices": {
+        "under100m": "Under 100M XOF",
+        "100m200m": "100M - 200M XOF",
+        "200m500m": "200M - 500M XOF",
+        "over500m": "Over 500M XOF"
+      }
     },
     "section": {
       "featured": "Featured New Developments"
@@ -947,6 +977,7 @@
       "viewDetails": "View Details",
       "inquireNow": "Inquire Now"
     },
+    "noResults": "No developments found matching your criteria.",
     "whyInvest": {
       "title": "Why Invest in New Developments?",
       "modernAmenities": {

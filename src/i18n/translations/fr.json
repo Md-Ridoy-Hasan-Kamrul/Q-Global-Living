@@ -932,7 +932,37 @@
       "cityArea": "Ville/Zone",
       "developmentStage": "Étape de Développement",
       "propertyType": "Type de Propriété",
-      "priceRange": "Gamme de Prix"
+      "priceRange": "Gamme de Prix",
+      "allTypes": "Tous les Types",
+      "types": {
+        "apartment": "Appartement",
+        "villa": "Villa",
+        "penthouse": "Penthouse",
+        "townhouse": "Maison de Ville",
+        "duplex": "Duplex"
+      },
+      "allCities": "Toutes les Villes",
+      "cities": {
+        "abidjan": "Abidjan",
+        "grandBassam": "Grand-Bassam",
+        "assinie": "Assinie",
+        "sanPedro": "San-Pédro"
+      },
+      "allStages": "Toutes les Étapes",
+      "stages": {
+        "planning": "Planification",
+        "construction": "En Construction",
+        "completion": "Près de l'Achèvement",
+        "readyToMove": "Prêt à Emménager",
+        "selling": "En Vente"
+      },
+      "allPrices": "Tous les Prix",
+      "prices": {
+        "under100m": "Moins de 100M XOF",
+        "100m200m": "100M - 200M XOF",
+        "200m500m": "200M - 500M XOF",
+        "over500m": "Plus de 500M XOF"
+      }
     },
     "section": {
       "featured": "Nouveaux Développements en Vedette"
@@ -946,6 +976,7 @@
       "viewDetails": "Voir les Détails",
       "inquireNow": "Se Renseigner"
     },
+    "noResults": "Aucun développement trouvé correspondant à vos critères.",
     "whyInvest": {
       "title": "Pourquoi Investir dans les Nouveaux Développements?",
       "modernAmenities": {
