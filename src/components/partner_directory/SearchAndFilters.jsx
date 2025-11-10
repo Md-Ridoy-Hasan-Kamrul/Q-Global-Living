@@ -36,8 +36,8 @@ export default function SearchAndFilters() {
             onClick={() => setActiveFilter(filter)}
             className={`flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-lg px-4 transition-colors ${
               activeFilter === filter
-                ? "bg-accent text-white font-bold"
-                : "bg-primary/10 dark:bg-accent/10 text-text-light dark:text-text-dark hover:bg-accent hover:text-primary"
+                ? "bg-accent text-white font-semibold"
+                : "bg-primary/10 dark:bg-accent/10 text-text-light dark:text-text-dark hover:bg-accent hover:text-black"
             }`}
           >
             <p
