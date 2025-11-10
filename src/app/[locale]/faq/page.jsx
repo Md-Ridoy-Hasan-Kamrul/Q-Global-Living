@@ -118,105 +118,110 @@
 // }
 
 "use client";
+import React, { useState } from "react";
 
-import React from "react";
-
-const title = "Hotel Booking FAQs";
+const title = "Hotel Buying FAQs";
 const subtitle =
-  "Find answers to the most common questions about hotel reservations, payments, and cancellations.";
+  "Get answers to common questions about purchasing hotels, ownership process, legal requirements, and investment opportunities.";
 
 const faqs = [
   {
-    question: "How do I make a hotel reservation?",
+    question: "How can I buy a hotel property through your platform?",
     answer:
-      "Simply search for your preferred destination and dates, select a hotel and room type, and complete your booking online using a debit/credit card or other available payment options.",
+      "You can browse listed hotels for sale, filter by location, budget, and type, then contact our sales team or submit an inquiry to start the buying process.",
   },
   {
-    question: "Can I modify or cancel my reservation?",
+    question: "Do I need a business license to buy a hotel?",
     answer:
-      "Yes, you can modify or cancel your booking through your account dashboard or by contacting our support team. Please note that cancellation policies may vary by hotel and room type.",
+      "Yes, owning or operating a hotel usually requires a valid business license, along with local government approvals and tax registration.",
   },
   {
-    question: "What is your refund policy?",
+    question: "Can international buyers purchase hotels?",
     answer:
-      "If you cancel your booking within the free cancellation period, you’ll receive a full refund. Refunds are processed within 5–7 business days to your original payment method.",
+      "Absolutely. Foreign investors can buy hotels in many regions, though some countries have restrictions on land ownership. Our legal partners can help guide you through this process.",
   },
   {
-    question: "Do I need to pay at the time of booking?",
+    question: "What documents are required for hotel purchase?",
     answer:
-      "Some hotels require prepayment, while others allow you to pay during check-in. The payment requirement is clearly mentioned before confirming your booking.",
+      "You’ll typically need your identification, proof of funds, a purchase agreement, and legal documents verifying the property’s ownership and permits.",
   },
   {
-    question: "Are taxes and service fees included in the price?",
+    question: "How long does the buying process take?",
     answer:
-      "Yes, all applicable taxes and service fees are displayed in the final price before you complete your booking. No hidden charges apply.",
+      "Depending on location and due diligence, a hotel purchase can take 30–90 days to finalize, including property inspection and legal verification.",
   },
   {
-    question: "What time is check-in and check-out?",
+    question: "Can I get financing or a loan to buy a hotel?",
     answer:
-      "Standard check-in time is from 2:00 PM and check-out is by 12:00 PM. However, early check-in or late check-out may be available on request, depending on room availability.",
-  },
-  {
-    question: "Can I book a hotel for someone else?",
-    answer:
-      "Yes, you can book a room on behalf of someone else. Please make sure the guest’s name is correctly entered during the booking process.",
-  },
-  {
-    question: "Is breakfast included with my booking?",
-    answer:
-      "This depends on the room type and rate plan you select. Rooms with breakfast included are clearly marked during booking.",
-  },
-  {
-    question: "Do you offer group bookings or corporate rates?",
-    answer:
-      "Yes, we offer special rates and packages for group or corporate bookings. Please contact our support team for customized offers.",
-  },
-  {
-    question: "Do you have a loyalty or rewards program?",
-    answer:
-      "Yes, members of our loyalty program earn reward points on every booking. These points can be redeemed for future stays or discounts.",
+      "Yes, we work with trusted financial partners to offer mortgage and commercial loan options for qualified buyers.",
   },
 ];
 
-const FAQ = () => {
+const ContactFAQ = React.memo(() => {
+  const [openIndex, setOpenIndex] = useState(0);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <section className="w-full py-8 sm:py-12 md:py-16">
-      <div className="mx-auto flex max-w-4xl flex-col items-center gap-8 sm:gap-12">
+    <section className="w-full py-10 sm:py-16">
+      <div className="mx-auto max-w-4xl flex flex-col items-center gap-10">
         {/* Header */}
         <div className="text-center">
-          <h2 className="font-heading text-[24px] font-bold text-navy dark:text-[#FFFFF0] sm:text-[28px] md:text-[32px] lg:text-[36px]">
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy dark:text-[#FFFFF0]">
             {title}
           </h2>
-          <p className="mt-3 max-w-2xl text-[14px] text-navy/70 dark:text-[#FFFFF0]/70 sm:mt-4 sm:text-[15px] md:text-base">
+          <p className="mt-3 max-w-2xl text-base text-navy/70 dark:text-[#FFFFF0]/70">
             {subtitle}
           </p>
         </div>
 
-        {/* FAQ Accordion */}
-        <div className="w-full space-y-3 sm:space-y-4">
+        {/* Accordion */}
+        <div className="w-full space-y-4">
           {faqs.map((faq, index) => (
-            <details
+            <div
               key={index}
-              className="group rounded-xl bg-white p-4 shadow-sm dark:bg-navy-light sm:p-6"
-              {...(index === 0 ? { open: true } : {})}
+              className="rounded-xl bg-white p-4 sm:p-6 shadow-sm dark:bg-navy-light transition-all duration-300"
             >
-              <summary className="flex cursor-pointer items-center justify-between gap-3 sm:gap-4">
-                <h3 className="text-[14px] font-bold text-navy dark:text-[#FFFFF0] sm:text-[15px] md:text-base lg:text-lg">
+              {/* Question */}
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="flex w-full items-center justify-between cursor-pointer"
+              >
+                <h3 className="text-base sm:text-lg font-semibold text-navy dark:text-[#FFFFF0] text-left">
                   {faq.question}
                 </h3>
-                <span className="material-symbols-outlined text-[#D4AF37] transition-transform duration-300 group-open:rotate-180">
+                <span
+                  className={`material-symbols-outlined text-[#D4AF37] transform transition-transform duration-500 ${
+                    openIndex === index ? "rotate-180" : "rotate-0"
+                  }`}
+                >
                   expand_more
                 </span>
-              </summary>
-              <div className="mt-3 text-[13px] text-navy/70 dark:text-[#FFFFF0]/70 sm:mt-4 sm:text-[14px] md:text-[15px]">
-                <p>{faq.answer}</p>
+              </button>
+
+              {/* Animated Answer */}
+              <div
+                className={`grid transition-all duration-300 ease-in-out overflow-hidden ${
+                  openIndex === index
+                    ? "grid-rows-[1fr] opacity-100 mt-3"
+                    : "grid-rows-[0fr] opacity-0 mt-0"
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <p className="text-sm sm:text-base text-navy/70 dark:text-[#FFFFF0]/70">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
-            </details>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
-};
+});
 
-export default FAQ;
+ContactFAQ.displayName = "ContactFAQ";
+export default ContactFAQ;
