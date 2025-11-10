@@ -58,11 +58,11 @@ export default function HeroSection({ locale }) {
             {t('hero.browseHomes')}
           </Link>
           <Link
-            href={`/${locale}/sell`}
+            href={user ? `/${locale}/dashboard/admin` : `/${locale}/sell`}
             className='w-full sm:w-auto flex items-center justify-center h-12 sm:h-14 px-6 sm:px-8 rounded-lg bg-white/95 backdrop-blur-sm text-base sm:text-lg font-bold text-charcoal transition-all hover:bg-white hover:shadow-xl hover:scale-105 active:scale-100'
           >
             {
-              user? <span>Go to Dashboard</span> : <>{t('hero.listProperty')}</>
+              user? <span>Go to Dashboard</span>:<>{t('hero.listProperty')}</>
             }
           </Link>
         </div>
