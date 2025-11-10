@@ -1,6 +1,7 @@
 'use client';
 
 import { forwardRef } from 'react';
+import * as LucideIcons from 'lucide-react';
 
 const FormInput = forwardRef(
   (
@@ -20,6 +21,9 @@ const FormInput = forwardRef(
   ) => {
     const inputId = `input-${name}`;
 
+    // Get Lucide icon component
+    const IconComponent = icon ? LucideIcons[icon] : null;
+
     return (
       <div className='flex w-full flex-col'>
         <label htmlFor={inputId} className='flex flex-col w-full'>
@@ -33,14 +37,12 @@ const FormInput = forwardRef(
           </span>
 
           <div className='flex w-full items-center rounded-lg'>
-            {icon && (
+            {IconComponent && (
               <div
                 className='flex items-center justify-center w-12 h-12 border border-r-0 border-charcoal-200 dark:border-charcoal-600 bg-charcoal-50 dark:bg-charcoal-700/50 rounded-l-lg'
                 aria-hidden='true'
               >
-                <span className='material-symbols-outlined text-charcoal-400 dark:text-charcoal-300 text-xl'>
-                  {icon}
-                </span>
+                <IconComponent className='text-charcoal-400 dark:text-charcoal-300 h-5 w-5' />
               </div>
             )}
 
@@ -83,7 +85,7 @@ const FormInput = forwardRef(
             className='text-red-600 text-xs mt-1.5 flex items-center gap-1'
             role='alert'
           >
-            <span className='material-symbols-outlined text-sm'>error</span>
+            <LucideIcons.AlertCircle className='h-4 w-4' />
             {error}
           </p>
         )}

@@ -108,7 +108,7 @@ export default function ChangePasswordForm() {
                     type="submit"
                     form="change-password-form"
                     disabled={saving}
-                    className="inline-flex items-center rounded-md bg-primary px-5 py-2 text-base font-medium text-white cursor-pointer hover:text-black focus:outline-none focus:ring-2 focus:ring-amber-300 disabled:opacity-60"
+                    className="inline-flex items-center rounded-md bg-[#d4af37] hover:bg-[#c19b2a] px-5 py-2 text-base font-medium text-white cursor-pointer hover:text-black focus:outline-none focus:ring-2 focus:ring-amber-300 disabled:opacity-60"
                 >
                     {saving ? t("dashboard.client.password.saving") : t("dashboard.client.password.updateButton")}
                 </button>

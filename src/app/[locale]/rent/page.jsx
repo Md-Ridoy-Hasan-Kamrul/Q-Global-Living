@@ -7,6 +7,7 @@ import RentHero from '@/components/rent/RentHero';
 import RentalFilters from '@/components/rent/RentalFilters';
 import RentalPropertyCard from '@/components/rent/RentalPropertyCard';
 import { PartnerCTA, FinalCTA } from '@/components/rent/RentCTA';
+import { RENT_PROPERTIES } from '@/lib/rentProperties';
 
 /**
  * RentPage Component
@@ -19,8 +20,7 @@ import { PartnerCTA, FinalCTA } from '@/components/rent/RentCTA';
 const MOCK_PROPERTIES = [
   {
     id: 1,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDSV_mXKw_VVOBCsRqP6JuFtM-tFEw5_dgVNeZOPD_fbD7HKWrsJasL9C0-Se93rYXNjNFBtRTNmTS3au64zMsDinmBEO0AGO4zITkBOvA0-grtq41wCo9_UAtSz2HtRHHDTDG1ZxmN4E9vxhr1wi9_jI2QCZUqQAY56jCbZoS9ZFal6P77u5Lh6ZcPlgO4HFsENDevHFLPTsBOA3WwAJjtU82LvTDUm5PYOBB-e5Cda0UPUpRiDfIi10TCzjwiSCIqwPRvr26Y5EA',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800',
     imageAlt: 'Modern apartment exterior with balcony',
     location: 'Abidjan, Cocody',
     title: 'Modern Apartment in Cocody',
@@ -35,8 +35,7 @@ const MOCK_PROPERTIES = [
   },
   {
     id: 2,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAxfLyTLwQhMPFhfmTIwgGw0mgClhtLnLjKjJ8K5d3xcf-DfLIA1BcxgRBMhYILatY9AW8j3BYgHN09EOMshMZTW4B8iqMTOYm1eZkJtMIsS8MHQl0AZhU-FMr6KR1iymlfnGtc32binXcXJa7ONVC6lfOR2kv2AyNW335mdqzHPrSUE1m3zi8iaws5VxyywLpjSfydFhxTqYjGh6jkKq7lJLLQY0Wo-Xy8afbaD7o0jgJf39hdZCLUSGDAmDqrsZcJjlBZFrmME7Q',
+    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800',
     imageAlt: 'Luxury seaside villa with swimming pool',
     location: 'Assinie-Mafia',
     title: 'Seaside Villa in Assinie',
@@ -51,8 +50,7 @@ const MOCK_PROPERTIES = [
   },
   {
     id: 3,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAsaxBScuFqS7z1QQY--r-HDUrNwJ12_OeNQGRHoIChXy8mcFy2t-l9nBX-edtmYBz14QfMi04f6ifkcvJvGdXD37GYrANRHp4fy5v0TConYi95At36Z32hnava3pJp11sfKWUL3ibCW6l4deIqdpJh_jVLWp6vKWgtrsx9MhtTqpLbGPiIHpHct_pRyWtsOObMnzX71Hkh5e9XsktPg5ygsEARhiMRhOIpsaQUNJHhO2thOM4URis69ipdzRRKZsSHEi5qC2YXM9Y',
+    image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800',
     imageAlt: 'Chic loft apartment with high ceilings',
     location: 'Abidjan, Plateau',
     title: 'Chic Loft in Plateau',
@@ -258,7 +256,7 @@ export default function RentPage() {
 
   // Filter and sort properties based on current filters
   const filteredAndSortedProperties = useMemo(() => {
-    let filtered = [...MOCK_PROPERTIES];
+    let filtered = [...RENT_PROPERTIES];
 
     // Apply city filter
     if (filters.city !== 'all') {
@@ -362,7 +360,7 @@ export default function RentPage() {
         >
           {/* Header with Sort */}
           <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6'>
-            <h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
+            <h2 className='text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white'>
               {t('rent.listings.title')}
             </h2>
             <div className='flex items-center gap-3'>
@@ -379,7 +377,7 @@ export default function RentPage() {
                   onChange={handleSortChange}
                   onFocus={() => setSortDropdownOpen(true)}
                   onBlur={() => setSortDropdownOpen(false)}
-                  className='appearance-none rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-card-dark shadow-sm focus:border-primary focus:ring-2 focus:ring-primary text-sm pl-4 pr-10 py-2 cursor-pointer min-w-[180px]'
+                  className='appearance-none rounded-lg border border-gray-300 dark:border-gray-600 bg-[#fafafa] dark:bg-card-dark shadow-sm focus:border-primary focus:ring-2 focus:ring-primary text-sm pl-4 pr-10 py-0.5 sm:py-2 cursor-pointer w-[110px] sm:min-w-[150px] md:min-w-[180px]'
                   aria-label='Sort properties'
                 >
                   <option value='newest'>
@@ -425,7 +423,7 @@ export default function RentPage() {
           {/* Property Grid */}
           {displayedProperties.length > 0 ? (
             <>
-              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+              <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 xl:gap-6'>
                 {displayedProperties.map((property) => (
                   <RentalPropertyCard key={property.id} property={property} />
                 ))}
@@ -433,10 +431,10 @@ export default function RentPage() {
 
               {/* Load More Button */}
               {hasMore && (
-                <div className='mt-10 text-center'>
+                <div className='mt-8 sm:mt-10 text-center'>
                   <button
                     onClick={handleLoadMore}
-                    className='bg-[#D4AF37] hover:bg-[#B8941F] text-black font-semibold text-base py-3 px-10 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 shadow-md'
+                    className='inline-flex items-center justify-center bg-[#D4AF37] hover:bg-[#B8941F] text-black font-semibold text-sm sm:text-base py-2.5 sm:py-3 px-6 sm:px-10 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 shadow-md'
                     aria-label='Load more properties'
                   >
                     {t('rent.listings.loadMore')}

@@ -1,16 +1,15 @@
 "use client";
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
+import { Search } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import PropertyCard from '@/components/dashboard/client/PropertyCard';
 import { useTranslation } from '@/i18n';
 
 export default function SavedProperties() {
-  // Use global language context to avoid accidental language switching
   const { locale } = useLanguage();
   const { t } = useTranslation(locale);
 
-  const [activeTab, setActiveTab] = useState('properties');
   const [savedProperties, setSavedProperties] = useState([
     {
       id: 1,
@@ -48,6 +47,18 @@ export default function SavedProperties() {
         'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&h=350&fit=crop',
       liked: false,
     },
+    {
+      id: 4,
+      name: 'Maison Familiale',
+      location: 'Riviera Palmeroie, Abidjan',
+      price: '120,000,000',
+      beds: 5,
+      baths: 4,
+      area: 400,
+      image:
+        'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&h=350&fit=crop',
+      liked: false,
+    },
   ]);
 
   const toggleLike = useCallback((id) => {
@@ -56,65 +67,70 @@ export default function SavedProperties() {
     );
   }, []);
 
+  // Toolbar search state
+  const [search, setSearch] = useState('');
+
+  const filteredProperties = useMemo(() => {
+    const q = (search || '').trim().toLowerCase();
+    if (!q) return savedProperties;
+    return savedProperties.filter((p) =>
+      String(p.name || '').toLowerCase().includes(q) ||
+      String(p.location || '').toLowerCase().includes(q) ||
+      String(p.price || '').toLowerCase().includes(q)
+    );
+  }, [savedProperties, search]);
+
   return (
     <div className="min-h-screen bg-gray-50 space-y-6">
       <div>
         {/* Header */}
-        <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-          {t('dashboard.pages.savedProperties.title')}
-        </h1>
+        
+        <div className="bg-gradient-to-r from-[#1e3a5f] to-[#2d5078] rounded-lg p-6 shadow-lg mb-6">
+          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">{t('dashboard.pages.savedProperties.title')}</h1>
+          <p className="text-sm sm:text-base text-white/80">{t('dashboard.pages.savedProperties.subtitle')}</p>
+        </div>
+        {/* Toolbar (search, status select, add) - matches provided image */}
+        <div className="bg-white rounded-lg px-4 py-6 mb-6 shadow-sm">
+          <div className="flex items-center gap-4">
+            <div className="flex-1 max-w-xl">
+              <div className="relative">
+                <span className="absolute inset-y-0 left-3 flex items-center text-gray-400">
+                  <Search className="h-4 w-4" />
+                </span>
+                <input
+                  type="search"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder={'Search properties...'}
+                  className="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-3 pl-10 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+            </div>
 
-        {/* Tabs */}
-        <div
-          role="tablist"
-          aria-label={t('dashboard.pages.savedProperties.tabsLabel')}
-          className="flex gap-6 mb-6 border-b border-gray-200"
-        >
-          <button
-            role="tab"
-            aria-selected={activeTab === 'properties'}
-            onClick={() => setActiveTab('properties')}
-            className={`pb-3 font-semibold cursor-pointer text-lg transition-colors ${activeTab === 'properties'
-                ? 'text-blue-600 border-b-2 border-blue-600'
-                : 'text-gray-600 hover:text-gray-900'
-              }`}
-          >
-            {t('dashboard.pages.savedProperties.tabs.properties')}
-          </button>
-          <button
-            role="tab"
-            aria-selected={activeTab === 'searches'}
-            onClick={() => setActiveTab('searches')}
-            className={`pb-3 font-semibold cursor-pointer text-lg transition-colors ${activeTab === 'searches'
-                ? 'text-blue-600 border-b-2 border-blue-600'
-                : 'text-gray-600 hover:text-gray-900'
-              }`}
-          >
-            {t('dashboard.pages.savedProperties.tabs.searches')}
-          </button>
+            <div className="ml-auto flex items-center gap-3">
+
+              <button
+                type="button"
+                className="bg-[#E6B325] text-white px-4 py-2 rounded shadow text-base
+                "
+              // TODO: wire add property action
+              >
+                {'Add Property'}
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Properties Grid */}
-        {activeTab === 'properties' && (
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-6"
-            role="region"
-            aria-label={t('dashboard.pages.savedProperties.propertiesRegion')}
-          >
-            {savedProperties.map((property) => (
-              <PropertyCard key={property.id} property={property} onToggleLike={toggleLike} />
-            ))}
-          </div>
-        )}
-
-        {/* Searches Tab */}
-        {activeTab === 'searches' && (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">
-              {t('dashboard.pages.savedProperties.noSavedSearches')}
-            </p>
-          </div>
-        )}
+        <div
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          role="region"
+          aria-label={t('dashboard.pages.savedProperties.propertiesRegion')}
+        >
+          {filteredProperties.map((property) => (
+            <PropertyCard key={property.id} property={property} onToggleLike={toggleLike} />
+          ))}
+        </div>
       </div>
     </div>
   );

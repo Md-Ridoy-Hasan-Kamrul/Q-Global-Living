@@ -70,7 +70,62 @@
         "loginFailed": "Login failed",
         "socialLoginFailed": "Failed to sign in with {provider}. Please try again."
       }
+    }, "register": {
+      "title": "Create an Account",
+      "subtitle": "Sign up to start your journey with Q Homes.",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Enter your full name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Create a password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Re-enter your password",
+      "registerButton": "Register",
+      "registering": "Registering...",
+      "backToLogin": "Back to Login",
+      "orDivider": "OR",
+      "continueWithGoogle": "Continue with Google",
+      "continueWithFacebook": "Continue with Facebook",
+      "haveAccount": "Already have an account?",
+      "loginNow": "Login Now",
+      "backToHome": "Back to Home",
+      "check1": "I agree to the Terms &amp; Conditions",
+      "check2": " have read the Privacy Policy",
+      "createAccount": "Create Account",
+ 
+      "errors": {
+        "fullNameRequired": "Full name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "passwordRequired": "Password is required",
+        "confirmPasswordRequired": "Please confirm your password",
+        "passwordMinLength": "Password must be at least 6 characters",
+        "passwordsMismatch": "Passwords do not match",
+        "registrationFailed": "Registration failed. Please try again."
+      }
+    },
+    "forgotPassword": {
+      "title": "Forgot Your Password?",
+      "subtitle": "Enter your email to reset your password.",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "submitButton": "Submit",
+      "submitting": "Submitting...",
+      "backToLogin": "Back to Login",
+      "backToHome": "Back to Home",
+      "checkEmail": "Check Your Email",
+      "checkEmailInstructions": "We've sent password reset instructions to {{email}}. Please check your inbox and spam folder.",
+      "returnToLogin": "Return to Login",
+      "didNotReceiveEmail": "Didn't receive the email?",
+      "resend": "Resend",
+      "errors": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "resetFailed": "Failed to send reset link. Please try again."
+      }
     }
+ 
   },
   "searchBar": {
     "buy": "Buy",
@@ -84,30 +139,64 @@
   "buy": {
     "title": "Buy Property in Côte d'Ivoire",
     "subtitle": "Find your dream property from our curated listings",
-    "filters": "Filters",
-    "sortBy": "Sort By",
-    "priceMinLabel": "Min Price",
-    "priceMaxLabel": "Max Price",
-    "bedroomsLabel": "Bedrooms",
-    "bathroomsLabel": "Bathrooms",
-    "propertyTypeLabel": "Property Type",
-    "locationLabel": "Location",
-    "applyFilters": "Apply Filters",
-    "clearFilters": "Clear Filters",
-    "resultsFound": "properties found",
-    "noResults": "No properties found matching your criteria",
-    "sortByNewest": "Newest First",
-    "sortByPriceAsc": "Price: Low to High",
-    "sortByPriceDesc": "Price: High to Low",
-    "viewDetails": "View Details",
-    "contactAgent": "Contact Agent",
-    "saveProperty": "Save Property",
+    "hero": {
+      "title": "Find Your Dream Home in Côte d'Ivoire",
+      "subtitle": "Discover verified, high-quality properties for sale across Abidjan and beyond."
+    },
+    "filters": {
+      "title": "Filter Results",
+      "cityLabel": "City",
+      "bedroomsLabel": "Bedrooms",
+      "propertyTypeLabel": "Type",
+      "verifiedOnly": "Verified Only",
+      "any": "Any",
+      "priceRangeLabel": "Price Range (XOF)",
+      "search": "Search",
+      "cities": {
+        "abidjan": "Abidjan",
+        "assinie": "Assinie-Mafia",
+        "yamoussoukro": "Yamoussoukro"
+      },
+      "bedrooms": {
+        "any": "Any",
+        "one": "1",
+        "two": "2",
+        "threePlus": "3+"
+      }
+    },
     "propertyTypes": {
-      "apartment": "Apartment",
-      "house": "House",
       "villa": "Villa",
+      "house": "House",
+      "apartment": "Apartment",
       "land": "Land",
       "commercial": "Commercial"
+    },
+    "results": {
+      "title": "Available Properties",
+      "sortBy": "Sort by:",
+      "sortOptions": {
+        "newest": "Newest Listings",
+        "priceLow": "Price (Low to High)",
+        "priceHigh": "Price (High to Low)",
+        "bedrooms": "Most Bedrooms"
+      },
+  "loadMore": "Load More",
+      "noResults": "No Properties Found",
+      "noResultsMessage": "Try adjusting your filters to see more properties"
+    },
+    "propertyCard": {
+      "verified": "Verified",
+      "perProperty": "",
+      "approx": "~",
+      "usd": "USD",
+      "viewDetails": "View Details",
+      "bookViewing": "Book Viewing",
+      "whatsapp": "WhatsApp"
+    },
+    "cta": {
+      "title": "Can't find what you're looking for?",
+      "description": "Our team can help you find the perfect property. Contact us for personalized assistance.",
+      "button": "Contact Us"
     },
     "property": {
       "title": "Modern 4-Bedroom Villa with Pool",
@@ -503,12 +592,12 @@
       }
     },
     "client": {
-      "title": "Client Dashboard",
+      "title": "User Dashboard",
       "subtitle": "View and edit your personal details, contact information, and password.",
       "profile": "Profile Details",
       "favorites": "Saved Properties",
       "savedSearches": "Saved Searches",
-      "appointments": "Appointments",
+      "appointments": "All Appointments",
       "messages": "Messages",
       "settings": "Settings",
       "firstName": "First Name",
@@ -525,6 +614,7 @@
       "yourNotifications": "Your Notifications",
       "notificationSubtitle": "Here are your latest property alerts and updates.",
       "markallRead": "Mark all as read",
+      "tickets":" Support Tickets",
 
       "personalDetails": {
         "title": "Personal Details",
@@ -564,6 +654,8 @@
       "addListing": "Add Listing",
       "editListing": "Edit Listing",
       "inquiries": "Inquiries",
+      "developerPortal": "Developer Portal",
+      "developerInquiry": "Developer Inquiry",
       "profile": "Profile"
     },
     "pages": {
@@ -660,7 +752,7 @@
         "changePassword": "Change Password"
       },
       "savedProperties": {
-        "title": "Your Saved Properties & Searches",
+        "title": "Your Saved Properties ",
         "subtitle": "Properties you've saved for later",
         "noSaved": "No saved properties yet",
         "tabsLabel": "Saved properties and searches",
@@ -844,6 +936,38 @@
       "bookViewing": "Book Viewing",
       "whatsapp": "WhatsApp"
     },
+    "property": {
+      "manager": "QHomes Rentals",
+      "title": "Modern Furnished Apartment with Balcony",
+      "location": "Cocody - Riviera, Abidjan",
+      "status": "Verified",
+      "description": "A stylish 3-bedroom furnished apartment offering bright living spaces, a modern kitchen, balcony views and reliable security — ideal for both short-term stays and long-term comfort in the heart of Abidjan.",
+      "highlights": {
+        "security": "24/7 gated security",
+        "furnished": "Fully furnished interior",
+        "internet": "High-speed internet ready",
+        "parking": "Reserved parking space"
+      },
+      "interior": {
+        "ac": "Air conditioning throughout",
+        "kitchen": "Equipped modern kitchen",
+        "wardrobes": "Built-in wardrobes",
+        "internet": "Fiber internet available"
+      },
+      "exterior": {
+        "gated": "Secure gated residence",
+        "parking": "On-site parking",
+        "security": "CCTV & night guard",
+        "entertainment": "Nearby cafés & leisure"
+      },
+      "locationDesc": "Situated in a prime Cocody area with quick access to business districts, supermarkets, schools and leisure spots.",
+      "managerDesc": "Professionally managed to ensure responsive support, cleanliness and a seamless tenant experience.",
+      "rental": {
+        "duration": "Flexible (Short / Long Term)",
+        "furnishing": "Fully Furnished",
+        "deposit": "2 Months Deposit"
+      }
+    },
     "cta": {
       "partnerTitle": "Partner With Q Homes",
       "partnerSubtitle": "Reach a premium audience of verified tenants and buyers. List your property with us for unparalleled service and exposure.",
@@ -867,7 +991,37 @@
       "cityArea": "City/Area",
       "developmentStage": "Development Stage",
       "propertyType": "Property Type",
-      "priceRange": "Price Range"
+      "priceRange": "Price Range",
+      "allTypes": "All Types",
+      "types": {
+        "apartment": "Apartment",
+        "villa": "Villa",
+        "penthouse": "Penthouse",
+        "townhouse": "Townhouse",
+        "duplex": "Duplex"
+      },
+      "allCities": "All Cities",
+      "cities": {
+        "abidjan": "Abidjan",
+        "grandBassam": "Grand-Bassam",
+        "assinie": "Assinie",
+        "sanPedro": "San-Pédro"
+      },
+      "allStages": "All Stages",
+      "stages": {
+        "planning": "Planning",
+        "construction": "Under Construction",
+        "completion": "Near Completion",
+        "readyToMove": "Ready to Move",
+        "selling": "Selling"
+      },
+      "allPrices": "All Prices",
+      "prices": {
+        "under100m": "Under 100M XOF",
+        "100m200m": "100M - 200M XOF",
+        "200m500m": "200M - 500M XOF",
+        "over500m": "Over 500M XOF"
+      }
     },
     "section": {
       "featured": "Featured New Developments"
@@ -881,6 +1035,7 @@
       "viewDetails": "View Details",
       "inquireNow": "Inquire Now"
     },
+    "noResults": "No developments found matching your criteria.",
     "whyInvest": {
       "title": "Why Invest in New Developments?",
       "modernAmenities": {

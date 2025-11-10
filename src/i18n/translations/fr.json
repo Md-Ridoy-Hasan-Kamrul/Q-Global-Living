@@ -70,7 +70,63 @@
         "loginFailed": "Échec de la connexion",
         "socialLoginFailed": "Échec de la connexion avec {provider}. Veuillez réessayer."
       }
-    }
+    },
+    "register": {
+  "title": "Créer un compte",
+  "subtitle": "Inscrivez-vous pour commencer votre aventure avec Q Homes.",
+  "fullName": "Nom complet",
+  "fullNamePlaceholder": "Entrez votre nom complet",
+  "email": "E-mail",
+  "emailPlaceholder": "Entrez votre adresse e-mail",
+  "password": "Mot de passe",
+  "passwordPlaceholder": "Créez un mot de passe",
+  "confirmPassword": "Confirmez le mot de passe",
+  "confirmPasswordPlaceholder": "Ressaisissez votre mot de passe",
+  "registerButton": "S'inscrire",
+  "registering": "Inscription en cours...",
+  "backToLogin": "Retour à la connexion",
+  "orDivider": "OU",
+  "continueWithGoogle": "Continuer avec Google",
+  "continueWithFacebook": "Continuer avec Facebook",
+  "haveAccount": "Vous avez déjà un compte ?",
+  "loginNow": "Connectez-vous maintenant",
+  "backToHome": "Retour à l'accueil",
+  "check1": "J'accepte les Termes et Conditions",
+  "check2": "J'ai lu la Politique de confidentialité",
+  "createAccount": "Créer un compte",
+
+  "errors": {
+    "fullNameRequired": "Le nom complet est requis",
+    "emailRequired": "L'e-mail est requis",
+    "emailInvalid": "Veuillez entrer une adresse e-mail valide",
+    "passwordRequired": "Le mot de passe est requis",
+    "confirmPasswordRequired": "Veuillez confirmer votre mot de passe",
+    "passwordMinLength": "Le mot de passe doit contenir au moins 6 caractères",
+    "passwordsMismatch": "Les mots de passe ne correspondent pas",
+    "registrationFailed": "Échec de l'inscription. Veuillez réessayer."
+  }
+},
+"forgotPassword": {
+  "title": "Mot de passe oublié ?",
+  "subtitle": "Entrez votre adresse e-mail pour réinitialiser votre mot de passe.",
+  "email": "E-mail",
+  "emailPlaceholder": "Entrez votre adresse e-mail",
+  "submitButton": "Envoyer",
+  "submitting": "Envoi en cours...",
+  "backToLogin": "Retour à la connexion",
+  "backToHome": "Retour à l'accueil",
+  "checkEmail": "Vérifiez votre e-mail",
+  "checkEmailInstructions": "Nous avons envoyé les instructions de réinitialisation du mot de passe à {{email}}. Veuillez vérifier votre boîte de réception et votre dossier spam.",
+  "returnToLogin": "Retour à la connexion",
+  "didNotReceiveEmail": "Vous n'avez pas reçu l'e-mail ?",
+  "resend": "Renvoyer",
+  "errors": {
+    "emailRequired": "L'e-mail est requis",
+    "emailInvalid": "Veuillez entrer une adresse e-mail valide",
+    "resetFailed": "Échec de l'envoi du lien de réinitialisation. Veuillez réessayer."
+  }
+}
+
   },
   "searchBar": {
     "buy": "Acheter",
@@ -84,30 +140,64 @@
   "buy": {
     "title": "Acheter une Propriété en Côte d'Ivoire",
     "subtitle": "Trouvez la propriété de vos rêves parmi nos annonces sélectionnées",
-    "filters": "Filtres",
-    "sortBy": "Trier Par",
-    "priceMinLabel": "Prix Min",
-    "priceMaxLabel": "Prix Max",
-    "bedroomsLabel": "Chambres",
-    "bathroomsLabel": "Salles de Bain",
-    "propertyTypeLabel": "Type de Propriété",
-    "locationLabel": "Emplacement",
-    "applyFilters": "Appliquer les Filtres",
-    "clearFilters": "Effacer les Filtres",
-    "resultsFound": "propriétés trouvées",
-    "noResults": "Aucune propriété trouvée correspondant à vos critères",
-    "sortByNewest": "Plus Récent",
-    "sortByPriceAsc": "Prix: Bas à Élevé",
-    "sortByPriceDesc": "Prix: Élevé à Bas",
-    "viewDetails": "Voir les Détails",
-    "contactAgent": "Contacter l'Agent",
-    "saveProperty": "Enregistrer la Propriété",
+    "hero": {
+      "title": "Trouvez la Maison de Vos Rêves en Côte d'Ivoire",
+      "subtitle": "Découvrez des propriétés vérifiées et de haute qualité à vendre à Abidjan et au-delà."
+    },
+    "filters": {
+      "title": "Filtrer les Résultats",
+      "cityLabel": "Ville",
+      "bedroomsLabel": "Chambres",
+      "propertyTypeLabel": "Type",
+      "verifiedOnly": "Vérifié Seulement",
+      "any": "Tous",
+      "priceRangeLabel": "Fourchette de Prix (XOF)",
+      "search": "Rechercher",
+      "cities": {
+        "abidjan": "Abidjan",
+        "assinie": "Assinie-Mafia",
+        "yamoussoukro": "Yamoussoukro"
+      },
+      "bedrooms": {
+        "any": "Tous",
+        "one": "1",
+        "two": "2",
+        "threePlus": "3+"
+      }
+    },
     "propertyTypes": {
-      "apartment": "Appartement",
-      "house": "Maison",
       "villa": "Villa",
+      "house": "Maison",
+      "apartment": "Appartement",
       "land": "Terrain",
       "commercial": "Commercial"
+    },
+    "results": {
+      "title": "Propriétés Disponibles",
+      "sortBy": "Trier par:",
+      "sortOptions": {
+        "newest": "Annonces Récentes",
+        "priceLow": "Prix (Bas à Élevé)",
+        "priceHigh": "Prix (Élevé à Bas)",
+        "bedrooms": "Plus de Chambres"
+      },
+  "loadMore": "Charger Plus",
+      "noResults": "Aucune Propriété Trouvée",
+      "noResultsMessage": "Essayez d'ajuster vos filtres pour voir plus de propriétés"
+    },
+    "propertyCard": {
+      "verified": "Vérifié",
+      "perProperty": "",
+      "approx": "~",
+      "usd": "USD",
+      "viewDetails": "Voir les Détails",
+      "bookViewing": "Réserver une Visite",
+      "whatsapp": "WhatsApp"
+    },
+    "cta": {
+      "title": "Vous ne trouvez pas ce que vous cherchez?",
+      "description": "Notre équipe peut vous aider à trouver la propriété parfaite. Contactez-nous pour une assistance personnalisée.",
+      "button": "Contactez-Nous"
     },
     "property": {
       "title": "Villa Moderne de 4 Chambres avec Piscine",
@@ -525,6 +615,7 @@
       "yourNotifications": "Vos Notifications",
       "notificationSubtitle": "Voici vos dernières alertes et mises à jour de propriétés.",
       "markallRead": "Tout marquer comme lu",
+      "tickets": "Tickets de Support",
       "personalDetails": {
         "title": "Détails personnels",
         "saving": "Enregistrement...",
@@ -563,6 +654,8 @@
       "addListing": "Ajouter une Annonce",
       "editListing": "Modifier l'Annonce",
       "inquiries": "Demandes",
+      "developerPortal": "Portail Développeur",
+      "developerInquiry": "Demande Développeur",
       "profile": "Profil"
     },
     "pages": {
@@ -843,6 +936,38 @@
       "bookViewing": "Réserver une Visite",
       "whatsapp": "WhatsApp"
     },
+    "property": {
+      "manager": "QHomes Locations",
+      "title": "Appartement Moderne Meublé avec Balcon",
+      "location": "Cocody - Riviera, Abidjan",
+      "status": "Vérifié",
+      "description": "Un élégant appartement meublé de 3 chambres offrant des espaces lumineux, une cuisine moderne, une vue depuis le balcon et une sécurité fiable — idéal pour les séjours de courte durée comme pour le confort à long terme au cœur d'Abidjan.",
+      "highlights": {
+        "security": "Sécurité 24h/24 dans résidence fermée",
+        "furnished": "Intérieur entièrement meublé",
+        "internet": "Internet haut débit prêt",
+        "parking": "Place de parking réservée"
+      },
+      "interior": {
+        "ac": "Climatisation partout",
+        "kitchen": "Cuisine moderne équipée",
+        "wardrobes": "Placards intégrés",
+        "internet": "Fibre optique disponible"
+      },
+      "exterior": {
+        "gated": "Résidence sécurisée",
+        "parking": "Parking sur place",
+        "security": "CCTV & vigile de nuit",
+        "entertainment": "Cafés & loisirs à proximité"
+      },
+      "locationDesc": "Situé dans un quartier prisé de Cocody avec un accès rapide aux quartiers d'affaires, supermarchés, écoles et loisirs.",
+      "managerDesc": "Géré professionnellement pour assurer un support réactif, une propreté irréprochable et une expérience locataire fluide.",
+      "rental": {
+        "duration": "Flexible (Court / Long Terme)",
+        "furnishing": "Entièrement Meublé",
+        "deposit": "2 Mois de Dépôt"
+      }
+    },
     "cta": {
       "partnerTitle": "Partenariat Avec Q Homes",
       "partnerSubtitle": "Atteignez un public premium de locataires et d'acheteurs vérifiés. Listez votre propriété avec nous pour un service et une exposition inégalés.",
@@ -866,7 +991,37 @@
       "cityArea": "Ville/Zone",
       "developmentStage": "Étape de Développement",
       "propertyType": "Type de Propriété",
-      "priceRange": "Gamme de Prix"
+      "priceRange": "Gamme de Prix",
+      "allTypes": "Tous les Types",
+      "types": {
+        "apartment": "Appartement",
+        "villa": "Villa",
+        "penthouse": "Penthouse",
+        "townhouse": "Maison de Ville",
+        "duplex": "Duplex"
+      },
+      "allCities": "Toutes les Villes",
+      "cities": {
+        "abidjan": "Abidjan",
+        "grandBassam": "Grand-Bassam",
+        "assinie": "Assinie",
+        "sanPedro": "San-Pédro"
+      },
+      "allStages": "Toutes les Étapes",
+      "stages": {
+        "planning": "Planification",
+        "construction": "En Construction",
+        "completion": "Près de l'Achèvement",
+        "readyToMove": "Prêt à Emménager",
+        "selling": "En Vente"
+      },
+      "allPrices": "Tous les Prix",
+      "prices": {
+        "under100m": "Moins de 100M XOF",
+        "100m200m": "100M - 200M XOF",
+        "200m500m": "200M - 500M XOF",
+        "over500m": "Plus de 500M XOF"
+      }
     },
     "section": {
       "featured": "Nouveaux Développements en Vedette"
@@ -880,6 +1035,7 @@
       "viewDetails": "Voir les Détails",
       "inquireNow": "Se Renseigner"
     },
+    "noResults": "Aucun développement trouvé correspondant à vos critères.",
     "whyInvest": {
       "title": "Pourquoi Investir dans les Nouveaux Développements?",
       "modernAmenities": {

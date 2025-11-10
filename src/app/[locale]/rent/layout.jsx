@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
     : "Découvrez des maisons de location vérifiées et de haute qualité en Côte d'Ivoire. Locations à court et long terme disponibles à Abidjan, Assinie et plus. Options meublées et non meublées avec paiement flexible.";
 
   const ogImage =
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuCfQeWBsMCX24T5y8UC_SdE6VyZCBj_FHDttPWx4ACjmfkqrkwJw_4USgp4hkSQcdxPblErwgOUoWudHt_Yf-Ob8YUL9krrCkhCAN1ybSJbBIOYq3yrntBMrHmSwtJ3QnOkWkpr8kttiV8VVWudv5jLPzy6uFEwsvc1VcosxJWIYpuEnTn36DehB2ZCS_wizLxC8AuLPgNTAITIgRgu0wxTTMLDR7L_-OJxi2sKrG4FSeWNPyPdUKaSK5sY4h816Q1GVxizqwsooR8';
+    'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&h=630&fit=crop';
 
   return {
     title,
