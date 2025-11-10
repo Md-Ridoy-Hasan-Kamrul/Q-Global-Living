@@ -38,7 +38,7 @@ export default function FAQ() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="md:min-h-screen bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
