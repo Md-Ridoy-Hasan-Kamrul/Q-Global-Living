@@ -83,7 +83,7 @@ export default function ResidentialPage() {
       }
 
       // Property type filter
-      if (filters.propertyType !== 'all' && dev.propertyType !== filters.propertyType) {
+      if (filters.propertyType !== 'all' && dev.propertyType !== filters.propertyType ) {
         return false;
       }
 
