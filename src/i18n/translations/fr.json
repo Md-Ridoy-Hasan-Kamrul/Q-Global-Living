@@ -1362,8 +1362,37 @@
     }
   },
   "ConciergeService": {
-    "title": "Votre déménagement sans accroc vers la Côte d'Ivoire commence ici.",
-    "subtitle": "De l'assistance pour l'obtention de votre visa à votre installation, notre équipe de concierges dédiée s'occupe de tout dans les moindres détails, pour que vous vous sentiez comme chez vous dès le premier jour.",
-    "contactButton": "Réservez une consultation gratuite"
+    "title": "Votre installation en Côte d’Ivoire commence ici.",
+    "subtitle": "De l’assistance pour le visa à votre installation, notre équipe de conciergerie dédiée s’occupe de chaque détail afin que vous vous sentiez chez vous dès le premier jour.",
+    "contactButton": "Réservez une consultation gratuite",
+    "ComprehensiveSection": {
+      "title": "Nos services de conciergerie complets",
+      "card": {
+        "relocationPlanning": {
+          "title": "Planification de la relocalisation",
+          "description": "Assistance complète pour les visas et la logistique afin d’assurer une transition en douceur."
+        },
+        "virtual": {
+          "title": "Visites virtuelles et sur place",
+          "description": "Découvrez vos futurs logements où que vous soyez, avec l’aide de nos experts."
+        },
+        "moving": {
+          "title": "Assistance au déménagement et à l’installation",
+          "description": "Nous nous occupons de tout, de l’emballage à la mise en place finale."
+        },
+        "utilities": {
+          "title": "Services publics et ameublement",
+          "description": "Préparez votre nouveau logement avec les services essentiels et la coordination du mobilier."
+        },
+        "corporate": {
+          "title": "Forfaits d’entreprise",
+          "description": "Des solutions de relocalisation sur mesure pour vos employés et les besoins de votre entreprise."
+        },
+        "Local": {
+          "title": "Accompagnement à l’intégration locale",
+          "description": "Trouvez les meilleures écoles, soins de santé et commodités locales grâce à notre assistance."
+        }
+      }
+    }
   }
 }

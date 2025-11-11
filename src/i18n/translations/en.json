@@ -1365,6 +1365,35 @@
   "ConciergeService": {
     "title": "Your Seamless Move to Côte d’Ivoire Starts Here.",
     "subtitle": "From visa assistance to settling in, our dedicated concierge team handles every detail, so you can feel at home from day one.",
-    "contactButton": "Book a Free Consultation"
+    "contactButton": "Book a Free Consultation",
+    "ComprehensiveSection": {
+      "title": "Our Comprehensive Concierge Services",
+      "card": {
+        "relocationPlanning": {
+          "title": "Relocation Planning",
+          "description": "Complete visa and logistics support for a smooth transition."
+        },
+        "virtual": {
+          "title": "Virtual & On-Ground Viewings",
+          "description": "Explore potential homes from anywhere with our expert guidance."
+        },
+        "moving": {
+          "title": "Moving & Setup Assistance",
+          "description": "We handle the heavy lifting, from packing to final setup."
+        },
+        "utilities": {
+          "title": "Utilities & Furnishing",
+          "description": "Get your home ready with essential services and furniture coordination."
+        },
+        "corporate": {
+          "title": "Corporate Packages",
+          "description": "Tailored relocation solutions for your employees and business needs."
+        },
+        "Local": {
+          "title": "Local Integration Support",
+          "description": "Find the best schools, healthcare, and local amenities with our help."
+        }
+      }
+    }
   }
 }
