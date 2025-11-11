@@ -1,15 +1,40 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function SearchAndFilters() {
+export default function SearchAndFilters({ partners = [], onFilterChange }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const filters = ["All", "Legal", "Moving", "Financial"];
+  const filters = ["All", "Legal", "Financial"];
+
+  useEffect(() => {
+    // Filter partners based on search term and active category filter
+    let filtered = partners;
+
+    // Apply search term filter (name-based)
+    if (searchTerm.trim()) {
+      const term = searchTerm.toLowerCase();
+      filtered = filtered.filter((partner) =>
+        partner.name.toLowerCase().includes(term)
+      );
+    }
+
+    // Apply category filter
+    if (activeFilter !== "All") {
+      filtered = filtered.filter(
+        (partner) => partner.category === activeFilter
+      );
+    }
+
+    // Notify parent component
+    if (onFilterChange) {
+      onFilterChange(filtered);
+    }
+  }, [searchTerm, activeFilter, partners, onFilterChange]);
 
   return (
-    <div className="flex flex-col md:flex-row gap-4 items-center px-4 py-3 mb-8">
+    <div className="flex flex-col md:flex-row gap-4 items-center px-4 py-3 mb-2 md:mb-8">
       {/* 🔍 Search Bar */}
       <div className="w-full md:flex-1">
         <label className="flex flex-col min-w-40 h-14 w-full">

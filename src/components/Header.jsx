@@ -3,9 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useCallback, useMemo, memo } from "react";
-import { Menu, X } from "lucide-react";
+import { Heading1, LayoutDashboard, Menu, X } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { getTranslation } from "@/i18n";
+import { useAuth } from "@/contexts/AuthContext";
+import ProfileDropDown from "./ProfileDropDown";
 
 /**
  * Production-grade Header Component
@@ -142,6 +144,14 @@ function Header({ locale }) {
     return () => document.removeEventListener("keydown", handleEscape);
   }, [mobileMenuOpen]);
 
+  // got user from auth context
+  const { user,logout } = useAuth();
+
+  const handleLogOut = async () =>{
+    await logout();
+    window.location.reload();
+  }
+
   return (
     <header
       className="sticky top-0 z-50 border-b border-solid border-primary/20 bg-background-light/95 backdrop-blur-md dark:bg-background-dark/95 shadow-sm"
@@ -184,13 +194,7 @@ function Header({ locale }) {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-3">
-          <Link
-            href={`/${locale}/login`}
-            className="flex items-center justify-center h-10 px-4 rounded-lg border border-primary text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-white whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-            aria-label="Sign in to your account"
-          >
-            {t("nav.login") || "Sign In"}
-          </Link>
+          <LanguageSwitcher currentLocale={locale} />
           <Link
             href={`/${locale}/event`}
             className="flex items-center justify-center h-10 px-4 rounded-lg bg-primary text-sm font-semibold text-white transition-all hover:bg-primary/90 hover:shadow-md whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
@@ -198,7 +202,19 @@ function Header({ locale }) {
           >
             {t("nav.listYourProperty")}
           </Link>
-          <LanguageSwitcher currentLocale={locale} />
+          {user ? (
+            <ProfileDropDown />
+          ) : (
+            <Link
+              href={`/${locale}/login`}
+              className="flex items-center justify-center h-10 px-4 rounded-lg border border-primary text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-white whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              aria-label="Sign in to your account"
+            >
+              {t("nav.login") || "Sign In"}
+            </Link>
+          )}
+          
+          
         </div>
 
         {/* Mobile Actions */}
@@ -242,15 +258,7 @@ function Header({ locale }) {
               </Link>
             ))}
             <div className="pt-4 border-t border-primary/20 space-y-3">
-              <Link
-                href={`/${locale}/login`}
-                onClick={handleMobileMenuClose}
-                className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
-                aria-label="Sign in to your account"
-              >
-                {t("nav.login") || "Sign In"}
-              </Link>
-              <Link
+            <Link
                 href={`/${locale}/event`}
                 onClick={handleMobileMenuClose}
                 className="flex items-center justify-center w-full h-12 px-4 rounded-lg bg-primary text-base font-semibold text-white hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
@@ -258,6 +266,27 @@ function Header({ locale }) {
               >
                 {t("nav.listYourProperty")}
               </Link>
+              {user ? (
+               <div className="space-y-3">
+                 <Link
+                  className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                  href={"/dashboard/admin"}
+                >
+                  <span>Dashboard</span>
+                </Link>
+                <button onClick={handleLogOut} className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary">Log out</button>
+               </div>
+              ) : (
+                <Link
+                  href={`/${locale}/login`}
+                  onClick={handleMobileMenuClose}
+                  className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                  aria-label="Sign in to your account"
+                >
+                  {t("nav.login") || "Sign In"}
+                </Link>
+              )}
+              
             </div>
           </nav>
         </div>

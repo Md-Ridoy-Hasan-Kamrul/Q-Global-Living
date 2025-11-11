@@ -37,8 +37,8 @@ const services = [
 
 export default function ComprehensiveSection() {
   return (
-    <section className="flex flex-col gap-6 px-4 py-12">
-      <h2 className="text-3xl font-bold font-heading text-center">
+    <section className="flex flex-col gap-6 md:my-4 lg:my-8">
+      <h2 className="text-3xl font-bold font-heading text-center my-4">
         Our Comprehensive Concierge Services
       </h2>
 

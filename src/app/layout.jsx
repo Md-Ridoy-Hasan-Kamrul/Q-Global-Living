@@ -10,7 +10,11 @@ const manrope = Manrope({
 export const metadata = {
   title: "Quiah Group - Real Estate Montreal",
   description:
-    "Leading real estate company in Montreal - Buy, Rent, Sell Properties",
+    'Leading real estate company in Montreal - Buy, Rent, Sell Properties',
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
 };
 
 export default function RootLayout({ children }) {

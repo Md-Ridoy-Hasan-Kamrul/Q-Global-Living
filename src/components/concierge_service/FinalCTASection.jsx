@@ -1,6 +1,6 @@
 export default function FinalCTASection() {
   return (
-    <section className="bg-[#0A1931] text-white rounded-xl p-10 md:p-16 flex flex-col items-center text-center gap-6">
+    <section className="bg-[#0A1931] text-white rounded-xl p-10 md:p-16 md:mb-4 flex flex-col items-center text-center gap-6">
       <h2 className="text-3xl font-bold font-heading">
         Ready to Make Your Move Effortless?
       </h2>

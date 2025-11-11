@@ -86,7 +86,7 @@ export default function RentDetailsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-neutral-900">
+    <main className="min-h-screen bg-background-light dark:bg-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Content */}
@@ -107,7 +107,7 @@ export default function RentDetailsPage() {
           {/* Right Sidebar */}
           <div className="lg:col-span-1 space-y-6">
             <div className="sticky top-8 space-y-6">
-              <div className="bg-white dark:bg-card-dark rounded-lg shadow-sm p-6">
+              <div className="bg-background-light border border-[#f6efcb] dark:bg-card-dark rounded-lg shadow-sm p-6">
                 <PropertyHeader
                   title={mockProperty.title}
                   location={mockProperty.location}

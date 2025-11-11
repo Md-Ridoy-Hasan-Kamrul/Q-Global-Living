@@ -23,7 +23,7 @@ function RentalOverview({ rental }) {
   } = rental;
 
   return (
-    <div className='bg-white border border-gray-200 rounded-lg p-6'>
+    <div className='bg-background-light border border-[#f6efcb] shadow-sm rounded-lg p-6'>
       <h3 className='text-lg font-semibold text-gray-900 mb-4'>
         {t('buy.property.rentalOverview')}
       </h3>

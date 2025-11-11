@@ -60,7 +60,7 @@ export default function BuyFilters({ onFilterChange, initialFilters = {} }) {
                   onChange={(e) => { handleFilterChange('city', e.target.value); applyFilters(); }}
                   onFocus={() => handleDropdownFocus('city')}
                   onBlur={() => handleDropdownBlur('city')}
-                  className='w-full h-9 px-2 pr-7 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-1 outline-none focus:ring-primary focus:border-primary text-xs appearance-none cursor-pointer'
+                  className='w-full h-9 px-2 pr-7 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary text-xs appearance-none cursor-pointer outline-none'
                 >
                   <option value='abidjan'>{t('buy.filters.cities.abidjan', 'Abidjan')}</option>
                   <option value='assinie'>{t('buy.filters.cities.assinie', 'Assinie-Mafia')}</option>
@@ -86,7 +86,7 @@ export default function BuyFilters({ onFilterChange, initialFilters = {} }) {
                   onChange={(e) => { handleFilterChange('bedrooms', e.target.value); applyFilters(); }}
                   onFocus={() => handleDropdownFocus('bedrooms')}
                   onBlur={() => handleDropdownBlur('bedrooms')}
-                  className='w-full h-9 px-2 pr-7 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-1  focus:ring-primary focus:border-primary text-xs appearance-none cursor-pointer'
+                  className='w-full h-9 px-2 pr-7 rounded-lg border border-gray-300 dark:border-border-dark bg-[#FFFFF0] dark:bg-background-dark focus:ring-1  focus:ring-primary focus:border-primary text-xs appearance-none cursor-pointer outline-none!'
                 >
                   <option value='any'>{t('buy.filters.bedrooms.any', 'Any')}</option>
                   <option value='1'>{t('buy.filters.bedrooms.one', '1')}</option>
