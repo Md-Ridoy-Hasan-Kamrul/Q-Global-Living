@@ -1061,6 +1061,61 @@
       "button": "Listez Votre Projet"
     }
   },
+  "residentialDetails": {
+    "notFound": {
+      "title": "Propriété Non Trouvée",
+      "description": "La propriété que vous recherchez n'existe pas.",
+      "backLink": "← Retour aux Propriétés Résidentielles"
+    },
+    "navigation": {
+      "overview": "Aperçu",
+      "units": "Plans d'Unités et Tarification",
+      "amenities": "Commodités",
+      "location": "Emplacement",
+      "developer": "Promoteur",
+      "payment": "Plans de Paiement",
+      "menu": "Menu"
+    },
+    "buttons": {
+      "downloadBrochure": "Télécharger la Brochure",
+      "brochure": "Brochure",
+      "inquire": "Renseignement",
+      "viewPlan": "Voir le Plan",
+      "inquireAbout": "Renseignements sur ce Développement",
+      "bookSiteVisit": "Réserver une Visite",
+      "whatsapp": "Chatter sur WhatsApp"
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "newDevelopments": "Nouveaux Développements"
+    },
+    "badges": {
+      "verifiedBy": "Vérifié par",
+      "escrowEligible": "Éligible à l'Entiercement",
+      "by": "par"
+    },
+    "sections": {
+      "unitPlans": "Plans d'Unités et Tarification",
+      "amenities": "Commodités",
+      "locationConnectivity": "Emplacement et Connectivité",
+      "developerProfile": "Profil du Promoteur",
+      "paymentPlans": "Plans de Paiement"
+    },
+    "sidebar": {
+      "developmentOverview": "Aperçu du Développement",
+      "investmentHighlights": "Points Forts de l'Investissement",
+      "unitTypes": "Types d'Unités",
+      "startingPrice": "Prix de Départ",
+      "estCompletion": "Achèvement Est."
+    },
+    "developer": {
+      "defaultDescription": "Avec plus de 15 ans d'expérience dans la création de propriétés résidentielles haut de gamme, Q Homes Development est synonyme de qualité, d'innovation et de confiance. Notre portefeuille témoigne d'un engagement envers l'excellence architecturale et la création de communautés qui résistent à l'épreuve du temps."
+    },
+    "payment": {
+      "description": "Nous proposons des plans de paiement flexibles pour répondre à vos besoins financiers. Notre équipe est disponible pour discuter des options de financement et vous guider tout au long du processus."
+    },
+    "locationMap": "Carte de l'Emplacement"
+  },
   "concierge": {
     "hero": {
       "title": "Votre Déménagement, Simplifié.",

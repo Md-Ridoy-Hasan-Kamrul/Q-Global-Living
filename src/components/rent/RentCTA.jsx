@@ -14,7 +14,7 @@ export function PartnerCTA() {
 
   return (
     <section
-      className='w-full p-5 sm:p-8 rounded-xl bg-[#fafafa] dark:bg-card-dark shadow-sm border border-gray-100 dark:border-border-dark text-center'
+      className='w-full p-5 sm:p-8 rounded-xl bg-white/50 dark:bg-card-dark shadow-sm border border-gray-200 dark:border-border-dark text-center'
       aria-labelledby='partner-cta-heading'
     >
       <h2

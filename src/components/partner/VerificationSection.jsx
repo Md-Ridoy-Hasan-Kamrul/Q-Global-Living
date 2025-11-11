@@ -9,19 +9,19 @@ import { Shield, ArrowRight } from 'lucide-react';
  */
 export default function VerificationSection() {
   return (
-    <section className="max-w-7xl mx-auto lg:px-6 py-5 lg:py-16">
-      <h2 className="text-2xl lg:text-4xl font-bold text-center text-charcoal mb-4 lg:mb-16">
+    <section className="max-w-7xl mx-auto lg:px-6 py-5 lg:py-10 mb-6 lg:mb-8">
+      <h2 className="text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] font-bold text-center text-charcoal mb-4 lg:mb-10">
         A Mark of Trust and Quality
       </h2>
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
-        <div className="bg-background-light rounded-xl p-6
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6 gap-3.5 items-center">
+        <div className="bg-white/50 rounded-xl p-6
          lg:p-12 border border-gray-200 flex items-center justify-center">
-          <div className="inline-flex items-center gap-3 px-4 py-2 lg:px-8 lg:py-4 border-2 border-primary rounded-full">
+          <div className="inline-flex items-center gap-3 px-4 py-2 lg:px-8 lg:py-4 border border-primary rounded-full">
             <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
               <Shield className="w-5 h-5 text-charcoal" strokeWidth={1.5} />
             </div>
-            <span className="lg:text-xl text-sm font-bold text-charcoal">Verified by Q Homes</span>
+            <span className="lg:text-lg text-sm font-bold text-charcoal">Verified by Q Global Living</span>
           </div>
         </div>
 

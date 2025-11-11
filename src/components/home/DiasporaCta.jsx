@@ -16,7 +16,7 @@ export default function DiasporaCta({ locale }) {
   };
 
   return (
-    <section className='py-10 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8'>
+    <section className='lg:py-13 py-8 px-4 sm:px-6 lg:px-8'>
       <div className='mx-auto max-w-6xl'>
         <div className='overflow-hidden rounded-2xl bg-charcoal dark:bg-primary shadow-2xl'>
           <div className='flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 p-6 sm:p-8 md:p-10 lg:p-12'>
@@ -33,7 +33,7 @@ export default function DiasporaCta({ locale }) {
             {/* CTA Button */}
             <Link
               href={`/${locale}/contact`}
-              className='group flex items-center justify-center gap-2 h-12 sm:h-14 px-6 sm:px-8 rounded-lg bg-primary dark:bg-white text-white dark:text-charcoal text-sm sm:text-base font-bold transition-all hover:scale-105 hover:shadow-xl active:scale-100 shrink-0 w-full md:w-auto'
+              className='group flex items-center justify-center gap-2 h-12 sm:h-14 px-6 sm:px-8 rounded-lg bg-primary dark:bg-white text-white dark:text-charcoal text-sm lg:text-base font-bold transition-all hover:scale-105 hover:shadow-xl active:scale-100 shrink-0 w-full md:w-auto'
             >
               <span>{t('diaspora.cta')}</span>
               <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />

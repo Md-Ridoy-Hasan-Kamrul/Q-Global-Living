@@ -8,7 +8,7 @@ import React from 'react';
  */
 export default function HeroSection({ onApplyClick }) {
   return (
-    <section className="w-full mb-6 md:mb-8" aria-labelledby="hero-title">
+    <section className="w-full mb-6 lg:mb-8" aria-labelledby="hero-title">
       <div 
         className="flex min-h-[420px] sm:min-h-[480px] md:min-h-[520px] flex-col gap-5 md:gap-6 bg-cover bg-center bg-no-repeat rounded-xl md:rounded-2xl items-center justify-center p-6 md:p-8 lg:p-10 text-center"
         style={{

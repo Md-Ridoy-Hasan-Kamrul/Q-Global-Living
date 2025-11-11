@@ -59,10 +59,10 @@ export default function PackagesSection({ onApplyClick }) {
   ];
 
   return (
-    <section className="py-3 lg:py-16">
+    <section className="py-4  mb-6 lg:mb-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8 md:mb-10 lg:mb-12 px-4 lg:px-6">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-charcoal mb-3 md:mb-4">
+        <div className="text-center mb-5 lg:mb-8 px-4 lg:px-6">
+          <h2 className="text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] font-bold text-charcoal mb-2 lg:mb-4">
             Listing Packages
           </h2>
           <p className="text-base text-charcoal-600 max-w-2xl mx-auto">
@@ -70,13 +70,13 @@ export default function PackagesSection({ onApplyClick }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-6 lg:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-4 xl:gap-6 gap-3.5 md:px-6 lg:px-2 xl:px-6">
           {packages.map((pkg, index) => (
             <article
               key={index}
-              className={`relative bg-background-light rounded-lg transition-all duration-300 ${
+              className={`relative bg-white/50 rounded-lg transition-all duration-300 ${
                 pkg.popular
-                  ? 'border-2 border-[#D1B156] shadow-md hover:shadow-lg md:scale-[1.02] md:hover:scale-[1.03]'
+                  ? 'border border-[#D1B156] shadow-md hover:shadow-lg md:scale-[1.02] md:hover:scale-[1.03]'
                   : 'border border-[#E5E7EB] hover:border-[#D1B156] hover:shadow-sm'
               }`}
             >
@@ -97,19 +97,19 @@ export default function PackagesSection({ onApplyClick }) {
               )}
               <div className="p-6 sm:p-7 md:p-8 flex flex-col h-full">
                 <div className="grow">
-                  <h3 className="text-lg md:text-xl font-bold text-charcoal mb-3">
+                  <h3 className="text-lg xl:text-xl font-bold text-charcoal mb-3">
                     {pkg.name}
                   </h3>
                   <div className="mb-4">
-                    <div className="text-3xl md:text-4xl font-bold text-charcoal">
+                    <div className="text-2xl lg:text-3xl xl:text-4xl font-bold text-charcoal whitespace-nowrap">
                       {pkg.price}
-                      <span className="text-sm md:text-base font-normal text-charcoal-600"> /{pkg.usdPrice}</span>
+                      <span className="text-xs lg:text-sm font-normal text-charcoal-600"> /{pkg.usdPrice}</span>
                     </div>
                   </div>
-                  <p className="text-sm md:text-base text-charcoal-600 mb-6 min-h-[60px]">
+                  <p className="text-sm md:text-base text-charcoal-600 mb-3 xl:mb-6 min-h-[60px]">
                     {pkg.description}
                   </p>
-                  <ul className="space-y-3.5 mb-8" role="list">
+                    <ul className="space-y-2 xl:space-y-3.5 mb-8" role="list">
                     {pkg.features.map((feature, idx) => (
                       <li
                         key={idx}
@@ -126,6 +126,7 @@ export default function PackagesSection({ onApplyClick }) {
                       </li>
                     ))}
                   </ul>
+                  
                 </div>
                 <div className="mt-auto pt-4">
                   <button

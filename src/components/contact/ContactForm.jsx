@@ -24,20 +24,20 @@ const ContactForm = React.memo(
     };
 
     return (
-      <section id='contact-form' className='w-full py-8 sm:py-12 md:py-16'>
-        <div className='mx-auto flex max-w-4xl flex-col items-center gap-8 sm:gap-12'>
+      <section id='contact-form' className='w-full py-8 sm:py-10'>
+        <div className='mx-auto flex max-w-4xl flex-col items-center gap-6'>
           {/* Header */}
           <div className='text-center'>
             <h2 className='font-heading text-[24px] font-bold text-navy dark:text-[#FFFFF0] sm:text-[28px] md:text-[32px] lg:text-[36px]'>
               {title}
             </h2>
-            <p className='mt-3 max-w-2xl text-[14px] text-navy/70 dark:text-[#FFFFF0]/70 sm:mt-4 sm:text-[15px] md:text-base'>
+            <p className='mt-2 max-w-2xl text-[14px] text-navy/70 dark:text-[#FFFFF0]/70 sm:mt-2.5 sm:text-[15px] md:text-base'>
               {subtitle}
             </p>
           </div>
 
           {/* Form Card */}
-          <div className='w-full rounded-xl bg-white p-4 shadow-sm dark:bg-navy-light sm:p-6 md:p-10'>
+          <div className='w-full rounded-xl bg-white/50 border border-gray-200 p-4 shadow-sm dark:bg-navy-light sm:p-6 md:p-10'>
             <form
               onSubmit={handleSubmit}
               className='grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6'
@@ -55,7 +55,7 @@ const ContactForm = React.memo(
                     onChange={handleChange}
                     placeholder={labels.fullNamePlaceholder}
                     required
-                    className='form-input h-11 w-full rounded-lg border border-navy/20 bg-[#FFFFF0] px-3 py-2 text-[14px] font-normal text-navy placeholder:text-navy/50 focus:border-[#D4AF37] focus:ring-[#D4AF37] dark:border-[#FFFFF0]/20 dark:bg-navy dark:text-[#FFFFF0] dark:placeholder:text-[#FFFFF0]/50 sm:h-12 sm:text-base'
+                    className='form-input h-11 w-full rounded-lg border border-navy/20 px-3 py-2 text-[14px] font-normal text-navy placeholder:text-navy/50 focus:border-[#D4AF37] focus:ring-[#D4AF37] dark:border-[#FFFFF0]/20 dark:bg-navy dark:text-[#FFFFF0] dark:placeholder:text-[#FFFFF0]/50 sm:h-12 sm:text-base'
                   />
                 </label>
               </div>
@@ -73,7 +73,7 @@ const ContactForm = React.memo(
                     onChange={handleChange}
                     placeholder={labels.emailPlaceholder}
                     required
-                    className='form-input h-11 w-full rounded-lg border border-navy/20 bg-[#FFFFF0] px-3 py-2 text-[14px] font-normal text-navy placeholder:text-navy/50 focus:border-[#D4AF37] focus:ring-[#D4AF37] dark:border-[#FFFFF0]/20 dark:bg-navy dark:text-[#FFFFF0] dark:placeholder:text-[#FFFFF0]/50 sm:h-12 sm:text-base'
+                    className='form-input h-11 w-full rounded-lg border border-navy/20 px-3 py-2 text-[14px] font-normal text-navy placeholder:text-navy/50 focus:border-[#D4AF37] focus:ring-[#D4AF37] dark:border-[#FFFFF0]/20 dark:bg-navy dark:text-[#FFFFF0] dark:placeholder:text-[#FFFFF0]/50 sm:h-12 sm:text-base'
                   />
                 </label>
               </div>
@@ -96,7 +96,7 @@ const ContactForm = React.memo(
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder={labels.phonePlaceholder}
-                      className='form-input h-11 w-full rounded-lg border border-navy/20 bg-[#FFFFF0] py-2 pl-[88px] pr-3 text-[14px] font-normal text-navy placeholder:text-navy/50 focus:border-[#D4AF37] focus:ring-[#D4AF37] dark:border-[#FFFFF0]/20 dark:bg-navy dark:text-[#FFFFF0] dark:placeholder:text-[#FFFFF0]/50 sm:h-12 sm:text-base'
+                      className='form-input h-11 w-full rounded-lg border border-navy/20 py-2 pl-[88px] pr-3 text-[14px] font-normal text-navy placeholder:text-navy/50 focus:border-[#D4AF37] focus:ring-[#D4AF37] dark:border-[#FFFFF0]/20 dark:bg-navy dark:text-[#FFFFF0] dark:placeholder:text-[#FFFFF0]/50 sm:h-12 sm:text-base'
                     />
                   </div>
                 </label>
@@ -114,7 +114,7 @@ const ContactForm = React.memo(
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder={labels.subjectPlaceholder}
-                    className='form-input h-11 w-full rounded-lg border border-navy/20 bg-[#FFFFF0] px-3 py-2 text-[14px] font-normal text-navy placeholder:text-navy/50 focus:border-[#D4AF37] focus:ring-[#D4AF37] dark:border-[#FFFFF0]/20 dark:bg-navy dark:text-[#FFFFF0] dark:placeholder:text-[#FFFFF0]/50 sm:h-12 sm:text-base'
+                    className='form-input h-11 w-full rounded-lg border border-navy/20 px-3 py-2 text-[14px] font-normal text-navy placeholder:text-navy/50 focus:border-[#D4AF37] focus:ring-[#D4AF37] dark:border-[#FFFFF0]/20 dark:bg-navy dark:text-[#FFFFF0] dark:placeholder:text-[#FFFFF0]/50 sm:h-12 sm:text-base'
                   />
                 </label>
               </div>
@@ -132,7 +132,7 @@ const ContactForm = React.memo(
                     placeholder={labels.messagePlaceholder}
                     rows='5'
                     required
-                    className='form-textarea w-full resize-y rounded-lg border border-navy/20 bg-[#FFFFF0] px-3 py-2 text-[14px] font-normal text-navy placeholder:text-navy/50 focus:border-[#D4AF37] focus:ring-[#D4AF37] dark:border-[#FFFFF0]/20 dark:bg-navy dark:text-[#FFFFF0] dark:placeholder:text-[#FFFFF0]/50 sm:text-base'
+                    className='form-textarea w-full resize-y rounded-lg border border-navy/20 px-3 py-2 text-[14px] font-normal text-navy placeholder:text-navy/50 focus:border-[#D4AF37] focus:ring-[#D4AF37] dark:border-[#FFFFF0]/20 dark:bg-navy dark:text-[#FFFFF0] dark:placeholder:text-[#FFFFF0]/50 sm:text-base'
                   />
                 </label>
               </div>
@@ -144,7 +144,7 @@ const ContactForm = React.memo(
                 </p>
                 <button
                   type='submit'
-                  className='flex h-11 w-full items-center justify-center gap-2 rounded-lg bg-navy px-5 text-[14px] font-bold text-white transition-opacity duration-200 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 dark:bg-[#D4AF37] dark:text-navy sm:h-12 sm:w-auto sm:min-w-40 sm:text-base'
+                  className='flex h-11 w-full items-center justify-center gap-2 rounded-lg bg-accent px-5 text-[14px] font-bold text-[#333333] transition-opacity duration-200 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 dark:bg-accent dark:text-navy sm:h-12 sm:w-auto sm:min-w-40 sm:text-base'
                 >
                   <span>{submitButton}</span>
                   <span className='material-symbols-outlined text-xl'>

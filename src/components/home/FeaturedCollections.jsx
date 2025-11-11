@@ -16,20 +16,20 @@ export default function FeaturedCollections({ locale, collections }) {
   };
 
   return (
-    <section className='py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8'>
-      <div className='mx-auto max-w-7xl'>
+    <section className='py-6 lg:py-10 px-4 sm:px-6 lg:px-8'>
+      <div className='mx-auto max-w-7xl mb-6'>
         {/* Header */}
-        <div className='text-center mb-10 sm:mb-12 lg:mb-16'>
+        <div className='text-center mb-6 lg:mb-10'>
           <h2 className='text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight'>
             {t('featuredCollections.title')}
           </h2>
-          <p className='mx-auto mt-3 sm:mt-4 max-w-2xl text-sm sm:text-base text-charcoal/80 dark:text-soft-grey/80'>
+          <p className='mx-auto mt-2 sm:mt-4 max-w-2xl text-sm sm:text-base text-charcoal/80 dark:text-soft-grey/80'>
             {t('featuredCollections.subtitle')}
           </p>
         </div>
 
         {/* Grid */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6'>
           {collections.map((collection) => (
             <Link
               key={collection.id}

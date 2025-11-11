@@ -27,9 +27,9 @@ export default function WhyPartnerSection() {
   ];
 
   return (
-    <section className="py-4 lg:py-16 bg-background-light rounded-xl md:rounded-2xl mb-6 md:mb-8">
-      <div className="text-center mb-10 md:mb-14 px-4">
-        <h2 className="text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] font-bold text-charcoal mb-3 md:mb-4 leading-tight">
+    <section className="py-4 lg:py-10 bg-background-light rounded-xl md:rounded-2xl mb-6 lg:mb-8">
+      <div className="text-center mb-5 lg:mb-8 px-4">
+        <h2 className="text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] font-bold text-charcoal mb-2 lg:mb-4 leading-tight">
           Why Partner With Q Homes?
         </h2>
         <p className="text-[15px] sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -37,11 +37,11 @@ export default function WhyPartnerSection() {
         </p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-6   md:px-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4 xl:gap-6 md:px-6">
         {benefits.map((benefit, index) => {
           const Icon = benefit.icon;
           return (
-            <article key={index} className="text-center p-6 border border-gray-200 rounded-lg">
+            <article key={index} className="text-center p-6 bg-white/50 border border-[#f6efcb] rounded-lg">
               <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 md:mb-6 flex items-center justify-center" aria-hidden="true">
                 <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary" strokeWidth={1.5} />
               </div>

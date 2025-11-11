@@ -21,7 +21,7 @@ export default function DeveloperCTA({ onListProject }) {
   };
 
   return (
-    <section className='w-full my-3.5 sm:my-6 lg:my-16'>
+    <section className='w-full my-3 lg:mt-10'>
       <div
         className='flex flex-col md:flex-row lg:min-h-[280px] gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-between p-8 md:p-12 text-center md:text-left'
         style={{

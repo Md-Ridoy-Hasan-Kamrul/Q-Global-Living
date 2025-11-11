@@ -73,7 +73,7 @@ export default function PropertyFeatures({ features }) {
           className='flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg'
         >
           <div className='mb-3'>{feature.icon}</div>
-          <p className='text-xl md:text-2xl font-bold text-gray-900'>
+          <p className='text-xl lg:text-2xl font-bold text-gray-900'>
             {feature.value || feature.label}
           </p>
           {feature.value !== '' && (

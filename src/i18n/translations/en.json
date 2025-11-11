@@ -1061,6 +1061,61 @@
       "button": "List Your Project"
     }
   },
+  "residentialDetails": {
+    "notFound": {
+      "title": "Property Not Found",
+      "description": "The property you're looking for doesn't exist.",
+      "backLink": "← Back to Residential Properties"
+    },
+    "navigation": {
+      "overview": "Overview",
+      "units": "Unit Plans & Pricing",
+      "amenities": "Amenities",
+      "location": "Location",
+      "developer": "Developer",
+      "payment": "Payment Plans",
+      "menu": "Menu"
+    },
+    "buttons": {
+      "downloadBrochure": "Download Brochure",
+      "brochure": "Brochure",
+      "inquire": "Inquire",
+      "viewPlan": "View Plan",
+      "inquireAbout": "Inquire About This Development",
+      "bookSiteVisit": "Book a Site Visit",
+      "whatsapp": "Chat on WhatsApp"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "newDevelopments": "New Developments"
+    },
+    "badges": {
+      "verifiedBy": "Verified by",
+      "escrowEligible": "Escrow Eligible",
+      "by": "by"
+    },
+    "sections": {
+      "unitPlans": "Unit Plans & Pricing",
+      "amenities": "Amenities",
+      "locationConnectivity": "Location & Connectivity",
+      "developerProfile": "Developer Profile",
+      "paymentPlans": "Payment Plans"
+    },
+    "sidebar": {
+      "developmentOverview": "Development Overview",
+      "investmentHighlights": "Investment Highlights",
+      "unitTypes": "Unit Types",
+      "startingPrice": "Starting Price",
+      "estCompletion": "Est. Completion"
+    },
+    "developer": {
+      "defaultDescription": "With over 15 years of experience in crafting premium residential properties, Q Homes Development is synonymous with quality, innovation, and trust. Our portfolio showcases a commitment to architectural excellence and creating communities that stand the test of time."
+    },
+    "payment": {
+      "description": "We offer flexible payment plans to suit your financial needs. Our team is available to discuss financing options and guide you through the process."
+    },
+    "locationMap": "Location Map"
+  },
   "concierge": {
     "hero": {
       "title": "Your Move, Simplified.",

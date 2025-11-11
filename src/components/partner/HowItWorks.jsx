@@ -26,9 +26,9 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="bg-background-light py-5 pt-8 lg:py-16">
+    <section className="bg-background-light py-5 lg:py-10 mb-6 lg:mb-8">
       <div className="max-w-7xl mx-auto lg:px-6">
-        <h2 className="text-2xl lg:text-4xl font-bold text-center text-charcoal mb-6 lg:mb-16">
+        <h2 className="text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] font-bold text-center text-charcoal mb-6 lg:mb-16">
           How to Get Verified in 3 Simple Steps
         </h2>
 

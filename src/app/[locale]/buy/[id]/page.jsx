@@ -93,9 +93,9 @@ export default function BuyDetailsPage() {
     <main className='min-h-screen bg-background-light'>
       {/* Container with max-width for better readability */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 lg:gap-6 gap-3.5'>
           {/* Main Content Area - Left Side (2/3 width on large screens) */}
-          <div className='lg:col-span-2 space-y-6'>
+          <div className='lg:col-span-2 space-y-3.5 lg:space-y-6'>
             {/* Image Gallery */}
             <Suspense
               fallback={
@@ -109,17 +109,17 @@ export default function BuyDetailsPage() {
             </Suspense>
 
             {/* Tabbed Content */}
-            <section className='bg-white rounded-lg shadow-sm p-6'>
+            <section className='bg-white/50 rounded-lg shadow-sm p-6'>
               <PropertyTabs property={mockProperty} />
             </section>
           </div>
 
           {/* Sidebar - Right Side (1/3 width on large screens) */}
-          <div className='lg:col-span-1 space-y-6'>
+          <div className='lg:col-span-1 lg:space-y-6 space-y-3.5'>
             {/* Property Info Card - Sticky on larger screens */}
-            <div className='sticky top-8 space-y-6'>
+            <div className='sticky top-22 lg:space-y-6 space-y-3.5'>
               {/* Combined Property Header and Contact Actions Card */}
-              <div className='bg-background-light border border-[#f6efcb] rounded-lg shadow-sm p-6'>
+              <div className='bg-white/50 border border-[#f6efcb] rounded-lg shadow-sm p-6'>
                 <PropertyHeader
                   title={mockProperty.title}
                   location={mockProperty.location}

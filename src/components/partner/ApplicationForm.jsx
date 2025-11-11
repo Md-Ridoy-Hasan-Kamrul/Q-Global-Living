@@ -36,16 +36,16 @@ export default function ApplicationForm() {
   };
 
   return (
-    <section id="apply" className="max-w-4xl mx-auto lg:px-6 py-6 lg:py-16 scroll-mt-20">
-      <h2 className="text-2xl lg:text-4xl font-bold text-center text-charcoal mb-1.5 lg:mb-4">
+    <section id="apply" className="max-w-4xl mx-auto lg:px-6 py-6 lg:pt-10 mb-6 scroll-mt-20">
+      <h2 className="text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] font-bold text-center text-charcoal mb-1.5 lg:mb-4">
         Become a Q Homes Partner
       </h2>
-      <p className="text-center text-charcoal-600 mb-6 lg:mb-12">
+      <p className="text-center text-charcoal-600 mb-6">
         Complete the form below to begin the verification process.
       </p>
 
-      <form onSubmit={handleSubmit} className="bg-background-light rounded-xl p-6 md:p-8 border border-gray-200 shadow-lg">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-6 mb-3 lg:mb-6">
+      <form onSubmit={handleSubmit} className="bg-white/50 rounded-xl p-6 md:p-8 border border-[#f6efcb] shadow-sm">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-6 gap-3.5 lg:mb-6 mb-3.5">
           <div>
             <label className="block text-sm font-medium text-charcoal mb-2">
               Company Name <span className="text-red-500">*</span>
@@ -75,7 +75,7 @@ export default function ApplicationForm() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-6 mb-3 lg:mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-6 gap-3.5 lg:mb-6 mb-3.5">
           <div>
             <label className="block text-sm font-medium text-charcoal mb-2">
               Email Address <span className="text-red-500">*</span>
@@ -106,7 +106,7 @@ export default function ApplicationForm() {
           </div>
         </div>
 
-        <div className="lg:mb-6 mb-3">
+        <div className="lg:mb-6 mb-3.5">
           <label className="block text-sm font-medium text-charcoal mb-2">
             Project Name(s)
           </label>
@@ -119,7 +119,7 @@ export default function ApplicationForm() {
           />
         </div>
 
-        <div className="lg:mb-6 mb-4">
+        <div className="lg:mb-6 mb-3.5">
           <label className="block text-sm font-medium text-charcoal mb-3">
             Preferred Package
           </label>
@@ -129,7 +129,7 @@ export default function ApplicationForm() {
                 key={pkg}
                 type="button"
                 onClick={() => setFormData(prev => ({ ...prev, preferredPackage: pkg }))}
-                className={`px-6 py-2 text-sm lg:text-lg lg:py-4 border-2 rounded-lg transition-all duration-200 ${
+                className={`px-6 py-2 text-sm lg:py-4 border rounded-lg transition-all duration-200 ${
                   formData.preferredPackage === pkg
                     ? 'border-primary bg-primary/10 scale-105'
                     : 'border-gray-200 hover:border-gray-300'
@@ -152,7 +152,7 @@ export default function ApplicationForm() {
           </div>
         </div>
 
-        <div className="mb-3 lg:mb-6">
+        <div className="lg:mb-6 mb-3.5">
           <label className="block text-sm font-medium text-charcoal mb-2">
             Upload Documents
           </label>
@@ -167,7 +167,7 @@ export default function ApplicationForm() {
 
         <button
           type="submit"
-          className="w-full py-2.5 lg:py-4 bg-primary hover:bg-primary-dark text-charcoal rounded-lg transition-all duration-200 font-semibold text-sm lg:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          className="w-full py-2.5 lg:py-4 bg-primary hover:bg-primary-dark text-charcoal rounded-lg transition-all duration-200 font-semibold text-sm lg:text-base shadow-lg hover:shadow-xl transform hover:-translate-y-1"
         >
           Submit Application
         </button>

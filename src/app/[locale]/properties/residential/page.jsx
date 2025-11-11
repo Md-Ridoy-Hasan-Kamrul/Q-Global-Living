@@ -216,7 +216,7 @@ export default function ResidentialPage() {
 
       {/* Why Invest Section */}
       <section
-        className='lg:my-16 my-4 py-6 sm:py-12 dark:bg-navy/20 rounded-xl'
+        className=' my-4 py-6 lg:py-17 dark:bg-navy/20 rounded-xl'
         aria-labelledby='why-invest'
       >
         <h2

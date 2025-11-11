@@ -5,14 +5,14 @@ import React from 'react';
 const ContactInfo = React.memo(
   ({ title, subtitle, contactDetails, mapTitle }) => {
     return (
-      <section className='w-full py-8 sm:py-12 md:py-16'>
+      <section className='w-full py-8 sm:py-12'>
         <div className='grid grid-cols-1 gap-8 md:grid-cols-5 md:gap-12 lg:gap-16'>
           {/* Left Column - Contact Details */}
           <div className='flex flex-col md:col-span-2'>
             <h2 className='font-heading text-[24px] font-bold text-navy dark:text-[#FFFFF0] sm:text-[28px] md:text-[32px]'>
               {title}
             </h2>
-            <p className='mt-3 text-[14px] text-navy/70 dark:text-[#FFFFF0]/70 sm:mt-4 sm:text-[15px] md:text-base'>
+            <p className='mt-2 text-[14px] text-navy/70 dark:text-[#FFFFF0]/70 sm:mt-2.5 sm:text-[15px] md:text-base'>
               {subtitle}
             </p>
 

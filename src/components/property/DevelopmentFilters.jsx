@@ -93,7 +93,7 @@ export default function DevelopmentFilters({ onFilterChange }) {
 
   return (
     <div
-      className='flex flex-wrap items-center gap-3 p-3 my-8 bg-[#fafafa] border border-gray-200 dark:bg-navy/20 rounded-xl shadow-xs'
+      className='flex flex-wrap items-center gap-3 p-3 my-8 bg-white/50 border border-gray-200 dark:bg-navy/20 rounded-xl shadow-xs'
       role='group'
       aria-label='Property filters'
     >

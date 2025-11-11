@@ -108,7 +108,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className='flex flex-col items-center bg-[#FFFFF0] dark:bg-navy-light'>
+    <main className='flex flex-col items-center bg-background-light dark:bg-navy-light'>
       {/* Main Content Container - Max Width */}
       <div className='w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8'>
         {/* Hero Section */}
