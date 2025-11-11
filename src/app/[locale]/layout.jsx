@@ -3,7 +3,7 @@ import { AuthProvider } from '@/contexts/AuthContext';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 
 export const metadata = {
-  title: "Q HOMES - Cote d'Ivoire Real Estate",
+  title: "Q Global Living",
   description:
     'Your trusted gateway to buying, renting, and investing in Ivorian property.',
 };
