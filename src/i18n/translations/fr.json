@@ -1354,6 +1354,11 @@
     "Legal": {
       "title": "Conseillers Juridiques",
       "contact": "Contacter le Partenaire"
+    },
+    "partnerCTA": {
+      "title": "Devenez partenaire de Q Homes",
+      "subtitle": "Rejoignez notre réseau exclusif de professionnels de confiance et connectez-vous avec un public ciblé d'acheteurs et de vendeurs de maisons.",
+      "button": "Rejoindre Notre Réseau"
     }
   }
 }

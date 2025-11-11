@@ -1355,6 +1355,11 @@
     "Legal": {
       "title": "Legal Advisors",
       "contact": "Contact Partner"
+    },
+    "partnerCTA": {
+      "title": "Become a Q Homes Partner",
+      "subtitle": "Join our exclusive network of trusted professionals and connect with a dedicated audience of home buyers and sellers.",
+      "button": "Join Our Network"
     }
   }
 }
