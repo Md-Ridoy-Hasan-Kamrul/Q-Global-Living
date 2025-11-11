@@ -2,7 +2,7 @@ import React from "react";
 
 const MainContent = ({ privacy, items }) => {
   return (
-    <main className="w-full lg:w-3/4 space-y-8 lg:mt-0 md:mt-12 sm:mt-10 mt-8">
+    <main className="w-full lg:w-3/4 space-y-6 lg:mt-0 md:mt-12 sm:mt-10 mt-8">
       <header>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-3">
           Privacy Policy
@@ -10,7 +10,7 @@ const MainContent = ({ privacy, items }) => {
         <p className="text-sm text-charcoal/80 dark:text-soft-grey/80 mb-4">
           Last Updated: October 26, 2023
         </p>
-        <p className="font-normal text-sm sm:text-base text-charcoal/90 dark:text-soft-grey/90">
+        <p className="font-normal text-base sm:text-base text-charcoal/90 dark:text-soft-grey/90">
           At Q Homes, we are committed to protecting your privacy and ensuring
           the security of your personal information. This Privacy Policy
           outlines how we collect, use, share, and protect your data when you
@@ -19,7 +19,7 @@ const MainContent = ({ privacy, items }) => {
         </p>
       </header>
 
-      <section className="md:space-y-14 sm:space-y-12 space-y-10">
+      <section className="space-y-6">
         {privacy.map((item, index) => {
           const matchingItem = items[index];
 
@@ -48,12 +48,12 @@ const MainContent = ({ privacy, items }) => {
               </h3>
               <hr className="text-gray-300 w-full my-2" />
 
-              <p className="font-normal text-sm sm:text-base text-charcoal/90 dark:text-soft-grey/90 mb-3">
+              <p className="font-normal text-base text-charcoal/90 dark:text-soft-grey/90 mb-3">
                 {item.description}
 
                 {item.email && (
                   <a
-                    className="font-semibold text-yellow-200 dark:text-yellow-200 hover:underline ml-2"
+                    className="font-semibold text-[#d4af37] dark:text-yellow-200 hover:underline ml-2"
                     href={`mailto:${item.email.replace(/\.$/, "")}`}
                   >
                     {item.email}

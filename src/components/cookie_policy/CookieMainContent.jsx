@@ -21,7 +21,7 @@ export default function CookieMainContent({ cookie }) {
 
   return (
     <main className="min-h-screen bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
-      <div className="mx-auto max-w-7xl px-6 py-10">
+      <div className="mx-auto max-w-7xl px-6 py-6">
         <Head>
           <title>{policy_title} | QHomes</title>
         </Head>

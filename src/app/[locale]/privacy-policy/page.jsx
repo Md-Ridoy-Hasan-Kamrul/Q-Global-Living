@@ -86,7 +86,7 @@ const items = [
 export default function PrivacyPolicyPage() {
   return (
     <main className="min-h-screen bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
-      <div className="mx-auto max-w-7xl px-6 py-10 lg:flex lg:gap-10">
+      <div className="mx-auto max-w-7xl px-5 py-10 lg:flex lg:gap-10">
         <PrivacySidebar items={items} />
         <MainContent items={items} privacy={privacy} />
       </div>
