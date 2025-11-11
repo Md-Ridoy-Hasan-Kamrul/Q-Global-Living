@@ -1350,8 +1350,11 @@
     },
     "Financial": {
       "title": "Financial Institutions",
-      "visit" : "Visit Website"
-
+      "visit": "Visit Website"
+    },
+    "Legal": {
+      "title": "Legal Advisors",
+      "contact": "Contact Partner"
     }
   }
 }

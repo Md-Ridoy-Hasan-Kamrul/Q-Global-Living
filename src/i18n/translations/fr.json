@@ -1350,6 +1350,10 @@
     "Financial": {
       "title": "Institutions financières",
       "visit": "Visiter le Site Web"
+    },
+    "Legal": {
+      "title": "Conseillers Juridiques",
+      "contact": "Contacter le Partenaire"
     }
   }
 }
