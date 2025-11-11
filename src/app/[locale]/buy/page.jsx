@@ -246,7 +246,7 @@ export default function BuyPage() {
         </section>
 
         {/* CTA Section */}
-        <section className='w-full px-4 sm:px-6 lg:px-8 pb-16'>
+        <section className='w-full px-4 sm:px-6 lg:px-8 pb-8'>
           <div className='p-6 sm:p-8 rounded-2xl bg-[#fafafa] dark:from-primary/20 dark:to-secondary/20 border border-primary/20 dark:border-primary/30'>
             <div className='text-center max-w-3xl mx-auto'>
               <h3 className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4'>
