@@ -1346,6 +1346,10 @@
         "Legal": "Légale",
         "Financial": "Financière"
       }
+    },
+    "Financial": {
+      "title": "Institutions financières",
+      "visit": "Visiter le Site Web"
     }
   }
 }

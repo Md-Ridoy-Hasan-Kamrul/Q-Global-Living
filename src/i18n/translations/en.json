@@ -1347,6 +1347,11 @@
         "Legal": "Legal",
         "Financial": "Financial"
       }
+    },
+    "Financial": {
+      "title": "Financial Institutions",
+      "visit" : "Visit Website"
+
     }
   }
 }
