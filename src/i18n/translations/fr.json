@@ -1477,5 +1477,53 @@
       "description": "Laissez nos experts s’occuper de chaque détail afin que vous puissiez profiter pleinement de l’enthousiasme de votre nouveau départ en Côte d’Ivoire.",
       "button": "Demander un devis"
     }
+  },
+  "Policy": {
+    "MainContent": {
+      "title": "Politique de confidentialité",
+      "lastUpdated": "Dernière mise à jour : 26 octobre 2023",
+      "subtitle": "Chez Q Homes, nous nous engageons à protéger votre vie privée et à garantir la sécurité de vos informations personnelles. Cette politique de confidentialité décrit la manière dont nous collectons, utilisons, partageons et protégeons vos données lorsque vous utilisez nos services. En accédant à notre plateforme ou en l’utilisant, vous acceptez les termes de cette politique de confidentialité.",
+      "Information": {
+        "title": "Informations que nous collectons",
+        "description": "Nous recueillons des informations afin de fournir et d’améliorer nos services. Cela inclut les informations personnelles que vous fournissez lors de la création d’un compte, telles que votre nom, votre adresse e-mail et votre numéro de téléphone. Nous collectons également des informations sur vos recherches de biens, vos annonces sauvegardées et vos interactions avec notre plateforme.",
+        "sortDescription": "De plus, nous collectons automatiquement des données techniques, notamment votre adresse IP, le type de navigateur et les informations sur votre appareil, afin d’assurer le bon fonctionnement de notre plateforme et de renforcer la sécurité."
+      },
+      "HowWeUse": {
+        "title": "Comment nous utilisons vos informations",
+        "description": "Vos informations sont utilisées pour personnaliser votre expérience, vous mettre en relation avec des professionnels de l’immobilier et vous proposer des annonces correspondant à vos intérêts. Nous pouvons également utiliser vos données à des fins d’analyse interne, pour améliorer la fonctionnalité de notre plateforme et pour communiquer avec vous au sujet de votre compte et de nos services.",
+        "sortDescription": ""
+      },
+      "HowWeShare": {
+        "title": "Comment nous partageons vos informations",
+        "description": "Nous pouvons partager vos informations avec des prestataires de services tiers de confiance qui nous aident à exploiter notre plateforme, tels que les services d’hébergement et les fournisseurs d’analyses. Nous pouvons également partager vos coordonnées avec des agents immobiliers lorsque vous manifestez un intérêt pour un bien. Nous ne vendons pas vos informations personnelles à des tiers.",
+        "sortDescription": ""
+      },
+      "YourPrivacyRights": {
+        "title": "Vos droits en matière de confidentialité",
+        "description": "Vous avez le droit d’accéder à vos informations personnelles, de les mettre à jour ou de les supprimer à tout moment via les paramètres de votre compte. Vous pouvez également choisir de ne plus recevoir nos communications marketing en suivant le lien de désinscription présent dans nos e-mails."
+      },
+      "CookiesandTracking": {
+        "title": "Cookies et technologies de suivi",
+        "description": "Nous utilisons des cookies et des technologies similaires pour améliorer votre expérience de navigation, mémoriser vos préférences et analyser le trafic sur la plateforme. Vous pouvez gérer vos préférences de cookies via les paramètres de votre navigateur, mais leur désactivation peut affecter le bon fonctionnement de nos services."
+      },
+      "DataSecurity": {
+        "title": "Sécurité des données",
+        "description": "Nous appliquons des mesures de sécurité conformes aux normes du secteur afin de protéger vos informations personnelles contre tout accès, divulgation ou modification non autorisés. Cependant, aucun mode de transmission sur Internet n’est totalement sécurisé, et nous ne pouvons garantir une sécurité absolue."
+      },
+      "ThirdPartyLinks": {
+        "title": "Liens vers des sites tiers",
+        "description": "Notre plateforme peut contenir des liens vers d’autres sites web. Nous ne sommes pas responsables des pratiques de confidentialité de ces sites tiers. Nous vous encourageons à lire leurs politiques de confidentialité avant de fournir des informations personnelles."
+      },
+      "ChangesToOurPrivacyPolicy": {
+        "title": "Modifications de notre politique de confidentialité",
+        "description": "Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Toute modification sera publiée sur cette page avec une date de mise à jour révisée. Nous vous encourageons à consulter régulièrement cette politique afin de rester informé de la manière dont nous protégeons vos informations."
+      },
+      "ContactUs": {
+        "title": "Nous contacter",
+        "description": "Si vous avez des questions ou des préoccupations concernant cette politique de confidentialité, veuillez nous contacter à l’adresse suivante :",
+        "email": "privacy@qhomes.com",
+        "sortDescription": ""
+      }
+    }
   }
 }

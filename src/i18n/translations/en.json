@@ -1478,5 +1478,53 @@
       "description": "Let our experts handle the details so you can focus on the excitement of your new beginning in Côte d’Ivoire.",
       "button": "Request a Quote"
     }
+  },
+  "Policy": {
+    "MainContent": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last Updated: October 26, 2023",
+      "subtitle": "At Q Homes, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, share, and protect your data when you use our services. By accessing or using our platform, you agree to the terms of this Privacy Policy.",
+      "Information": {
+        "title": "Information We Collect",
+        "description": "We collect information to provide and improve our services. This includes personal information you provide when you create an account, such as your name, email address, and phone number. We also collect information about your property searches, saved listings, and interactions with our platform.",
+        "sortDescription": "Additionally, we automatically collect technical data, including your IP address, browser type, and device information, to ensure our platform functions correctly and to enhance security."
+      },
+      "HowWeUse": {
+        "title": "How We Use Your Information",
+        "description": "Your information is used to personalize your experience, connect you with real estate professionals, and provide you with relevant property listings. We may also use your data for internal analytics, to improve our platform's functionality, and to communicate with you about your account and our services.",
+        "sortDescription": ""
+      },
+      "HowWeShare": {
+        "title": "How We Share Your Information",
+        "description": "We may share your information with trusted third-party service providers who assist us in operating our platform, such as hosting services and analytics providers. We may also share your contact details with real estate agents when you express interest in a property. We do not sell your personal information to third parties.",
+        "sortDescription": ""
+      },
+      "YourPrivacyRights": {
+        "title": "Your Privacy Rights",
+        "description": "You have the right to access, update, or delete your personal information at any time through your account settings. You can also opt-out of receiving marketing communications from us by following the unsubscribe link in our emails."
+      },
+      "CookiesandTracking": {
+        "title": "Cookies and Tracking Technologies",
+        "description": "We use cookies and similar technologies to enhance your browsing experience, remember your preferences, and analyze platform traffic. You can control cookie settings through your browser, but disabling them may affect the functionality of our services."
+      },
+      "DataSecurity": {
+        "title": "Data Security",
+        "description": "We implement industry-standard security measures to protect your personal information from unauthorized access, disclosure, or alteration. However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security."
+      },
+      "ThirdPartyLinks": {
+        "title": "Third-Party Links",
+        "description": "Our platform may contain links to other websites. We are not responsible for the privacy practices of these third-party sites. We encourage you to read their privacy policies before providing any personal information."
+      },
+      "ChangesToOurPrivacyPolicy": {
+        "title": "Changes to Our Privacy Policy",
+        "description": "We reserve the right to modify this Privacy Policy at any time. Any changes will be posted on this page with an updated Last Updated date. We encourage you to review this policy periodically to stay informed about how we are protecting your information."
+      },
+      "ContactUs": {
+        "title": "Contact Us",
+        "description": "If you have any questions or concerns about this Privacy Policy, please contact us at",
+        "email": "privacy@qhomes.com",
+        "sortDescription": ""
+      }
+    }
   }
 }
