@@ -1,3 +1,4 @@
+"use client"; 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslation } from "@/i18n";
 import React from "react";

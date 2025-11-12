@@ -1588,5 +1588,56 @@
       "ChangesToTerms": "7. Modifications des conditions",
       "ContactInformation": "8. Informations de contact"
     }
+  },
+  "CookiePolicy": {
+    "MainContent": {
+      "title": "Politique relative aux cookies",
+      "lastUpdated": "Dernière mise à jour : 26 octobre 2023",
+      "subtitle": "La présente politique relative aux cookies explique ce que sont les cookies et comment nous les utilisons. Vous devez lire cette politique afin de comprendre ce que sont les cookies, comment nous les utilisons, les types de cookies que nous employons, les informations que nous recueillons grâce à eux, la manière dont ces informations sont utilisées, ainsi que la façon de gérer vos préférences en matière de cookies. Pour plus d’informations sur la manière dont nous utilisons, stockons et protégeons vos données personnelles, veuillez consulter notre politique de confidentialité.",
+      "WhatAreCookies": {
+        "title": "Qu’est-ce qu’un cookie ?",
+        "description": "Les cookies sont de petits fichiers texte placés sur votre ordinateur ou votre appareil mobile lorsque vous visitez un site web. Ils sont largement utilisés pour permettre aux sites de fonctionner correctement ou plus efficacement, ainsi que pour fournir des informations sur l’utilisation du site. Les cookies nous aident à mémoriser vos préférences et à comprendre comment vous utilisez notre site web, ce qui nous permet d’améliorer votre expérience."
+      },
+      "HowWeUseCookies": {
+        "title": "Comment nous utilisons les cookies",
+        "description": "Nous utilisons des cookies pour diverses raisons détaillées ci-dessous. Malheureusement, dans la plupart des cas, il n’existe pas d’options standard permettant de désactiver les cookies sans affecter complètement la fonctionnalité et les caractéristiques qu’ils apportent à ce site. Il est donc recommandé de laisser les cookies activés si vous n’êtes pas sûr d’en avoir besoin, car ils peuvent être nécessaires pour fournir certains services que vous utilisez."
+      },
+      "TypesOfCookiesWeUse": {
+        "title": "Types de cookies que nous utilisons"
+      },
+      "TypesOfCookies": {
+        "title": "Cookies essentiels",
+        "description": "Ces cookies sont nécessaires au bon fonctionnement du site web et ne peuvent pas être désactivés dans nos systèmes. Ils sont généralement définis en réponse à des actions que vous effectuez, telles que la définition de vos préférences de confidentialité, la connexion à votre compte ou le remplissage de formulaires."
+      },
+      "PerformanceAnalyticsCookies": {
+        "title": "Cookies de performance et d’analyse",
+        "description": "Ces cookies nous permettent de comptabiliser les visites et les sources de trafic afin de mesurer et d’améliorer les performances de notre site. Ils nous aident à savoir quelles pages sont les plus ou les moins visitées et à comprendre comment les visiteurs naviguent sur le site."
+      },
+      "FunctionalityCookies": {
+        "title": "Cookies de fonctionnalité",
+        "description": "Ces cookies permettent au site web d’offrir des fonctionnalités et une personnalisation améliorées. Ils peuvent être installés par nous ou par des prestataires tiers dont nous avons intégré les services sur nos pages."
+      },
+      "TargetingAdvertisingCookies": {
+        "title": "Cookies de ciblage et de publicité",
+        "description": "Ces cookies peuvent être placés sur notre site par nos partenaires publicitaires. Ils peuvent être utilisés par ces entreprises pour établir un profil de vos centres d’intérêt et vous proposer des publicités pertinentes sur d’autres sites."
+      },
+      "ThirdPartyCookies": {
+        "title": "Cookies tiers",
+        "description": "Dans certains cas spécifiques, nous utilisons également des cookies fournis par des tiers de confiance. La section suivante détaille les cookies tiers que vous pouvez rencontrer sur ce site. Par exemple, ce site utilise Google Analytics, l’une des solutions d’analyse les plus répandues et les plus fiables sur le web, qui nous aide à comprendre comment vous utilisez le site et comment nous pouvons améliorer votre expérience."
+      },
+      "YourChoicesRegardingCookies": {
+        "title": "Vos choix concernant les cookies",
+        "description": "Vous avez le droit de décider d’accepter ou de refuser les cookies. Vous pouvez exercer vos droits relatifs aux cookies en définissant vos préférences dans le gestionnaire de consentement aux cookies ou en désactivant certains types de technologies de suivi. Les méthodes permettant de refuser les cookies varient selon les navigateurs ; nous vous recommandons donc de consulter le menu d’aide de votre navigateur pour plus d’informations."
+      },
+      "ChangesToOurCookiePolicy": {
+        "title": "Modifications de notre politique relative aux cookies",
+        "description": "Nous pouvons mettre à jour la présente politique relative aux cookies de temps à autre afin de refléter, par exemple, des changements concernant les cookies que nous utilisons ou pour d’autres raisons opérationnelles, juridiques ou réglementaires. Nous vous encourageons à consulter régulièrement cette politique pour rester informé de notre utilisation des cookies et des technologies associées."
+      },
+      "ContactUs": {
+        "title": "Nous contacter",
+        "description": "Si vous avez des questions concernant notre utilisation des cookies ou d’autres technologies, veuillez nous écrire à l’adresse suivante :",
+        "email": "support@chances.com"
+      }
+    }
   }
 }
