@@ -1670,5 +1670,17 @@
       "title": "Concierge Service",
       "description": "Important information about limitations of liability and platform use."
     }
+  },
+  "Blog":{
+    "SearchResults" : "Search Results for",
+    "search" : "Search",
+    "searchByKeyword" : "Search by partner name...",
+    "Home" : "Home",
+    "Blog" : "Blog",
+    "By" : "By",
+    "Published" : "Published on",
+    "ShareThisArticle" : "Share this article",
+    "ReadMoreArticles" : "You Might Also Like",
+    "ReadMore" : "Read More"
   }
 }

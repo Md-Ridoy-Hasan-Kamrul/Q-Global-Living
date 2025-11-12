@@ -1664,5 +1664,18 @@
       "title": "Service de conciergerie",
       "description": "Informations importantes concernant les limitations de responsabilité et l’utilisation de la plateforme."
     }
-  }
+  },
+  "Blog": {
+    "SearchResults": "Résultats de recherche pour",
+    "search": "Rechercher",
+    "searchByKeyword": "Rechercher par nom de partenaire...",
+    "Home": "Accueil",
+    "Blog": "Blog",
+    "By": "Par",
+    "Published": "Publié le",
+    "ShareThisArticle": "Partager cet article",
+    "ReadMoreArticles": "Vous pourriez aussi aimer",
+    "ReadMore": "Lire la suite"
+  },
+  "Patner":{}
 }
