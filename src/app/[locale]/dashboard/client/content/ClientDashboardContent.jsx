@@ -20,7 +20,7 @@ export default function ClientDashboardContent() {
             {/* Page header */}
             <header className="rounded-lg">
                 <div className="flex items-start justify-between">
-                    <div>
+                    <div >
                         <h1 className="text-4xl font-bold text-slate-900">{t("dashboard.client.profile")}</h1>
                         <p className="mt-3 text-slate-500 text-lg max-w-2xl">{t("dashboard.client.subtitle")}</p>
                     </div>
