@@ -1525,5 +1525,47 @@
         "sortDescription": ""
       }
     }
+  },
+  "Terms": {
+    "MainContent": {
+      "title": "Conditions générales d’utilisation",
+      "lastUpdated": "Dernière mise à jour : 26 octobre 2023",
+      "subtitle": "Bienvenue chez Q Homes. Les présentes conditions générales définissent les règles et réglementations relatives à l’utilisation du site Web de Q Homes, accessible à l’adresse qhomes.ci. En accédant à ce site, nous considérons que vous acceptez ces conditions générales. N’utilisez pas le site Q Homes si vous n’acceptez pas l’ensemble des conditions énoncées sur cette page.",
+      "Introduction": {
+        "title": "1. Introduction",
+        "description": "Les présentes conditions générales d’utilisation du site Web, rédigées sur cette page, régissent votre utilisation du site Q Homes, accessible à l’adresse qhomes.ci. Ces conditions s’appliquent pleinement et affectent votre utilisation du site. En utilisant ce site, vous acceptez l’ensemble des conditions générales énoncées ici. Vous ne devez pas utiliser ce site si vous êtes en désaccord avec l’une quelconque de ces conditions générales.",
+        "sortDescription": ""
+      },
+      "UserObligations": {
+        "title": "2. Obligations et conduite de l’utilisateur",
+        "description": "Vous bénéficiez d’une licence limitée uniquement à des fins de consultation du contenu figurant sur ce site Web. Vous n’êtes pas autorisé à : publier tout contenu du site sur un autre support ; vendre, concéder sous licence ou exploiter commercialement tout contenu du site ; présenter ou diffuser publiquement tout contenu du site ; ou utiliser ce site de manière à l’endommager ou susceptible de lui nuire.",
+        "sortDescription": ""
+      },
+      "Intellectual": {
+        "title": "3. Droits de propriété intellectuelle",
+        "description": "À l’exception du contenu que vous possédez, conformément aux présentes conditions, Q Homes et/ou ses concédants détiennent tous les droits de propriété intellectuelle et le contenu figurant sur ce site Web. Cela inclut, sans s’y limiter, la conception, la mise en page, l’apparence et les éléments graphiques. Toute reproduction est interdite, sauf en conformité avec la notice de droit d’auteur qui fait partie intégrante des présentes conditions générales.",
+        "sortDescription": ""
+      },
+      "Disclaimer": {
+        "title": "4. Clause de non-responsabilité",
+        "description": "Les informations fournies par Q Homes sur qhomes.ci le sont à titre purement informatif. Toutes les informations publiées sur le site le sont de bonne foi ; toutefois, nous ne formulons aucune garantie, explicite ou implicite, quant à l’exactitude, l’exhaustivité, la fiabilité, la validité ou la disponibilité des informations présentes sur le site."
+      },
+      "Limitation": {
+        "title": "5. Limitation de responsabilité",
+        "description": "En aucun cas Q Homes, ni aucun de ses dirigeants, administrateurs ou employés, ne pourra être tenu responsable de tout préjudice découlant de ou lié à l’utilisation de ce site Web, que cette responsabilité soit contractuelle ou autre. Q Homes, y compris ses dirigeants, administrateurs et employés, ne saurait être tenu responsable de tout dommage indirect, consécutif ou particulier résultant de l’utilisation de ce site Web ou y étant lié."
+      },
+      "Governing": {
+        "title": "6. Droit applicable et juridiction",
+        "description": "Les présentes conditions seront régies et interprétées conformément aux lois de la Côte d’Ivoire. Vous acceptez la compétence non exclusive des tribunaux étatiques et fédéraux situés en Côte d’Ivoire pour le règlement de tout litige éventuel."
+      },
+      "ChangesToTerms": {
+        "title": "7. Modifications des conditions",
+        "description": "Q Homes se réserve le droit de modifier ces conditions à tout moment, selon ce qu’il juge approprié. En utilisant ce site Web, vous êtes invité à consulter régulièrement ces conditions. Nous vous informerons de toute modification en publiant les nouvelles conditions générales sur cette page."
+      },
+      "ContactInformation": {
+        "title": "8. Informations de contact",
+        "description": "Si vous avez des questions concernant nos conditions, veuillez nous contacter. Vous pouvez nous joindre via notre page de contact."
+      }
+    }
   }
 }
