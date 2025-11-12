@@ -1714,5 +1714,35 @@
     "to": "to",
     "of": "of",
     "results": "properties"
+  },
+  "Partner_my_listing": {
+    "title": "Listings",
+    "subtitle": "View and manage all your property listings.",
+    "addButton": "Add New Listing",
+    "Yourproperty": "Your property listings will be displayed here."
+  },
+  "Partner_my_listing_Modal":{
+    "PropertyDeveloper" : "Property Developer",
+    "Adddevelopmentprojectlisting" : "Add a development project listing",
+    "PropertyBuySell" : "Property Buy / Sell",
+    "AddProperty" : "Add Property Buy / Sell listing"
+  }
+,
+  "PropertyDeveloperForm": {
+    "propertyName": "Property Name",
+    "propertyNamePlaceholder": "Enter property name",
+    "partnerId": "Partner ID",
+    "partnerIdPlaceholder": "Enter partner ID",
+    "location": "Location",
+    "locationPlaceholder": "Enter location",
+    "premiumListing": "Premium Listing",
+    "overview": "Overview",
+    "overviewPlaceholder": "Enter property overview",
+    "features": "Features",
+    "featuresPlaceholder": "Enter features (comma-separated)",
+    "pictures": "Pictures URLs",
+    "picturesPlaceholder": "Enter picture URLs (comma-separated)",
+    "paymentPlan": "Payment Plan",
+    "paymentPlanPlaceholder": "Enter payment plan details"
   }
 }

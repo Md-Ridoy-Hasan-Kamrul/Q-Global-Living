@@ -1708,5 +1708,35 @@
     "to": "à",
     "of": "sur",
     "results": "propriétés"
+  },
+  "Partner_my_listing": {
+    "title": "Annonces",
+    "subtitle": "Consultez et gérez toutes vos annonces immobilières.",
+    "addButton": "Ajouter une nouvelle annonce",
+    "Yourproperty": "Vos annonces immobilières s’afficheront ici."
+  },
+  "Partner_my_listing_Modal": {
+    "PropertyDeveloper": "Promoteur immobilier",
+    "Adddevelopmentprojectlisting": "Ajouter une annonce de projet de développement",
+    "PropertyBuySell": "Achat / Vente de propriété",
+    "AddProperty": "Ajouter une annonce d’achat / vente de propriété"
+  }
+  ,
+  "PropertyDeveloperForm": {
+    "propertyName": "Nom de la propriété",
+    "propertyNamePlaceholder": "Entrez le nom de la propriété",
+    "partnerId": "ID du partenaire",
+    "partnerIdPlaceholder": "Entrez l'ID du partenaire",
+    "location": "Emplacement",
+    "locationPlaceholder": "Entrez l'emplacement",
+    "premiumListing": "Annonce premium",
+    "overview": "Aperçu",
+    "overviewPlaceholder": "Entrez l'aperçu de la propriété",
+    "features": "Fonctionnalités",
+    "featuresPlaceholder": "Entrez les fonctionnalités (séparées par des virgules)",
+    "pictures": "URLs des images",
+    "picturesPlaceholder": "Entrez les URLs des images (séparées par des virgules)",
+    "paymentPlan": "Plan de paiement",
+    "paymentPlanPlaceholder": "Entrez les détails du plan de paiement"
   }
 }
