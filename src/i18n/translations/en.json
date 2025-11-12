@@ -1645,5 +1645,30 @@
         "email": "support@chances.com"
       }
     }
+  },
+  "LegalCenter": {
+    "title": "Legal Center",
+    "subtitle": "This page is the central repository for all important legal documents governing the use of the Q Homes platform, ensuring transparency and trust.",
+    "Last Updated": "Last Updated:",
+    "Terms": {
+      "title": "Terms & Conditions",
+      "description": "Outlines the rules and guidelines for using our services and platform."
+    },
+    "PrivacyPolicy": {
+      "title": "Privacy Policy",
+      "description": "Details how we collect, use, and protect your personal data."
+    },
+    "CookiePolicy": {
+      "title": "Cookie Policy",
+      "description": "Explains how we use cookies to enhance your browsing experience."
+    },
+    "Partner": {
+      "title": "Partner Directory",
+      "description": "Our commitment to ensuring our platform is usable by everyone."
+    },
+    "ConciergeService": {
+      "title": "Concierge Service",
+      "description": "Important information about limitations of liability and platform use."
+    }
   }
 }

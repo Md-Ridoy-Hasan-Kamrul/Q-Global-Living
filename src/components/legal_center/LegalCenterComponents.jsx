@@ -1,22 +1,26 @@
 import Head from "next/head";
 import React from "react";
 import Link from "next/link";
+import { useTranslation } from "@/i18n";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function LegalCenterComponents({ legalDocuments }) {
+  const { locale } = useLanguage();
+
+  const { t } = useTranslation(locale);
   const lastUpdated = "October 26, 2023";
 
   return (
     <main className="min-h-screen bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
       <div className="mx-auto max-w-7xl px-4 md:px-6 py-6">
         <header className="mb-6 md:mb-8 text-center">
-          <h1 className="text-2xl md:text-5xl font-bold">Legal Center</h1>
+          <h1 className="text-2xl md:text-5xl font-bold">{t("LegalCenter.title")}</h1>
           <p className="mx-auto mt-2 md:mt-4 max-w-2xl text-base text-subtle-light dark:text-subtle-dark md:text-lg">
-            This page is the central repository for all important legal documents
-            governing the use of the Q Homes platform, ensuring transparency and trust.
+            {t("LegalCenter.subtitle")}
           </p>
           <p className="mt-2 md:mt-4 text-base font-normal text-subtle-light dark:text-subtle-dark">
-            Last Updated: <strong>{lastUpdated}</strong>
-          </p> 
+            {t("LegalCenter.Last Updated")} <strong>{lastUpdated}</strong>
+          </p>
         </header>
 
         <div className="space-y-4">
@@ -28,7 +32,9 @@ export default function LegalCenterComponents({ legalDocuments }) {
             >
               <div className="flex items-center gap-2 md:gap-5">
                 <div className="flex items-center justify-center rounded-lg md:bg-primary/10 dark:bg-primary/20 size-12 text-primary">
-                  <span className="material-symbols-outlined text-xl md:text-2xl">{doc.iconName}</span>
+                  <span className="material-symbols-outlined text-xl md:text-2xl">
+                    {doc.iconName}
+                  </span>
                 </div>
                 <div>
                   <p className="text-base font-bold text-content-light dark:text-content-dark group-hover:text-primary transition-colors">
@@ -39,12 +45,13 @@ export default function LegalCenterComponents({ legalDocuments }) {
                   </p>
                 </div>
               </div>
-              <span className="material-symbols-outlined text-primary">arrow_forward_ios</span>
+              <span className="material-symbols-outlined text-primary">
+                arrow_forward_ios
+              </span>
             </Link>
           ))}
         </div>
       </div>
     </main>
-
   );
 }
