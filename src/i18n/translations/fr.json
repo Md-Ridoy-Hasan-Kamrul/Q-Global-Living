@@ -1739,4 +1739,27 @@
     "paymentPlan": "Plan de paiement",
     "paymentPlanPlaceholder": "Entrez les détails du plan de paiement"
   }
+  ,
+  "PropertyBuySellForm": {
+    "userId": "ID utilisateur",
+    "userIdPlaceholder": "Entrez l'ID utilisateur",
+    "propertyId": "ID de la propriété",
+    "propertyIdPlaceholder": "Entrez l'ID de la propriété",
+    "propertyName": "Nom de la propriété",
+    "propertyNamePlaceholder": "Entrez le nom de la propriété",
+    "location": "Emplacement",
+    "locationPlaceholder": "Entrez l'emplacement",
+    "overview": "Aperçu",
+    "overviewPlaceholder": "Entrez l'aperçu de la propriété",
+    "features": "Fonctionnalités",
+    "featuresPlaceholder": "Entrez les fonctionnalités (séparées par des virgules)",
+    "pictures": "URLs des images",
+    "picturesPlaceholder": "Entrez les URLs des images (séparées par des virgules)",
+    "paymentPlan": "Plan de paiement",
+    "paymentPlanPlaceholder": "Entrez les détails du plan de paiement",
+    "status": "Statut",
+    "statusAvailable": "Disponible",
+    "statusSold": "Vendu",
+    "statusPending": "En attente"
+  }
 }

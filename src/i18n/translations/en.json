@@ -1745,4 +1745,27 @@
     "paymentPlan": "Payment Plan",
     "paymentPlanPlaceholder": "Enter payment plan details"
   }
+  ,
+  "PropertyBuySellForm": {
+    "userId": "User ID",
+    "userIdPlaceholder": "Enter user ID",
+    "propertyId": "Property ID",
+    "propertyIdPlaceholder": "Enter property ID",
+    "propertyName": "Property Name",
+    "propertyNamePlaceholder": "Enter property name",
+    "location": "Location",
+    "locationPlaceholder": "Enter location",
+    "overview": "Overview",
+    "overviewPlaceholder": "Enter property overview",
+    "features": "Features",
+    "featuresPlaceholder": "Enter features (comma-separated)",
+    "pictures": "Pictures URLs",
+    "picturesPlaceholder": "Enter picture URLs (comma-separated)",
+    "paymentPlan": "Payment Plan",
+    "paymentPlanPlaceholder": "Enter payment plan details",
+    "status": "Status",
+    "statusAvailable": "Available",
+    "statusSold": "Sold",
+    "statusPending": "Pending"
+  }
 }
