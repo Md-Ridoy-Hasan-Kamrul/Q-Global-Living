@@ -1784,5 +1784,24 @@
     "ViewDetails": "View Details",
     "NoInquiries": "No Inquiries Found",
     "TryAdjusting": "Try adjusting your search or filter criteria."
+  },
+  "Developer_Portal": {
+    "DeveloperPortal": "Developer Portal",
+    "title": "Manage your development projects and track performance.",
+    "addButton": "Add New Project",
+    "SearchProjects": "Search Projects...",
+    "AllStatus": "All Status",
+    "Active": "Active",
+    "Completed": "Completed",
+    "Pending": "Pending",
+    "ExportData": "Export Data",
+    "ProjectName": "Project Name",
+    "Location": "Location",
+    "Units": "Units",
+    "Revenue": "Revenue",
+    "Status": "Status",
+    "Actions": "Actions",
+    "LastUpdated" : "Last Updated",
+    "NoProjectsFound": "No Projects Found"
   }
 }

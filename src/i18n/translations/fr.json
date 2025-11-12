@@ -1778,5 +1778,24 @@
     "ViewDetails": "Voir les détails",
     "NoInquiries": "Aucune demande trouvée",
     "TryAdjusting": "Essayez de modifier vos critères de recherche ou de filtrage."
+  },
+  "Developer_Portal": {
+    "DeveloperPortal": "Portail Promoteur",
+    "title": "Gérez vos projets de développement et suivez leurs performances.",
+    "addButton": "Ajouter un nouveau projet",
+    "SearchProjects": "Rechercher des projets...",
+    "AllStatus": "Tous les statuts",
+    "Active": "Actif",
+    "Completed": "Terminé",
+    "Pending": "En attente",
+    "ExportData": "Exporter les données",
+    "ProjectName": "Nom du projet",
+    "Location": "Emplacement",
+    "Units": "Unités",
+    "Revenue": "Revenus",
+    "Status": "Statut",
+    "Actions": "Actions",
+    "LastUpdated": "Dernière mise à jour",
+    "NoProjectsFound": "Aucun projet trouvé"
   }
 }
