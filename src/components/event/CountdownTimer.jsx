@@ -4,7 +4,7 @@ import { useState, useEffect, memo, useMemo } from 'react';
 
 const TimeBox = memo(({ value, label }) => (
   <div className='flex flex-col items-center bg-white rounded-lg p-3 sm:p-4 min-w-[70px] sm:min-w-[90px]'>
-    <div className='text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900'>
+    <div className='text-xl sm:text-3xl lg:text-4xl font-bold text-gray-900'>
       {String(value).padStart(2, '0')}
     </div>
     <div className='text-xs sm:text-sm text-gray-600 mt-1'>{label}</div>

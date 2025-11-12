@@ -20,12 +20,12 @@ const EventHero = memo(({ translations, countdownTranslations }) => {
       <div className='relative px-6 sm:px-8 md:px-12 py-12 sm:py-16 md:py-20'>
         <div className='max-w-4xl mx-auto text-center'>
           {/* Title */}
-          <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight'>
+          <h1 className='lg:text-5xl text-2xl sm:text-3xl leading-tight tracking-[-0.033em] font-bold text-white mb-4 sm:mb-6'>
             {translations.title}
           </h1>
 
           {/* Subtitle */}
-          <p className='text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed'>
+          <p className='text-sm sm:text-base font-normal leading-normal lg:text-lg text-white/90 mb-8 sm:mb-10 max-w-3xl mx-auto'>
             {translations.subtitle}
           </p>
 
@@ -38,7 +38,7 @@ const EventHero = memo(({ translations, countdownTranslations }) => {
           </div>
 
           {/* CTA Button */}
-          <button className='bg-[#E6B325] hover:bg-[#d4a420] text-[#0F1B2E] font-semibold px-8 sm:px-10 py-3 sm:py-4 rounded-lg text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl'>
+          <button className='bg-[#E6B325] hover:bg-[#d4a420] text-[#0F1B2E] font-semibold px-8 sm:px-10 py-3 sm:py-4 rounded-lg text-sm lg:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl'>
             {translations.cta}
           </button>
         </div>
