@@ -55,7 +55,7 @@ export default function SearchBar({ locale = 'en', onSearch }) {
               <select
                 value={searchType}
                 onChange={(e) => setSearchType(e.target.value)}
-                className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium appearance-none pr-8 outline-none'
+                className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium text-center appearance-none pr-8 outline-none'
                 aria-label={t('searchBar.buy')}
               >
                 <option value='' disabled>
@@ -75,7 +75,7 @@ export default function SearchBar({ locale = 'en', onSearch }) {
               <select
                 value={cityArea}
                 onChange={(e) => setCityArea(e.target.value)}
-                className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium appearance-none pr-8'
+                className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium text-center outline-none appearance-none pr-8'
                 aria-label={t('searchBar.cityArea')}
               >
                 <option value='' disabled>
@@ -110,7 +110,7 @@ export default function SearchBar({ locale = 'en', onSearch }) {
                 <select
                   value={priceRange}
                   onChange={(e) => setPriceRange(e.target.value)}
-                  className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium appearance-none pr-8'
+                  className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium text-center appearance-none pr-8 outline-none '
                   aria-label={t('searchBar.priceRange')}
                 >
                   <option value='' disabled>{t('searchBar.priceRange')}</option>
@@ -128,7 +128,7 @@ export default function SearchBar({ locale = 'en', onSearch }) {
                 <select
                   value={bedrooms}
                   onChange={(e) => setBedrooms(e.target.value)}
-                  className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium appearance-none pr-8'
+                  className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium text-center appearance-none pr-8 outline-none'
                   aria-label={t('searchBar.bedrooms')}
                 >
                   <option value='' disabled>{t('searchBar.bedrooms')}</option>
@@ -147,7 +147,7 @@ export default function SearchBar({ locale = 'en', onSearch }) {
                 <select
                   value={propertyType}
                   onChange={(e) => setPropertyType(e.target.value)}
-                  className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium appearance-none pr-8'
+                  className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium text-center appearance-none pr-8'
                   aria-label={t('searchBar.propertyType')}
                 >
                   <option value='' disabled>{t('searchBar.propertyType')}</option>
@@ -180,10 +180,10 @@ export default function SearchBar({ locale = 'en', onSearch }) {
             <select
               value={searchType}
               onChange={(e) => setSearchType(e.target.value)}
-              className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium appearance-none pr-10'
+              className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium text-center appearance-none pr-10 outline-none focus:ring-1 focus:ring-primary'
               aria-label={t('searchBar.buy')}
             >
-              <option value='' disabled>
+              <option value=''>
                 {`${t('searchBar.buy')} / ${t('searchBar.rent', 'Rent')}`}
               </option>
               <option value='buy'>{t('searchBar.buy')}</option>
@@ -200,10 +200,10 @@ export default function SearchBar({ locale = 'en', onSearch }) {
             <select
               value={cityArea}
               onChange={(e) => setCityArea(e.target.value)}
-              className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium appearance-none pr-10'
+              className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium text-center appearance-none pr-10 focus:ring-1 focus:ring-primary border-transparent outline-none'
               aria-label={t('searchBar.cityArea')}
             >
-              <option value='' disabled>{t('searchBar.cityArea')}</option>
+              <option value=''>{t('searchBar.cityArea')}</option>
               <option value='abidjan'>{t('buy.filters.cities.abidjan', 'Abidjan')}</option>
               <option value='assinie'>{t('buy.filters.cities.assinie', 'Assinie-Mafia')}</option>
               <option value='yamoussoukro'>{t('buy.filters.cities.yamoussoukro', 'Yamoussoukro')}</option>
@@ -219,10 +219,10 @@ export default function SearchBar({ locale = 'en', onSearch }) {
             <select
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
-              className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium appearance-none pr-10'
+              className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium text-center appearance-none pr-10 border-transparent outline-none focus:ring-1 focus:ring-primary'
               aria-label={t('searchBar.priceRange')}
             >
-              <option value='' disabled>{t('searchBar.priceRange')}</option>
+              <option value=''>{t('searchBar.priceRange')}</option>
               <option value='asc'>Min to Max</option>
               <option value='desc'>Max to Min</option>
             </select>
@@ -237,10 +237,10 @@ export default function SearchBar({ locale = 'en', onSearch }) {
             <select
               value={bedrooms}
               onChange={(e) => setBedrooms(e.target.value)}
-              className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium appearance-none pr-10'
+              className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium text-center appearance-none pr-10 border-transparent outline-none focus:ring-1 focus:ring-primary'
               aria-label={t('searchBar.bedrooms')}
             >
-              <option value='' disabled>{t('searchBar.bedrooms')}</option>
+              <option value=''>{t('searchBar.bedrooms')}</option>
               <option value='1'>1</option>
               <option value='2'>2</option>
               <option value='3+'>3+</option>
@@ -256,10 +256,10 @@ export default function SearchBar({ locale = 'en', onSearch }) {
             <select
               value={propertyType}
               onChange={(e) => setPropertyType(e.target.value)}
-              className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium appearance-none pr-10'
+              className='flex h-11 w-full items-center justify-center gap-1 rounded-lg bg-white dark:bg-charcoal/50 px-3 py-2.5 text-charcoal dark:text-soft-grey shadow-sm transition-all hover:shadow-md text-sm font-medium text-center appearance-none pr-10 focus:ring-1 focus:ring-primary outline-none border-transparent'
               aria-label={t('searchBar.propertyType')}
             >
-              <option value='' disabled>{t('searchBar.propertyType')}</option>
+              <option value=''>{t('searchBar.propertyType')}</option>
               <option value='apartment'>{t('buy.propertyTypes.apartment', 'Apartment')}</option>
               <option value='house'>{t('buy.propertyTypes.house', 'House')}</option>
               <option value='villa'>{t('buy.propertyTypes.villa', 'Villa')}</option>
