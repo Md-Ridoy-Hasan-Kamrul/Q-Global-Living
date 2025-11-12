@@ -8,7 +8,7 @@ export default function Footer({ locale }) {
   const footerLinks = {
     quick: [
       { href: `/${locale}/about`, label: t("footer.aboutUs") },
-      { href: `/${locale}/faq`, label: t("footer.faq") },
+      { href: `/${locale}/contact#faq`, label: t("footer.faq") },
       { href: `/${locale}/contact`, label: t("footer.contactUs") },
       { href: `/${locale}/blog`, label: t("footer.blog") },
     ],

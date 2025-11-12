@@ -38,7 +38,7 @@ export default function TrustBadges({ locale }) {
   ];
 
   return (
-    <section className='bg-primary/5 dark:bg-primary/10 lg:pb-6 -pt-20 sm:-mt-16 sm:pt-14 px-4 sm:px-6'>
+    <section className='bg-primary/5 dark:bg-primary/10 lg:pb-6 -pt-20 sm:-mt-15 sm:pt-14 px-4 sm:px-6'>
       <div className='mx-auto max-w-6xl lg:pt-10 py-3 '>
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 '>
           {badges.map((badge) => {

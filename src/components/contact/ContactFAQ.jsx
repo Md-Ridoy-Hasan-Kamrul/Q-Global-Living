@@ -5,7 +5,7 @@ import ComponentTitle from '@/components/shared/ComponentTitle';
 
 const ContactFAQ = React.memo(({ title, subtitle, faqs }) => {
   return (
-    <section className="w-full">
+    <section  className="w-full">
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-6">
         {/* Header */}
        <ComponentTitle title={title} subtitle={subtitle} position={'text-center'} />

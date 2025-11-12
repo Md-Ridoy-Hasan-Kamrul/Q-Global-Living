@@ -38,7 +38,7 @@ const ContactInfo = React.memo(
           </div>
 
           {/* Right Column - Map */}
-          <div className='overflow-hidden rounded-xl md:col-span-3'>
+          <div  className='overflow-hidden rounded-xl md:col-span-3'>
             <iframe
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127116.53235688536!2d-4.089855589160175!3d5.334033300000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ea5e4b343807%3A0x10a20a6723b7b8f!2sMarcory%2C%20Abidjan%2C%20C%C3%B4te%20d%27Ivoire!5e0!3m2!1sen!2sus!4v1700000000000'
               width='600'
