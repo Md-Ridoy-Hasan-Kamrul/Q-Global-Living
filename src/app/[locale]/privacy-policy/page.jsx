@@ -14,33 +14,31 @@ export default function PrivacyPolicyPage() {
       id: 1,
       title: t("Policy.MainContent.Information.title"),
       description: t("Policy.MainContent.Information.description"),
-      short_Description: t("Policy.MainContent.Information.short_Description"),
+      short_Description: t("Policy.MainContent.Information.sortDescription"),
     },
     {
       id: 2,
       title: t("Policy.MainContent.HowWeUse.title"),
       description: t("Policy.MainContent.HowWeUse.description"),
-      short_Description: t("Policy.MainContent.HowWeUse.short_Description"),
+      short_Description: "",
     },
     {
       id: 3,
       title: t("Policy.MainContent.HowWeShare.title"),
       description: t("Policy.MainContent.HowWeShare.description"),
-      short_Description: t("Policy.MainContent.HowWeShare.short_Description"),
+      short_Description: "",
     },
     {
       id: 4,
       title: t("Policy.MainContent.YourPrivacyRights.title"),
       description: t("Policy.MainContent.YourPrivacyRights.description"),
-      short_Description: t(
-        "Policy.MainContent.YourPrivacyRights.short_Description"
-      ),
+      short_Description: "",
     },
     {
       id: 5,
-      title: t("Policy.MainContent.Cookies.title"),
-      description: t("Policy.MainContent.Cookies.description"),
-      short_Description: t("Policy.MainContent.Cookies.short_Description"),
+      title: t("Policy.MainContent.CookiesandTracking.title"),
+      description: t("Policy.MainContent.CookiesandTracking.description"),
+      short_Description: "",
     },
     {
       id: 6,

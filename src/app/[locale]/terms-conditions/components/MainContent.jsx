@@ -12,10 +12,10 @@ const MainContent = ({ terms, items }) => {
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-3">
           {t("Terms.MainContent.title")}
         </h2>
-        <p className="text-sm text-charcoal/80 dark:text-soft-grey/80 mb-4">
+        <p className="text-sm text-black dark:text-soft-grey/80 mb-4">
           {t("Terms.MainContent.lastUpdated")}
         </p>
-        <p className="font-normal text-sm sm:text-base text-charcoal/90 dark:text-soft-grey/90">
+        <p className="font-normal text-sm sm:text-base text-black dark:text-soft-grey/90">
           {t("Terms.MainContent.subtitle")}
         </p>
       </header>
@@ -33,7 +33,7 @@ const MainContent = ({ terms, items }) => {
               <h3 className="text-xl lg:text-2xl font-bold tracking-tight mb-3">
                 {item.title}
               </h3>
-              <p className="font-normal text-base text-charcoal/90 dark:text-soft-grey/90 mb-3">
+              <p className="font-normal text-base text-black dark:text-soft-grey/90 mb-3">
                 {item.description
                   ? item.description
                       .split(item.contact)
@@ -56,7 +56,7 @@ const MainContent = ({ terms, items }) => {
                   : null}
               </p>
               {item.short_Description && (
-                <p className="font-normal text-base text-charcoal/90 dark:text-soft-grey/90">
+                <p className="font-normal text-base text-black dark:text-soft-grey/90">
                   {item.short_Description}
                 </p>
               )}

@@ -11,13 +11,13 @@ const MainContent = ({ privacy, items }) => {
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-3">
           {t("Policy.MainContent.title", "Privacy Policy")}
         </h2>
-        <p className="text-sm text-charcoal/80 dark:text-soft-grey/80 mb-4">
+        <p className="text-sm text-black dark:text-soft-grey/80 mb-4">
           {t(
             "Policy.MainContent.lastUpdated",
             "Last Updated: October 26, 2023"
           )}
         </p>
-        <p className="font-normal text-base sm:text-base text-charcoal/90 dark:text-soft-grey/90">
+        <p className="font-normal text-base sm:text-base text-black dark:text-soft-grey/90">
           {t("Policy.MainContent.subtitle")}
         </p>
       </header>
@@ -51,7 +51,7 @@ const MainContent = ({ privacy, items }) => {
               </h3>
               <hr className="text-gray-300 w-full my-2" />
 
-              <p className="font-normal text-base text-charcoal/90 dark:text-soft-grey/90 mb-3">
+              <p className="font-normal text-base text-black dark:text-soft-grey/90 mb-3">
                 {item.description}
 
                 {item.email && (
@@ -65,7 +65,7 @@ const MainContent = ({ privacy, items }) => {
               </p>
 
               {item.short_Description && (
-                <p className="font-normal text-sm sm:text-base text-charcoal/90 dark:text-soft-grey/90">
+                <p className="font-normal text-sm sm:text-base text-black dark:text-soft-grey/90">
                   {item.short_Description}
                 </p>
               )}
