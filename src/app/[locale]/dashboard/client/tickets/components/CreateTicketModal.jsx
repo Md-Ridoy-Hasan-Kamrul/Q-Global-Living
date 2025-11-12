@@ -36,7 +36,7 @@ export default function CreateTicketModal({ show, onClose, newTicket, setNewTick
                         <InputField label="Subject" value={newTicket.subject} onChange={(e) => setNewTicket({ ...newTicket, subject: e.target.value })} />
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">Priority</label>
-                            <select value={newTicket.priority} onChange={(e) => setNewTicket({ ...newTicket, priority: e.target.value })} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                            <select value={newTicket.priority} onChange={(e) => setNewTicket({ ...newTicket, priority: e.target.value })} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]">
                                 <option value="low">Low</option>
                                 <option value="medium">Medium</option>
                                 <option value="high">High</option>
@@ -46,13 +46,13 @@ export default function CreateTicketModal({ show, onClose, newTicket, setNewTick
 
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
-                        <textarea placeholder="Describe your issue..." value={newTicket.description} onChange={(e) => setNewTicket({ ...newTicket, description: e.target.value })} rows="4" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" />
+                        <textarea placeholder="Describe your issue..." value={newTicket.description} onChange={(e) => setNewTicket({ ...newTicket, description: e.target.value })} rows="4" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]" />
                     </div>
                 </div>
 
                 <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 flex justify-end gap-3 rounded-b-2xl">
                     <button type="button" onClick={onClose} className="px-4 py-2 bg-gray-200 rounded-lg text-gray-800 hover:bg-gray-300 transition">Cancel</button>
-                    <button type="button" onClick={onSubmit} className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">{editing ? "Save Changes" : "Create Ticket"}</button>
+                    <button type="button" onClick={onSubmit} className="px-4 py-2 bg-[#d4af37] text-white rounded-lg hover:bg-[#b38f2f] transition">{editing ? "Save Changes" : "Create Ticket"}</button>
                 </div>
             </div>
 

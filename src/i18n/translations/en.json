@@ -615,7 +615,42 @@
       "notificationSubtitle": "Here are your latest property alerts and updates.",
       "markallRead": "Mark all as read",
       "tickets": " Support Tickets",
-
+      "searchProperties":"Search properties...",
+      "addProperty": "Add Property",
+      "SavedSearches":{
+        "title": "Saved Searches and Settings",
+        "subtitle":"Manage Your Saved Property alerts, enable or disable notifications, and keep your preferences organized efficiently",
+        "noSavedSearches": "No saved searches yet. Start searching to save your preferences!",
+        "yourSavedSearches": "Your Saved Searches",
+        "resetButton":"Reset to Default",
+        "saveChanges":"Save Changes"
+      },
+      "AppointmentTable":{
+        "id":"ID",
+        "Name":"Name",
+        "email":"Email",
+        "type":"Type",
+       
+        "date":"Date",
+        "status":"Status",
+        "actions":"Actions"
+      },
+      "supportTicket":{
+        "title": "Support Tickets",
+        "subtitle":"Manage all your support requests in one place",
+        "totalTickets":"Total Tickets",
+        "openTicket":"Open ",
+        "inProgress":"In Progress",
+        "resolved":"Resolved",
+        "searchTickets":"Search tickets...",
+        "createTicket":"Create Ticket",
+        "id":"ID",
+        "subject":"Subject",
+        "property":"Property",
+        "replies":"Replies",
+        "created":"Created At",
+        "Actions":"Actions"
+      },
       "personalDetails": {
         "title": "Personal Details",
         "saving": "Saving...",

@@ -12,6 +12,7 @@ const AppointmentDetailModal = React.lazy(() => import('../../../../../component
 const NewAppointmentModal = React.lazy(() => import('../../../../../components/dashboard/client/NewAppointmentModal'));
 
 export default function ClientAppointments() {
+   
     const [appointments, setAppointments] = useState([
         { id: 1, full_name: 'Rahim Ahmed', email: 'rahim@example.com', phone: '01700000001', appointment_type: 'Property Visit', preferred_date: '2025-11-15', preferred_time: '10:00 AM', status: 'confirmed', notes: 'Interested in viewing the property' },
         { id: 2, full_name: 'Fatema Khan', email: 'fatema@example.com', phone: '01800000002', appointment_type: 'Consultation', preferred_date: '2025-11-16', preferred_time: '02:00 PM', status: 'pending', notes: 'Wants to learn about loan facilities' },
@@ -43,7 +44,7 @@ export default function ClientAppointments() {
         setFormData({ full_name: '', email: '', phone: '', appointment_type: 'Property Visit', preferred_date: '', preferred_time: '', notes: '' });
         setShowNewModal(false);
     };
-
+ 
     // prevent body scroll when any modal is open
     useEffect(() => {
         const open = showModal || showNewModal;

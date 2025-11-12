@@ -615,6 +615,41 @@
       "notificationSubtitle": "Voici vos dernières alertes et mises à jour de propriétés.",
       "markallRead": "Tout marquer comme lu",
       "tickets": "Tickets de Support",
+      "searchProperties": "Rechercher des propriétés...",
+      "addProperty": "Ajouter une Propriété",
+      "SavedSearches": {
+        "title": "Recherches Enregistrées et Paramètres",
+        "subtitle": "Gérez vos alertes de propriétés enregistrées, activez ou désactivez les notifications, et gardez vos préférences organisées efficacement",
+        "noSavedSearches": "Aucune recherche enregistrée pour le moment. Commencez à chercher pour enregistrer vos préférences !",
+        "yourSavedSearches": "Vos Recherches Enregistrées",
+        "resetButton": "Réinitialiser par défaut",
+        "saveChanges": "Enregistrer les modifications"
+      },
+      "AppointmentTable": {
+        "id": "Identifiant",
+        "Name": "Nom",
+        "email": "E-mail",
+        "type": "Type",
+        "date": "Date",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "supportTicket": {
+        "title": "Tickets d’assistance",
+        "subtitle": "Gérez toutes vos demandes d’assistance en un seul endroit",
+        "totalTickets": "Total des tickets",
+        "openTicket": "Ouvert",
+        "inProgress": "En cours",
+        "resolved": "Résolu",
+        "searchTickets": "Rechercher des tickets...",
+        "createTicket": "Créer un ticket",
+        "id": "ID",
+        "subject": "Sujet",
+        "property": "Propriété",
+        "replies": "Réponses",
+        "created": "Créé le",
+        "Actions": "Actions"
+      },
       "personalDetails": {
         "title": "Détails personnels",
         "saving": "Enregistrement...",

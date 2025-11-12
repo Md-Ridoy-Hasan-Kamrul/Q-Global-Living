@@ -13,8 +13,12 @@ import StatsSection from "./components/StatsSection";
 import SearchFilter from "./components/SearchFilter";
 import TicketsTable from "./components/TicketsTable";
 import CreateTicketModal from "./components/CreateTicketModal";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "@/i18n";
 
 export default function UserTicketDashboard() {
+      const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
     const [tickets, setTickets] = useState([
         {
             id: 1,
@@ -211,7 +215,7 @@ export default function UserTicketDashboard() {
                 <div className="space-y-4 md:space-y-6">
                     {/* Header */}
                     <Header />
-
+ 
                     {/* Stats */}
                     <StatsSection stats={stats} />
 
