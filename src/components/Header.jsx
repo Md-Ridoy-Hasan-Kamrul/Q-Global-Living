@@ -145,9 +145,9 @@ function Header({ locale }) {
   }, [mobileMenuOpen]);
 
   // got user from auth context
-  const { user,logout } = useAuth();
+  const { user, logout } = useAuth();
 
-  const handleLogOut = async () =>{
+  const handleLogOut = async () => {
     await logout();
     window.location.reload();
   }
@@ -213,8 +213,8 @@ function Header({ locale }) {
               {t("nav.login") || "Sign In"}
             </Link>
           )}
-          
-          
+
+
         </div>
 
         {/* Mobile Actions */}
@@ -258,7 +258,7 @@ function Header({ locale }) {
               </Link>
             ))}
             <div className="pt-4 border-t border-primary/20 space-y-3">
-            <Link
+              <Link
                 href={`/${locale}/event`}
                 onClick={handleMobileMenuClose}
                 className="flex items-center justify-center w-full h-12 px-4 rounded-lg bg-primary text-base font-semibold text-white hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
@@ -267,15 +267,16 @@ function Header({ locale }) {
                 {t("nav.listYourProperty")}
               </Link>
               {user ? (
-               <div className="space-y-3">
-                 <Link
-                  className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
-                  href={"/dashboard/admin"}
-                >
-                  <span>Dashboard</span>
-                </Link>
-                <button onClick={handleLogOut} className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary">Log out</button>
-               </div>
+                <div className="space-y-3">
+                  <Link
+                    className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                    href={`/${locale}/dashboard/${user?.role || 'admin'}`}
+                    onClick={handleMobileMenuClose}
+                  >
+                    <span>Dashboard</span>
+                  </Link>
+                  <button onClick={handleLogOut} className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary">Log out</button>
+                </div>
               ) : (
                 <Link
                   href={`/${locale}/login`}
@@ -286,7 +287,7 @@ function Header({ locale }) {
                   {t("nav.login") || "Sign In"}
                 </Link>
               )}
-              
+
             </div>
           </nav>
         </div>

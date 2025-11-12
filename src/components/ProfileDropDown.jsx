@@ -8,6 +8,7 @@ const ProfileDropDown = () => {
   const { user, logout } = useAuth();
   const router = useRouter();
   const pathname = usePathname();
+  const locale = pathname?.split('/')?.[1] || 'en';
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -16,8 +17,10 @@ const ProfileDropDown = () => {
 
   const logOutHandler = async () => {
     await logout();
+    // Redirect to localized login/home after logout
+    router.push(`/${locale}/login`);
+    // reload to ensure client state resets
     window.location.reload();
-    router.push("/");
   };
 
   // click outside close dropdown
@@ -56,11 +59,10 @@ const ProfileDropDown = () => {
       {/* dropdown menu with premium styling */}
       <div
         className={`absolute top-14 right-0 w-56 bg-white dark:bg-[#0F1B2E] rounded-md shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden z-50 origin-top-right transition-all duration-200 ease-out
-        ${
-          open
+        ${open
             ? "opacity-100 scale-100 translate-y-0"
             : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
-        }`}
+          }`}
       >
         {/* User info header in dropdown */}
         <div className="px-4 py-3 bg-linear-to-br from-gray-50 to-white dark:from-[#1A2B42] dark:to-[#0F1B2E] border-b border-[#ecd077]/30 dark:border-gray-700">
@@ -77,7 +79,7 @@ const ProfileDropDown = () => {
           {/* Dashboard or Home - Dynamic based on route */}
           {isOnDashboard ? (
             <Link
-              href="/"
+              href={`/${locale}`}
               className="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-[#f6efcb] dark:hover:bg-[#1A2B42] hover:text-[#C5A572] rounded-lg transition-all duration-150 group"
             >
               <Home className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -85,7 +87,7 @@ const ProfileDropDown = () => {
             </Link>
           ) : (
             <Link
-              href="/dashboard/admin"
+              href={`/${locale}/dashboard/${user?.role || 'admin'}`}
               className="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-[#f6efcb] dark:hover:bg-[#1A2B42] hover:text-[#C5A572] rounded-lg transition-all duration-150 group"
             >
               <LayoutDashboard className="w-5 h-5 group-hover:scale-110 transition-transform" />

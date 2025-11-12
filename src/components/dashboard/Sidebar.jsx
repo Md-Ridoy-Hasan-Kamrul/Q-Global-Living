@@ -275,14 +275,14 @@ export default function Sidebar({ role = "admin" }) {
     <div className="flex h-full flex-col">
       {/* Logo Section */}
       <div className='flex  items-center justify-between lg:justify-center gap-1 mt-1  border-b border-gray-700/50 px-6'>
-        <Link className="flex items-center " href={'/'}>
-        <div className='flex items-center justify-center rounded-full -my-3'>
-          
-         
-          <img src='/logo.png' alt='Logo' className='w-[85px] h-[85px]' />
-         
-        </div>
-        {/* <div className='flex-1 min-w-0'>
+        <Link className="flex items-center " href={`/${locale}`}>
+          <div className='flex items-center justify-center rounded-full -my-3'>
+
+
+            <img src='/logo.png' alt='Logo' className='w-[85px] h-[85px]' />
+
+          </div>
+          {/* <div className='flex-1 min-w-0'>
           <p className='text-base font-semibold text-gray-400 capitalize'>
             {t(`dashboard.${role}.title`)}
           </p>
@@ -313,20 +313,18 @@ export default function Sidebar({ role = "admin" }) {
                   className={`
                     group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium
                     transition-all duration-200 ease-in-out
-                    ${
-                      isActive
-                        ? "bg-[#1E3A5F] text-white shadow-sm"
-                        : "text-gray-300 hover:bg-[#1A2B42] hover:text-white"
+                    ${isActive
+                      ? "bg-[#1E3A5F] text-white shadow-sm"
+                      : "text-gray-300 hover:bg-[#1A2B42] hover:text-white"
                     }
                   `}
                 >
                   <Icon
                     className={`
                       h-5 w-5 shrink-0 transition-colors
-                      ${
-                        isActive
-                          ? "text-[#E6B325]"
-                          : "text-gray-400 group-hover:text-gray-300"
+                      ${isActive
+                        ? "text-[#E6B325]"
+                        : "text-gray-400 group-hover:text-gray-300"
                       }
                     `}
                   />
@@ -358,9 +356,8 @@ export default function Sidebar({ role = "admin" }) {
               </p>
             </div>
             <ChevronDown
-              className={`h-4 w-4 shrink-0 text-gray-400 transition-transform ${
-                showLangDropdown ? "rotate-180" : ""
-              }`}
+              className={`h-4 w-4 shrink-0 text-gray-400 transition-transform ${showLangDropdown ? "rotate-180" : ""
+                }`}
             />
           </button>
 
@@ -369,11 +366,10 @@ export default function Sidebar({ role = "admin" }) {
             <div className="absolute bottom-full left-0 right-0 mb-2 bg-[#1A2B42] rounded-lg shadow-lg border border-gray-700/50 overflow-hidden">
               <button
                 onClick={() => handleLanguageChange("en")}
-                className={`flex w-full items-center gap-3 px-3 py-2.5 text-sm transition-colors ${
-                  locale === "en"
+                className={`flex w-full items-center gap-3 px-3 py-2.5 text-sm transition-colors ${locale === "en"
                     ? "bg-[#1E3A5F] text-white"
                     : "text-gray-300 hover:bg-[#1E3A5F] hover:text-white"
-                }`}
+                  }`}
               >
                 <Globe className="h-4 w-4 shrink-0" />
                 <span>English</span>
@@ -383,11 +379,10 @@ export default function Sidebar({ role = "admin" }) {
               </button>
               <button
                 onClick={() => handleLanguageChange("fr")}
-                className={`flex w-full items-center gap-3 px-3 py-2.5 text-sm transition-colors ${
-                  locale === "fr"
+                className={`flex w-full items-center gap-3 px-3 py-2.5 text-sm transition-colors ${locale === "fr"
                     ? "bg-[#1E3A5F] text-white"
                     : "text-gray-300 hover:bg-[#1E3A5F] hover:text-white"
-                }`}
+                  }`}
               >
                 <Globe className="h-4 w-4 shrink-0" />
                 <span>Français</span>
@@ -449,3 +444,15 @@ export default function Sidebar({ role = "admin" }) {
     </>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
