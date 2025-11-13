@@ -1359,6 +1359,26 @@
         }
       }
     },
+    "overview": {
+      "title": "Qui nous sommes",
+      "p1": "Q Homes est une plateforme immobilière numérique créée par Q Global Living, une marque d'innovation du groupe The Quiah Group, qui connecte le marché immobilier africain au monde.",
+      "p2": "Notre mission est de simplifier la manière dont les gens découvrent, vérifient et investissent dans les propriétés africaines — le tout via un écosystème numérique de confiance.",
+      "p3": "Nous combinons la technologie, des données vérifiées et des partenariats locaux pour créer de la transparence et de la sécurité pour les acheteurs, locataires et promoteurs en Côte d'Ivoire et à travers le continent. Via notre plateforme, vous pouvez parcourir des annonces vérifiées, accéder à la protection par séquestre et entrer en contact avec des propriétaires et promoteurs de confiance — sans intermédiaires."
+    },
+    "ecosystem": {
+      "title": "Notre Écosystème Comprend",
+      "qhomes": "Q Homes — place de marché immobilière vérifiée",
+      "concierge": "Q Global Concierge — services de relocalisation et lifestyle",
+      "developments": "Q Homes Developments — nouvelles constructions & opportunités d'investissement"
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "v1": "Confiance par Conception – Chaque propriété est vérifiée avant publication.",
+      "v2": "Innovation d'Abord – Des outils technologiques pour un parcours sans friction.",
+      "v3": "Transparence Toujours – Tarification, propriété et processus clairs.",
+      "v4": "Accès Global – Conçu pour l'Afrique et la diaspora.",
+      "conclusion": "Q Homes façonne l'avenir du logement en Afrique — là où la technologie rencontre la confiance et les opportunités globales."
+    },
     "cta": {
       "title": "Prêt à Trouver la Maison de Vos Rêves?",
       "subtitle": "Explorez nos annonces vérifiées et découvrez la différence Q Homes dès aujourd'hui.",

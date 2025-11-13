@@ -121,10 +121,10 @@ export default function Footer({ locale }) {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:info@qglobaliving.com"
+                  href="mailto:support@qgloballiving.com"
                   className="text-sm text-white/80 hover:text-white hover:underline transition-colors inline-block"
                 >
-                  info@qglobaliving.com
+                  support@qgloballiving.com
                 </a>
               </li>
               <li>
@@ -178,12 +178,15 @@ export default function Footer({ locale }) {
           </div>
         </div>
 
+        {/* (platform note moved into bottom bar for visual hierarchy) */}
+
         {/* Bottom Bar */}
         <div className="mt-10 sm:mt-12 pt-8 border-t border-white/20">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-white/70 text-center sm:text-left">
-              {t("footer.copyright")}
-            </p>
+            <div className="md:w-1/2 text-center sm:text-left">
+              <p className="text-sm text-white/80 mb-2">A platform by The Quiah Group.</p>
+              <p className="text-sm text-white/70">© {new Date().getFullYear()} Q Global Living. All rights reserved.</p>
+            </div>
             {/* <div className="flex gap-6">
               <Link
                 href={`/${locale}/privacy-policy`}

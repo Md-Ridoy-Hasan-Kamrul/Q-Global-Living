@@ -1310,7 +1310,7 @@
       "description": "Learn about Q Homes mission and team"
     },
     "hero": {
-      "title": "Your Trusted Partner in Côte d'Ivoire Real Estate",
+      "title": "About Q Homes – Powered by Q Global Living",
       "subtitle": "Connecting you with exceptional properties and seamless service across Abidjan and beyond."
     },
     "mission": {
@@ -1359,6 +1359,26 @@
           "bio": "Moussa safeguards all transactions with expert legal guidance and regulatory compliance."
         }
       }
+    },
+    "overview": {
+      "title": "Who we are",
+      "p1": "Q Homes is a digital property platform built by Q Global Living, an innovation brand of The Quiah Group, that connects Africa’s real-estate market with the world.",
+      "p2": "Our mission is to simplify how people discover, verify, and invest in African properties — all through one trusted digital ecosystem.",
+      "p3": "We combine technology, verified data, and local partnerships to create transparency and safety for buyers, renters, and developers in Côte d’Ivoire and across the continent. Through our platform, you can browse verified listings, access escrow protection, and connect with trusted property owners and developers — without intermediaries."
+    },
+    "ecosystem": {
+      "title": "Our Ecosystem Includes",
+      "qhomes": "Q Homes — verified property marketplace",
+      "concierge": "Q Global Concierge — relocation & lifestyle services",
+      "developments": "Q Homes Developments — new construction & investment opportunities"
+    },
+    "values": {
+      "title": "Our Values",
+      "v1": "Trust by Design – Every property is verified before going live.",
+      "v2": "Innovation First – Tech-enabled tools for a seamless journey.",
+      "v3": "Transparency Always – Clear pricing, ownership & process.",
+      "v4": "Global Access – Created for Africa and the diaspora.",
+      "conclusion": "Q Homes is shaping the future of African living — where technology meets trust and global opportunity."
     },
     "cta": {
       "title": "Ready to Find Your Dream Home?",
