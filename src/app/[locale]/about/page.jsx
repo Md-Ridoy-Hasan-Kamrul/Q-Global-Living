@@ -155,11 +155,8 @@ export default function AboutPage() {
 
           {/* Render hero (keeps hero image + overlay from AboutHero component) */}
           <AboutHero
-            title={"About Q Homes – Powered by Q Global Living"}
-            subtitle={
-              heroData.subtitle ||
-              "Tech-enabled, trusted property marketplace for Africa."
-            }
+            title={heroData.title}
+            subtitle={heroData.subtitle || "Tech-enabled, trusted property marketplace for Africa."}
           />
 
           {/* Main content beneath hero */}
@@ -168,32 +165,19 @@ export default function AboutPage() {
               {/* Left: primary narrative */}
               <div className="lg:col-span-7">
                 <h2 className="text-2xl font-extrabold text-black dark:text-white sm:text-3xl lg:text-4xl">
-                  Who we are
-                </h2>
+                    {t("about.overview.title")}
+                  </h2>
 
-                <article className="mt-4 space-y-2">
-                  <p className="text-base md:text-lg leading-relaxed text-black dark:text-white/90">
-                    Q Homes is a digital property platform built by{" "}
-                    <b>Q Global Living</b>, an innovation brand of{" "}
-                    <b>The Quiah Group</b>, that connects Africa’s real-estate
-                    market with the world.
-                  </p>
-                  <p className="text-base md:text-lg leading-relaxed text-black dark:text-white/90">
-                    Our mission is to simplify how people{" "}
-                    <b>discover, verify, and invest </b> in African properties —
-                    all through one trusted digital ecosystem.
-                  </p>
-                  <p className="text-base md:text-lg leading-relaxed text-black dark:text-white/90">
-                    We combine <b>technology, verified data,</b> and{" "}
-                    <b>local partnerships</b> to create transparency and safety
-                    for buyers, renters, and to create transparency and safety
-                    for buyers, renters, and developers in Côte d’Ivoire and
-                    across the continent. Through our platform, you can browse{" "}
-                    <b>verified listings, </b>
-                    access <b>escrow protection,</b> and connect with trusted{" "}
-                    <b>property owners and developers </b> — without
-                    intermediaries.
-                  </p>
+                  <article className="mt-4 space-y-2">
+                    <p className="text-base md:text-lg leading-relaxed text-black dark:text-white/90">
+                      {t("about.overview.p1")}
+                    </p>
+                    <p className="text-base md:text-lg leading-relaxed text-black dark:text-white/90">
+                      {t("about.overview.p2")}
+                    </p>
+                    <p className="text-base md:text-lg leading-relaxed text-black dark:text-white/90">
+                      {t("about.overview.p3")}
+                    </p>
                   {/* 
                   <div className='grid gap-4 sm:grid-cols-2'>
                     <div className='flex items-start gap-3'>
@@ -265,45 +249,28 @@ export default function AboutPage() {
               <div className="mt-4 md:mt-10 space-y-6">
                 <div className="rounded-xl border border-solid border-primary/6 bg-white/50 dark:bg-background-dark p-6 shadow-md">
                   <h3 className="text-xl md:text-xl lg:text-2xl font-semibold text-black dark:text-white mb-3">
-                    Our Ecosystem Includes
+                    {t("about.ecosystem.title")}
                   </h3>
                   <ul className="list-inside list-disc space-x-1 md:space-y-2 text-base md:text-lg text-black dark:text-white/80 ml-2 md:ml-4">
-                    <li>Q Homes — verified property marketplace</li>
-                    <li>
-                      Q Global Concierge — relocation &amp; lifestyle services
-                    </li>
-                    <li>
-                      Q Homes Developments — new construction &amp; investment
-                      opportunities
-                    </li>
+                    <li>{t("about.ecosystem.qhomes")}</li>
+                    <li>{t("about.ecosystem.concierge")}</li>
+                    <li>{t("about.ecosystem.developments")}</li>
                   </ul>
                 </div>
 
                 <div className="rounded-2xl border border-solid border-primary/6 bg-white/50 dark:bg-background-dark p-6 shadow-md">
                   <h3 className="text-xl md:text-xl lg:text-2xl font-semibold text-black dark:text-white mb-3">
-                    Our Values
+                    {t("about.values.title")}
                   </h3>
                   <ul className="list-inside list-disc space-x-1 md:space-y-2 text-base md:text-lg text-black  dark:text-white/80 ml-2 md:ml-4">
-                    <li>
-                      Trust by Design – Every property is verified before going
-                      live.
-                    </li>
-                    <li>
-                      Innovation First – Tech-enabled tools for a seamless
-                      journey.
-                    </li>
-                    <li>
-                      Transparency Always – Clear pricing, ownership &amp;
-                      process.
-                    </li>
-                    <li>
-                      Global Access – Created for Africa and the diaspora.
-                    </li>
+                    <li>{t("about.values.v1")}</li>
+                    <li>{t("about.values.v2")}</li>
+                    <li>{t("about.values.v3")}</li>
+                    <li>{t("about.values.v4")}</li>
                   </ul>
 
                   <p className="mt-3 md:mt-6 text-sm md:text-base text-black dark:text-white/70">
-                    Q Homes is shaping the future of African living — where
-                    technology meets trust and global opportunity.
+                    {t("about.values.conclusion")}
                   </p>
                 </div>
               </div>
