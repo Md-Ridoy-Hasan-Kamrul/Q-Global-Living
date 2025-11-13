@@ -26,7 +26,7 @@ export default function HowItWorks() {
     },
   ];
   return (
-    <section className="flex flex-col gap-2 md:gap-10 px-4 pt-10">
+    <section className="flex flex-col gap-2 md:gap-10 px-4 pt-10 md:pt-20 md:pb-10">
       <h2 className="text-2xl md:text-3xl font-bold font-heading text-center">
         {t("ConciergeService.HowItWorks.title")}
       </h2>

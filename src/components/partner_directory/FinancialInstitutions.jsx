@@ -44,7 +44,7 @@ export default function FinancialInstitutions({ filteredPartners }) {
   return (
     <section className="mb-8">
       <div className="mb-1.5 md:mb-3 pb-1.5 md:pb-3">
-        <h2 className="font-display text-black dark:text-text-dark text-2xl md:text-3xl font-bold leading-tight tracking-tight px-4">
+        <h2 className="font-display text-black dark:text-text-dark text-2xl md:text-3xl font-bold leading-tight tracking-tight px-4 border-b-2 pb-2 border-primary/40">
           {t("PartnerDirectory.Financial.title")}
         </h2>
       </div>
@@ -71,7 +71,7 @@ export default function FinancialInstitutions({ filteredPartners }) {
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
               aria-label={`Visit ${partner.name} website`}
-              className="mt-auto flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-accent text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="mt-auto flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
             >
               <span>{t("PartnerDirectory.Financial.visit")}</span>
             </Link>

@@ -21,15 +21,15 @@ export default function BlogCard({ initialData, searchQuery }) {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4">
       {filteredData.map((blog) => {
         // Try to parse a machine-readable date for <time>. Fall back to the raw string.
-        let isoDate = '';
+        let isoDate = "";
         try {
           const d = new Date(blog.date);
           if (!Number.isNaN(d.getTime())) isoDate = d.toISOString();
         } catch (e) {
-          isoDate = '';
+          isoDate = "";
         }
 
         return (
@@ -49,7 +49,10 @@ export default function BlogCard({ initialData, searchQuery }) {
               />
             </div>
 
-            <div className="p-4 flex flex-col flex-grow" itemProp="mainEntityOfPage">
+            <div
+              className="p-4 flex flex-col flex-grow"
+              itemProp="mainEntityOfPage"
+            >
               <header>
                 <h2 className="font-bold text-lg mb-2 text-text-light dark:text-text-dark">
                   <Link
@@ -74,7 +77,10 @@ export default function BlogCard({ initialData, searchQuery }) {
                 )}
               </p>
 
-              <p className="text-text-light dark:text-text-dark flex-grow" itemProp="description">
+              <p
+                className="text-text-light dark:text-text-dark grow"
+                itemProp="description"
+              >
                 {blog.snippet}
               </p>
 

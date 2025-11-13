@@ -615,7 +615,42 @@
       "notificationSubtitle": "Here are your latest property alerts and updates.",
       "markallRead": "Mark all as read",
       "tickets": " Support Tickets",
-
+      "searchProperties":"Search properties...",
+      "addProperty": "Add Property",
+      "SavedSearches":{
+        "title": "Saved Searches and Settings",
+        "subtitle":"Manage Your Saved Property alerts, enable or disable notifications, and keep your preferences organized efficiently",
+        "noSavedSearches": "No saved searches yet. Start searching to save your preferences!",
+        "yourSavedSearches": "Your Saved Searches",
+        "resetButton":"Reset to Default",
+        "saveChanges":"Save Changes"
+      },
+      "AppointmentTable":{
+        "id":"ID",
+        "Name":"Name",
+        "email":"Email",
+        "type":"Type",
+       
+        "date":"Date",
+        "status":"Status",
+        "actions":"Actions"
+      },
+      "supportTicket":{
+        "title": "Support Tickets",
+        "subtitle":"Manage all your support requests in one place",
+        "totalTickets":"Total Tickets",
+        "openTicket":"Open ",
+        "inProgress":"In Progress",
+        "resolved":"Resolved",
+        "searchTickets":"Search tickets...",
+        "createTicket":"Create Ticket",
+        "id":"ID",
+        "subject":"Subject",
+        "property":"Property",
+        "replies":"Replies",
+        "created":"Created At",
+        "Actions":"Actions"
+      },
       "personalDetails": {
         "title": "Personal Details",
         "saving": "Saving...",
@@ -1478,5 +1513,330 @@
       "description": "Let our experts handle the details so you can focus on the excitement of your new beginning in Côte d’Ivoire.",
       "button": "Request a Quote"
     }
+  },
+  "Policy": {
+    "MainContent": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last Updated: October 26, 2023",
+      "subtitle": "At Q Homes, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, share, and protect your data when you use our services. By accessing or using our platform, you agree to the terms of this Privacy Policy.",
+      "Information": {
+        "title": "Information We Collect",
+        "description": "We collect information to provide and improve our services. This includes personal information you provide when you create an account, such as your name, email address, and phone number. We also collect information about your property searches, saved listings, and interactions with our platform.",
+        "sortDescription": "Additionally, we automatically collect technical data, including your IP address, browser type, and device information, to ensure our platform functions correctly and to enhance security."
+      },
+      "HowWeUse": {
+        "title": "How We Use Your Information",
+        "description": "Your information is used to personalize your experience, connect you with real estate professionals, and provide you with relevant property listings. We may also use your data for internal analytics, to improve our platform's functionality, and to communicate with you about your account and our services.",
+        "sortDescription": ""
+      },
+      "HowWeShare": {
+        "title": "How We Share Your Information",
+        "description": "We may share your information with trusted third-party service providers who assist us in operating our platform, such as hosting services and analytics providers. We may also share your contact details with real estate agents when you express interest in a property. We do not sell your personal information to third parties.",
+        "sortDescription": ""
+      },
+      "YourPrivacyRights": {
+        "title": "Your Privacy Rights",
+        "description": "You have the right to access, update, or delete your personal information at any time through your account settings. You can also opt-out of receiving marketing communications from us by following the unsubscribe link in our emails."
+      },
+      "CookiesandTracking": {
+        "title": "Cookies and Tracking Technologies",
+        "description": "We use cookies and similar technologies to enhance your browsing experience, remember your preferences, and analyze platform traffic. You can control cookie settings through your browser, but disabling them may affect the functionality of our services."
+      },
+      "DataSecurity": {
+        "title": "Data Security",
+        "description": "We implement industry-standard security measures to protect your personal information from unauthorized access, disclosure, or alteration. However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security."
+      },
+      "ThirdPartyLinks": {
+        "title": "Third-Party Links",
+        "description": "Our platform may contain links to other websites. We are not responsible for the privacy practices of these third-party sites. We encourage you to read their privacy policies before providing any personal information."
+      },
+      "ChangesToOurPrivacyPolicy": {
+        "title": "Changes to Our Privacy Policy",
+        "description": "We reserve the right to modify this Privacy Policy at any time. Any changes will be posted on this page with an updated Last Updated date. We encourage you to review this policy periodically to stay informed about how we are protecting your information."
+      },
+      "ContactUs": {
+        "title": "Contact Us",
+        "description": "If you have any questions or concerns about this Privacy Policy, please contact us at",
+        "email": "privacy@qhomes.com",
+        "sortDescription": ""
+      }
+    },
+    "Sidebar": {
+      "Information": "Information We Collect",
+      "HowWeUse": "How We Use Your Information",
+      "HowWeShare": "How We Share Your Information",
+      "YourPrivacyRights": "Your Privacy Rights",
+      "CookiesandTracking": "Cookies and Tracking Technologies",
+      "DataSecurity": "Data Security",
+      "ThirdPartyLinks": "Third-Party Links",
+      "ChangesToOurPrivacyPolicy": "Changes to Our Privacy Policy",
+      "ContactUs": "Contact Us"
+    }
+  },
+  "Terms": {
+    "MainContent": {
+      "title": "Terms & Conditions",
+      "lastUpdated": "Last Updated: October 26, 2023",
+      "subtitle": "Welcome to Q Homes. These terms and conditions outline the rules and regulations for the use of Q Homes Website, located at qhomes.ci. By accessing this website we assume you accept these terms and conditions. Do not continue to use Q Homes if you do not agree to take all of the terms and conditions stated on this page.",
+      "Introduction": {
+        "title": "1. Introduction",
+        "description": "These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Q Homes accessible at qhomes.ci. These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions.",
+        "sortDescription": ""
+      },
+      "UserObligations": {
+        "title": "2. User Obligations & Conduct",
+        "description": "You are granted a limited license only for purposes of viewing the material contained on this Website. You are specifically restricted from all of the following: publishing any Website material in any other media; selling, sublicensing and/or otherwise commercializing any Website material; publicly performing and/or showing any Website material; using this Website in any way that is or may be damaging to this Website.",
+        "sortDescription": ""
+      },
+      "Intellectual": {
+        "title": "3. Intellectual Property Rights",
+        "description": "Other than the content you own, under these Terms, Q Homes and/or its licensors own all the intellectual property rights and materials contained in this Website. This includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.",
+        "sortDescription": ""
+      },
+      "Disclaimer": {
+        "title": "4. Disclaimer",
+        "description": "The information provided by Q Homes on qhomes.ci is for general informational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.",
+        "sortDescription": "The platform includes property listings and information provided by third-party agents, developers, and owners. Q Homes is not responsible for any inaccuracies, errors, or omissions in such third-party listings. The content is provided on an as-is and as available basis. Users are strongly advised to conduct their own due diligence and verify all information independently before entering into any agreements or transactions. Your use of the site and your reliance on any information on the site is solely at your own risk."
+      },
+      "Limitation": {
+        "title": "5. Limitation of Liability",
+        "description": "In no event shall Q Homes, nor any of its officers, directors and employees, be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract. Q Homes, including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.",
+        "sortDescription": ""
+      },
+      "Governing": {
+        "title": "6. Governing Law & Jurisdiction",
+        "description": "These Terms will be governed by and interpreted in accordance with the laws of Côte d’Ivoire, and you submit to the non-exclusive jurisdiction of the state and federal courts located in Côte d’Ivoire for the resolution of any disputes.",
+        "sortDescription": ""
+      },
+      "ChangesToTerms": {
+        "title": "7. Changes to Terms",
+        "description": "Q Homes is permitted to revise these Terms at any time as it sees fit, and by using this Website you are expected to review these Terms on a regular basis. We will notify you of any changes by posting the new Terms and Conditions on this page.",
+        "sortDescription": ""
+      },
+      "ContactInformation": {
+        "title": "8. Contact Information",
+        "description": "If you have any queries regarding any of our terms, please contact us. You can reach us via our Contact Page.",
+        "sortDescription": ""
+      }
+    },
+    "Sidebar": {
+      "Introduction": "1. Introduction",
+      "UserObligations": "2. User Obligations & Conduct",
+      "Intellectual": "3. Intellectual Property Rights",
+      "Disclaimer": "4. Disclaimer",
+      "Limitation": "5. Limitation of Liability",
+      "Governing": "6. Governing Law & Jurisdiction",
+      "ChangesToTerms": "7. Changes to Terms",
+      "ContactInformation": "8. Contact Information"
+    }
+  },
+  "CookiePolicy": {
+    "MainContent": {
+      "title": "Cookie Policy",
+      "lastUpdated": "Last Updated: October 26, 2023",
+      "subtitle": "This Cookie Policy explains what cookies are and how we use them. You should read this policy to understand what cookies are, how we use them, the types of cookies we use, the information we collect using cookies, how that information is used, and how to control your cookie preferences. For further information on how we use, store, and keep your personal data secure, see our Privacy Policy.",
+      "WhatAreCookies": {
+        "title": "What Are Cookies?",
+        "description": "Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work, or work more efficiently, as well as to provide reporting information about use of the site. Cookies help us to remember your preferences and to understand how you use our website, which allows us to improve your experience."
+      },
+      "HowWeUseCookies": {
+        "title": "How We Use Cookies",
+        "description": "We use cookies for a variety of reasons detailed below. Unfortunately, in most cases, there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. It is recommended that you leave on all cookies if you are not sure whether you need them or not in case they are used to provide a service that you use."
+      },
+      "TypesOfCookiesWeUse": {
+        "title": "Types of Cookies We Use"
+      },
+      "TypesOfCookies": {
+        "title": "Essential Cookies",
+        "description": "These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms."
+      },
+      "PerformanceAnalyticsCookies": {
+        "title": "Performance & Analytics Cookies",
+        "description": "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site."
+      },
+      "FunctionalityCookies": {
+        "title": "Functionality Cookies",
+        "description": "These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages."
+      },
+      "TargetingAdvertisingCookies": {
+        "title": "Targeting & Advertising Cookies",
+        "description": "These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites."
+      },
+      "ThirdPartyCookies": {
+        "title": "Third-Party Cookies",
+        "description": "In some special cases, we also use cookies provided by trusted third parties. The following section details which third-party cookies you might encounter through this site. For example, this site uses Google Analytics which is one of the most widespread and trusted analytics solutions on the web for helping us to understand how you use the site and ways that we can improve your experience."
+      },
+      "YourChoicesRegardingCookies": {
+        "title": "Your Choices Regarding Cookies",
+        "description": "You have the right to decide whether to accept or reject cookies. You can exercise your cookie rights by setting your preferences in the Cookie Consent Manager or by opting out of certain types of web tracking technologies, such as certain cookies. As the means by which you can refuse cookies through your web browser controls vary from browser to browser, you should use your browser's help menu for more information."
+      },
+      "ChangesToOurCookiePolicy": {
+        "title": "Changes to Our Cookie Policy",
+        "description": "We may update this Cookie Policy from time to time in order to reflect, for example, changes to the cookies we use or for other operational, legal, or regulatory reasons. Please ensure you revisit the Cookie Policy regularly to stay informed about our use of cookies and related technologies."
+      },
+      "ContactUs": {
+        "title": "Contact Us",
+        "description": "If you have any questions about our use of cookies or other technologies, please email us at support@chances.com.",
+        "email": "support@chances.com"
+      }
+    }
+  },
+  "LegalCenter": {
+    "title": "Legal Center",
+    "subtitle": "This page is the central repository for all important legal documents governing the use of the Q Homes platform, ensuring transparency and trust.",
+    "Last Updated": "Last Updated:",
+    "Terms": {
+      "title": "Terms & Conditions",
+      "description": "Outlines the rules and guidelines for using our services and platform."
+    },
+    "PrivacyPolicy": {
+      "title": "Privacy Policy",
+      "description": "Details how we collect, use, and protect your personal data."
+    },
+    "CookiePolicy": {
+      "title": "Cookie Policy",
+      "description": "Explains how we use cookies to enhance your browsing experience."
+    },
+    "Partner": {
+      "title": "Partner Directory",
+      "description": "Our commitment to ensuring our platform is usable by everyone."
+    },
+    "ConciergeService": {
+      "title": "Concierge Service",
+      "description": "Important information about limitations of liability and platform use."
+    }
+  },
+  "Blog": {
+    "SearchResults": "Search Results for",
+    "search": "Search",
+    "searchByKeyword": "Search by partner name...",
+    "Home": "Home",
+    "Blog": "Blog",
+    "By": "By",
+    "Published": "Published on",
+    "ShareThisArticle": "Share this article",
+    "ReadMoreArticles": "You Might Also Like",
+    "ReadMore": "Read More"
+  },
+  "Partner": {
+    "welcome": "Welcome Back, Partner",
+    "title": "Here's an overview of your property portfolio and recent activities",
+    "addButton": "Add New Property",
+    "statsData": {
+      "totalProperties": "Total Properties",
+      "totalViews": "Total Views",
+      "activeListings": "Active Listings",
+      "newInquiries": "New Inquiries"
+    },
+    "AllInquiries": "All Inquiries",
+    "SearchInquiries": "Search inquiries...",
+    "AllStatus": "All Status",
+    "Active": "Active",
+    "Pending": "Pending",
+    "Properties": "Properties",
+    "Locations": "Locations",
+    "Price": "Price",
+    "Views": "Views",
+    "Inquiries": "Inquiries",
+    "Status": "Status",
+    "views": "views",
+    "inquiries": "inquiries",
+    "NoPropertiesFound": "No Properties Found",
+    "TryAdjusting": "Try adjusting your search or filters",
+    "Next": "Next",
+    "Previous": "Previous",
+    "Showing": "Showing",
+    "to": "to",
+    "of": "of",
+    "results": "properties"
+  },
+  "Partner_my_listing": {
+    "title": "Listings",
+    "subtitle": "View and manage all your property listings.",
+    "addButton": "Add New Listing",
+    "Yourproperty": "Your property listings will be displayed here."
+  },
+  "Partner_my_listing_Modal": {
+    "PropertyDeveloper": "Property Developer",
+    "Adddevelopmentprojectlisting": "Add a development project listing",
+    "PropertyBuySell": "Property Buy / Sell",
+    "AddProperty": "Add Property Buy / Sell listing"
+  },
+  "PropertyDeveloperForm": {
+    "propertyName": "Property Name",
+    "propertyNamePlaceholder": "Enter property name",
+    "partnerId": "Partner ID",
+    "partnerIdPlaceholder": "Enter partner ID",
+    "location": "Location",
+    "locationPlaceholder": "Enter location",
+    "premiumListing": "Premium Listing",
+    "overview": "Overview",
+    "overviewPlaceholder": "Enter property overview",
+    "features": "Features",
+    "featuresPlaceholder": "Enter features (comma-separated)",
+    "pictures": "Pictures URLs",
+    "picturesPlaceholder": "Enter picture URLs (comma-separated)",
+    "paymentPlan": "Payment Plan",
+    "paymentPlanPlaceholder": "Enter payment plan details"
+  },
+  "PropertyBuySellForm": {
+    "userId": "User ID",
+    "userIdPlaceholder": "Enter user ID",
+    "propertyId": "Property ID",
+    "propertyIdPlaceholder": "Enter property ID",
+    "propertyName": "Property Name",
+    "propertyNamePlaceholder": "Enter property name",
+    "location": "Location",
+    "locationPlaceholder": "Enter location",
+    "overview": "Overview",
+    "overviewPlaceholder": "Enter property overview",
+    "features": "Features",
+    "featuresPlaceholder": "Enter features (comma-separated)",
+    "pictures": "Pictures URLs",
+    "picturesPlaceholder": "Enter picture URLs (comma-separated)",
+    "paymentPlan": "Payment Plan",
+    "paymentPlanPlaceholder": "Enter payment plan details",
+    "status": "Status",
+    "statusAvailable": "Available",
+    "statusSold": "Sold",
+    "statusPending": "Pending"
+  },
+  "InquiryDetails": {
+    "title": "Inquiries",
+    "subtitle": "View and respond to property inquiries from potential buyers.",
+    "SearchByName": "Search by name, email, or subject...",
+    "AllStatus": "All Status",
+    "Pending": "Pending",
+    "InProgress": "In Progress",
+    "Responded": "Responded",
+    "ID": "ID",
+    "ContactInfo": "Contact Info",
+    "Type": "Type",
+    "Subject": "Subject",
+    "Status": "Status",
+    "Date": "Date",
+    "Actions": "Actions",
+    "ViewDetails": "View Details",
+    "NoInquiries": "No Inquiries Found",
+    "TryAdjusting": "Try adjusting your search or filter criteria."
+  },
+  "Developer_Portal": {
+    "DeveloperPortal": "Developer Portal",
+    "title": "Manage your development projects and track performance.",
+    "addButton": "Add New Project",
+    "SearchProjects": "Search Projects...",
+    "AllStatus": "All Status",
+    "Active": "Active",
+    "Completed": "Completed",
+    "Pending": "Pending",
+    "ExportData": "Export Data",
+    "ProjectName": "Project Name",
+    "Location": "Location",
+    "Units": "Units",
+    "Revenue": "Revenue",
+    "Status": "Status",
+    "Actions": "Actions",
+    "LastUpdated" : "Last Updated",
+    "NoProjectsFound": "No Projects Found"
   }
 }

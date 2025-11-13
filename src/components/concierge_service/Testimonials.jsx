@@ -52,6 +52,7 @@ const testimonials = [
     imageUrl:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
   },
+  
 ];
 
 export default function TestimonialsSection() {
@@ -111,13 +112,14 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative">
+        <div className="relative px-12 lg:px-16">
           {/* Left Navigation Button */}
           {canScrollLeft && (
             <button
               onClick={() => scroll("left")}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-6 z-20 rounded-full bg-white dark:bg-charcoal border-2 border-primary/20 dark:border-accent/20 p-3 shadow-xl transition-all hover:bg-primary hover:text-white hover:border-primary hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="absolute left-5 md:left-10 top-1/2 -translate-y-1/2 z-50 rounded-full bg-white dark:bg-charcoal border-2 border-primary/20 dark:border-accent/20 p-3 shadow-2xl transition-all hover:bg-primary hover:text-white hover:border-primary hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               aria-label="Scroll left"
+              style={{ pointerEvents: 'auto' }}
             >
               <ChevronLeft className="h-6 w-6" />
             </button>
@@ -127,8 +129,9 @@ export default function TestimonialsSection() {
           {canScrollRight && (
             <button
               onClick={() => scroll("right")}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-6 z-20 rounded-full bg-white dark:bg-charcoal border-2 border-primary/20 dark:border-accent/20 p-3 shadow-xl transition-all hover:bg-primary hover:text-white hover:border-primary hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="absolute right-15 md:right-10 top-1/2 -translate-y-1/2 z-50 rounded-full bg-white dark:bg-charcoal border-2 border-primary/20 dark:border-accent/20 p-3 shadow-2xl transition-all hover:bg-primary hover:text-white hover:border-primary hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               aria-label="Scroll right"
+              style={{ pointerEvents: 'auto' }}
             >
               <ChevronRight className="h-6 w-6" />
             </button>
@@ -143,7 +146,7 @@ export default function TestimonialsSection() {
             {testimonials.map((item) => (
               <article
                 key={item.id}
-                className="flex w-[85%] sm:w-[70%] md:w-[45%] lg:w-[calc(33.333%-1rem)] shrink-0 snap-start flex-col justify-between rounded-2xl border border-primary/20 dark:border-accent/20 bg-background-light dark:bg-charcoal p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="flex w-[85%] sm:w-[70%] md:w-[45%] lg:w-[calc(33.333%-1rem)] shrink-0 snap-start flex-col justify-between rounded-2xl border border-primary/20 dark:border-accent/20 bg-white/50  dark:bg-charcoal p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Quote */}
                 <blockquote className="text-sm sm:text-base leading-relaxed text-black dark:text-soft-grey ">

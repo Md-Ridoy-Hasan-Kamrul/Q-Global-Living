@@ -8,7 +8,7 @@ export default function PageHeading() {
   return (
     <div className="flex flex-wrap justify-between gap-3  text-center my-4">
       <div className="flex w-full flex-col gap-4 max-w-3xl mx-auto">
-        <h1 className="font-display text-black dark:text-text-dark text-3xl md:text-5xl font-semibold leading-tight tracking-tight">
+        <h1 className="font-display text-black dark:text-text-dark text-3xl md:text-5xl font-bold leading-tight tracking-tight">
           {t('PartnerDirectory.Title')}
           
         </h1>

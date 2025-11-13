@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback, useMemo } from 'react';
-import { Search } from 'lucide-react';
+import { Search, Plus } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import PropertyCard from '@/components/dashboard/client/PropertyCard';
 import { useTranslation } from '@/i18n';
@@ -84,7 +84,7 @@ export default function SavedProperties() {
     <div className="min-h-screen bg-gray-50 space-y-6">
       <div>
         {/* Header */}
-        
+
         <div className="bg-gradient-to-r from-[#1e3a5f] to-[#2d5078] rounded-lg p-6 shadow-lg mb-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">{t('dashboard.pages.savedProperties.title')}</h1>
           <p className="text-sm sm:text-base text-white/80">{t('dashboard.pages.savedProperties.subtitle')}</p>
@@ -101,7 +101,7 @@ export default function SavedProperties() {
                   type="search"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  placeholder={'Search properties...'}
+                  placeholder={t('dashboard.client.searchProperties')}
                   className="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-3 pl-10 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
@@ -111,11 +111,12 @@ export default function SavedProperties() {
 
               <button
                 type="button"
-                className="bg-[#E6B325] text-white px-4 py-2 rounded shadow text-base
-                "
+                aria-label={t('dashboard.actions.addProperty') || 'Add Property'}
+                className="bg-[#E6B325] text-white px-4 py-2 rounded shadow text-base flex items-center"
               // TODO: wire add property action
               >
-                {'Add Property'}
+                <Plus className="h-6 text-white w-6 mr-2" aria-hidden="true" />
+                <span>{t('dashboard.client.addProperty')}</span>
               </button>
             </div>
           </div>

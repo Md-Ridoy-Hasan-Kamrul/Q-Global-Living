@@ -1,8 +1,12 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "@/i18n";
 import Image from "next/image";
 import Link from "next/link";
 
 // Main ArticleHeader component
 export default function ArticleHeader({ articleData }) {
+  const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
   return (
     <>
       {/* Breadcrumb */}
@@ -11,7 +15,7 @@ export default function ArticleHeader({ articleData }) {
           href="/"
           className="text-gray-500 dark:text-gray-400 text-sm font-medium hover:text-accent"
         >
-          Home
+          {t("Blog.Home")}
         </Link>
         <span className="text-gray-500 dark:text-gray-400 text-sm font-medium">
           /
@@ -20,7 +24,7 @@ export default function ArticleHeader({ articleData }) {
           href="/blog"
           className="text-gray-500 dark:text-gray-400 text-sm font-medium hover:text-accent"
         >
-          Blog
+          {t("Blog.Blog")}
         </Link>
         <span className="text-gray-500 dark:text-gray-400 text-sm font-medium">
           /
@@ -51,7 +55,7 @@ export default function ArticleHeader({ articleData }) {
           {articleData.subtitle}
         </h2>
         <p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal pb-4 border-b ">
-          By {articleData.author} | Published on {articleData.publishedDate} |{" "}
+          {t("Blog.By")} {articleData.author} | {t("Blog.Published")} {articleData.publishedDate} |{" "}
           {articleData.readTime}
         </p>
 
@@ -59,7 +63,7 @@ export default function ArticleHeader({ articleData }) {
         <div className="prose prose-lg dark:prose-invert max-w-none font-body text-text-light dark:text-text-dark pt-2 space-y-3">
           {articleData.sections.map((section, idx) => (
             <section key={idx}>
-              <h3 className="font-display font-bold text-2xl !mt-2 !mb-2">
+              <h3 className="font-display font-bold text-2xl mt-2 mb-2">
                 {section.heading}
               </h3>
               <p>{section.content}</p>
@@ -107,7 +111,7 @@ export default function ArticleHeader({ articleData }) {
         {/* Social Share */}
         <div className="py-4 mt-10 border-t border-b border-subtle-light dark:border-subtle-dark">
           <h4 className="text-center text-lg font-bold mb-4 font-display">
-            Share This Article
+            {t("Blog.ShareThisArticle")}
           </h4>
           <div className="flex justify-center items-center gap-4">
             {["share", "link", "mail"].map((icon, i) => (

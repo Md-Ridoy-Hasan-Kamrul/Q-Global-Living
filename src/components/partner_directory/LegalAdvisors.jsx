@@ -19,7 +19,7 @@ const LegalAdvisors = memo(function LegalAdvisors({ filteredPartners }) {
       <div className="mb-1.5 md:mb-3 pb-1.5 md:pb-3">
         <h2
           id="legal-advisors-heading"
-          className="font-display text-black dark:text-text-dark text-2xl md:text-3xl font-bold leading-tight tracking-tight px-4"
+          className="font-display text-black dark:text-text-dark text-2xl md:text-3xl font-bold leading-tight tracking-tight px-4 border-b-2 pb-2 border-primary/40"
         >
           {t("PartnerDirectory.Legal.title")}
         </h2>
@@ -45,7 +45,7 @@ const LegalAdvisors = memo(function LegalAdvisors({ filteredPartners }) {
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
               aria-label={`Contact ${partner.name}`}
-              className="mt-auto flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-accent text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+              className="mt-auto flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
             >
               <span>{t("PartnerDirectory.Legal.contact")}</span>
             </Link>
