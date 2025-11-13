@@ -167,8 +167,9 @@ const navigationConfig = {
 export default function Sidebar({ role = "admin" }) {
   const pathname = usePathname();
   const { user, logout } = useAuth();
-  const { locale, changeLanguage } = useLanguage(); // Use LanguageContext
+  const { locale } = useLanguage();
   const { t } = useTranslation(locale);
+  const router = useRouter();
   // const { t } = useMemo(() => useTranslation(locale), [locale]);
 
 
@@ -238,8 +239,8 @@ export default function Sidebar({ role = "admin" }) {
    * Professional approach: instant UI update using React Context
    */
   const handleLanguageChange = (newLocale) => {
-    changeLanguage(newLocale); // This updates state + URL without reload ✨
-    setShowLangDropdown(false); // Close dropdown after selection
+    changeLanguage(newLocale);
+    setShowLangDropdown(false);
   };
 
   /**
@@ -343,7 +344,7 @@ export default function Sidebar({ role = "admin" }) {
       {/* User Section */}
       <div className="border-t border-gray-700/50 p-4">
         {/* User Info with Dropdown */}
-        <div className='relative' ref={dropdownRef}>
+        <div className='relative z-50' ref={dropdownRef}>
           <button
             onClick={() => setShowLangDropdown(!showLangDropdown)}
             className="mb-3 flex w-full items-center gap-3 rounded-lg bg-[#1A2B42] px-3 py-2.5 hover:bg-[#1E3A5F] transition-colors"
@@ -368,7 +369,9 @@ export default function Sidebar({ role = "admin" }) {
 
           {/* Language Dropdown */}
           {showLangDropdown && (
-            <div className="absolute bottom-full left-0 right-0 mb-2 bg-[#1A2B42] rounded-lg shadow-lg border border-gray-700/50 overflow-hidden">
+            <div 
+              className="absolute bottom-full left-0 right-0 mb-2 bg-[#1A2B42] rounded-lg shadow-xl border border-gray-700/50 z-60"
+            >
               <button
                 onClick={() => handleLanguageChange("en")}
                 className={`flex w-full items-center gap-3 px-3 py-2.5 text-sm transition-colors ${
@@ -435,7 +438,7 @@ export default function Sidebar({ role = "admin" }) {
       )}
 
       {/* Desktop Sidebar - Hidden on mobile, visible on lg+ */}
-      <aside className="hidden lg:block fixed left-0 top-0 z-40 h-screen w-64 bg-[#0F1B2E]">
+      <aside className="hidden lg:block fixed left-0 top-0 z-40 h-screen w-64 bg-[#0F1B2E] overflow-visible">
         {renderSidebarContent()}
       </aside>
 
