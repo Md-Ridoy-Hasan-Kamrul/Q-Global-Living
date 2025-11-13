@@ -80,22 +80,56 @@ export default function ContactPage() {
     title: t("contact.faq.title"),
     subtitle: t("contact.faq.subtitle"),
     faqs: [
-      {
-        question: t("contact.faq.q1"),
-        answer: t("contact.faq.a1"),
-      },
-      {
-        question: t("contact.faq.q2"),
-        answer: t("contact.faq.a2"),
-      },
-      {
-        question: t("contact.faq.q3"),
-        answer: t("contact.faq.a3"),
-      },
-      {
-        question: t("contact.faq.q4"),
-        answer: t("contact.faq.a4"),
-      },
+       {
+      question: "What is Q Homes?",
+      answer:
+        "Q Homes is a tech-driven real estate platform powered by Q Global Living. It connects verified properties, developers, and buyers across Africa through a transparent, data-driven experience",
+    },
+    {
+      question: "How does Q Homes verify listings?",
+      answer:
+        "Every property goes through a five-step verification process: legal review, on-site validation, developer authentication, escrow readiness, and final digital approval.",
+    },
+    {
+      question: " Who can list on Q Homes?",
+      answer:
+        "Q Homes welcomes property owners, developers, and partners who meet our basic eligibility and documentation requirements to publish listings on the platform.However, only those who complete our comprehensive verification process—including legal, ownership, and authenticity checks—receive the “Verified by Q Homes” digital badge, displayed on their listings and profiles.This badge distinguishes fully verified listings from basic entries, allowing users to identify properties and developers that have passed Q Global Living’s highest level of due diligence and compliance.",
+    },
+    {
+      question: " Can I purchase property remotely from abroad?",
+      answer:
+        "Yes. Q Homes supports diaspora buyers through secure escrow payment systems, digital contracts, and verified notaries",
+    },
+    {
+      question: " Is Q Homes a real-estate agency?",
+      answer:
+        "No. Q Homes is not an agency — it is a tech platform that provides verified property data, digital transaction tools, and compliance infrastructure.We do not act as brokers; we enable direct, verified connections between property owners, developers, and buyers",
+    },
+    {
+      question: "What is the Q Global Concierge?",
+      answer:
+        "It’s a digital service that helps with relocation, temporary housing, airport pickup, and lifestyle setup for individuals or corporate clients moving to Africa.",
+    },
+    {
+      question: "What is “Verified by Q Homes”?",
+      answer:
+        "It’s our quality seal confirming that a property, project, or developer has passed all verification and compliance checks. Look for this badge before engaging in any transaction.",
+    },
+    {
+      question: "How does escrow protection work?",
+      answer:
+        "Funds are deposited with a Q Global Living partner bank and released only when all contractual conditions are met — protecting both buyers and developers.",
+    },
+    {
+      question: "How does Q Homes use my information?",
+      answer:
+        "We collect limited personal data (name, contact, and inquiry details) solely to process property requests and improve your digital experience. Your information is never sold or shared.",
+    },
+    {
+      question: "How can I contact Q Homes support?",
+      answer:
+        "You can reach us anytime via support@qhomes.ci/ support@qgloballiving.com or through WhatsApp directly from the platform’s footer and contact page.",
+    },
     ],
   };
 

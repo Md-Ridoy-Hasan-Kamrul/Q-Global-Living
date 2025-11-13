@@ -207,11 +207,16 @@ export default function Sidebar({ role = 'admin' }) {
     };
 
     if (showLangDropdown) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('click', handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+
+
+
+
+      
+      document.removeEventListener('click', handleClickOutside);
     };
   }, [showLangDropdown]);
 
@@ -365,7 +370,7 @@ export default function Sidebar({ role = 'admin' }) {
 
           {/* Language Dropdown */}
           {showLangDropdown && (
-            <div className='absolute bottom-full left-0 right-0 mb-2 bg-[#1A2B42] rounded-lg shadow-xl border border-gray-700/50 z-60'>
+            <div className='absolute bottom-full left-0 right-0 mb-2 bg-[#1A2B42] rounded-lg shadow-xl border border-gray-700/50 z-50'>
               <button
                 onClick={() => handleLanguageChange('en')}
                 className={`flex w-full items-center gap-3 px-3 py-2.5 text-sm transition-colors ${

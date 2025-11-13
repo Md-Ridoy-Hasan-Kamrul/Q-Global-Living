@@ -1,7 +1,7 @@
-'use client';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { useTranslation } from '@/i18n';
-import React, { useState, useCallback, useId } from 'react';
+"use client";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "@/i18n";
+import React, { useState, useCallback, useId } from "react";
 
 const ContactFAQ = React.memo(() => {
   const baseId = useId();
@@ -12,56 +12,76 @@ const ContactFAQ = React.memo(() => {
   }, []);
   const { locale } = useLanguage();
   const { t } = useTranslation(locale);
-  const title = t('faq.title');
-  const subtitle = t('faq.subtitle');
+  const title = t("faq.title");
+  const subtitle = t("faq.subtitle");
 
   const faqs = [
     {
-      question: 'How can I buy a hotel property through your platform?',
+      question: "What is Q Homes?",
       answer:
-        'You can browse listed hotels for sale, filter by location, budget, and type, then contact our sales team or submit an inquiry to start the buying process.',
+        "Q Homes is a tech-driven real estate platform powered by Q Global Living. It connects verified properties, developers, and buyers across Africa through a transparent, data-driven experience",
     },
     {
-      question: 'Do I need a business license to buy a hotel?',
+      question: "How does Q Homes verify listings?",
       answer:
-        'Yes, owning or operating a hotel usually requires a valid business license, along with local government approvals and tax registration.',
+        "Every property goes through a five-step verification process: legal review, on-site validation, developer authentication, escrow readiness, and final digital approval.",
     },
     {
-      question: 'Can international buyers purchase hotels?',
+      question: " Who can list on Q Homes?",
       answer:
-        'Absolutely. Foreign investors can buy hotels in many regions, though some countries have restrictions on land ownership. Our legal partners can help guide you through this process.',
+        "Q Homes welcomes property owners, developers, and partners who meet our basic eligibility and documentation requirements to publish listings on the platform.However, only those who complete our comprehensive verification process—including legal, ownership, and authenticity checks—receive the “Verified by Q Homes” digital badge, displayed on their listings and profiles.This badge distinguishes fully verified listings from basic entries, allowing users to identify properties and developers that have passed Q Global Living’s highest level of due diligence and compliance.",
     },
     {
-      question: 'What documents are required for hotel purchase?',
+      question: " Can I purchase property remotely from abroad?",
       answer:
-        'You’ll typically need your identification, proof of funds, a purchase agreement, and legal documents verifying the property’s ownership and permits.',
+        "Yes. Q Homes supports diaspora buyers through secure escrow payment systems, digital contracts, and verified notaries",
     },
     {
-      question: 'How long does the buying process take?',
+      question: " Is Q Homes a real-estate agency?",
       answer:
-        'Depending on location and due diligence, a hotel purchase can take 30–90 days to finalize, including property inspection and legal verification.',
+        "No. Q Homes is not an agency — it is a tech platform that provides verified property data, digital transaction tools, and compliance infrastructure.We do not act as brokers; we enable direct, verified connections between property owners, developers, and buyers",
     },
     {
-      question: 'Can I get financing or a loan to buy a hotel?',
+      question: "What is the Q Global Concierge?",
       answer:
-        'Yes, we work with trusted financial partners to offer mortgage and commercial loan options for qualified buyers.',
+        "It’s a digital service that helps with relocation, temporary housing, airport pickup, and lifestyle setup for individuals or corporate clients moving to Africa.",
+    },
+    {
+      question: "What is “Verified by Q Homes”?",
+      answer:
+        "It’s our quality seal confirming that a property, project, or developer has passed all verification and compliance checks. Look for this badge before engaging in any transaction.",
+    },
+    {
+      question: "How does escrow protection work?",
+      answer:
+        "Funds are deposited with a Q Global Living partner bank and released only when all contractual conditions are met — protecting both buyers and developers.",
+    },
+    {
+      question: "How does Q Homes use my information?",
+      answer:
+        "We collect limited personal data (name, contact, and inquiry details) solely to process property requests and improve your digital experience. Your information is never sold or shared.",
+    },
+    {
+      question: "How can I contact Q Homes support?",
+      answer:
+        "You can reach us anytime via support@qhomes.ci/ support@qgloballiving.com or through WhatsApp directly from the platform’s footer and contact page.",
     },
   ];
   return (
-    <section className='w-full py-6 min-h-screen sm:py-6  px-4'>
-      <div className='mx-auto max-w-4xl flex flex-col items-center gap-10'>
+    <section className="w-full py-6 min-h-screen sm:py-6  px-4">
+      <div className="mx-auto max-w-4xl flex flex-col items-center gap-10">
         {/* Header */}
-        <div className='text-center'>
-          <h2 className=' text-xl md:text-5xl font-bold text-navy dark:text-[#FFFFF0]'>
+        <div className="text-center">
+          <h2 className=" text-xl md:text-5xl font-bold text-navy dark:text-[#FFFFF0]">
             {title}
           </h2>
-          <p className='mt-3 max-w-2xl text-base text-navy/70 dark:text-[#FFFFF0]/70'>
+          <p className="mt-3 max-w-2xl text-base text-navy/70 dark:text-[#FFFFF0]/70">
             {subtitle}
           </p>
         </div>
 
         {/* Accordion (semantic dl/dt/dd) */}
-        <dl className='w-full space-y-4'>
+        <dl className="w-full space-y-4">
           {faqs.map((faq, index) => {
             const headerId = `${baseId}-header-${index}`;
             const contentId = `${baseId}-content-${index}`;
@@ -70,36 +90,36 @@ const ContactFAQ = React.memo(() => {
             return (
               <div
                 key={index}
-                className='rounded-xl bg-white/50 p-4 sm:p-6 shadow-sm dark:bg-navy-light transition-all duration-300'
+                className="rounded-xl bg-white/50 p-4 sm:p-6 shadow-sm dark:bg-navy-light transition-all duration-300"
               >
                 <dt>
                   <button
-                    type='button'
+                    type="button"
                     id={headerId}
                     aria-controls={contentId}
                     aria-expanded={isOpen}
                     onClick={() => toggleFAQ(index)}
-                    className='flex w-full items-center justify-between cursor-pointer text-left'
+                    className="flex w-full items-center justify-between cursor-pointer text-left"
                   >
-                    <h3 className='text-base sm:text-lg font-semibold text-navy dark:text-[#FFFFF0]'>
+                    <h3 className="text-base sm:text-lg font-semibold text-navy dark:text-[#FFFFF0]">
                       {faq.question}
                     </h3>
                     <svg
                       className={`w-6 h-6 text-[#D4AF37] transform transition-transform duration-300 ${
-                        isOpen ? 'rotate-180' : 'rotate-0'
+                        isOpen ? "rotate-180" : "rotate-0"
                       }`}
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      xmlns='http://www.w3.org/2000/svg'
-                      aria-hidden='true'
-                      focusable='false'
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
                     >
                       <path
-                        d='M6 9l6 6 6-6'
-                        stroke='currentColor'
-                        strokeWidth='2'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
+                        d="M6 9l6 6 6-6"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
                   </button>
@@ -107,16 +127,16 @@ const ContactFAQ = React.memo(() => {
 
                 <dd
                   id={contentId}
-                  role='region'
+                  role="region"
                   aria-labelledby={headerId}
                   className={`text-sm sm:text-base text-navy/70 dark:text-[#FFFFF0]/70 overflow-hidden transition-[max-height,opacity,margin] duration-300 ease-in-out ${
                     isOpen
-                      ? 'max-h-96 opacity-100 mt-3'
-                      : 'max-h-0 opacity-0 mt-0'
+                      ? "max-h-96 opacity-100 mt-3"
+                      : "max-h-0 opacity-0 mt-0"
                   }`}
                 >
                   <div>
-                    <p className='leading-relaxed'>{faq.answer}</p>
+                    <p className="leading-relaxed">{faq.answer}</p>
                   </div>
                 </dd>
               </div>
@@ -128,5 +148,5 @@ const ContactFAQ = React.memo(() => {
   );
 });
 
-ContactFAQ.displayName = 'ContactFAQ';
+ContactFAQ.displayName = "ContactFAQ";
 export default ContactFAQ;
