@@ -1,65 +1,71 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React, { useState } from "react";
+import Link from "next/link";
+import { ApplicationForm, HowItWorks } from "@/components/partner";
 
 export default function VerificationPage() {
-    const [form, setForm] = useState({ name: '', email: '', age: '', message: '' });
-    const [submitted, setSubmitted] = useState(false);
-    const [errors, setErrors] = useState({});
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    age: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState({});
 
-    function handleChange(e) {
-        const { name, value } = e.target;
-        setForm(prev => ({ ...prev, [name]: value }));
-    }
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  }
 
-    function validate() {
-        const err = {};
-        if (!form.name.trim()) err.name = 'Name is required';
-        if (!form.email.trim()) err.email = 'Email is required';
-        if (!form.age || Number(form.age) <= 0) err.age = 'Valid age is required';
-        return err;
-    }
+  function validate() {
+    const err = {};
+    if (!form.name.trim()) err.name = "Name is required";
+    if (!form.email.trim()) err.email = "Email is required";
+    if (!form.age || Number(form.age) <= 0) err.age = "Valid age is required";
+    return err;
+  }
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        const err = validate();
-        setErrors(err);
-        if (Object.keys(err).length === 0) {
-            // For now we simulate a successful submission client-side
-            setSubmitted(true);
-        }
+  function handleSubmit(e) {
+    e.preventDefault();
+    const err = validate();
+    setErrors(err);
+    if (Object.keys(err).length === 0) {
+      // For now we simulate a successful submission client-side
+      setSubmitted(true);
     }
-    const steps = [
-        {
-            number: 1,
-            title: "Legal Review",
-            description: "Ownership, land title & permits."
-        },
-        {
-            number: 2,
-            title: "On-Site Validation",
-            description: "Digital mapping + inspection."
-        },
-        {
-            number: 3,
-            title: "Developer Authentication",
-            description: "RCCM/K-bis + track record."
-        },
-        {
-            number: 4,
-            title: "Escrow Readiness",
-            description: "Eligibility via partner banks."
-        },
-        {
-            number: 5,
-            title: "Final Verification Badge",
-            description: "Listings passing all checks receive “Verified by Q Homes.”"
-        },
-    ];
-    return (
-        <main className="max-w-7xl mx-auto px-4 py-10">
-            <h1 className="text-5xl font-bold text-center mb-4">Verified by Q Homes</h1>
+  }
+  const steps = [
+    {
+      number: 1,
+      title: "Legal Review",
+      description: "Ownership, land title & permits.",
+    },
+    {
+      number: 2,
+      title: "On-Site Validation",
+      description: "Digital mapping + inspection.",
+    },
+    {
+      number: 3,
+      title: "Developer Authentication",
+      description: "RCCM/K-bis + track record.",
+    },
+    {
+      number: 4,
+      title: "Escrow Readiness",
+      description: "Eligibility via partner banks.",
+    },
+    {
+      number: 5,
+      title: "Final Verification Badge",
+      description: "Listings passing all checks receive “Verified by Q Homes.”",
+    },
+  ];
+  return (
+    <main className="max-w-7xl mx-auto px-4 ">
+      {/* <h1 className="text-5xl font-bold text-center mb-4">Verified by Q Homes</h1>
 
             <p className="text-charcoal-600 mb-6 text-center max-w-xl mx-auto">
                 Every property listed on Q Homes goes through a digital and physical verification protocol designed by Q Global Living.
@@ -151,7 +157,9 @@ export default function VerificationPage() {
                         </div>
                     </form>
                 )}
-            </section>
-        </main>
-    );
+            </section> */}
+      <HowItWorks />
+      <ApplicationForm />
+    </main>
+  );
 }
