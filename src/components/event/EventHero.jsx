@@ -4,8 +4,8 @@ import { memo } from 'react';
 import CountdownTimer from './CountdownTimer';
 
 const EventHero = memo(({ translations, countdownTranslations }) => {
-  // Set event date: October 26, 2026 at 7:00 PM GMT
-  const eventDate = new Date('2026-10-26T19:00:00Z');
+  // Set event date: October 26, 2025 at 7:00 PM GMT
+  const eventDate = new Date('2025-12-26T19:00:00Z');
 
   return (
     <div className='relative bg-linear-to-br from-[#1e3a5f] via-[#2d5078] to-[#3a5a7a] rounded-2xl overflow-hidden'>

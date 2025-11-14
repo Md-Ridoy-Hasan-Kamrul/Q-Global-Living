@@ -35,7 +35,7 @@ export default function FinalCta({ locale }) {
             <span>{t('finalCta.browseHomes')}</span>
           </Link>
           <Link
-            href={`/${locale}/services`}
+            href={`/${locale}/concierge`}
             className='group flex items-center justify-center gap-2 w-full sm:w-auto h-12 sm:h-14 px-6 sm:px-8 rounded-lg border-2 border-primary bg-transparent text-primary text-sm lg:text-base font-bold transition-all hover:bg-primary/10 hover:shadow-lg hover:scale-105 active:scale-100'
           >
             <MessageCircle className='w-5 h-5' />
