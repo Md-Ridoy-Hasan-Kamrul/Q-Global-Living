@@ -1853,5 +1853,28 @@
     "Actions": "Actions",
     "LastUpdated": "Dernière mise à jour",
     "NoProjectsFound": "Aucun projet trouvé"
+  },
+  "Verification": {
+    "HowItWorksTitle": "Comment être vérifié en 5 étapes simples",
+    "step1": {
+      "title": "Examen juridique",
+      "description": "Propriété, titre foncier et permis de développement."
+    },
+    "step2": {
+      "title": "Validation sur site",
+      "description": "Cartographie numérique et inspection en personne."
+    },
+    "step3": {
+      "title": "Authentification du promoteur",
+      "description": "Enregistrement commercial (RCCM/K-bis) et historique des projets."
+    },
+    "step4": {
+      "title": "Préparation de l'entiercement",
+      "description": "Éligibilité aux transactions sécurisées via les banques partenaires."
+    },
+    "step5": {
+      "title": "Badge de vérification final",
+      "description": "Seules les annonces qui passent toutes les vérifications reçoivent le sceau « Vérifié par Q Homes »."
+    }
   }
 }

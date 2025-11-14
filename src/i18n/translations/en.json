@@ -615,41 +615,41 @@
       "notificationSubtitle": "Here are your latest property alerts and updates.",
       "markallRead": "Mark all as read",
       "tickets": " Support Tickets",
-      "searchProperties":"Search properties...",
+      "searchProperties": "Search properties...",
       "addProperty": "Add Property",
-      "SavedSearches":{
+      "SavedSearches": {
         "title": "Saved Searches and Settings",
-        "subtitle":"Manage Your Saved Property alerts, enable or disable notifications, and keep your preferences organized efficiently",
+        "subtitle": "Manage Your Saved Property alerts, enable or disable notifications, and keep your preferences organized efficiently",
         "noSavedSearches": "No saved searches yet. Start searching to save your preferences!",
         "yourSavedSearches": "Your Saved Searches",
-        "resetButton":"Reset to Default",
-        "saveChanges":"Save Changes"
+        "resetButton": "Reset to Default",
+        "saveChanges": "Save Changes"
       },
-      "AppointmentTable":{
-        "id":"ID",
-        "Name":"Name",
-        "email":"Email",
-        "type":"Type",
-       
-        "date":"Date",
-        "status":"Status",
-        "actions":"Actions"
+      "AppointmentTable": {
+        "id": "ID",
+        "Name": "Name",
+        "email": "Email",
+        "type": "Type",
+
+        "date": "Date",
+        "status": "Status",
+        "actions": "Actions"
       },
-      "supportTicket":{
+      "supportTicket": {
         "title": "Support Tickets",
-        "subtitle":"Manage all your support requests in one place",
-        "totalTickets":"Total Tickets",
-        "openTicket":"Open ",
-        "inProgress":"In Progress",
-        "resolved":"Resolved",
-        "searchTickets":"Search tickets...",
-        "createTicket":"Create Ticket",
-        "id":"ID",
-        "subject":"Subject",
-        "property":"Property",
-        "replies":"Replies",
-        "created":"Created At",
-        "Actions":"Actions"
+        "subtitle": "Manage all your support requests in one place",
+        "totalTickets": "Total Tickets",
+        "openTicket": "Open ",
+        "inProgress": "In Progress",
+        "resolved": "Resolved",
+        "searchTickets": "Search tickets...",
+        "createTicket": "Create Ticket",
+        "id": "ID",
+        "subject": "Subject",
+        "property": "Property",
+        "replies": "Replies",
+        "created": "Created At",
+        "Actions": "Actions"
       },
       "personalDetails": {
         "title": "Personal Details",
@@ -1856,7 +1856,30 @@
     "Revenue": "Revenue",
     "Status": "Status",
     "Actions": "Actions",
-    "LastUpdated" : "Last Updated",
+    "LastUpdated": "Last Updated",
     "NoProjectsFound": "No Projects Found"
+  },
+  "Verification": {
+    "HowItWorksTitle": "How to Get Verified in 5 Simple Steps",
+    "step1": {
+      "title": "Legal Review",
+      "description": "Ownership, land title, and development permits."
+    },
+    "step2": {
+      "title": "On-Site Validation",
+      "description": "Digital mapping and in-person inspection."
+    },
+    "step3": {
+      "title": "Developer Authentication",
+      "description": "Business registration (RCCM/K-bis) and project track record."
+    },
+    "step4": {
+      "title": "Escrow Readiness",
+      "description": "Eligibility for secure transactions via partner banks."
+    },
+    "step5": {
+      "title": "Final Verification Badge",
+      "description": "Only listings that pass all checks receive the “Verified by Q Homes” seal."
+    }
   }
 }
