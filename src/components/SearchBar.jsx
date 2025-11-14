@@ -45,7 +45,7 @@ export default function SearchBar({ locale = 'en', onSearch }) {
 
   return (
     <section className='relative z-10 -mt-20 sm:-mt-13 px-4 sm:px-6'>
-      <div className='mx-auto max-w-6xl rounded-2xl bg-[#F5F3EF] dark:bg-charcoal/95 p-4 sm:p-6 shadow-xm border border-gray-200'>
+      <div className='mx-auto max-w-6xl rounded-2xl bg-[#F5F3EF] dark:bg-background-dark p-4 sm:p-6 shadow-xm border dark:border-gray-900 border-gray-200'>
         {/* Mobile: Stack filters vertically */}
         <div className='block lg:hidden space-y-3'>
           {/* Primary filters always visible */}
