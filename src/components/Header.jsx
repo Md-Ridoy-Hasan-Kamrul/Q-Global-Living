@@ -177,7 +177,7 @@ function Header({ locale }) {
 
         {/* Desktop Navigation - Semantic HTML */}
         <nav
-          className="hidden md:flex items-center gap-2 lg:gap-4"
+          className="hidden lg:flex items-center gap-2 lg:gap-4"
           aria-label="Main navigation"
         >
           {navLinks.map((link) => (

@@ -81,7 +81,7 @@ const ProfileDropDown = () => {
           {isOnDashboard ? (
             <Link
               href={`/${locale}`}
-              className='flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-[#f6efcb] dark:hover:bg-[#1A2B42] hover:text-[#C5A572] rounded-lg transition-all duration-150 group'
+              className='flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-[#f6efcb] dark:hover:bg-[#1A2B42] rounded-lg transition-all duration-150 group'
             >
               <Home className='w-5 h-5 group-hover:scale-110 transition-transform' />
               <span>Home</span>

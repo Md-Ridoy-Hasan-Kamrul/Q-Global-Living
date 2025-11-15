@@ -32,7 +32,7 @@ export default function DiasporaCta({ locale }) {
 
             {/* CTA Button */}
             <Link
-              href={`/${locale}/contact`}
+              href={`/${locale}/diaspora`}
               className='group flex items-center justify-center gap-2 h-12 sm:h-14 px-6 sm:px-8 rounded-lg bg-primary dark:bg-white text-white dark:text-charcoal text-sm lg:text-base font-bold transition-all hover:scale-105 hover:shadow-xl active:scale-100 shrink-0 w-full md:w-auto'
             >
               <span>{t('diaspora.cta')}</span>

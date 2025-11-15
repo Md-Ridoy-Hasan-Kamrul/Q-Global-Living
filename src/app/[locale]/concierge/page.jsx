@@ -14,6 +14,7 @@ import {
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/i18n';
+import Link from 'next/link';
 
 export default function ConciergePage() {
   const { locale } = useLanguage();
@@ -62,7 +63,7 @@ export default function ConciergePage() {
       {/* Hero Section */}
       <section className='w-full' aria-labelledby='hero-title'>
         <div
-          className='flex min-h-[420px] sm:min-h-[480px] md:min-h-[520px] flex-col gap-5 md:gap-6 bg-cover bg-center bg-no-repeat rounded-xl md:rounded-2xl items-center justify-center p-6 md:p-8 lg:p-10 text-center'
+          className='flex min-h-[420px] sm:min-h-[480px] flex-col gap-5 md:gap-6 bg-cover bg-center bg-no-repeat rounded-xl md:rounded-2xl items-center justify-center p-6 md:p-8 lg:p-10 text-center'
           style={{
             backgroundImage: `linear-gradient(rgba(10, 25, 49, 0.65) 0%, rgba(10, 25, 49, 0.85) 100%), url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&auto=format&fit=crop")`,
           }}
@@ -79,18 +80,12 @@ export default function ConciergePage() {
               {t('concierge.hero.subtitle')}
             </p>
             <div className='flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-stretch sm:items-center mt-2'>
-              <button
+              <Link href={'/verification'}
                 className='w-full sm:w-auto bg-primary hover:bg-primary-dark text-charcoal font-semibold px-6 md:px-8 lg:px-10 py-3 md:py-3.5 rounded-lg transition-all duration-200 text-sm lg:text-base focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
                 aria-label='Book a consultation with our concierge team'
               >
-                {t('concierge.hero.bookConsultation')}
-              </button>
-              <button
-                className='w-full sm:w-auto bg-transparent border-2 border-primary hover:bg-primary/10 text-primary font-semibold px-6 md:px-8 lg:px-10 py-3 md:py-3.5 rounded-lg transition-all duration-200 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
-                aria-label='Talk to a concierge specialist'
-              >
                 {t('concierge.hero.talkToConcierge')}
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -243,8 +238,8 @@ export default function ConciergePage() {
                     </ul>
                   </div>
                   <div className='mt-auto pt-4'>
-                    <button
-                      className={`w-full text-center text-sm md:text-base font-medium px-5 py-2.5 md:py-3 rounded-lg transition-all duration-200 ${
+                    <Link href={'/verification'}
+                      className={`w-full block text-center text-sm md:text-base font-medium px-5 py-2.5 md:py-3 rounded-lg transition-all duration-200 ${
                         pkg.isPremium
                           ? 'bg-[#D1B156] text-white hover:bg-[#C4A54D] shadow-sm'
                           : 'bg-primary/20 text-charcoal hover:bg-primary/30'
@@ -252,7 +247,7 @@ export default function ConciergePage() {
                       aria-label={`Choose ${pkg.name} package`}
                     >
                       Choose Plan
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </article>
@@ -354,6 +349,7 @@ export default function ConciergePage() {
 
       {/* Ready to Make Your Move Section */}
       <section
+      id='concierge-form'
         className=' bg-background-light rounded-xl md:rounded-2xl'
         aria-labelledby='contact-title'
       >
