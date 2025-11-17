@@ -358,7 +358,7 @@ export default function ConciergePage() {
           <div className='order-2 lg:order-1'>
             <div className='relative h-80 sm:h-[400px] md:h-[480px] lg:h-[580px] rounded-2xl overflow-hidden shadow-xl'>
               <Image
-                src='/concierge/logo.png'
+                src='/concierge/contact.jpg'
                 alt="Modern luxury home in Côte d'Ivoire with contemporary design"
                 fill
                 className='object-cover'

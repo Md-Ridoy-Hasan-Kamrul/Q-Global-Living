@@ -27,7 +27,7 @@ export function PartnerCTA() {
         {t('rent.cta.partnerSubtitle')}
       </p>
       <Link
-        href='/contact'
+        href='/partner-verification'
         className='inline-flex mt-5 sm:mt-6 min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 sm:h-12 px-5 sm:px-6 bg-primary text-background-dark text-sm sm:text-base font-bold leading-normal tracking-wide hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
         aria-label='Become a partner with Q Homes'
       >
@@ -70,7 +70,7 @@ export function FinalCTA() {
             {t('rent.cta.exploreButton')}
           </Link>
           <Link
-            href='/services'
+            href='/concierge'
             className='inline-flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 sm:h-12 px-5 sm:px-6 bg-white/20 text-white text-sm sm:text-base font-bold leading-normal tracking-wide border border-white/50 hover:bg-white/30 transition-colors backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2'
           >
             {t('rent.cta.conciergeButton')}
