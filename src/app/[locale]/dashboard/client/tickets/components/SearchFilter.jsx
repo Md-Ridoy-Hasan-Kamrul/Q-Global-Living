@@ -27,10 +27,10 @@ export default function SearchFilter({ searchTerm, setSearchTerm, filterStatus, 
                     aria-label="Filter tickets by status"
                     className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
                 >
-                    <option value="all">All Status</option>
-                    <option value="open">Open</option>
-                    <option value="in_progress">In Progress</option>
-                    <option value="resolved">Resolved</option>
+                    <option value="all">{t("dashboard.client.supportTicket.AllStatus")}</option>
+                    <option value="open">{t("dashboard.client.supportTicket.Open")}</option>
+                    <option value="in_progress">{t("dashboard.client.supportTicket.InProgress")}</option>
+                    <option value="resolved">{t("dashboard.client.supportTicket.Resolved")}</option>
                 </select>
                 <button
                     type="button"
