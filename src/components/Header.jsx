@@ -189,7 +189,7 @@ function Header({ locale }) {
                 key={link.href}
                 className={`text-sm font-medium hover:text-primary dark:hover:text-primary whitespace-nowrap rounded-md px-3 py-2 ${
                   isActive
-                    ? "border-2 rounded-md border-primary"
+                    ? "border-2 rounded-md border-primary text-primary"
                     : "text-charcoal dark:text-soft-grey focus:outline-none border-transparent"
                 }`}
                 href={link.href}

@@ -36,13 +36,12 @@ export default function FeaturedCollections({ locale, collections }) {
               href={`/${locale}${collection.href}`}
               className='group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300'
             >
-              <div className='relative aspect-3/4 sm:aspect-4/5 w-full overflow-hidden'>
+              <div className='relative aspect-5/4 sm:aspect-4/5 w-full overflow-hidden'>
                 <Image
                   className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-110'
                   src={collection.imageUrl}
                   alt={collection.alt ?? collection.title ?? 'Collection image'}
-                  width={400}
-                  height={500}
+                  fill
                   sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw'
                   priority={collection.id <= 2}
                 />
