@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -8,6 +8,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import { getTranslation } from "@/i18n";
 import { useAuth } from "@/contexts/AuthContext";
 import ProfileDropDown from "./ProfileDropDown";
+import { usePathname } from "next/navigation";
 
 /**
  * Production-grade Header Component
@@ -26,6 +27,7 @@ import ProfileDropDown from "./ProfileDropDown";
 function Header({ locale }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [blogDropdownOpen, setBlogDropdownOpen] = useState(false);
+  const pathname = usePathname();
 
   // Memoize translation function to prevent re-creation
   const translations = useMemo(() => getTranslation(locale), [locale]);
@@ -150,7 +152,7 @@ function Header({ locale }) {
   const handleLogOut = async () => {
     await logout();
     window.location.reload();
-  }
+  };
 
   return (
     <header
@@ -180,20 +182,27 @@ function Header({ locale }) {
           className="hidden lg:flex items-center gap-2 lg:gap-4"
           aria-label="Main navigation"
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              className="text-sm font-medium text-charcoal dark:text-soft-grey hover:text-primary dark:hover:text-primary transition-colors whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary rounded-md px-3 py-2"
-              href={link.href}
-              aria-label={link.ariaLabel}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname.startsWith(link.href);
+            return (
+              <Link
+                key={link.href}
+                className={`text-sm font-medium hover:text-primary dark:hover:text-primary whitespace-nowrap rounded-md px-3 py-2 ${
+                  isActive
+                    ? "border-2 rounded-md border-primary"
+                    : "text-charcoal dark:text-soft-grey focus:outline-none border-transparent"
+                }`}
+                href={link.href}
+                aria-label={link.ariaLabel}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-3">
           <LanguageSwitcher currentLocale={locale} />
           <Link
             href={`/${locale}/event`}
@@ -213,12 +222,10 @@ function Header({ locale }) {
               {t("nav.login") || "Sign In"}
             </Link>
           )}
-
-
         </div>
 
         {/* Mobile Actions */}
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex lg:hidden items-center gap-2">
           <LanguageSwitcher currentLocale={locale} />
           <button
             onClick={handleMobileMenuToggle}
@@ -241,7 +248,7 @@ function Header({ locale }) {
       {mobileMenuOpen && (
         <div
           id="mobile-menu"
-          className="md:hidden fixed inset-x-0 top-[76px] max-h-[calc(100vh-76px)] bg-background-light dark:bg-background-dark z-40 overflow-y-auto border-b border-primary/20 shadow-lg animate-slide-up"
+          className="lg:hidden fixed inset-x-0 top-[76px] max-h-[calc(100vh-76px)] bg-background-light dark:bg-background-dark z-40 overflow-y-auto border-b border-primary/20 shadow-lg animate-slide-up"
           role="navigation"
           aria-label="Mobile navigation"
         >
@@ -270,12 +277,17 @@ function Header({ locale }) {
                 <div className="space-y-3">
                   <Link
                     className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
-                    href={`/${locale}/dashboard/${user?.role || 'admin'}`}
+                    href={`/${locale}/dashboard/${user?.role || "admin"}`}
                     onClick={handleMobileMenuClose}
                   >
                     <span>Dashboard</span>
                   </Link>
-                  <button onClick={handleLogOut} className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary">Log out</button>
+                  <button
+                    onClick={handleLogOut}
+                    className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    Log out
+                  </button>
                 </div>
               ) : (
                 <Link
@@ -287,7 +299,6 @@ function Header({ locale }) {
                   {t("nav.login") || "Sign In"}
                 </Link>
               )}
-
             </div>
           </nav>
         </div>
