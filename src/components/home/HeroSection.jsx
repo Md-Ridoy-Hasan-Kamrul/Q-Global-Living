@@ -95,7 +95,7 @@ export default function HeroSection({ locale }) {
       </video>
 
       {/* Overlay */}
-      <div className='absolute inset-0 bg-linear-to-b from-black/60 via-black/60 to-black/60 z-2' />
+      <div className='absolute inset-0 bg-linear-to-b from-black/30 via-black/60 to-black/30 z-2' />
 
       {/* Content */}
       <div className='relative z-10 max-w-5xl mx-auto w-full px-4'>

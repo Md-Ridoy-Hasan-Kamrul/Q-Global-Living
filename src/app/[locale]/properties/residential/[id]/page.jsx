@@ -78,7 +78,7 @@ const PropertyDetailPage = () => {
           }')`,
         }}
       >
-        <div className="absolute inset-0 bg-linear-to-b from-black/40 to-black/60" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/35 to-black/35" />
         <div className=" justify-start items-start w-full">
           <div className="relative max-w-7xl mx-auto px-2 lg:px-6 h-full flex flex-col items-start sm:pb-12">
             <h1 className="text-2xl lg:text-4xl font-bold text-white mb-2 text-center sm:text-left">

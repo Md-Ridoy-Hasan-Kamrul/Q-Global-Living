@@ -31,7 +31,7 @@ export default function RentHero() {
         />
         {/* Gradient Overlay */}
         <div
-          className='absolute inset-0 bg-linear-to-b from-gray-900/40 via-gray-900/60 to-gray-900/70'
+          className='absolute inset-0 bg-linear-to-b from-gray-900/35 to-gray-900/35'
           aria-hidden='true'
         />
       </div>
