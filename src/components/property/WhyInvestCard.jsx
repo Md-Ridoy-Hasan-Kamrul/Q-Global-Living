@@ -13,7 +13,7 @@
  */
 export default function WhyInvestCard({ icon, title, description }) {
   return (
-    <div className='flex flex-col items-center gap-3 text-center border border-[#d4af37]/20 shadow-sm p-5 rounded-lg'>
+    <div className='flex flex-col items-center gap-3 bg-white/50 text-center border border-[#d4af37]/20 shadow-sm p-5 rounded-lg'>
       {/* Icon Container */}
       <div
         className='flex items-center justify-center size-14 bg-accent/20 rounded-full text-accent'

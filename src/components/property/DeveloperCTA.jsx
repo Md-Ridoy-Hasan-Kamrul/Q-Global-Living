@@ -2,6 +2,7 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/i18n';
+import Link from 'next/link';
 
 /**
  * DeveloperCTA Component
@@ -21,7 +22,7 @@ export default function DeveloperCTA({ onListProject }) {
   };
 
   return (
-    <section className='w-full my-3.5 sm:my-6 lg:my-16'>
+    <section className='w-full my-3 lg:mt-10'>
       <div
         className='flex flex-col md:flex-row lg:min-h-[280px] gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-between p-8 md:p-12 text-center md:text-left'
         style={{
@@ -41,7 +42,8 @@ export default function DeveloperCTA({ onListProject }) {
         </div>
 
         {/* CTA Button */}
-        <button
+        <Link
+        href={'/partner-verification'}
           onClick={handleClick}
           className='flex min-w-40 max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 lg:h-12 lg:px-5 bg-accent text-navy text-xs sm:text-sm lg:text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 whitespace-nowrap transition-opacity'
           aria-label={t('newDevelopments.developerCta.button')}
@@ -49,7 +51,7 @@ export default function DeveloperCTA({ onListProject }) {
           <span className='truncate'>
             {t('newDevelopments.developerCta.button')}
           </span>
-        </button>
+        </Link>
       </div>
     </section>
   );

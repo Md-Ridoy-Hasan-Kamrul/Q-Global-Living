@@ -30,7 +30,7 @@ function PropertyHeader({
     <div className='space-y-2'>
       {/* Title and Status Badge */}
       <div className='flex items-start gap-2'>
-        <h1 className='text-2xl font-bold text-gray-900 leading-tight flex-1'>
+        <h1 className='text-2xl  font-bold text-gray-900 leading-tight flex-1'>
           {title}
         </h1>
         {status && (
@@ -84,7 +84,7 @@ function PropertyHeader({
           {t('buy.property.priceLabel')}
         </p>
         <div className='flex flex-col'>
-          <p className='text-3xl md:text-4xl font-bold text-yellow-600'>
+          <p className='text-3xl xl:text-4xl font-bold text-yellow-600'>
             {formatPrice(price)} XOF
           </p>
           {priceUSD && (
