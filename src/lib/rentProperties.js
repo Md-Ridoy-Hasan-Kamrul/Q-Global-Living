@@ -4,7 +4,7 @@
 export const RENT_PROPERTIES = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800',
+    image: '/buy-rent/balcony.jpg',
     imageAlt: 'Modern apartment exterior with balcony',
     location: 'Abidjan, Cocody',
     title: 'Modern Apartment in Cocody',
@@ -20,6 +20,7 @@ export const RENT_PROPERTIES = [
   {
     id: 2,
     image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800',
+    // separate image
     imageAlt: 'Luxury seaside villa with swimming pool',
     location: 'Assinie-Mafia',
     title: 'Seaside Villa in Assinie',
@@ -35,6 +36,7 @@ export const RENT_PROPERTIES = [
   {
     id: 3,
     image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800',
+    // separate image
     imageAlt: 'Chic loft apartment with high ceilings',
     location: 'Abidjan, Plateau',
     title: 'Chic Loft in Plateau',
@@ -50,6 +52,7 @@ export const RENT_PROPERTIES = [
   {
     id: 4,
     image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',
+    // separate image
     imageAlt: 'Elegant apartment with modern finishes',
     location: 'Yamoussoukro',
     title: 'Elegant Residence in Yamoussoukro',
@@ -64,7 +67,7 @@ export const RENT_PROPERTIES = [
   },
   {
     id: 5,
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800',
+    image: '/buy-rent/family.jpg',
     imageAlt: 'Spacious family home with garden',
     location: 'Abidjan, Marcory',
     title: 'Family Home in Marcory',
@@ -80,6 +83,7 @@ export const RENT_PROPERTIES = [
   {
     id: 6,
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800',
+    // separate image
     imageAlt: 'Contemporary studio apartment',
     location: 'Abidjan, Zone 4',
     title: 'Contemporary Studio in Zone 4',
@@ -94,7 +98,7 @@ export const RENT_PROPERTIES = [
   },
   {
     id: 7,
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800',
+    image: '/buy-rent/luxuryColody.jpg',
     imageAlt: 'Luxury penthouse with city views',
     location: 'Abidjan, Cocody',
     title: 'Luxury Penthouse in Cocody',
@@ -110,6 +114,7 @@ export const RENT_PROPERTIES = [
   {
     id: 8,
     image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800',
+    // separate image
     imageAlt: 'Cozy apartment near beach',
     location: 'Assinie-Mafia',
     title: 'Beachfront Apartment in Assinie',
@@ -125,6 +130,7 @@ export const RENT_PROPERTIES = [
   {
     id: 9,
     image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800',
+    // separate image
     imageAlt: 'Modern villa with garden',
     location: 'Yamoussoukro',
     title: 'Garden Villa in Yamoussoukro',
@@ -139,7 +145,7 @@ export const RENT_PROPERTIES = [
   },
   {
     id: 10,
-    image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800',
+    image: '/buy-rent/modernTown.jpg',
     imageAlt: 'Spacious townhouse',
     location: 'Abidjan, Marcory',
     title: 'Modern Townhouse in Marcory',
@@ -155,6 +161,7 @@ export const RENT_PROPERTIES = [
   {
     id: 11,
     image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800',
+    // separate image
     imageAlt: 'Charming bungalow',
     location: 'Abidjan, Riviera',
     title: 'Charming Bungalow in Riviera',
@@ -169,7 +176,7 @@ export const RENT_PROPERTIES = [
   },
   {
     id: 12,
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800',
+    image: '/buy-rent/plateau.jpg',
     imageAlt: 'Executive apartment',
     location: 'Abidjan, Plateau',
     title: 'Executive Suite in Plateau',

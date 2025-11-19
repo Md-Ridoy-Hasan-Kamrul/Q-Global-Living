@@ -23,14 +23,14 @@ function RentalOverview({ rental }) {
   } = rental;
 
   return (
-    <div className='bg-white border border-gray-200 rounded-lg p-6'>
+    <div className='bg-white/50 border border-[#f6efcb] shadow-sm rounded-lg p-6'>
       <h3 className='text-lg font-semibold text-gray-900 mb-4'>
         {t('buy.property.rentalOverview')}
       </h3>
 
       <div className='space-y-4'>
         {/* Rental Duration */}
-        <div className='flex items-start justify-between pb-3 border-b border-gray-200'>
+        <div className='flex items-start justify-between lg:text-sm xl:text-base pb-3 border-b border-gray-200'>
           <span className='text-gray-600'>
             {t('buy.property.rentalDuration')}
           </span>
@@ -40,13 +40,13 @@ function RentalOverview({ rental }) {
         </div>
 
         {/* Furnishing */}
-        <div className='flex items-start justify-between pb-3 border-b border-gray-200'>
+        <div className='flex items-start justify-between lg:text-sm xl:text-base pb-3 border-b border-gray-200'>
           <span className='text-gray-600'>{t('buy.property.furnishing')}</span>
           <span className='font-medium text-gray-900'>{furnishing}</span>
         </div>
 
         {/* Deposit Terms */}
-        <div className='flex items-start justify-between'>
+        <div className='flex items-start justify-between lg:text-sm xl:text-base'>
           <span className='text-gray-600'>{t('buy.property.terms')}</span>
           <span className='font-medium text-gray-900 text-right'>
             {deposit}
@@ -55,7 +55,7 @@ function RentalOverview({ rental }) {
       </div>
 
       {/* Talk to Concierge Button */}
-      <button className='mt-6 w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center gap-2'>
+      <button className='mt-6 w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-2.5 px-4 text-sm xl:text-base rounded-lg transition-colors flex items-center justify-center gap-2'>
         <svg
           className='w-5 h-5'
           fill='none'

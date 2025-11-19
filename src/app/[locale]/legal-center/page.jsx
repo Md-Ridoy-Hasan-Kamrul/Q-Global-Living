@@ -1,44 +1,46 @@
+"use client";
 import React from "react";
 import LegalCenterComponents from "@/components/legal_center/LegalCenterComponents";
-
-const legalDocuments = [
-  {
-    title: "Terms & Conditions",
-    description:
-      "Outlines the rules and guidelines for using our services and platform.",
-    iconName: "description",
-    href: "/legal/terms",
-  },
-  {
-    title: "Privacy Policy",
-    description: "Details how we collect, use, and protect your personal data.",
-    iconName: "shield_lock",
-    href: "/legal/privacy",
-  },
-  {
-    title: "Cookie Policy",
-    description:
-      "Explains how we use cookies to enhance your browsing experience.",
-    iconName: "cookie",
-    href: "/legal/cookies",
-  },
-  {
-    title: "Accessibility Statement",
-    description:
-      "Our commitment to ensuring our platform is usable by everyone.",
-    iconName: "accessibility_new",
-    href: "/legal/accessibility",
-  },
-  {
-    title: "Legal Disclaimer",
-    description:
-      "Important information about limitations of liability and platform use.",
-    iconName: "gavel",
-    href: "/legal/disclaimer",
-  },
-];
+import { useTranslation } from "@/i18n";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function LegalCenter() {
+  const { locale } = useLanguage();
+
+  const { t } = useTranslation(locale);
+
+  const legalDocuments = [
+    {
+      title: t("LegalCenter.Terms.title"),
+      description: t("LegalCenter.Terms.description"),
+      iconName: "description",
+      href: "/terms-conditions",
+    },
+    {
+      title: t("LegalCenter.PrivacyPolicy.title"),
+      description: t("LegalCenter.PrivacyPolicy.description"),
+      iconName: "shield_lock",
+      href: "/privacy-policy",
+    },
+    {
+      title: t("LegalCenter.CookiePolicy.title"),
+      description: t("LegalCenter.CookiePolicy.description"),
+      iconName: "cookie",
+      href: "/cookie-policy",
+    },
+    {
+      title: t("LegalCenter.Partner.title"),
+      description: t("LegalCenter.Partner.description"),
+      iconName: "accessibility_new",
+      href: "/partner-directory",
+    },
+    {
+      title: t("LegalCenter.ConciergeService.title"),
+      description: t("LegalCenter.ConciergeService.description"),
+      iconName: "gavel",
+      href: "/concierge-service",
+    },
+  ];
   return (
     <>
       <LegalCenterComponents legalDocuments={legalDocuments} />

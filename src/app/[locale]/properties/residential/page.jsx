@@ -38,7 +38,7 @@ export default function ResidentialPage() {
       priceXOF: 85000000,
       priceUSD: 140000,
       image:
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuC_NsSUqsH956hUra2tT1odu-A12CS6QWgV6UpixeqbBG9Pgk_7Oy9LKqEeUqYmAOtpl_76rcDv4KzGoE4briLdO7cmamDp880BBYxTdcjVXtGiZTZMovfPMKmdW4HQHKO8FNVeMDRY-w23I_Y6a3WrDu66kMIAAu26Q0XjQ1-H5m50kbYDrNdxtkE4lsvRCg17IMg9HIeluImdaiQ4VqBxDxJ16sqffXsA2IleAp21qIFKUH24Ax3sF0-HuRXlNItOdAWQd0rilkU',
+        '/new-development/azura.jpg',
       verified: true,
       escrowEligible: true,
     },
@@ -53,7 +53,7 @@ export default function ResidentialPage() {
       priceXOF: 120000000,
       priceUSD: 197000,
       image:
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuBr5qEUFUC4wNYz4DAi4fGtLd6sBfGfIGFpBZuO0ITOB7F5qKfCvgJwLSJPq5v3PcUecqPZFQrDSWKroLzxFRzGG6l-9-FmdnpvBYfWjBGuwIpnz1TavqDhlgZX1pLnz95390zm0udEspCpzxBPGqR8mlzF-V6qpQGKfx7oNUC0DAmjUapj56R_--WjvgtFpFMagVHjioxbwgBP2p-DeXYgiIKHR4kWK2a-1nt2l5skFKpYGKxR4NbmtB4XghEsnueikFxggGo25t8',
+        '/new-development/pearl.jpg',
       verified: true,
       escrowEligible: false,
     },
@@ -68,7 +68,7 @@ export default function ResidentialPage() {
       priceXOF: 350000000,
       priceUSD: 575000,
       image:
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuAndvJ-0zmlCvziH-APxIWtuL3lME5f-2Uub1kTNi6sN30wM1lLPDKPNTkO0exezLup_5I_2PMtdO_5UdeDgwEXnJ0ghO4S-S6DItzkhetbJYq8BxrJF6RqPc8MBrOrEaAy0t8U6c4CPRVEzd6_ISEouptWubL4kPOpJiAW6MkGZjBZMSGtMsEmku0daqn_OvfSQPzgAguA0jYWkEXauOzvLGysmMPcw9zeQwpepZV07EprKrHXu0m40ME5x5-61iRvboEZrQiFqX8',
+        '/new-development/last.png',
       verified: true,
       escrowEligible: true,
     },
@@ -166,12 +166,12 @@ export default function ResidentialPage() {
         <div
           className='flex sm:min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-6 text-center'
           style={{
-            backgroundImage: `linear-gradient(rgba(10, 25, 49, 0.6) 0%, rgba(10, 25, 49, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9OD-HKYMCUrHYqizPl6bZVRzjkCy4ioyz484ZdQU0212i6RhwyfXTHRWEgiFpL0cLaTwyJNcJ0jSLl2EJyNToBOLg-JxeaLzyZOWlVb8saYJYGBzFOFJIt3GgpCa9HGRmWcxJaqglsWkHwgVwVJz_TF0uHjDASh_quW1mQqfRvqBMLqzpBNBHDBefNUc5HA8BbIoAUvXd4fNObIkob6Y7wIhqEZpLUNZzi1SH2tC2LFMqeowpe_pj0gy6aSKEJF0yvYgTe4lg9Ko")`,
+            backgroundImage: `linear-gradient(rgba(10, 25, 49, 0.4) 0%, rgba(10, 25, 49, 0.3) 100%), url("/new-development/banner.png")`,
           }}
           role='banner'
         >
           <div className='flex flex-col gap-4 max-w-3xl'>
-            <h1 className='text-white text-2xl sm:text-3xl font-black leading-tight tracking-[-0.033em] lg:text-5xl'>
+            <h1 className='text-white font-black leading-tight tracking-[-0.033em] lg:text-5xl text-2xl sm:text-3xl'>
               {t('newDevelopments.hero.title')}
             </h1>
             <p className='text-gray-200 text-sm sm:text-base font-normal leading-normal lg:text-lg'>
@@ -216,7 +216,7 @@ export default function ResidentialPage() {
 
       {/* Why Invest Section */}
       <section
-        className='lg:my-16 my-4 py-6 sm:py-12 dark:bg-navy/20 rounded-xl'
+        className=' my-4 py-6 lg:py-17 dark:bg-navy/20 rounded-xl'
         aria-labelledby='why-invest'
       >
         <h2

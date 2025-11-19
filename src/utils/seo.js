@@ -25,7 +25,7 @@ export function generateMetadata(config) {
     alternateLanguages = [],
   } = config;
 
-  const siteName = "Q HOMES - Côte d'Ivoire Real Estate";
+  const siteName = "Q Global Living - Real Estate Platform";
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://qhomes.ci';
 
   return {
@@ -47,9 +47,9 @@ export function generateMetadata(config) {
       'verified listings',
       'escrow protection',
     ],
-    authors: [{ name: 'Q HOMES Team' }],
-    creator: 'Q HOMES',
-    publisher: 'Q HOMES',
+    authors: [{ name: 'Q Global Living Team' }],
+    creator: 'Q Global Living',
+    publisher: 'Q Global Living',
 
     // Open Graph
     openGraph: {
@@ -166,12 +166,12 @@ export function generateOrganizationStructuredData() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Q HOMES',
-    alternateName: "Q HOMES - Côte d'Ivoire Real Estate",
+    name: 'Q Global Living',
+    alternateName: "Q Global Living - Real Estate Platform",
     url: baseUrl,
     logo: `${baseUrl}/logo.png`,
     description:
-      'Your trusted gateway to buying, renting, and investing in Ivorian property.',
+      'Q Global Living is your trusted gateway to buying, renting, and investing in African property through our Q Homes platform.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Abidjan',

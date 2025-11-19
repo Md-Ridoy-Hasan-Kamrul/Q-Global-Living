@@ -66,14 +66,14 @@ export default function PropertyFeatures({ features }) {
   ];
 
   return (
-    <div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6'>
+    <div className='grid grid-cols-2 md:grid-cols-4  gap-4 md:gap-6'>
       {featureList.map((feature) => (
         <div
           key={feature.id}
-          className='flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg'
+          className='flex flex-col items-center text-center p-6  bg-white/80 border border-gray-100 rounded-lg'
         >
           <div className='mb-3'>{feature.icon}</div>
-          <p className='text-xl md:text-2xl font-bold text-gray-900'>
+          <p className='text-xl lg:text-2xl font-bold text-gray-900'>
             {feature.value || feature.label}
           </p>
           {feature.value !== '' && (

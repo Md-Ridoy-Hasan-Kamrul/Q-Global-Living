@@ -1,11 +1,14 @@
-// "use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useCallback, useMemo, memo } from "react";
-import { Menu, X } from "lucide-react";
+import { Heading1, LayoutDashboard, Menu, X } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { getTranslation } from "@/i18n";
+import { useAuth } from "@/contexts/AuthContext";
+import ProfileDropDown from "./ProfileDropDown";
+import { usePathname } from "next/navigation";
 
 /**
  * Production-grade Header Component
@@ -24,6 +27,7 @@ import { getTranslation } from "@/i18n";
 function Header({ locale }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [blogDropdownOpen, setBlogDropdownOpen] = useState(false);
+  const pathname = usePathname();
 
   // Memoize translation function to prevent re-creation
   const translations = useMemo(() => getTranslation(locale), [locale]);
@@ -142,6 +146,14 @@ function Header({ locale }) {
     return () => document.removeEventListener("keydown", handleEscape);
   }, [mobileMenuOpen]);
 
+  // got user from auth context
+  const { user, logout } = useAuth();
+
+  const handleLogOut = async () => {
+    await logout();
+    window.location.reload();
+  };
+
   return (
     <header
       className="sticky top-0 z-50 border-b border-solid border-primary/20 bg-background-light/95 backdrop-blur-md dark:bg-background-dark/95 shadow-sm"
@@ -167,30 +179,31 @@ function Header({ locale }) {
 
         {/* Desktop Navigation - Semantic HTML */}
         <nav
-          className="hidden md:flex items-center gap-2 lg:gap-4"
+          className="hidden lg:flex items-center gap-2 lg:gap-4"
           aria-label="Main navigation"
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              className="text-sm font-medium text-charcoal dark:text-soft-grey hover:text-primary dark:hover:text-primary transition-colors whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary rounded-md px-3 py-2"
-              href={link.href}
-              aria-label={link.ariaLabel}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname.startsWith(link.href);
+            return (
+              <Link
+                key={link.href}
+                className={`text-sm font-medium hover:text-primary dark:hover:text-primary whitespace-nowrap rounded-md px-3 py-2 ${
+                  isActive
+                    ? "border-2 rounded-md border-primary text-primary"
+                    : "text-charcoal dark:text-soft-grey focus:outline-none border-transparent"
+                }`}
+                href={link.href}
+                aria-label={link.ariaLabel}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-3">
-          <Link
-            href={`/${locale}/login`}
-            className="flex items-center justify-center h-10 px-4 rounded-lg border border-primary text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-white whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-            aria-label="Sign in to your account"
-          >
-            {t("nav.login") || "Sign In"}
-          </Link>
+        <div className="hidden lg:flex items-center gap-3">
+          <LanguageSwitcher currentLocale={locale} />
           <Link
             href={`/${locale}/event`}
             className="flex items-center justify-center h-10 px-4 rounded-lg bg-primary text-sm font-semibold text-white transition-all hover:bg-primary/90 hover:shadow-md whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
@@ -198,11 +211,21 @@ function Header({ locale }) {
           >
             {t("nav.listYourProperty")}
           </Link>
-          <LanguageSwitcher currentLocale={locale} />
+          {user ? (
+            <ProfileDropDown />
+          ) : (
+            <Link
+              href={`/${locale}/login`}
+              className="flex items-center justify-center h-10 px-4 rounded-lg border border-primary text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-white whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              aria-label="Sign in to your account"
+            >
+              {t("nav.login") || "Sign In"}
+            </Link>
+          )}
         </div>
 
         {/* Mobile Actions */}
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex lg:hidden items-center gap-2">
           <LanguageSwitcher currentLocale={locale} />
           <button
             onClick={handleMobileMenuToggle}
@@ -225,7 +248,7 @@ function Header({ locale }) {
       {mobileMenuOpen && (
         <div
           id="mobile-menu"
-          className="md:hidden fixed inset-x-0 top-[76px] max-h-[calc(100vh-76px)] bg-background-light dark:bg-background-dark z-40 overflow-y-auto border-b border-primary/20 shadow-lg animate-slide-up"
+          className="lg:hidden fixed inset-x-0 top-[76px] max-h-[calc(100vh-76px)] bg-background-light dark:bg-background-dark z-40 overflow-y-auto border-b border-primary/20 shadow-lg animate-slide-up"
           role="navigation"
           aria-label="Mobile navigation"
         >
@@ -243,14 +266,6 @@ function Header({ locale }) {
             ))}
             <div className="pt-4 border-t border-primary/20 space-y-3">
               <Link
-                href={`/${locale}/login`}
-                onClick={handleMobileMenuClose}
-                className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
-                aria-label="Sign in to your account"
-              >
-                {t("nav.login") || "Sign In"}
-              </Link>
-              <Link
                 href={`/${locale}/event`}
                 onClick={handleMobileMenuClose}
                 className="flex items-center justify-center w-full h-12 px-4 rounded-lg bg-primary text-base font-semibold text-white hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
@@ -258,6 +273,32 @@ function Header({ locale }) {
               >
                 {t("nav.listYourProperty")}
               </Link>
+              {user ? (
+                <div className="space-y-3">
+                  <Link
+                    className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                    href={`/${locale}/dashboard/${user?.role || "admin"}`}
+                    onClick={handleMobileMenuClose}
+                  >
+                    <span>Dashboard</span>
+                  </Link>
+                  <button
+                    onClick={handleLogOut}
+                    className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    Log out
+                  </button>
+                </div>
+              ) : (
+                <Link
+                  href={`/${locale}/login`}
+                  onClick={handleMobileMenuClose}
+                  className="flex items-center justify-center w-full h-12 px-4 rounded-lg border border-primary text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                  aria-label="Sign in to your account"
+                >
+                  {t("nav.login") || "Sign In"}
+                </Link>
+              )}
             </div>
           </nav>
         </div>

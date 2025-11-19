@@ -48,8 +48,11 @@ export default function RentDetailsPage() {
     images: [
       base.image,
       // add a couple of safe fallbacks for the gallery
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop",
+      '/buy-rent/khet.jpg',
+      '/buy-rent/villa.jpg',
+      '/buy-rent/homne.jpg',
+      '/buy-rent/night.jpg',
+      '/buy-rent/dogWoman.jpg',
     ],
     features: {
       bedrooms: base.bedrooms,
@@ -86,11 +89,11 @@ export default function RentDetailsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-neutral-900">
+    <main className="min-h-screen bg-background-light dark:bg-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-6 gap-3.5">
           {/* Left Content */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-2 space-y-3.5 lg:space-y-6">
             {/* Image Gallery */}
             <Suspense
               fallback={<div className="w-full h-96 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse" />}
@@ -99,15 +102,15 @@ export default function RentDetailsPage() {
             </Suspense>
 
             {/* Tabs (Overview / Features / Location / etc.) */}
-            <section className="bg-white dark:bg-card-dark rounded-lg shadow-sm p-6">
+            <section className="bg-white/50 dark:bg-card-dark rounded-lg shadow-sm p-6">
               <PropertyTabs property={mockProperty} />
             </section>
           </div>
 
           {/* Right Sidebar */}
-          <div className="lg:col-span-1 space-y-6">
-            <div className="sticky top-8 space-y-6">
-              <div className="bg-white dark:bg-card-dark rounded-lg shadow-sm p-6">
+          <div className="lg:col-span-1 lg:space-y-6 space-y-3.5">
+            <div className="sticky top-22 lg:space-y-6 space-y-3.5">
+              <div className="bg-white/50 border border-[#f6efcb] dark:bg-card-dark rounded-lg shadow-sm p-6">
                 <PropertyHeader
                   title={mockProperty.title}
                   location={mockProperty.location}
