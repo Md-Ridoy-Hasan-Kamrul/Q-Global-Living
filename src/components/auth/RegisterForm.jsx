@@ -1,5 +1,5 @@
 "use client";
- 
+
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -9,31 +9,31 @@ import Divider from './Divider';
 import QHomesLogo from './QHomesLogo';
 import { useTranslation } from '@/i18n';
 // Keep texts in English here; language switcher will be integrated later
- 
+
 const RegisterForm = () => {
     const pathname = usePathname();
-     const locale = pathname.split('/')[1] || 'en';
-      const { t } = useTranslation(locale);
- 
+    const locale = pathname.split('/')[1] || 'en';
+    const { t } = useTranslation(locale);
+
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
         password: '',
         confirmPassword: '',
     });
- 
+
     const [isLoading] = useState(false);
- 
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
- 
+
     const handleSubmit = (e) => {
         e.preventDefault();
         // Design-only: no submission logic here
     };
- 
+
     return (
         <div className="flex w-full flex-col items-center justify-center gap-4 rounded-xl bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm p-6 sm:p-8 shadow-2xl">
             <div className="flex flex-col items-center gap-2 pb-4">
@@ -45,50 +45,50 @@ const RegisterForm = () => {
                     {t('auth.register.subtitle')}
                 </p>
             </div>
- 
+
             <form onSubmit={handleSubmit} className="flex w-full flex-col items-stretch gap-4" noValidate>
                 <FormInput
                     label={t('auth.register.fullName')}
                     type="text"
                     name="fullName"
                     placeholder={t('auth.register.fullNamePlaceholder')}
-                    icon="person"
+                    icon="User"
                     value={formData.fullName}
                     onChange={handleChange}
                     required
                     disabled={isLoading}
                 />
- 
+
                 <FormInput
                     label={t('auth.register.email')}
                     type="email"
                     name="email"
                     placeholder={t('auth.register.emailPlaceholder')}
-                    icon="email"
+                    icon="Mail"
                     value={formData.email}
                     onChange={handleChange}
                     required
                     disabled={isLoading}
                 />
- 
+
                 <FormInput
                     label={t('auth.register.password')}
                     type="password"
                     name="password"
                     placeholder={t('auth.register.passwordPlaceholder')}
-                    icon="lock"
+                    icon="Lock"
                     value={formData.password}
                     onChange={handleChange}
                     required
                     disabled={isLoading}
                 />
- 
+
                 <FormInput
                     label={t('auth.register.confirmPassword')}
                     type="password"
                     name="confirmPassword"
                     placeholder={t('auth.register.confirmPasswordPlaceholder')}
-                    icon="lock"
+                    icon="Lock"
                     value={formData.confirmPassword}
                     onChange={handleChange}
                     required
@@ -105,12 +105,12 @@ const RegisterForm = () => {
                         />
                         <span className="leading-tight">
                             I agree to the{' '}
-                            <a href={`/${locale}/terms-conditions`} className="underline text-primary hover:text-primary/90">
+                            <Link href={`/${locale}/terms-conditions`} className="underline text-primary hover:text-primary/90">
                                 Terms &amp; Conditions
-                            </a>
+                            </Link>
                         </span>
                     </label>
- 
+
                     <label className="flex items-start gap-3 text-sm text-charcoal-700 dark:text-charcoal-300">
                         <input
                             type="checkbox"
@@ -120,13 +120,13 @@ const RegisterForm = () => {
                         />
                         <span className="leading-tight">
                             I have read the{' '}
-                            <a href={`/${locale}/privacy-policy`} className="underline text-primary hover:text-primary/90">
+                            <Link href={`/${locale}/privacy-policy`} className="underline text-primary hover:text-primary/90">
                                 Privacy Policy
-                            </a>
+                            </Link>
                         </span>
                     </label>
                 </div>
- 
+
                 <button
                     type="submit"
                     disabled={isLoading}
@@ -134,10 +134,10 @@ const RegisterForm = () => {
                 >
                     {t('auth.register.createAccount')}
                 </button>
- 
- 
+
+
             </form>
- 
+
             {/* <Divider text={t('auth.register.orDivider')} />
  
             <div className="flex w-full flex-col gap-3">
@@ -149,7 +149,7 @@ const RegisterForm = () => {
                     {  t('auth.register.continueWithFacebook')}
                 </SocialButton>
             </div> */}
- 
+
             <div className="pt-4 text-center">
                 <p className="text-charcoal-500 dark:text-charcoal-300 text-sm font-normal">
                     {t('auth.register.haveAccount')}{' '}
@@ -158,7 +158,7 @@ const RegisterForm = () => {
                     </Link>
                 </p>
             </div>
- 
+
             <div className="pt-2 text-center">
                 <Link href={`/${locale}`} className="text-charcoal-500 dark:text-charcoal-300 text-sm font-normal hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded inline-flex items-center gap-1">
                     <span className="material-symbols-outlined text-base">arrow_back</span>
@@ -168,7 +168,6 @@ const RegisterForm = () => {
         </div>
     );
 };
- 
+
 export default RegisterForm;
- 
- 
+

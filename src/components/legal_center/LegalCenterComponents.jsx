@@ -1,73 +1,56 @@
 import Head from "next/head";
 import React from "react";
+import Link from "next/link";
+import { useTranslation } from "@/i18n";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function LegalCenterComponents({ legalDocuments }) {
+  const { locale } = useLanguage();
+
+  const { t } = useTranslation(locale);
   const lastUpdated = "October 26, 2023";
 
   return (
-    <main className="lg:h-screen bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 ">
-      <div className="mx-auto max-w-7xl px-6 py-10 lg:flex lg:gap-10">
-        <Head>
-          <title>Legal Center - Q Homes | Terms, Privacy, and Policies</title>
-          <meta
-            name="description"
-            content="This page is the central repository for all important legal documents governing the use of the Q Homes platform, ensuring transparency and trust."
-          />
-        </Head>
+    <main className="min-h-screen bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
+      <div className="mx-auto max-w-7xl px-4 md:px-6 py-6">
+        <header className="mb-6 md:mb-8 text-center">
+          <h1 className="text-2xl md:text-5xl font-bold">{t("LegalCenter.title")}</h1>
+          <p className="mx-auto mt-2 md:mt-4 max-w-2xl text-base text-subtle-light dark:text-subtle-dark md:text-lg">
+            {t("LegalCenter.subtitle")}
+          </p>
+          <p className="mt-2 md:mt-4 text-base font-normal text-subtle-light dark:text-subtle-dark">
+            {t("LegalCenter.Last Updated")} <strong>{lastUpdated}</strong>
+          </p>
+        </header>
 
-        <main className="flex-grow bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
-          <div className="container mx-auto">
-            <div className="">
-              <header className="mb-8 text-center">
-                <h1 className="text-primary-deep-navy dark:text-primary text-4xl font-black leading-tight tracking-tighter md:text-5xl lg:text-6xl">
-                  Legal Center
-                </h1>
-                <p className="mx-auto mt-4 max-w-2xl text-base text-subtle-light dark:text-subtle-dark md:text-lg">
-                  This page is the central repository for all important legal
-                  documents governing the use of the Q Homes platform, ensuring
-                  transparency and trust.
-                </p>
-              </header>
-
-              <p className="text-center text-sm font-normal text-subtle-light dark:text-subtle-dark pb-8 pt-2">
-                Last Updated: **{lastUpdated}**
-              </p>
-
-              <div className="space-y-4">
-                {legalDocuments.map((doc) => (
-                  <a
-                    key={doc.title}
-                    // href={doc.href}
-                    className="group flex items-center gap-4 rounded-lg bg-white dark:bg-gray-700 p-4 min-h-[72px] justify-between border border-transparent transition-all hover:border-primary/50 hover:shadow-lg dark:hover:bg-gray-600"
-                  >
-                    <div className="flex items-center gap-4 md:gap-5">
-                      <div className="flex items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 shrink-0 size-12 text-primary">
-                        <span className="material-symbols-outlined text-2xl">
-                          {doc.iconName}
-                        </span>
-                      </div>
-
-                      <div className="flex flex-col justify-center">
-                        <p className="text-base font-bold text-content-light dark:text-content-dark group-hover:text-primary transition-colors">
-                          {doc.title}
-                        </p>
-                        <p className="text-sm text-subtle-light dark:text-subtle-dark line-clamp-2">
-                          {doc.description}
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="shrink-0 text-primary opacity-0 transition-opacity group-hover:opacity-100">
-                      <span className="material-symbols-outlined">
-                        arrow_forward_ios
-                      </span>
-                    </div>
-                  </a>
-                ))}
+        <div className="space-y-4">
+          {legalDocuments.map((doc) => (
+            <Link
+              key={doc.title}
+              href={doc.href || "#"}
+              className="group flex items-center justify-between gap-4 rounded-lg bg-white/50 dark:bg-gray-700 p-2 md:p-4 min-h-[72px] border border-gray-200 transition-all hover:border-primary/50 hover:shadow-lg dark:hover:bg-gray-600"
+            >
+              <div className="flex items-center gap-2 md:gap-5">
+                <div className="flex items-center justify-center rounded-lg md:bg-primary/10 dark:bg-primary/20 size-12 text-primary">
+                  <span className="material-symbols-outlined text-xl md:text-2xl">
+                    {doc.iconName}
+                  </span>
+                </div>
+                <div>
+                  <p className="text-base font-bold text-content-light dark:text-content-dark group-hover:text-primary transition-colors">
+                    {doc.title}
+                  </p>
+                  <p className="text-sm text-subtle-light dark:text-subtle-dark line-clamp-2">
+                    {doc.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-        </main>
+              <span className="material-symbols-outlined text-primary">
+                arrow_forward_ios
+              </span>
+            </Link>
+          ))}
+        </div>
       </div>
     </main>
   );
