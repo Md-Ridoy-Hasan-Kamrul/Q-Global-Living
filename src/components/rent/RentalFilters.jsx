@@ -54,7 +54,7 @@ export default function RentalFilters({ onFilterChange, initialFilters = {} }) {
   return (
     <>
       {/* Mobile & Desktop Unified Filter */}
-      <div className='p-4 rounded-xl bg-[#fafafa] dark:bg-card-dark shadow-sm border border-gray-200 dark:border-border-dark'>
+      <div className='p-4 rounded-xl bg-white/50 dark:bg-card-dark shadow-sm border border-gray-200 dark:border-border-dark'>
         {/* Mobile: Stacked Layout */}
         <div className='flex flex-col gap-3 lg:hidden'>
           {/* Row 1: City, Bedrooms, Duration */}

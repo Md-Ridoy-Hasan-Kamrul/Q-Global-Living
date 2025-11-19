@@ -28,7 +28,7 @@ const EventRegistration = memo(({ translations }) => {
   );
 
   return (
-    <div className='bg-linear-to-br from-gray-50 to-white rounded-xl p-6 sm:p-8 border border-gray-200'>
+    <div className='bg-white/50 rounded-xl p-6 sm:p-8 border border-gray-200'>
       <h2 className='text-2xl sm:text-3xl font-bold text-gray-900 mb-2'>
         {translations.title}
       </h2>
@@ -93,7 +93,7 @@ const EventRegistration = memo(({ translations }) => {
 
         <button
           type='submit'
-          className='w-full bg-[#E6B325] hover:bg-[#d4a420] text-[#0F1B2E] font-semibold px-6 py-4 rounded-lg text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-lg'
+          className='w-full bg-[#E6B325] hover:bg-[#d4a420] text-[#0F1B2E] font-semibold px-6 py-4 rounded-lg text-sm lg:text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-lg'
         >
           {translations.submit}
         </button>

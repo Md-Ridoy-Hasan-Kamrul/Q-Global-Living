@@ -24,7 +24,7 @@ const EventLearning = memo(({ translations }) => {
   ];
 
   return (
-    <div className='bg-white rounded-xl p-6 sm:p-8'>
+    <div className='bg-white/50 border border-gray-200 rounded-xl p-6 sm:p-8'>
       <h2 className='text-2xl sm:text-3xl font-bold text-[#E6B325] mb-6'>
         {translations.title}
       </h2>
@@ -32,7 +32,7 @@ const EventLearning = memo(({ translations }) => {
         {learningPoints.map((point) => (
           <div key={point.id} className='flex items-start gap-3'>
             <CheckCircle className='h-6 w-6 text-[#E6B325] shrink-0 mt-0.5' />
-            <p className='text-gray-700 text-base sm:text-lg leading-relaxed'>
+            <p className='text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed'>
               {point.text}
             </p>
           </div>

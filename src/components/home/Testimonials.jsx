@@ -55,14 +55,14 @@ export default function Testimonials({ testimonials, locale = 'en' }) {
   };
 
   return (
-    <section className='py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-soft-grey/30 dark:bg-charcoal/20'>
+    <section className='py-6 lg:py-10 px-4 sm:px-6 lg:px-8 bg-soft-grey/30 dark:bg-charcoal/20'>
       <div className='mx-auto max-w-7xl'>
         {/* Header */}
-        <div className='text-center mb-10 sm:mb-12 lg:mb-16'>
+        <div className='text-center mb-6 lg:mb-10'>
           <h2 className='text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight'>
             {t('testimonials.title')}
           </h2>
-          <p className='mx-auto mt-3 sm:mt-4 max-w-2xl text-sm sm:text-base text-charcoal/80 dark:text-soft-grey/80'>
+          <p className='mx-auto mt-2 sm:mt-4 max-w-2xl text-sm sm:text-base text-charcoal/80 dark:text-soft-grey/80'>
             {t('testimonials.subtitle')}
           </p>
         </div>
