@@ -21,7 +21,7 @@ export default function BuyHero() {
       {/* Background Image */}
       <div className='absolute inset-0 z-0'>
         <Image
-          src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&h=800&fit=crop'
+          src='/buy-rent/thumb.png'
           alt='Luxury property exterior with modern architecture'
           fill
           sizes='100vw'
@@ -31,14 +31,14 @@ export default function BuyHero() {
         />
         {/* Gradient Overlay */}
         <div
-          className='absolute inset-0 bg-linear-to-b from-gray-900/40 via-gray-900/60 to-gray-900/70'
+          className='absolute inset-0 bg-linear-to-b from-gray-900/35  to-gray-900/35'
           aria-hidden='true'
         />
       </div>
 
       {/* Content */}
       <div className='relative z-10 flex flex-col gap-4 text-center max-w-3xl mx-auto'>
-        <h1 className='text-white text-2xl sm:text-3xl font-black leading-tight tracking-[-0.033em] lg:text-5xl'>
+        <h1 className='text-white  font-black leading-tight tracking-[-0.033em] text-2xl sm:text-3xl lg:text-5xl'>
           {t('buy.hero.title', "Find Your Dream Home in Côte d'Ivoire")}
         </h1>
         <p className='text-gray-200 text-sm sm:text-base font-normal leading-normal lg:text-lg'>

@@ -85,7 +85,7 @@ export default function EventPage({ params }) {
   );
 
   return (
-    <div className='min-h-screen bg-gray-50'>
+    <div className='min-h-screen bg-background-light'>
       <div className='max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8'>
         {/* Hero Section */}
         <div className='mb-8 sm:mb-12'>
@@ -96,9 +96,9 @@ export default function EventPage({ params }) {
         </div>
 
         {/* Main Content Grid */}
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-6'>
           {/* Left Column - Event Details */}
-          <div className='lg:col-span-2 space-y-6 sm:space-y-8'>
+          <div className='lg:col-span-2 space-y-3 lg:space-y-6'>
             <EventAbout translations={aboutTranslations} />
             <EventLearning translations={learningTranslations} />
             <EventSpeakers translations={speakersTranslations} />

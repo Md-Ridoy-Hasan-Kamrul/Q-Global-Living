@@ -70,9 +70,9 @@ const AuditLogsFilters = memo(
               className='w-full pl-10 pr-10 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#d4af37] focus:border-transparent transition-all duration-200 text-sm text-gray-900 appearance-none cursor-pointer'
             >
               <option value='all'>{translations.allUsers}</option>
-              <option value='admin'>Admin Users</option>
-              <option value='staff'>Staff Members</option>
-              <option value='system'>System</option>
+              <option value='admin'>{translations.Users}</option>
+              <option value='staff'>{translations.StaffMembers}</option>
+              <option value='system'>{translations.System}</option>
             </select>
             <ChevronDown
               className='absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none'
@@ -92,10 +92,10 @@ const AuditLogsFilters = memo(
               className='w-full pl-10 pr-10 py-2.5 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#d4af37] focus:border-transparent transition-all duration-200 text-sm text-gray-900 appearance-none cursor-pointer'
             >
               <option value='all'>{translations.allActions}</option>
-              <option value='property'>Property Actions</option>
-              <option value='user'>User Actions</option>
-              <option value='settings'>Settings</option>
-              <option value='security'>Security</option>
+              <option value='property'>{translations.PropertyActions}</option>
+              <option value='user'>{translations.UserActions}</option>
+              <option value='settings'>{translations.Settings}</option>
+              <option value='security'>{translations.Security}</option>
             </select>
             <ChevronDown
               className='absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none'

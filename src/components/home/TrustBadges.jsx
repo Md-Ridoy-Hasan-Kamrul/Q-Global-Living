@@ -38,15 +38,15 @@ export default function TrustBadges({ locale }) {
   ];
 
   return (
-    <section className='bg-primary/5 dark:bg-primary/10 py-10 sm:py-12 md:py-16 px-4 sm:px-6'>
-      <div className='mx-auto max-w-6xl'>
-        <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10'>
+    <section className='bg-primary/5 dark:bg-primary/10 lg:pb-6 -pt-20 sm:-mt-15 sm:pt-14 px-4 sm:px-6'>
+      <div className='mx-auto max-w-6xl lg:pt-10 py-3 '>
+        <div className='grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 '>
           {badges.map((badge) => {
             const IconComponent = badge.icon;
             return (
               <div
                 key={badge.label}
-                className='flex flex-col items-center gap-3 sm:gap-4 text-center p-4 rounded-lg transition-all hover:bg-white/50 dark:hover:bg-charcoal/50'
+                className='flex flex-col items-center gap-3 sm:gap-4 text-center p-4 rounded-lg transition-all  dark:hover:bg-charcoal/50'
               >
                 <div className='flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/10'>
                   <IconComponent
