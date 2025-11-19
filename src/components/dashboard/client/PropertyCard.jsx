@@ -97,7 +97,7 @@ export default function PropertyCard({
                         <button
                             type="button"
                             onClick={() => onView && onView(property.id)}
-                            className="flex items-center gap-1.5 rounded p-1.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-blue-600"
+                            className="flex items-center gap-1.5 rounded p-1.5 text-gray-400 transition-colors "
                             aria-label="View property"
                         >
                             <Bed className="h-4 w-4" />
@@ -107,7 +107,7 @@ export default function PropertyCard({
                         <button
                             type="button"
                             onClick={() => onEdit && onEdit(property.id)}
-                            className="flex items-center gap-1.5 rounded p-1.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600"
+                            className="flex items-center gap-1.5 rounded p-1.5 text-gray-400 transition-colors "
                             aria-label="Edit property"
                         >
                             <Bath className="h-4 w-4" />
@@ -117,7 +117,7 @@ export default function PropertyCard({
                         <button
                             type="button"
                             onClick={() => onDelete && onDelete(property.id)}
-                            className="flex items-center gap-1.5 rounded p-1.5 text-gray-400 transition-colors hover:bg-red-50 hover:text-red-600"
+                            className="flex items-center gap-1.5 rounded p-1.5 text-gray-400 transition-colors"
                             aria-label="Delete property"
                         >
                             <TriangleRight className="h-4 w-4" />

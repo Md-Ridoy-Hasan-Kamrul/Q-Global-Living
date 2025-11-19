@@ -2,6 +2,8 @@
 
 import React, { useState, useCallback, useMemo, useRef } from "react";
 import dynamic from "next/dynamic";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "@/i18n";
 
 // ✅ Dynamic import for icons with ssr: false for client-side only rendering
 const Eye = dynamic(() => import("lucide-react").then(m => ({ default: m.Eye })), {
@@ -17,7 +19,7 @@ const Trash2 = dynamic(() => import("lucide-react").then(m => ({ default: m.Tras
   ssr: false
 });
 
-// ✅ Memoized SavedSearchItem component with comparison function
+//  Memoized SavedSearchItem component with comparison function
 const SavedSearchItem = React.memo(
   function SavedSearchItem({ search, onToggle, onDelete }) {
     return (
@@ -115,7 +117,7 @@ const SavedSearchItem = React.memo(
 );
 
 export default function NotificationSettings() {
-  // ✅ Constant initial searches (defined outside component would be better for production)
+  //  Constant initial searches (defined outside component would be better for production)
   const INITIAL_SEARCHES = useMemo(() => [
     {
       id: 1,
@@ -144,7 +146,7 @@ export default function NotificationSettings() {
 
   const [searches, setSearches] = useState(INITIAL_SEARCHES);
 
-  // ✅ Stable callbacks (no re-renders)
+  // Stable callbacks (no re-renders)
   const handleToggle = useCallback((id) => {
     setSearches((prev) =>
       prev.map((s) => (s.id === id ? { ...s, enabled: !s.enabled } : s))
@@ -179,7 +181,8 @@ export default function NotificationSettings() {
       />
     ));
   }, [searches, handleToggle, handleDelete]);
-
+const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
   return (
     <main
       className="min-h-screen bg-gray-50 space-y-6"
@@ -187,24 +190,23 @@ export default function NotificationSettings() {
     >
       <header className="bg-gradient-to-r from-[#1e3a5f] to-[#2d5078] rounded-lg p-6 shadow-sm mb-6 ">
         <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">
-          Saved Searches and Settings
+          {t("dashboard.client.SavedSearches.title")}
         </h1>
         <p className="text-sm sm:text-base text-white/80 ">
-          Manage your saved property alerts, enable or disable notifications, and
-          keep your preferences organized efficiently.
+          {t("dashboard.client.SavedSearches.subtitle")}
         </p>
       </header>
 
       <section aria-label="My Saved Searches" className="space-y-5">
         <h2 className="text-2xl font-bold text-slate-800 mb-4">
-          Your Saved Searches
+          {t("dashboard.client.SavedSearches.yourSavedSearches")}
         </h2>
 
         {searches.length > 0 ? (
           <div className="space-y-4">{renderedSearches}</div>
         ) : (
           <p className="text-gray-600 italic text-center">
-            No saved searches available.
+            {t("dashboard.client.SavedSearches.noSavedSearches")}
           </p>
         )}
       </section>
@@ -215,13 +217,13 @@ export default function NotificationSettings() {
           onClick={handleReset}
           className="px-6 py-2 border border-gray-300 rounded-lg font-medium text-gray-700 hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-300"
         >
-          Reset to Default
+          {t("dashboard.client.SavedSearches.resetButton")}
         </button>
         <button
           onClick={handleSave}
           className="px-6 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-yellow-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-yellow-400"
         >
-          Save Changes
+          {t("dashboard.client.SavedSearches.saveChanges")}
         </button>
       </div>
     </main>

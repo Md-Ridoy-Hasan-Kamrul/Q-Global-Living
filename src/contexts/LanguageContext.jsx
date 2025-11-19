@@ -55,10 +55,10 @@ export function LanguageProvider({ children, initialLocale = 'en' }) {
 
       // Use React 18 transition for smooth, non-blocking update
       startTransition(() => {
-        router.push(newPath, { scroll: false });
+        window.history.pushState(null, '', newPath);
       });
     },
-    [localeFromPath, pathname, isPending, router]
+    [localeFromPath, pathname, isPending]
   );
 
   const value = useMemo(
