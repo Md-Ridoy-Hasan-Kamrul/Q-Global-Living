@@ -145,6 +145,8 @@ export default function AdminUsersPage({ params }) {
         role: t('dashboard.admin.users.filters.role'),
         roleAll: t('dashboard.admin.users.filters.roleAll'),
         lastActivity: t('dashboard.admin.users.filters.lastActivity'),
+        last: t('dashboard.admin.users.filters.last'),
+        days: t('dashboard.admin.users.filters.days'),
       },
       table: {
         userId: t('dashboard.admin.users.table.userId'),
