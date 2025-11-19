@@ -10,7 +10,7 @@ export default function InputField({ label, type = "text", value, onChange, inpu
                 value={value}
                 onChange={onChange}
                 ref={inputRef}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
             />
         </div>
     );

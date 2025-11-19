@@ -55,6 +55,6 @@ export default function LoginPage() {
           </Suspense>
         </div>
       </div>
-    </main>
+    </main> 
   );
 }

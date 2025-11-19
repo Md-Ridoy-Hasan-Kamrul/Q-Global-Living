@@ -4,7 +4,7 @@
 export const BUY_PROPERTIES = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800',
+    image: '/buy-rent/fourbeds.webp',
     imageAlt: 'Modern villa with pool',
     location: 'Abidjan, Cocody',
     title: 'Modern 4-Bedroom Villa with Pool',
@@ -19,7 +19,7 @@ export const BUY_PROPERTIES = [
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800',
+    image: '/buy-rent/luxurypent.jpg',
     imageAlt: 'Luxury apartment',
     location: 'Abidjan, Plateau',
     title: 'Luxury Penthouse in Plateau',
@@ -35,6 +35,7 @@ export const BUY_PROPERTIES = [
   {
     id: 3,
     image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',
+    // separate image
     imageAlt: 'Elegant house',
     location: 'Yamoussoukro',
     title: 'Elegant 5-Bedroom House',
@@ -50,6 +51,7 @@ export const BUY_PROPERTIES = [
   {
     id: 4,
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800',
+    // separate image
     imageAlt: 'Spacious family home',
     location: 'Abidjan, Marcory',
     title: 'Spacious Family Home in Marcory',
@@ -65,6 +67,7 @@ export const BUY_PROPERTIES = [
   {
     id: 5,
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800',
+    // separate image
     imageAlt: 'Contemporary villa',
     location: 'Assinie-Mafia',
     title: 'Beachfront Villa in Assinie',
@@ -79,7 +82,7 @@ export const BUY_PROPERTIES = [
   },
   {
     id: 6,
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800',
+    image: '/buy-rent/threebeds.jpg',
     imageAlt: 'Modern apartment',
     location: 'Abidjan, Cocody',
     title: 'Modern 3-Bedroom Apartment',
@@ -94,7 +97,7 @@ export const BUY_PROPERTIES = [
   },
   {
     id: 7,
-    image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800',
+    image: '/buy-rent/tempo.png',
     imageAlt: 'Townhouse',
     location: 'Abidjan, Riviera',
     title: 'Contemporary Townhouse',
@@ -110,6 +113,7 @@ export const BUY_PROPERTIES = [
   {
     id: 8,
     image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800',
+    // separate image
     imageAlt: 'Garden villa',
     location: 'Yamoussoukro',
     title: 'Garden Villa with Pool',
@@ -125,6 +129,7 @@ export const BUY_PROPERTIES = [
   {
     id: 9,
     image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800',
+    // separate image
     imageAlt: 'Executive apartment',
     location: 'Abidjan, Plateau',
     title: 'Executive Apartment Downtown',
@@ -139,7 +144,7 @@ export const BUY_PROPERTIES = [
   },
   {
     id: 10,
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800',
+    image: '/buy-rent/luxury.png',
     imageAlt: 'Luxury penthouse',
     location: 'Abidjan, Cocody',
     title: 'Luxury Penthouse with City Views',
@@ -154,7 +159,7 @@ export const BUY_PROPERTIES = [
   },
   {
     id: 11,
-    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800',
+    image: '/buy-rent/withGarden.png',
     imageAlt: 'Modern house',
     location: 'Abidjan, Marcory',
     title: 'Modern House with Garden',
@@ -170,6 +175,7 @@ export const BUY_PROPERTIES = [
   {
     id: 12,
     image: 'https://images.unsplash.com/photo-1600047509358-9dc75507daeb?w=800',
+    // separate image
     imageAlt: 'Coastal villa',
     location: 'Assinie-Mafia',
     title: 'Coastal Villa with Private Beach',

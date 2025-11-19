@@ -1,5 +1,7 @@
 'use client';
 import React, { useState } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslation } from '@/i18n';
 
 /**
  * Property Developer Form Component
@@ -16,6 +18,9 @@ const PropertyDeveloperForm = ({ onSubmit, onCancel }) => {
     pictures: '',
     paymentPlan: '',
   });
+
+  const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -39,7 +44,8 @@ const PropertyDeveloperForm = ({ onSubmit, onCancel }) => {
       {/* Name */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Property Name <span className='text-red-400'>*</span>
+          {t('PropertyDeveloperForm.propertyName', 'Property Name')}
+          <span className='text-red-400'>*</span>
         </label>
         <input
           type='text'
@@ -48,14 +54,15 @@ const PropertyDeveloperForm = ({ onSubmit, onCancel }) => {
           onChange={handleChange}
           required
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent'
-          placeholder='Enter property name'
+          placeholder={t('PropertyDeveloperForm.propertyNamePlaceholder', 'Enter property name')}
         />
       </div>
 
       {/* Partner ID */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Partner ID <span className='text-red-400'>*</span>
+          {t('PropertyDeveloperForm.partnerId', 'Partner ID')}
+          <span className='text-red-400'>*</span>
         </label>
         <input
           type='text'
@@ -64,14 +71,15 @@ const PropertyDeveloperForm = ({ onSubmit, onCancel }) => {
           onChange={handleChange}
           required
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent'
-          placeholder='Enter partner ID'
+          placeholder={t('PropertyDeveloperForm.partnerIdPlaceholder', 'Enter partner ID')}
         />
       </div>
 
       {/* Location */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Location <span className='text-red-400'>*</span>
+          {t('PropertyDeveloperForm.location', 'Location')}
+          <span className='text-red-400'>*</span>
         </label>
         <input
           type='text'
@@ -80,7 +88,7 @@ const PropertyDeveloperForm = ({ onSubmit, onCancel }) => {
           onChange={handleChange}
           required
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent'
-          placeholder='Enter location'
+          placeholder={t('PropertyDeveloperForm.locationPlaceholder', 'Enter location')}
         />
       </div>
 
@@ -94,14 +102,15 @@ const PropertyDeveloperForm = ({ onSubmit, onCancel }) => {
           className='w-5 h-5 text-[#E6B325] bg-white/10 border-white/20 rounded focus:ring-[#E6B325] focus:ring-2'
         />
         <label className='ml-3 text-white text-sm font-medium'>
-          Premium Listing
+          {t('PropertyDeveloperForm.premiumListing', 'Premium Listing')}
         </label>
       </div>
 
       {/* Overview */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Overview <span className='text-red-400'>*</span>
+          {t('PropertyDeveloperForm.overview', 'Overview')}
+          <span className='text-red-400'>*</span>
         </label>
         <textarea
           name='overview'
@@ -110,14 +119,15 @@ const PropertyDeveloperForm = ({ onSubmit, onCancel }) => {
           required
           rows={4}
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent resize-none'
-          placeholder='Enter property overview'
+          placeholder={t('PropertyDeveloperForm.overviewPlaceholder', 'Enter property overview')}
         />
       </div>
 
       {/* Features */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Features <span className='text-red-400'>*</span>
+          {t('PropertyDeveloperForm.features', 'Features')}
+          <span className='text-red-400'>*</span>
         </label>
         <textarea
           name='features'
@@ -126,14 +136,14 @@ const PropertyDeveloperForm = ({ onSubmit, onCancel }) => {
           required
           rows={3}
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent resize-none'
-          placeholder='Enter features (comma-separated)'
+          placeholder={t('PropertyDeveloperForm.featuresPlaceholder', 'Enter features (comma-separated)')}
         />
       </div>
 
       {/* Pictures */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Pictures URLs
+          {t('PropertyDeveloperForm.pictures', 'Pictures URLs')}
         </label>
         <textarea
           name='pictures'
@@ -141,14 +151,15 @@ const PropertyDeveloperForm = ({ onSubmit, onCancel }) => {
           onChange={handleChange}
           rows={2}
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent resize-none'
-          placeholder='Enter picture URLs (comma-separated)'
+          placeholder={t('PropertyDeveloperForm.picturesPlaceholder', 'Enter picture URLs (comma-separated)')}
         />
       </div>
 
       {/* Payment Plan */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Payment Plan <span className='text-red-400'>*</span>
+          {t('PropertyDeveloperForm.paymentPlan', 'Payment Plan')}
+          <span className='text-red-400'>*</span>
         </label>
         <textarea
           name='paymentPlan'
@@ -157,7 +168,7 @@ const PropertyDeveloperForm = ({ onSubmit, onCancel }) => {
           required
           rows={3}
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent resize-none'
-          placeholder='Enter payment plan details'
+          placeholder={t('PropertyDeveloperForm.paymentPlanPlaceholder', 'Enter payment plan details')}
         />
       </div>
 
@@ -168,13 +179,13 @@ const PropertyDeveloperForm = ({ onSubmit, onCancel }) => {
           onClick={onCancel}
           className='px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors'
         >
-          Cancel
+          {t('common.cancel', 'Cancel')}
         </button>
         <button
           type='submit'
           className='px-6 py-2 bg-[#E6B325] hover:bg-[#d4a520] text-black font-semibold rounded-lg transition-colors'
         >
-          Submit
+          {t('common.submit', 'Submit')}
         </button>
       </div>
     </form>

@@ -3,9 +3,9 @@ import { AuthProvider } from '@/contexts/AuthContext';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 
 export const metadata = {
-  title: "Q HOMES - Cote d'Ivoire Real Estate",
+  title: "Q Global Living - Real Estate Platform",
   description:
-    'Your trusted gateway to buying, renting, and investing in Ivorian property.',
+    'Q Global Living is your trusted gateway to buying, renting, and investing in African property through our Q Homes platform.',
 };
 
 export default async function LocaleLayout({ children, params }) {

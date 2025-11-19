@@ -128,9 +128,9 @@ export default function UserFilters({
           '
         >
           <option>{translations.filters.lastActivity}</option>
-          <option>Last 7 days</option>
-          <option>Last 30 days</option>
-          <option>Last 90 days</option>
+          <option>{translations.filters.last} 7 {translations.filters.days}</option>
+          <option>{translations.filters.last} 30 {translations.filters.days}</option>
+          <option>{translations.filters.last} 90 {translations.filters.days}</option>
         </select>
         <ChevronDown className='pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500' />
       </div>
