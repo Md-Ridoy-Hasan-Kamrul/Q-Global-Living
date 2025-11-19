@@ -5,11 +5,11 @@ import { Calendar, MapPin } from 'lucide-react';
 
 const EventAbout = memo(({ translations }) => {
   return (
-    <div className='bg-white rounded-xl p-6 sm:p-8'>
+    <div className='bg-white/50 border border-gray-200 rounded-xl p-6 sm:p-8'>
       <h2 className='text-2xl sm:text-3xl font-bold text-[#E6B325] mb-4'>
         {translations.title}
       </h2>
-      <p className='text-gray-700 leading-relaxed mb-6 text-base sm:text-lg'>
+      <p className='text-gray-700 leading-relaxed mb-6 text-sm sm:text-base lg:text-lg'>
         {translations.description}
       </p>
 
@@ -20,7 +20,7 @@ const EventAbout = memo(({ translations }) => {
             <h3 className='font-semibold text-gray-900 mb-1'>
               {translations.dateTimeLabel}
             </h3>
-            <p className='text-gray-600'>{translations.dateTime}</p>
+            <p className='text-gray-600 text-sm lg:text-base'>{translations.dateTime}</p>
           </div>
         </div>
 
@@ -30,7 +30,7 @@ const EventAbout = memo(({ translations }) => {
             <h3 className='font-semibold text-gray-900 mb-1'>
               {translations.locationLabel}
             </h3>
-            <p className='text-gray-600'>{translations.location}</p>
+            <p className='text-gray-600 text-sm lg:text-base'>{translations.location}</p>
           </div>
         </div>
       </div>

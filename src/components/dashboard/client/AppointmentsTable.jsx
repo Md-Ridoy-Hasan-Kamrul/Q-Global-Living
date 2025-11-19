@@ -3,16 +3,16 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import { Eye, Edit, Trash2, Calendar, Clock } from 'lucide-react';
 import Pagination from '../Pagination';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslation } from '@/i18n';
 
 export default function AppointmentsTable({
   appointments = [],
   onView,
   onEdit,
   onDelete,
-  onStatusChange,
   translations = {},
   query = '',
-  onQueryChange,
 }) {
   const [page, setPage] = useState(1);
   const pageSize = 6;
@@ -62,14 +62,21 @@ export default function AppointmentsTable({
   useEffect(() => {
     if (page > totalPages) setPage(totalPages);
   }, [page, totalPages]);
-
+  const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
   return (
     <div className="overflow-hidden">
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead className="bg-gray-50 border-b border-gray-100">
             <tr>
-              {['ID', 'Name', 'Email', 'Type', 'Date', 'Status', 'Actions'].map((h) => (
+              {[t('dashboard.client.AppointmentTable.id'),
+              t('dashboard.client.AppointmentTable.Name'),
+              t('dashboard.client.AppointmentTable.email'),
+              t('dashboard.client.AppointmentTable.type'),
+              t('dashboard.client.AppointmentTable.date'),
+              t('dashboard.client.AppointmentTable.status'),
+              t('dashboard.client.AppointmentTable.actions')].map((h) => (
                 <th
                   key={h}
                   className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-gray-600"

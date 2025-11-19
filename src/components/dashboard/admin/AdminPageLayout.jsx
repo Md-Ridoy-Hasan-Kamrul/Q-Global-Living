@@ -3,6 +3,7 @@
 import { useMemo } from 'react';
 import { useTranslation } from '@/i18n';
 import { ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function AdminPageLayout({
   children,
@@ -42,12 +43,12 @@ export default function AdminPageLayout({
                       <ChevronRight className='mx-2 h-4 w-4 shrink-0 text-gray-400' />
                     )}
                     {item.href ? (
-                      <a
+                      <Link
                         href={`/${locale}${item.href}`}
                         className='hover:text-gray-700 hover:underline'
                       >
                         {item.label}
-                      </a>
+                      </Link>
                     ) : (
                       <span className='text-gray-900'>{item.label}</span>
                     )}
