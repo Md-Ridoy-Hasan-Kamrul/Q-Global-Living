@@ -17,9 +17,9 @@ export default function PartnerDashboardLayout({ children }) {
 
   useEffect(() => {
     if (!loading && (!user || user.role !== 'partner')) {
-      router.push('/en/login');
+      router.push(`/${locale}/login`);
     }
-  }, [user, loading, router]);
+  }, [user, loading, router, locale]);
 
   if (loading) {
     return (
