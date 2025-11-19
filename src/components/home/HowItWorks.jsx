@@ -33,14 +33,14 @@ export default function HowItWorks({ locale }) {
   ];
 
   return (
-    <section className='bg-soft-grey/50 dark:bg-charcoal/30 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8'>
+    <section className='bg-soft-grey/50 dark:bg-charcoal/30 py-6 pb-10 lg:pt-10 px-4 sm:px-6 lg:px-8'>
       <div className='mx-auto max-w-6xl'>
         {/* Header */}
-        <div className='text-center mb-10 sm:mb-12 lg:mb-16'>
+        <div className='text-center mb-6 lg:mb-10'>
           <h2 className='text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight'>
             {t('howItWorks.title')}
           </h2>
-          <p className='mx-auto mt-3 sm:mt-4 max-w-2xl text-sm sm:text-base text-charcoal/80 dark:text-soft-grey/80'>
+          <p className='mx-auto mt-2 sm:mt-4 max-w-2xl text-sm sm:text-base text-charcoal/80 dark:text-soft-grey/80'>
             {t('howItWorks.subtitle')}
           </p>
         </div>

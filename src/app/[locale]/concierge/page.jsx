@@ -14,6 +14,7 @@ import {
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from '@/i18n';
+import Link from 'next/link';
 
 export default function ConciergePage() {
   const { locale } = useLanguage();
@@ -57,20 +58,21 @@ export default function ConciergePage() {
   ];
 
   return (
-    <main className='container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8'>
+    <main className='flex flex-col items-center bg-background-light dark:bg-navy-light'>
+      <div className='w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 space-y-8 lg:space-y-16'>
       {/* Hero Section */}
-      <section className='w-full mb-6 md:mb-8' aria-labelledby='hero-title'>
+      <section className='w-full' aria-labelledby='hero-title'>
         <div
-          className='flex min-h-[420px] sm:min-h-[480px] md:min-h-[520px] flex-col gap-5 md:gap-6 bg-cover bg-center bg-no-repeat rounded-xl md:rounded-2xl items-center justify-center p-6 md:p-8 lg:p-10 text-center'
+          className='flex min-h-[420px] sm:min-h-[480px] flex-col gap-5 md:gap-6 bg-cover bg-center bg-no-repeat rounded-xl md:rounded-2xl items-center justify-center p-6 md:p-8 lg:p-10 text-center'
           style={{
-            backgroundImage: `linear-gradient(rgba(10, 25, 49, 0.65) 0%, rgba(10, 25, 49, 0.85) 100%), url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&auto=format&fit=crop")`,
+            backgroundImage: `linear-gradient(rgba(10, 25, 49, 0.35) 0%, rgba(10, 25, 49, 0.35) 100%), url("/concierge/ss.png")`,
           }}
           role='banner'
         >
           <div className='flex flex-col gap-4 md:gap-5 max-w-3xl w-full'>
             <h1
               id='hero-title'
-              className='text-white text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-black leading-tight tracking-[-0.033em]'
+              className='text-white lg:text-5xl text-2xl sm:text-3xl font-black leading-tight tracking-[-0.033em]'
             >
               {t('concierge.hero.title')}
             </h1>
@@ -78,18 +80,12 @@ export default function ConciergePage() {
               {t('concierge.hero.subtitle')}
             </p>
             <div className='flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-stretch sm:items-center mt-2'>
-              <button
-                className='w-full sm:w-auto bg-primary hover:bg-primary-dark text-charcoal font-semibold px-6 md:px-8 lg:px-10 py-3 md:py-3.5 rounded-lg transition-all duration-200 text-[15px] md:text-base focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
+              <Link href={'/verification'}
+                className='w-full sm:w-auto bg-primary hover:bg-primary-dark text-charcoal font-semibold px-6 md:px-8 lg:px-10 py-3 md:py-3.5 rounded-lg transition-all duration-200 text-sm lg:text-base focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
                 aria-label='Book a consultation with our concierge team'
               >
-                {t('concierge.hero.bookConsultation')}
-              </button>
-              <button
-                className='w-full sm:w-auto bg-transparent border-2 border-primary hover:bg-primary/10 text-primary font-semibold px-6 md:px-8 lg:px-10 py-3 md:py-3.5 rounded-lg transition-all duration-200 text-[15px] md:text-base focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
-                aria-label='Talk to a concierge specialist'
-              >
                 {t('concierge.hero.talkToConcierge')}
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -97,24 +93,24 @@ export default function ConciergePage() {
 
       {/* Personalized Support Section */}
       <section
-        className='py-12 md:py-16 lg:py-20 bg-background-light rounded-xl md:rounded-2xl mb-6 md:mb-8'
+        className=' bg-background-light rounded-xl md:rounded-2xl'
         aria-labelledby='support-title'
       >
-        <div className='text-center mb-10 md:mb-14 px-4'>
+        <div className='text-center mb-6 px-4'>
           <h2
             id='support-title'
-            className='text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] font-bold text-charcoal mb-3 md:mb-4 leading-tight'
+            className='text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] font-bold text-charcoal leading-tight'
           >
             {t('concierge.support.title')}
           </h2>
-          <p className='text-[15px] sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed'>
+          <p className='text-[15px] sm:text-base lg:mt-4 mt-2 text-gray-600 max-w-3xl mx-auto leading-relaxed'>
             {t('concierge.support.subtitle')}
           </p>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 lg:gap-8 px-4 md:px-6'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-6 lg:px-4'>
           {/* Property Matchmaking */}
-          <article className='text-center p-6 border border-gray-200 rounded-lg'>
+          <article className='text-center p-6 border bg-white/50 border-[#f6efcb] rounded-lg'>
             <div
               className='w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 md:mb-6 flex items-center justify-center'
               aria-hidden='true'
@@ -133,7 +129,7 @@ export default function ConciergePage() {
           </article>
 
           {/* Relocation Planning */}
-          <article className='text-center p-6 border border-gray-200 rounded-lg'>
+          <article className='text-center p-6 border bg-white/50 border-[#f6efcb] rounded-lg'>
             <div
               className='w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 md:mb-6 flex items-center justify-center'
               aria-hidden='true'
@@ -152,7 +148,7 @@ export default function ConciergePage() {
           </article>
 
           {/* Settling-In Services */}
-          <article className='text-center p-6 border border-gray-200 rounded-lg'>
+          <article className='text-center p-6 border bg-white/50 border-[#f6efcb] rounded-lg mb-0.5 sm:mb-0'>
             <div
               className='w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 md:mb-6 flex items-center justify-center'
               aria-hidden='true'
@@ -174,11 +170,11 @@ export default function ConciergePage() {
 
       {/* Concierge Packages Section */}
       <section
-        className='py-12 md:py-16 lg:py-20'
+        className='w-full'
         aria-labelledby='packages-title'
       >
         <div className='max-w-7xl mx-auto'>
-          <div className='text-center mb-8 md:mb-10 lg:mb-12'>
+          <div className='text-center mb-6'>
             <h2
               id='packages-title'
               className='text-2xl md:text-3xl lg:text-4xl font-bold text-charcoal mb-3 md:mb-4'
@@ -190,13 +186,13 @@ export default function ConciergePage() {
             </p>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10 px-4 sm:px-6 lg:px-8'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 xl:gap-6 px-2 lg:grid-cols-3'>
             {packages.map((pkg, index) => (
               <article
                 key={index}
-                className={`relative bg-background-light rounded-lg transition-all duration-300 ${
+                className={`relative bg-white/50 rounded-lg transition-all duration-300 ${
                   pkg.isPremium
-                    ? 'border-2 border-[#D1B156] shadow-md hover:shadow-lg md:scale-[1.02] md:hover:scale-[1.03]'
+                    ? 'border-2 border-[#D1B156] shadow-md hover:shadow-lg md:scale-[1.02] mb-1'
                     : 'border border-[#E5E7EB] hover:border-[#D1B156] hover:shadow-sm'
                 }`}
               >
@@ -223,7 +219,7 @@ export default function ConciergePage() {
                     <p className='text-sm md:text-base text-charcoal-600 mb-6 min-h-[60px]'>
                       {pkg.description}
                     </p>
-                    <ul className='space-y-3.5 mb-8' role='list'>
+                    <ul className='lg:space-y-3.5 sm:space-y-2 mb-8' role='list'>
                       {pkg.features.map((feature, idx) => (
                         <li
                           key={idx}
@@ -242,8 +238,8 @@ export default function ConciergePage() {
                     </ul>
                   </div>
                   <div className='mt-auto pt-4'>
-                    <button
-                      className={`w-full text-center text-sm md:text-base font-medium px-5 py-2.5 md:py-3 rounded-lg transition-all duration-200 ${
+                    <Link href={'/verification'}
+                      className={`w-full block text-center text-sm md:text-base font-medium px-5 py-2.5 md:py-3 rounded-lg transition-all duration-200 ${
                         pkg.isPremium
                           ? 'bg-[#D1B156] text-white hover:bg-[#C4A54D] shadow-sm'
                           : 'bg-primary/20 text-charcoal hover:bg-primary/30'
@@ -251,7 +247,7 @@ export default function ConciergePage() {
                       aria-label={`Choose ${pkg.name} package`}
                     >
                       Choose Plan
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </article>
@@ -262,7 +258,7 @@ export default function ConciergePage() {
 
       {/* How It Works Section */}
       <section
-        className='py-12 md:py-16 lg:py-20 bg-background-light rounded-xl md:rounded-2xl mb-6 md:mb-8'
+        className=' bg-background-light rounded-xl md:rounded-2xl'
         aria-labelledby='how-it-works-title'
       >
         <div className='text-center mb-10 md:mb-14 px-4'>
@@ -313,10 +309,10 @@ export default function ConciergePage() {
 
       {/* Concierge Add-Ons Section */}
       <section
-        className='py-12 md:py-16 lg:py-20 bg-primary rounded-xl md:rounded-2xl mb-6 md:mb-8'
+        className='py-12  bg-[#f6efd1] border border-[#f6efcb] shadow-sm rounded-xl md:rounded-2xl'
         aria-labelledby='add-ons-title'
       >
-        <div className='text-center mb-10 md:mb-12 px-4'>
+        <div className='text-center mb-10 px-4'>
           <h2
             id='add-ons-title'
             className='text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] font-bold text-charcoal mb-3 md:mb-4 leading-tight'
@@ -353,7 +349,8 @@ export default function ConciergePage() {
 
       {/* Ready to Make Your Move Section */}
       <section
-        className='py-12 md:py-16 lg:py-20 bg-background-light rounded-xl md:rounded-2xl'
+      id='concierge-form'
+        className=' bg-background-light rounded-xl md:rounded-2xl'
         aria-labelledby='contact-title'
       >
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center px-4 md:px-6'>
@@ -361,7 +358,7 @@ export default function ConciergePage() {
           <div className='order-2 lg:order-1'>
             <div className='relative h-80 sm:h-[400px] md:h-[480px] lg:h-[580px] rounded-2xl overflow-hidden shadow-xl'>
               <Image
-                src='/placeholder-property.png'
+                src='/concierge/contact.jpg'
                 alt="Modern luxury home in Côte d'Ivoire with contemporary design"
                 fill
                 className='object-cover'
@@ -481,6 +478,7 @@ export default function ConciergePage() {
           </div>
         </div>
       </section>
+      </div>
     </main>
   );
 }
