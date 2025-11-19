@@ -57,7 +57,7 @@
       "continueWithFacebook": "Continue with Facebook",
       "quickLogin": "Quick Login (Demo)",
       "loginAsAdmin": "Login as Admin",
-      "loginAsClient": "Login as Client",
+      "loginAsClient": "Login as User",
       "loginAsPartner": "Login as Partner",
       "noAccount": "Don't have an account?",
       "registerNow": "Register Now",
@@ -70,7 +70,8 @@
         "loginFailed": "Login failed",
         "socialLoginFailed": "Failed to sign in with {provider}. Please try again."
       }
-    }, "register": {
+    },
+    "register": {
       "title": "Create an Account",
       "subtitle": "Sign up to start your journey with Q Homes.",
       "fullName": "Full Name",
@@ -93,7 +94,7 @@
       "check1": "I agree to the Terms &amp; Conditions",
       "check2": " have read the Privacy Policy",
       "createAccount": "Create Account",
- 
+
       "errors": {
         "fullNameRequired": "Full name is required",
         "emailRequired": "Email is required",
@@ -125,7 +126,6 @@
         "resetFailed": "Failed to send reset link. Please try again."
       }
     }
- 
   },
   "searchBar": {
     "buy": "Buy",
@@ -180,7 +180,7 @@
         "priceHigh": "Price (High to Low)",
         "bedrooms": "Most Bedrooms"
       },
-  "loadMore": "Load More",
+      "loadMore": "Load More",
       "noResults": "No Properties Found",
       "noResultsMessage": "Try adjusting your filters to see more properties"
     },
@@ -341,7 +341,9 @@
           "statusAll": "All",
           "role": "Role",
           "roleAll": "All",
-          "lastActivity": "Last Activity"
+          "lastActivity": "Last Activity",
+          "last": "Last",
+          "days": "Days"
         },
         "table": {
           "userId": "User ID",
@@ -437,7 +439,14 @@
         "actionType": "Action Type",
         "allDates": "All Dates",
         "allUsers": "All Users",
+        "Users": "Users",
+        "StaffMembers": "Staff Members",
+        "System": "System",
         "allActions": "All Actions",
+        "PropertyActions": "Property Actions",
+        "UserActions": "User Actions",
+        "Settings": "Settings",
+        "Security": "Security",
         "last7Days": "Last 7 Days",
         "last30Days": "Last 30 Days",
         "last90Days": "Last 90 Days",
@@ -614,8 +623,68 @@
       "yourNotifications": "Your Notifications",
       "notificationSubtitle": "Here are your latest property alerts and updates.",
       "markallRead": "Mark all as read",
-      "tickets":" Support Tickets",
+      "tickets": " Support Tickets",
+      "searchProperties": "Search properties...",
+      "addProperty": "Add Property",
+      "SavedSearches": {
+        "title": "Saved Searches and Settings",
+        "subtitle": "Manage Your Saved Property alerts, enable or disable notifications, and keep your preferences organized efficiently",
+        "noSavedSearches": "No saved searches yet. Start searching to save your preferences!",
+        "yourSavedSearches": "Your Saved Searches",
+        "resetButton": "Reset to Default",
+        "saveChanges": "Save Changes"
+      },
+      "AppointmentTable": {
+        "id": "ID",
+        "Name": "Name",
+        "email": "Email",
+        "type": "Type",
 
+        "date": "Date",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "supportTicket": {
+        "title": "Support Tickets",
+        "subtitle": "Manage all your support requests in one place",
+        "totalTickets": "Total Tickets",
+        "openTicket": "Open ",
+        "inProgress": "In Progress",
+        "resolved": "Resolved",
+        "searchTickets": "Search tickets...",
+        "createTicket": "Create Ticket",
+        "AllStatus": "All Status",
+        "Open": "Open",
+        "InProgress": "In Progress",
+        "Resolved": "Resolved",
+        "id": "ID",
+        "subject": "Subject",
+        "property": "Property",
+        "replies": "Replies",
+        "created": "Created At",
+        "Actions": "Actions",
+        "createNewTicket": {
+          "CreateNewTicket": "Create New Ticket",
+          "EditTicket": "Edit Ticket",
+          "PropertyID": "Property ID",
+          "PropertyName" : "Property Name",
+          "Subject": "Subject",
+          "Priority": "Priority",
+          "Low": "Low",
+          "Medium": "Medium",
+          "High": "High",
+          "Description": "Description",
+          "DescriptionPlaceholder": "Describe your issue",
+          "Cancel": "Cancel",
+          "SaveChanges": "Save Changes",
+          "CreateTicket": "Create Ticket",
+          "subjectPlaceholder": "Enter the subject of your ticket",
+          "descriptionPlaceholder": "Describe your issue in detail",
+          "attachFile": "Attach File (optional)",
+          "submitTicket": "Submit Ticket",
+          "creatingTicket": "Creating Ticket..."
+        }
+      },
       "personalDetails": {
         "title": "Personal Details",
         "saving": "Saving...",
@@ -839,7 +908,7 @@
   "diaspora": {
     "title": "Coming Soon: The Diaspora Hub",
     "subtitle": "Your dedicated resource for investing and relocating back to Côte d'Ivoire.",
-    "cta": "Join the Waitlist"
+    "cta": "Join Diaspora Hub Waitlist"
   },
   "finalCta": {
     "title": "Ready to Find Your Ivorian Home?",
@@ -1061,6 +1130,61 @@
       "button": "List Your Project"
     }
   },
+  "residentialDetails": {
+    "notFound": {
+      "title": "Property Not Found",
+      "description": "The property you're looking for doesn't exist.",
+      "backLink": "← Back to Residential Properties"
+    },
+    "navigation": {
+      "overview": "Overview",
+      "units": "Unit Plans & Pricing",
+      "amenities": "Amenities",
+      "location": "Location",
+      "developer": "Developer",
+      "payment": "Payment Plans",
+      "menu": "Menu"
+    },
+    "buttons": {
+      "downloadBrochure": "Download Brochure",
+      "brochure": "Brochure",
+      "inquire": "Inquire",
+      "viewPlan": "View Plan",
+      "inquireAbout": "Inquire About This Development",
+      "bookSiteVisit": "Book a Site Visit",
+      "whatsapp": "Chat on WhatsApp"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "newDevelopments": "New Developments"
+    },
+    "badges": {
+      "verifiedBy": "Verified by",
+      "escrowEligible": "Escrow Eligible",
+      "by": "by"
+    },
+    "sections": {
+      "unitPlans": "Unit Plans & Pricing",
+      "amenities": "Amenities",
+      "locationConnectivity": "Location & Connectivity",
+      "developerProfile": "Developer Profile",
+      "paymentPlans": "Payment Plans"
+    },
+    "sidebar": {
+      "developmentOverview": "Development Overview",
+      "investmentHighlights": "Investment Highlights",
+      "unitTypes": "Unit Types",
+      "startingPrice": "Starting Price",
+      "estCompletion": "Est. Completion"
+    },
+    "developer": {
+      "defaultDescription": "With over 15 years of experience in crafting premium residential properties, Q Homes Development is synonymous with quality, innovation, and trust. Our portfolio showcases a commitment to architectural excellence and creating communities that stand the test of time."
+    },
+    "payment": {
+      "description": "We offer flexible payment plans to suit your financial needs. Our team is available to discuss financing options and guide you through the process."
+    },
+    "locationMap": "Location Map"
+  },
   "concierge": {
     "hero": {
       "title": "Your Move, Simplified.",
@@ -1160,7 +1284,7 @@
       "phone": "Phone Number",
       "preferredDate": "Preferred Date & Time",
       "message": "Message",
-      "submit": "Book My Consultation"
+      "submit": "Talk to a Concierge"
     }
   },
   "event": {
@@ -1220,7 +1344,7 @@
       "description": "Learn about Q Homes mission and team"
     },
     "hero": {
-      "title": "Your Trusted Partner in Côte d'Ivoire Real Estate",
+      "title": "About Q Homes – Powered by Q Global Living",
       "subtitle": "Connecting you with exceptional properties and seamless service across Abidjan and beyond."
     },
     "mission": {
@@ -1270,6 +1394,26 @@
         }
       }
     },
+    "overview": {
+      "title": "Who we are",
+      "p1": "Q Homes is a digital property platform built by Q Global Living, an innovation brand of The Quiah Group, that connects Africa’s real-estate market with the world.",
+      "p2": "Our mission is to simplify how people discover, verify, and invest in African properties — all through one trusted digital ecosystem.",
+      "p3": "We combine technology, verified data, and local partnerships to create transparency and safety for buyers, renters, and developers in Côte d’Ivoire and across the continent. Through our platform, you can browse verified listings, access escrow protection, and connect with trusted property owners and developers — without intermediaries."
+    },
+    "ecosystem": {
+      "title": "Our Ecosystem Includes",
+      "qhomes": "Q Homes — verified property marketplace",
+      "concierge": "Q Global Concierge — relocation & lifestyle services",
+      "developments": "Q Homes Developments — new construction & investment opportunities"
+    },
+    "values": {
+      "title": "Our Values",
+      "v1": "Trust by Design – Every property is verified before going live.",
+      "v2": "Innovation First – Tech-enabled tools for a seamless journey.",
+      "v3": "Transparency Always – Clear pricing, ownership & process.",
+      "v4": "Global Access – Created for Africa and the diaspora.",
+      "conclusion": "Q Homes is shaping the future of African living — where technology meets trust and global opportunity."
+    },
     "cta": {
       "title": "Ready to Find Your Dream Home?",
       "subtitle": "Explore our verified listings and experience the Q Homes difference today.",
@@ -1311,9 +1455,9 @@
       "officeTitle": "Our Office",
       "officeAddress": "Plateau, Abidjan, Côte d'Ivoire",
       "phoneTitle": "Phone",
-      "phoneNumber": "+225 01 23 45 67 89",
+      "phoneNumber": "+225 01 23 45 67 89 (Sample)",
       "emailTitle": "Email",
-      "emailAddress": "hello@qhomes.ci",
+      "emailAddress": "info@qglobaliving.com",
       "hoursTitle": "Business Hours",
       "hoursContent": "Mon - Fri: 8:00 AM - 6:00 PM WAT\nSat: 9:00 AM - 2:00 PM\nSun: Closed",
       "mapTitle": "Find Us on the Map"
@@ -1321,20 +1465,534 @@
     "faq": {
       "title": "Frequently Asked Questions",
       "subtitle": "Quick answers to common questions about our services.",
-      "q1": "How do I schedule a property viewing?",
-      "a1": "You can schedule a viewing directly through our website by clicking 'Book Viewing' on any property listing, or contact our concierge team via WhatsApp or email.",
-      "q2": "What areas do you serve?",
-      "a2": "We primarily serve Abidjan and surrounding areas, including Plateau, Cocody, Marcory, and emerging neighborhoods. We also assist with properties in Assinie and Grand-Bassam.",
-      "q3": "Do you offer property management services?",
-      "a3": "Yes, we provide comprehensive property management services for landlords, including tenant screening, rent collection, maintenance coordination, and regular property inspections.",
-      "q4": "How does your escrow service work?",
-      "a4": "Our escrow service acts as a neutral third party holding funds during the transaction. Money is only released when all contract conditions are met, ensuring security for both buyers and sellers."
+      "q1": "What types of properties does Q Homes specialize in?",
+      "a1": "Q Homes specializes in a wide range of properties in Côte d'Ivoire, including luxury villas, modern apartments, and commercial spaces. We cater to various needs, from long-term rentals to sales for both locals and expatriates relocating to the country.",
+      "q2": "How does Q Homes verify property listings?",
+      "a2": "We have a rigorous verification process. Our team conducts on-site visits, checks legal documentation and ownership titles (ACD - Arrêté de Concession Définitive), and ensures all listings meet our high standards for quality and safety. This guarantees that you are viewing legitimate, high-quality properties.",
+      "q3": "Do you offer relocation assistance for international clients?",
+      "a3": "Yes, we provide comprehensive relocation services. This includes helping you find the perfect home, assisting with administrative paperwork, and offering insights into life in Abidjan. Our goal is to make your move to Côte d'Ivoire as smooth and stress-free as possible.",
+      "q4": "What are the typical fees associated with renting or buying?",
+      "a4": "For rentals, standard fees usually include one month's rent for the agency fee, a security deposit (typically 2 months' rent), and the first month's rent in advance. For purchases, fees include notary fees and our agency commission, which are calculated based on the property's value. We ensure full transparency on all costs upfront."
     },
     "cta": {
       "title": "Prefer to Talk Directly?",
       "subtitle": "Schedule a call with one of our experts to discuss your real estate needs in detail.",
       "primaryButton": "Schedule a Call",
       "secondaryButton": "Browse FAQs"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about Q Homes and our services."
+  },
+  "PartnerDirectory": {
+    "Title": "Our Trusted Partners : Your Network for a Seamless Move",
+    "Subtitle": "Explore our curated network of vetted professionals, from legal advisors to moving specialists, ensuring every step of your real estate journey in Côte d’Ivoire is seamless and secure.",
+    "searchAndFilters": {
+      "searchPlaceholder": "Search by partner name...",
+      "filters": {
+        "All": "All",
+        "Legal": "Legal",
+        "Financial": "Financial"
+      }
+    },
+    "Financial": {
+      "title": "Financial Institutions",
+      "visit": "Visit Website"
+    },
+    "Legal": {
+      "title": "Legal Advisors",
+      "contact": "Contact Partner"
+    },
+    "partnerCTA": {
+      "title": "Become a Q Homes Partner",
+      "subtitle": "Join our exclusive network of trusted professionals and connect with a dedicated audience of home buyers and sellers.",
+      "button": "Join Our Network"
+    }
+  },
+  "ConciergeService": {
+    "title": "Your Seamless Move to Côte d’Ivoire Starts Here.",
+    "subtitle": "From visa assistance to settling in, our dedicated concierge team handles every detail, so you can feel at home from day one.",
+    "contactButton": "Book a Free Consultation",
+    "ComprehensiveSection": {
+      "title": "Our Comprehensive Concierge Services",
+      "card": {
+        "relocationPlanning": {
+          "title": "Relocation Planning",
+          "description": "Complete visa and logistics support for a smooth transition."
+        },
+        "virtual": {
+          "title": "Virtual & On-Ground Viewings",
+          "description": "Explore potential homes from anywhere with our expert guidance."
+        },
+        "moving": {
+          "title": "Moving & Setup Assistance",
+          "description": "We handle the heavy lifting, from packing to final setup."
+        },
+        "utilities": {
+          "title": "Utilities & Furnishing",
+          "description": "Get your home ready with essential services and furniture coordination."
+        },
+        "corporate": {
+          "title": "Corporate Packages",
+          "description": "Tailored relocation solutions for your employees and business needs."
+        },
+        "Local": {
+          "title": "Local Integration Support",
+          "description": "Find the best schools, healthcare, and local amenities with our help."
+        }
+      }
+    },
+    "HowItWorks": {
+      "title": "A Simple Path to Your New Home",
+      "Initial": {
+        "title": "Initial Consultation",
+        "description": "Share your needs and expectations with us in a free, no-obligation meeting."
+      },
+      "Customized": {
+        "title": "Customized Plan",
+        "description": "We design a personalized relocation strategy that covers all your requirements."
+      },
+      "Seamless": {
+        "title": "Seamless Execution",
+        "description": "Relax as our team handles every detail, providing you with regular updates."
+      }
+    },
+    "Testimonials": {
+      "title": "Trusted by Buyers and Sellers Worldwide",
+      "subtitle": "Hear from clients who found their dream property with Q HOMES."
+    },
+    "finalCta": {
+      "title": "Ready to Make Your Move Effortless?",
+      "description": "Let our experts handle the details so you can focus on the excitement of your new beginning in Côte d’Ivoire.",
+      "button": "Request a Quote"
+    }
+  },
+  "Policy": {
+    "MainContent": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last Updated: October 26, 2023",
+      "subtitle": "At Q Homes, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, share, and protect your data when you use our services. By accessing or using our platform, you agree to the terms of this Privacy Policy.",
+      "Information": {
+        "title": "Information We Collect",
+        "description": "We collect information to provide and improve our services. This includes personal information you provide when you create an account, such as your name, email address, and phone number. We also collect information about your property searches, saved listings, and interactions with our platform.",
+        "sortDescription": "Additionally, we automatically collect technical data, including your IP address, browser type, and device information, to ensure our platform functions correctly and to enhance security."
+      },
+      "HowWeUse": {
+        "title": "How We Use Your Information",
+        "description": "Your information is used to personalize your experience, connect you with real estate professionals, and provide you with relevant property listings. We may also use your data for internal analytics, to improve our platform's functionality, and to communicate with you about your account and our services.",
+        "sortDescription": ""
+      },
+      "HowWeShare": {
+        "title": "How We Share Your Information",
+        "description": "We may share your information with trusted third-party service providers who assist us in operating our platform, such as hosting services and analytics providers. We may also share your contact details with real estate agents when you express interest in a property. We do not sell your personal information to third parties.",
+        "sortDescription": ""
+      },
+      "YourPrivacyRights": {
+        "title": "Your Privacy Rights",
+        "description": "You have the right to access, update, or delete your personal information at any time through your account settings. You can also opt-out of receiving marketing communications from us by following the unsubscribe link in our emails."
+      },
+      "CookiesandTracking": {
+        "title": "Cookies and Tracking Technologies",
+        "description": "We use cookies and similar technologies to enhance your browsing experience, remember your preferences, and analyze platform traffic. You can control cookie settings through your browser, but disabling them may affect the functionality of our services."
+      },
+      "DataSecurity": {
+        "title": "Data Security",
+        "description": "We implement industry-standard security measures to protect your personal information from unauthorized access, disclosure, or alteration. However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security."
+      },
+      "ThirdPartyLinks": {
+        "title": "Third-Party Links",
+        "description": "Our platform may contain links to other websites. We are not responsible for the privacy practices of these third-party sites. We encourage you to read their privacy policies before providing any personal information."
+      },
+      "ChangesToOurPrivacyPolicy": {
+        "title": "Changes to Our Privacy Policy",
+        "description": "We reserve the right to modify this Privacy Policy at any time. Any changes will be posted on this page with an updated Last Updated date. We encourage you to review this policy periodically to stay informed about how we are protecting your information."
+      },
+      "ContactUs": {
+        "title": "Contact Us",
+        "description": "If you have any questions or concerns about this Privacy Policy, please contact us at",
+        "email": "privacy@qglobaliving.com",
+        "sortDescription": ""
+      }
+    },
+    "Sidebar": {
+      "Information": "Information We Collect",
+      "HowWeUse": "How We Use Your Information",
+      "HowWeShare": "How We Share Your Information",
+      "YourPrivacyRights": "Your Privacy Rights",
+      "CookiesandTracking": "Cookies and Tracking Technologies",
+      "DataSecurity": "Data Security",
+      "ThirdPartyLinks": "Third-Party Links",
+      "ChangesToOurPrivacyPolicy": "Changes to Our Privacy Policy",
+      "ContactUs": "Contact Us"
+    }
+  },
+  "Terms": {
+    "MainContent": {
+      "title": "Terms & Conditions",
+      "lastUpdated": "Last Updated: October 26, 2023",
+      "subtitle": "Welcome to Q Homes. These terms and conditions outline the rules and regulations for the use of Q Homes Website, located at qhomes.ci. By accessing this website we assume you accept these terms and conditions. Do not continue to use Q Homes if you do not agree to take all of the terms and conditions stated on this page.",
+      "Introduction": {
+        "title": "1. Introduction",
+        "description": "These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Q Homes accessible at qhomes.ci. These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions.",
+        "sortDescription": ""
+      },
+      "UserObligations": {
+        "title": "2. User Obligations & Conduct",
+        "description": "You are granted a limited license only for purposes of viewing the material contained on this Website. You are specifically restricted from all of the following: publishing any Website material in any other media; selling, sublicensing and/or otherwise commercializing any Website material; publicly performing and/or showing any Website material; using this Website in any way that is or may be damaging to this Website.",
+        "sortDescription": ""
+      },
+      "Intellectual": {
+        "title": "3. Intellectual Property Rights",
+        "description": "Other than the content you own, under these Terms, Q Homes and/or its licensors own all the intellectual property rights and materials contained in this Website. This includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.",
+        "sortDescription": ""
+      },
+      "Disclaimer": {
+        "title": "4. Disclaimer",
+        "description": "The information provided by Q Homes on qhomes.ci is for general informational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.",
+        "sortDescription": "The platform includes property listings and information provided by third-party agents, developers, and owners. Q Homes is not responsible for any inaccuracies, errors, or omissions in such third-party listings. The content is provided on an as-is and as available basis. Users are strongly advised to conduct their own due diligence and verify all information independently before entering into any agreements or transactions. Your use of the site and your reliance on any information on the site is solely at your own risk."
+      },
+      "Limitation": {
+        "title": "5. Limitation of Liability",
+        "description": "In no event shall Q Homes, nor any of its officers, directors and employees, be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract. Q Homes, including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.",
+        "sortDescription": ""
+      },
+      "Governing": {
+        "title": "6. Governing Law & Jurisdiction",
+        "description": "These Terms will be governed by and interpreted in accordance with the laws of Côte d’Ivoire, and you submit to the non-exclusive jurisdiction of the state and federal courts located in Côte d’Ivoire for the resolution of any disputes.",
+        "sortDescription": ""
+      },
+      "ChangesToTerms": {
+        "title": "7. Changes to Terms",
+        "description": "Q Homes is permitted to revise these Terms at any time as it sees fit, and by using this Website you are expected to review these Terms on a regular basis. We will notify you of any changes by posting the new Terms and Conditions on this page.",
+        "sortDescription": ""
+      },
+      "ContactInformation": {
+        "title": "8. Contact Information",
+        "description": "If you have any queries regarding any of our terms, please contact us. You can reach us via our Contact Page.",
+        "sortDescription": ""
+      }
+    },
+    "Sidebar": {
+      "Introduction": "1. Introduction",
+      "UserObligations": "2. User Obligations & Conduct",
+      "Intellectual": "3. Intellectual Property Rights",
+      "Disclaimer": "4. Disclaimer",
+      "Limitation": "5. Limitation of Liability",
+      "Governing": "6. Governing Law & Jurisdiction",
+      "ChangesToTerms": "7. Changes to Terms",
+      "ContactInformation": "8. Contact Information"
+    }
+  },
+  "CookiePolicy": {
+    "MainContent": {
+      "title": "Cookie Policy",
+      "lastUpdated": "Last Updated: October 26, 2023",
+      "subtitle": "This Cookie Policy explains what cookies are and how we use them. You should read this policy to understand what cookies are, how we use them, the types of cookies we use, the information we collect using cookies, how that information is used, and how to control your cookie preferences. For further information on how we use, store, and keep your personal data secure, see our Privacy Policy.",
+      "WhatAreCookies": {
+        "title": "What Are Cookies?",
+        "description": "Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work, or work more efficiently, as well as to provide reporting information about use of the site. Cookies help us to remember your preferences and to understand how you use our website, which allows us to improve your experience."
+      },
+      "HowWeUseCookies": {
+        "title": "How We Use Cookies",
+        "description": "We use cookies for a variety of reasons detailed below. Unfortunately, in most cases, there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. It is recommended that you leave on all cookies if you are not sure whether you need them or not in case they are used to provide a service that you use."
+      },
+      "TypesOfCookiesWeUse": {
+        "title": "Types of Cookies We Use"
+      },
+      "TypesOfCookies": {
+        "title": "Essential Cookies",
+        "description": "These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms."
+      },
+      "PerformanceAnalyticsCookies": {
+        "title": "Performance & Analytics Cookies",
+        "description": "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site."
+      },
+      "FunctionalityCookies": {
+        "title": "Functionality Cookies",
+        "description": "These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages."
+      },
+      "TargetingAdvertisingCookies": {
+        "title": "Targeting & Advertising Cookies",
+        "description": "These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites."
+      },
+      "ThirdPartyCookies": {
+        "title": "Third-Party Cookies",
+        "description": "In some special cases, we also use cookies provided by trusted third parties. The following section details which third-party cookies you might encounter through this site. For example, this site uses Google Analytics which is one of the most widespread and trusted analytics solutions on the web for helping us to understand how you use the site and ways that we can improve your experience."
+      },
+      "YourChoicesRegardingCookies": {
+        "title": "Your Choices Regarding Cookies",
+        "description": "You have the right to decide whether to accept or reject cookies. You can exercise your cookie rights by setting your preferences in the Cookie Consent Manager or by opting out of certain types of web tracking technologies, such as certain cookies. As the means by which you can refuse cookies through your web browser controls vary from browser to browser, you should use your browser's help menu for more information."
+      },
+      "ChangesToOurCookiePolicy": {
+        "title": "Changes to Our Cookie Policy",
+        "description": "We may update this Cookie Policy from time to time in order to reflect, for example, changes to the cookies we use or for other operational, legal, or regulatory reasons. Please ensure you revisit the Cookie Policy regularly to stay informed about our use of cookies and related technologies."
+      },
+      "ContactUs": {
+        "title": "Contact Us",
+        "description": "If you have any questions about our use of cookies or other technologies, please email us at support@qglobaliving.com.",
+        "email": "support@qglobaliving.com"
+      }
+    }
+  },
+  "LegalCenter": {
+    "title": "Legal Center",
+    "subtitle": "This page is the central repository for all important legal documents governing the use of the Q Homes platform, ensuring transparency and trust.",
+    "Last Updated": "Last Updated:",
+    "Terms": {
+      "title": "Terms & Conditions",
+      "description": "Outlines the rules and guidelines for using our services and platform."
+    },
+    "PrivacyPolicy": {
+      "title": "Privacy Policy",
+      "description": "Details how we collect, use, and protect your personal data."
+    },
+    "CookiePolicy": {
+      "title": "Cookie Policy",
+      "description": "Explains how we use cookies to enhance your browsing experience."
+    },
+    "Partner": {
+      "title": "Partner Directory",
+      "description": "Our commitment to ensuring our platform is usable by everyone."
+    },
+    "ConciergeService": {
+      "title": "Concierge Service",
+      "description": "Important information about limitations of liability and platform use."
+    }
+  },
+  "Blog": {
+    "SearchResults": "Search Results for",
+    "search": "Search",
+    "searchByKeyword": "Search by partner name...",
+    "Home": "Home",
+    "Blog": "Blog",
+    "By": "By",
+    "Published": "Published on",
+    "ShareThisArticle": "Share this article",
+    "ReadMoreArticles": "You Might Also Like",
+    "ReadMore": "Read More"
+  },
+  "Partner": {
+    "welcome": "Welcome Back, Partner",
+    "title": "Here's an overview of your property portfolio and recent activities",
+    "addButton": "Add New Property",
+    "statsData": {
+      "totalProperties": "Total Properties",
+      "totalViews": "Total Views",
+      "activeListings": "Active Listings",
+      "newInquiries": "New Inquiries"
+    },
+    "AllInquiries": "All Inquiries",
+    "SearchInquiries": "Search inquiries...",
+    "AllStatus": "All Status",
+    "Active": "Active",
+    "Pending": "Pending",
+    "Properties": "Properties",
+    "Locations": "Locations",
+    "Price": "Price",
+    "Views": "Views",
+    "Inquiries": "Inquiries",
+    "Status": "Status",
+    "views": "views",
+    "inquiries": "inquiries",
+    "NoPropertiesFound": "No Properties Found",
+    "TryAdjusting": "Try adjusting your search or filters",
+    "Next": "Next",
+    "Previous": "Previous",
+    "Showing": "Showing",
+    "to": "to",
+    "of": "of",
+    "results": "properties"
+  },
+  "Partner_my_listing": {
+    "title": "Listings",
+    "subtitle": "View and manage all your property listings.",
+    "addButton": "Add New Listing",
+    "Yourproperty": "Your property listings will be displayed here."
+  },
+  "Partner_my_listing_Modal": {
+    "PropertyDeveloper": "Property Developer",
+    "Adddevelopmentprojectlisting": "Add a development project listing",
+    "PropertyBuySell": "Property Buy / Sell",
+    "AddProperty": "Add Property Buy / Sell listing"
+  },
+  "PropertyDeveloperForm": {
+    "propertyName": "Property Name",
+    "propertyNamePlaceholder": "Enter property name",
+    "partnerId": "Partner ID",
+    "partnerIdPlaceholder": "Enter partner ID",
+    "location": "Location",
+    "locationPlaceholder": "Enter location",
+    "premiumListing": "Premium Listing",
+    "overview": "Overview",
+    "overviewPlaceholder": "Enter property overview",
+    "features": "Features",
+    "featuresPlaceholder": "Enter features (comma-separated)",
+    "pictures": "Pictures URLs",
+    "picturesPlaceholder": "Enter picture URLs (comma-separated)",
+    "paymentPlan": "Payment Plan",
+    "paymentPlanPlaceholder": "Enter payment plan details"
+  },
+  "PropertyBuySellForm": {
+    "userId": "User ID",
+    "userIdPlaceholder": "Enter user ID",
+    "propertyId": "Property ID",
+    "propertyIdPlaceholder": "Enter property ID",
+    "propertyName": "Property Name",
+    "propertyNamePlaceholder": "Enter property name",
+    "location": "Location",
+    "locationPlaceholder": "Enter location",
+    "overview": "Overview",
+    "overviewPlaceholder": "Enter property overview",
+    "features": "Features",
+    "featuresPlaceholder": "Enter features (comma-separated)",
+    "pictures": "Pictures URLs",
+    "picturesPlaceholder": "Enter picture URLs (comma-separated)",
+    "paymentPlan": "Payment Plan",
+    "paymentPlanPlaceholder": "Enter payment plan details",
+    "status": "Status",
+    "statusAvailable": "Available",
+    "statusSold": "Sold",
+    "statusPending": "Pending"
+  },
+  "InquiryDetails": {
+    "title": "Inquiries",
+    "subtitle": "View and respond to property inquiries from potential buyers.",
+    "SearchByName": "Search by name, email, or subject...",
+    "AllStatus": "All Status",
+    "Pending": "Pending",
+    "InProgress": "In Progress",
+    "Responded": "Responded",
+    "ID": "ID",
+    "ContactInfo": "Contact Info",
+    "Type": "Type",
+    "Subject": "Subject",
+    "Status": "Status",
+    "Date": "Date",
+    "Actions": "Actions",
+    "ViewDetails": "View Details",
+    "NoInquiries": "No Inquiries Found",
+    "TryAdjusting": "Try adjusting your search or filter criteria."
+  },
+  "Developer_Portal": {
+    "DeveloperPortal": "Developer Portal",
+    "title": "Manage your development projects and track performance.",
+    "addButton": "Add New Project",
+    "SearchProjects": "Search Projects...",
+    "AllStatus": "All Status",
+    "Active": "Active",
+    "Completed": "Completed",
+    "Pending": "Pending",
+    "ExportData": "Export Data",
+    "ProjectName": "Project Name",
+    "Location": "Location",
+    "Units": "Units",
+    "Revenue": "Revenue",
+    "Status": "Status",
+    "Actions": "Actions",
+    "LastUpdated": "Last Updated",
+    "NoProjectsFound": "No Projects Found",
+    "TotalProjects": "Total Projects",
+    "ActiveListings": "Active Listings",
+    "UnitsSold": "Units Sold",
+    "TotalRevenue": "Total Revenue"
+  },
+  "Developer_Inquiry": {
+    "title": "Developer Inquiry",
+    "subTitle": "Manage and respond to developer inquiries and customer messages",
+    "ComposeMessage": "Compose Message",
+    "TotalInquiries": "Total Inquiries",
+    "NewInquiries": "New Inquiries",
+    "Pending": "Pending",
+    "Resolved": "Resolved",
+    "AllInquiries": "All Inquiries",
+    "SearchByKeyword": "Search by keyword...",
+    "AllStatus": "All Status",
+    "New": "New",
+    "Closed": "Closed",
+    "Contact": "Contact",
+    "Subject": "Subject",
+    "Project": "Project",
+    "Date": "Date",
+    "Priority": "Priority",
+    "Actions": "Actions",
+    "TryAdjusting": "Try adjusting your search or filters.",
+    "NoInquiriesReceived": "No inquiries have been received yet",
+    "Status": "Status",
+    "NoInquiriesFound": "No inquiries found",
+    "InquiryDetailModal": {
+      "ContactInformation": "Contact Information",
+      "Message": "Message",
+      "ReplyToInquiry": "Reply to Inquiry",
+      "Archive": "Archive"
+    }
+  },
+  "PertnerProfile": {
+    "title": "Partner Profile",
+    "subtitle": "Manage your profile information and settings.",
+    "EditProfile": "Edit Profile",
+    "Edit": "Edit",
+    "SaveChanges": "Save Changes",
+    "Cancel": "Cancel",
+    "save": "Save",
+    "VerificationStatus": "Verification Status",
+    "Verified": "Verified",
+    "Unverified": "Unverified",
+    "PaymentStatus": "Payment Status",
+    "Paid": "Paid",
+    "Unpaid": "Unpaid",
+    "CompanyInformation": "Company Information",
+    "PartnerID": "Partner ID",
+    "CompanyName": "Company Name",
+    "ContactPerson": "Contact Person",
+    "EmailAddress": "Email Address",
+    "PhoneNumber": "Phone Number",
+    "PackageType": "Package Type",
+    "ProjectNames": "Project Names",
+    "UploadedDocuments": "Uploaded Documents",
+    "PDFDocuments": "PDF Documents",
+    "AccountInformation": "Account Information",
+    "AccountCreated": "Account Created",
+    "LastLogin": "Last Login"
+  },
+  "Verification": {
+    "HowItWorksTitle": "How to Get Verified in 5 Simple Steps",
+    "step1": {
+      "title": "Legal Review",
+      "description": "Ownership, land title, and development permits."
+    },
+    "step2": {
+      "title": "On-Site Validation",
+      "description": "Digital mapping and in-person inspection."
+    },
+    "step3": {
+      "title": "Developer Authentication",
+      "description": "Business registration (RCCM/K-bis) and project track record."
+    },
+    "step4": {
+      "title": "Escrow Readiness",
+      "description": "Eligibility for secure transactions via partner banks."
+    },
+    "step5": {
+      "title": "Final Verification Badge",
+      "description": "Only listings that pass all checks receive the “Verified by Q Homes” seal."
+    },
+    "ApplicationForm": {
+      "title": "Become a Q Homes Partner",
+      "subtitle": "Complete the form below to begin the verification process.",
+      "CompanyName": "Company Name",
+      "ContactPerson": "Contact Person",
+      "Email": "Email Address",
+      "Phone": "Phone Number",
+      "ProjectName": "Project Name",
+      "PreferredPackage": "Preferred Package",
+      "Starter": "Starter",
+      "Featured": "Featured",
+      "Premium": "Premium",
+      "UploadDocuments": "Upload Documents",
+      "OrDragAndDrop": "or drag and drop",
+      "fileTypes": "PDF, DOCX, PNG, JPG up to 10MB",
+      "SubmitButton": "Submit Application"
     }
   }
 }
