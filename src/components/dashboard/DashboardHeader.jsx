@@ -3,6 +3,7 @@
 import { useAuth } from '@/contexts/AuthContext';
 import { usePathname } from 'next/navigation';
 import { useTranslation } from '@/i18n';
+import ProfileDropDown from '../ProfileDropDown';
 
 /**
  * Dashboard Header Component
@@ -26,15 +27,13 @@ export default function DashboardHeader({ title }) {
 
         {/* User Badge */}
         <div className='flex items-center gap-2 sm:gap-4'>
-          <div className='hidden sm:flex items-center gap-2 rounded-full bg-gray-100 px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-gray-700'>
-            <div className='h-2 w-2 rounded-full bg-green-500'></div>
-            <span className='capitalize truncate max-w-[100px] sm:max-w-none'>
-              {user?.role || t('common.loading')}
-            </span>
+          <div className='hidden sm:flex items-center gap-2 rounded-full px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-gray-700'>
+            
+          <ProfileDropDown/>
           </div>
           {/* Mobile: Show only role initial */}
           <div className='sm:hidden flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 text-xs font-semibold text-gray-700 uppercase'>
-            {user?.role?.charAt(0) || 'U'}
+            {user? <ProfileDropDown/> : 'U'}
           </div>
         </div>
       </div>

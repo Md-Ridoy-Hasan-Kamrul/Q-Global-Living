@@ -22,9 +22,9 @@ export const RESIDENTIAL_PROPERTIES = [
     propertyType: '2-3 BR Apartments',
     priceXOF: 85000000,
     priceUSD: 140000,
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800',
+    image: '/new-development/azura.jpg',
     heroImage:
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80',
+      '/new-development/azura.jpg',
     verified: true,
     verifiedBy: 'Q Homes',
     escrowEligible: true,
@@ -55,14 +55,14 @@ export const RESIDENTIAL_PROPERTIES = [
         size: '120 sqm',
         price: 'Starts from XOF 85,000,000',
         image:
-          'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500&q=80',
+          '/new-development/commonbed.jpg',
       },
       {
         name: '3 Bedroom Apartment',
         size: '180 sqm',
         price: 'Starts from XOF 120,000,000',
         image:
-          'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&q=80',
+          '/new-development/commonbed1.jpg',
       },
     ],
     amenities: [
@@ -101,9 +101,9 @@ export const RESIDENTIAL_PROPERTIES = [
     propertyType: '3-5 BR Penthouses',
     priceXOF: 120000000,
     priceUSD: 197000,
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800',
+    image: '/new-development/pearl.jpg',
     heroImage:
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+      '/new-development/pearl.jpg',
     verified: true,
     verifiedBy: 'Q Homes',
     escrowEligible: false,
@@ -134,14 +134,14 @@ export const RESIDENTIAL_PROPERTIES = [
         size: '220 sqm',
         price: 'Starts from XOF 120,000,000',
         image:
-          'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500&q=80',
+          '/new-development/commonbed.jpg',
       },
       {
         name: '5 Bedroom Penthouse',
         size: '380 sqm',
         price: 'Price on Request',
         image:
-          'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&q=80',
+          '/new-development/commonbed1.jpg',
       },
     ],
     amenities: [
@@ -180,9 +180,9 @@ export const RESIDENTIAL_PROPERTIES = [
     propertyType: '4-6 BR Villas',
     priceXOF: 350000000,
     priceUSD: 575000,
-    image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800',
+    image: '/new-development/last.png',
     heroImage:
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80',
+      '/new-development/last.png',
     verified: true,
     verifiedBy: 'Q Homes',
     escrowEligible: true,
@@ -213,14 +213,14 @@ export const RESIDENTIAL_PROPERTIES = [
         size: '450 sqm',
         price: 'Starts from XOF 350,000,000',
         image:
-          'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500&q=80',
+          '/new-development/commonbed.jpg',
       },
       {
         name: '6 Bedroom Villa',
         size: '650 sqm',
         price: 'Price on Request',
         image:
-          'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&q=80',
+          '/new-development/commonbed1.jpg',
       },
     ],
     amenities: [
