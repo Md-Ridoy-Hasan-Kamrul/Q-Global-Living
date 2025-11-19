@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import {
   LayoutDashboard,
   Users,
@@ -39,18 +39,18 @@ import { useTranslation } from '@/i18n';
 const navigationConfig = {
   admin: [
     {
-      key: "dashboard.admin.overview",
-      href: "/dashboard/admin",
+      key: 'dashboard.admin.overview',
+      href: '/dashboard/admin',
       icon: LayoutDashboard,
     },
     {
-      key: "dashboard.admin.usersLink",
-      href: "/dashboard/admin/users",
+      key: 'dashboard.admin.usersLink',
+      href: '/dashboard/admin/users',
       icon: Users,
     },
     {
-      key: "dashboard.admin.blogEditorLink",
-      href: "/dashboard/admin/blog-editor",
+      key: 'dashboard.admin.blogEditorLink',
+      href: '/dashboard/admin/blog-editor',
       icon: FileText,
     },
     // {
@@ -59,8 +59,8 @@ const navigationConfig = {
     //   icon: Image,
     // },
     {
-      key: "dashboard.admin.auditLogsLink",
-      href: "/dashboard/admin/audit-logs",
+      key: 'dashboard.admin.auditLogsLink',
+      href: '/dashboard/admin/audit-logs',
       icon: ScrollText,
     },
     // {
@@ -69,23 +69,23 @@ const navigationConfig = {
     //   icon: Search,
     // },
     {
-      key: "dashboard.admin.propertiesLink",
-      href: "/dashboard/admin/properties",
+      key: 'dashboard.admin.propertiesLink',
+      href: '/dashboard/admin/properties',
       icon: Building2,
     },
     {
-      key: "dashboard.admin.partnersLink",
-      href: "/dashboard/admin/partners",
+      key: 'dashboard.admin.partnersLink',
+      href: '/dashboard/admin/partners',
       icon: UserCheck,
     },
     {
-      key: "dashboard.admin.conciergeRequestsLink",
-      href: "/dashboard/admin/concierge-requests",
+      key: 'dashboard.admin.conciergeRequestsLink',
+      href: '/dashboard/admin/concierge-requests',
       icon: Bell,
     },
     {
-      key: "dashboard.admin.eventManagement",
-      href: "/dashboard/admin/event-management",
+      key: 'dashboard.admin.eventManagement',
+      href: '/dashboard/admin/event-management',
       icon: Calendar,
     },
     // {
@@ -96,30 +96,30 @@ const navigationConfig = {
   ],
   client: [
     {
-      key: "dashboard.client.profile",
-      href: "/dashboard/client",
+      key: 'dashboard.client.profile',
+      href: '/dashboard/client',
       icon: UserCircle,
     },
     {
-      key: "dashboard.client.favorites",
-      href: "/dashboard/client/favorites",
+      key: 'dashboard.client.favorites',
+      href: '/dashboard/client/favorites',
       icon: Heart,
     },
     {
-      key: "dashboard.client.savedSearches",
-      href: "/dashboard/client/saved-searches",
+      key: 'dashboard.client.savedSearches',
+      href: '/dashboard/client/saved-searches',
       icon: Search,
     },
     {
-      key: "dashboard.client.appointments",
-      href: "/dashboard/client/appointments",
+      key: 'dashboard.client.appointments',
+      href: '/dashboard/client/appointments',
       icon: Calendar,
     },
     {
       key: 'dashboard.client.tickets',
       href: '/dashboard/client/tickets',
       icon: MessageSquare,
-    }
+    },
     // {
     //   key: 'dashboard.client.settings',
     //   href: '/dashboard/client/settings',
@@ -128,18 +128,18 @@ const navigationConfig = {
   ],
   partner: [
     {
-      key: "dashboard.partner.properties",
-      href: "/dashboard/partner",
+      key: 'dashboard.partner.properties',
+      href: '/dashboard/partner',
       icon: Building2,
     },
     {
-      key: "dashboard.partner.myListings",
-      href: "/dashboard/partner/my-listings",
+      key: 'dashboard.partner.myListings',
+      href: '/dashboard/partner/my-listings',
       icon: List,
     },
     {
-      key: "dashboard.partner.inquiries",
-      href: "/dashboard/partner/inquiries",
+      key: 'dashboard.partner.inquiries',
+      href: '/dashboard/partner/inquiries',
       icon: Mail,
     },
     {
@@ -164,11 +164,13 @@ const navigationConfig = {
  * Sidebar Navigation Component
  * Production-grade responsive sidebar with mobile menu and client-side language switching
  */
-export default function Sidebar({ role = "admin" }) {
+export default function Sidebar({ role = 'admin' }) {
   const pathname = usePathname();
   const { user, logout } = useAuth();
-  const { locale, changeLanguage } = useLanguage(); // Use LanguageContext
+  const { locale, changeLanguage } = useLanguage();
   const { t } = useTranslation(locale);
+  const router = useRouter();
+  // const { t } = useMemo(() => useTranslation(locale), [locale]);
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [prevPathname, setPrevPathname] = useState(pathname);
@@ -187,12 +189,12 @@ export default function Sidebar({ role = "admin" }) {
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = 'unset';
     }
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = 'unset';
     };
   }, [isMobileMenuOpen]);
 
@@ -205,11 +207,11 @@ export default function Sidebar({ role = "admin" }) {
     };
 
     if (showLangDropdown) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('click', handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('click', handleClickOutside);
     };
   }, [showLangDropdown]);
 
@@ -236,8 +238,8 @@ export default function Sidebar({ role = "admin" }) {
    * Professional approach: instant UI update using React Context
    */
   const handleLanguageChange = (newLocale) => {
-    changeLanguage(newLocale); // This updates state + URL without reload ✨
-    setShowLangDropdown(false); // Close dropdown after selection
+    changeLanguage(newLocale);
+    setShowLangDropdown(false);
   };
 
   /**
@@ -249,54 +251,55 @@ export default function Sidebar({ role = "admin" }) {
     // Translate role-based default names
     const roleNames = {
       admin:
-        t("dashboard.admin.title")
-          .replace("Tableau de Bord ", "")
-          .replace("Dashboard", "")
-          .trim() || "Admin",
+        t('dashboard.admin.title')
+          .replace('Tableau de Bord ', '')
+          .replace('Dashboard', '')
+          .trim() || 'Admin',
       client:
-        t("dashboard.client.title")
-          .replace("Tableau de Bord ", "")
-          .replace("Dashboard", "")
-          .trim() || "Client",
+        t('dashboard.client.title')
+          .replace('Tableau de Bord ', '')
+          .replace('Dashboard', '')
+          .trim() || 'Client',
       partner:
-        t("dashboard.partner.title")
-          .replace("Tableau de Bord ", "")
-          .replace("Dashboard", "")
-          .trim() || "Partner",
+        t('dashboard.partner.title')
+          .replace('Tableau de Bord ', '')
+          .replace('Dashboard', '')
+          .trim() || 'Partner',
     };
 
-    return roleNames[user?.role] || "User";
+    return roleNames[user?.role] || 'User';
   };
 
   /**
    * Render sidebar content
    */
   const renderSidebarContent = () => (
-    <div className="flex h-full flex-col">
+    <div className='flex h-full flex-col'>
       {/* Logo Section */}
-      <div className="flex h-20 items-center gap-3 border-b border-gray-700/50 px-6">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E6B325]">
-          <Home className="h-6 w-6 text-[#0F1B2E]" />
-        </div>
-        <div className="flex-1 min-w-0">
-          <h1 className="text-lg font-semibold text-white">Q Global Living</h1>
-          <p className="text-xs text-gray-400 capitalize">
+      <div className='flex  items-center justify-between lg:justify-center gap-1 mt-1  border-b border-gray-700/50 px-6'>
+        <Link className='flex items-center ' href={`/${locale}`}>
+          <div className='flex items-center justify-center rounded-full -my-3'>
+            <img src='/logo.png' alt='Logo' className='w-[85px] h-[85px]' />
+          </div>
+          {/* <div className='flex-1 min-w-0'>
+          <p className='text-base font-semibold text-gray-400 capitalize'>
             {t(`dashboard.${role}.title`)}
           </p>
-        </div>
+        </div> */}
+        </Link>
         {/* Close button for mobile */}
         <button
           onClick={() => setIsMobileMenuOpen(false)}
-          className="lg:hidden text-gray-400 hover:text-white transition-colors"
-          aria-label="Close menu"
+          className='lg:hidden text-gray-400 hover:text-white transition-colors'
+          aria-label='Close menu'
         >
-          <X className="h-6 w-6" />
+          <X className='h-6 w-6' />
         </button>
       </div>
 
       {/* Navigation Items */}
-      <nav className="flex-1 overflow-y-auto px-3 py-4 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800">
-        <ul className="space-y-1">
+      <nav className='flex-1 overflow-y-auto px-3 py-4 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800'>
+        <ul className='space-y-1'>
           {navigationItems.map((item) => {
             const Icon = item.icon;
             const isActive = isActiveLink(item.href);
@@ -311,8 +314,8 @@ export default function Sidebar({ role = "admin" }) {
                     transition-all duration-200 ease-in-out
                     ${
                       isActive
-                        ? "bg-[#1E3A5F] text-white shadow-sm"
-                        : "text-gray-300 hover:bg-[#1A2B42] hover:text-white"
+                        ? 'bg-[#1E3A5F] text-white shadow-sm'
+                        : 'text-gray-300 hover:bg-[#1A2B42] hover:text-white'
                     }
                   `}
                 >
@@ -321,12 +324,12 @@ export default function Sidebar({ role = "admin" }) {
                       h-5 w-5 shrink-0 transition-colors
                       ${
                         isActive
-                          ? "text-[#E6B325]"
-                          : "text-gray-400 group-hover:text-gray-300"
+                          ? 'text-[#E6B325]'
+                          : 'text-gray-400 group-hover:text-gray-300'
                       }
                     `}
                   />
-                  <span className="flex-1 truncate">{t(item.key)}</span>
+                  <span className='flex-1 truncate'>{t(item.key)}</span>
                 </Link>
               </li>
             );
@@ -335,60 +338,60 @@ export default function Sidebar({ role = "admin" }) {
       </nav>
 
       {/* User Section */}
-      <div className="border-t border-gray-700/50 p-4">
+      <div className='border-t border-gray-700/50 p-4'>
         {/* User Info with Dropdown */}
-        <div className='relative' ref={dropdownRef}>
+        <div className='relative z-50' ref={dropdownRef}>
           <button
             onClick={() => setShowLangDropdown(!showLangDropdown)}
-            className="mb-3 flex w-full items-center gap-3 rounded-lg bg-[#1A2B42] px-3 py-2.5 hover:bg-[#1E3A5F] transition-colors"
+            className='mb-3 flex w-full items-center gap-3 rounded-lg bg-[#1A2B42] px-3 py-2.5 hover:bg-[#1E3A5F] transition-colors'
           >
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#E6B325] text-sm font-semibold text-[#0F1B2E]">
+            <div className='flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#E6B325] text-sm font-semibold text-[#0F1B2E]'>
               {user?.name?.charAt(0) || getUserDisplayName().charAt(0)}
             </div>
-            <div className="flex-1 min-w-0 text-left">
-              <p className="truncate text-sm font-medium text-white">
+            <div className='flex-1 min-w-0 text-left'>
+              <p className='truncate text-sm font-medium text-white'>
                 {getUserDisplayName()}
               </p>
-              <p className="truncate text-xs text-gray-400">
-                {user?.email || ""}
+              <p className='truncate text-xs text-gray-400'>
+                {user?.email || ''}
               </p>
             </div>
             <ChevronDown
               className={`h-4 w-4 shrink-0 text-gray-400 transition-transform ${
-                showLangDropdown ? "rotate-180" : ""
+                showLangDropdown ? 'rotate-180' : ''
               }`}
             />
           </button>
 
           {/* Language Dropdown */}
           {showLangDropdown && (
-            <div className="absolute bottom-full left-0 right-0 mb-2 bg-[#1A2B42] rounded-lg shadow-lg border border-gray-700/50 overflow-hidden">
+            <div className='absolute bottom-full left-0 right-0 mb-2 bg-[#1A2B42] rounded-lg shadow-xl border border-gray-700/50 z-50'>
               <button
-                onClick={() => handleLanguageChange("en")}
+                onClick={() => handleLanguageChange('en')}
                 className={`flex w-full items-center gap-3 px-3 py-2.5 text-sm transition-colors ${
-                  locale === "en"
-                    ? "bg-[#1E3A5F] text-white"
-                    : "text-gray-300 hover:bg-[#1E3A5F] hover:text-white"
+                  locale === 'en'
+                    ? 'bg-[#1E3A5F] text-white'
+                    : 'text-gray-300 hover:bg-[#1E3A5F] hover:text-white'
                 }`}
               >
-                <Globe className="h-4 w-4 shrink-0" />
+                <Globe className='h-4 w-4 shrink-0' />
                 <span>English</span>
-                {locale === "en" && (
-                  <span className="ml-auto text-[#E6B325]">✓</span>
+                {locale === 'en' && (
+                  <span className='ml-auto text-[#E6B325]'>✓</span>
                 )}
               </button>
               <button
-                onClick={() => handleLanguageChange("fr")}
+                onClick={() => handleLanguageChange('fr')}
                 className={`flex w-full items-center gap-3 px-3 py-2.5 text-sm transition-colors ${
-                  locale === "fr"
-                    ? "bg-[#1E3A5F] text-white"
-                    : "text-gray-300 hover:bg-[#1E3A5F] hover:text-white"
+                  locale === 'fr'
+                    ? 'bg-[#1E3A5F] text-white'
+                    : 'text-gray-300 hover:bg-[#1E3A5F] hover:text-white'
                 }`}
               >
-                <Globe className="h-4 w-4 shrink-0" />
+                <Globe className='h-4 w-4 shrink-0' />
                 <span>Français</span>
-                {locale === "fr" && (
-                  <span className="ml-auto text-[#E6B325]">✓</span>
+                {locale === 'fr' && (
+                  <span className='ml-auto text-[#E6B325]'>✓</span>
                 )}
               </button>
             </div>
@@ -398,11 +401,11 @@ export default function Sidebar({ role = "admin" }) {
         {/* Logout Button */}
         <button
           onClick={handleLogout}
-          className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-300 transition-all duration-200 hover:bg-[#1A2B42] hover:text-white"
-          aria-label="Logout"
+          className='flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-300 transition-all duration-200 hover:bg-[#1A2B42] hover:text-white'
+          aria-label='Logout'
         >
-          <LogOut className="h-5 w-5 shrink-0 text-gray-400" />
-          <span>{t("dashboard.logout")}</span>
+          <LogOut className='h-5 w-5 shrink-0 text-gray-400' />
+          <span>{t('dashboard.logout')}</span>
         </button>
       </div>
     </div>
@@ -413,23 +416,23 @@ export default function Sidebar({ role = "admin" }) {
       {/* Mobile Menu Toggle Button - Perfectly centered with header */}
       <button
         onClick={() => setIsMobileMenuOpen(true)}
-        className="fixed top-3.5 left-4 z-50 lg:hidden flex h-10 w-10 items-center justify-center rounded-lg bg-[#0F1B2E] text-white shadow-md hover:bg-[#1A2B42] transition-colors"
-        aria-label="Open menu"
+        className='fixed top-3.5 left-4 z-50 lg:hidden flex h-10 w-10 items-center justify-center rounded-lg bg-[#0F1B2E] text-white shadow-md hover:bg-[#1A2B42] transition-colors'
+        aria-label='Open menu'
       >
-        <Menu className="h-5 w-5" />
+        <Menu className='h-5 w-5' />
       </button>
 
       {/* Mobile Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden transition-opacity"
+          className='fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden transition-opacity'
           onClick={() => setIsMobileMenuOpen(false)}
-          aria-hidden="true"
+          aria-hidden='true'
         />
       )}
 
       {/* Desktop Sidebar - Hidden on mobile, visible on lg+ */}
-      <aside className="hidden lg:block fixed left-0 top-0 z-40 h-screen w-64 bg-[#0F1B2E]">
+      <aside className='hidden lg:block fixed left-0 top-0 z-40 h-screen w-64 bg-[#0F1B2E] overflow-visible'>
         {renderSidebarContent()}
       </aside>
 
@@ -437,7 +440,7 @@ export default function Sidebar({ role = "admin" }) {
       <aside
         className={`
           fixed left-0 top-0 z-50 h-screen w-64 bg-[#0F1B2E] transition-transform duration-300 ease-in-out lg:hidden
-          ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"}
+          ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
         `}
       >
         {renderSidebarContent()}

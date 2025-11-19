@@ -1,5 +1,7 @@
 'use client';
 import React, { useState } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslation } from '@/i18n';
 
 /**
  * Property Buy/Sell Form Component
@@ -35,12 +37,15 @@ const PropertyBuySellForm = ({ onSubmit, onCancel }) => {
     });
   };
 
+  const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
+
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>
       {/* User ID */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          User ID <span className='text-red-400'>*</span>
+          {t('PropertyBuySellForm.userId', 'User ID')} <span className='text-red-400'>*</span>
         </label>
         <input
           type='text'
@@ -49,14 +54,14 @@ const PropertyBuySellForm = ({ onSubmit, onCancel }) => {
           onChange={handleChange}
           required
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent'
-          placeholder='Enter user ID'
+          placeholder={t('PropertyBuySellForm.userIdPlaceholder', 'Enter user ID')}
         />
       </div>
 
       {/* Property ID */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Property ID <span className='text-red-400'>*</span>
+          {t('PropertyBuySellForm.propertyId', 'Property ID')} <span className='text-red-400'>*</span>
         </label>
         <input
           type='text'
@@ -65,14 +70,14 @@ const PropertyBuySellForm = ({ onSubmit, onCancel }) => {
           onChange={handleChange}
           required
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent'
-          placeholder='Enter property ID'
+          placeholder={t('PropertyBuySellForm.propertyIdPlaceholder', 'Enter property ID')}
         />
       </div>
 
       {/* Name */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Property Name <span className='text-red-400'>*</span>
+          {t('PropertyBuySellForm.propertyName', 'Property Name')} <span className='text-red-400'>*</span>
         </label>
         <input
           type='text'
@@ -81,14 +86,14 @@ const PropertyBuySellForm = ({ onSubmit, onCancel }) => {
           onChange={handleChange}
           required
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent'
-          placeholder='Enter property name'
+          placeholder={t('PropertyBuySellForm.propertyNamePlaceholder', 'Enter property name')}
         />
       </div>
 
       {/* Location */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Location <span className='text-red-400'>*</span>
+          {t('PropertyBuySellForm.location', 'Location')} <span className='text-red-400'>*</span>
         </label>
         <input
           type='text'
@@ -97,14 +102,14 @@ const PropertyBuySellForm = ({ onSubmit, onCancel }) => {
           onChange={handleChange}
           required
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent'
-          placeholder='Enter location'
+          placeholder={t('PropertyBuySellForm.locationPlaceholder', 'Enter location')}
         />
       </div>
 
       {/* Overview */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Overview <span className='text-red-400'>*</span>
+          {t('PropertyBuySellForm.overview', 'Overview')} <span className='text-red-400'>*</span>
         </label>
         <textarea
           name='overview'
@@ -113,14 +118,14 @@ const PropertyBuySellForm = ({ onSubmit, onCancel }) => {
           required
           rows={4}
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent resize-none'
-          placeholder='Enter property overview'
+          placeholder={t('PropertyBuySellForm.overviewPlaceholder', 'Enter property overview')}
         />
       </div>
 
       {/* Features */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Features <span className='text-red-400'>*</span>
+          {t('PropertyBuySellForm.features', 'Features')} <span className='text-red-400'>*</span>
         </label>
         <textarea
           name='features'
@@ -129,14 +134,14 @@ const PropertyBuySellForm = ({ onSubmit, onCancel }) => {
           required
           rows={3}
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent resize-none'
-          placeholder='Enter features (comma-separated)'
+          placeholder={t('PropertyBuySellForm.featuresPlaceholder', 'Enter features (comma-separated)')}
         />
       </div>
 
       {/* Pictures */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Pictures URLs
+          {t('PropertyBuySellForm.pictures', 'Pictures URLs')}
         </label>
         <textarea
           name='pictures'
@@ -144,14 +149,14 @@ const PropertyBuySellForm = ({ onSubmit, onCancel }) => {
           onChange={handleChange}
           rows={2}
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent resize-none'
-          placeholder='Enter picture URLs (comma-separated)'
+          placeholder={t('PropertyBuySellForm.picturesPlaceholder', 'Enter picture URLs (comma-separated)')}
         />
       </div>
 
       {/* Payment Plan */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Payment Plan <span className='text-red-400'>*</span>
+          {t('PropertyBuySellForm.paymentPlan', 'Payment Plan')} <span className='text-red-400'>*</span>
         </label>
         <textarea
           name='paymentPlan'
@@ -160,14 +165,14 @@ const PropertyBuySellForm = ({ onSubmit, onCancel }) => {
           required
           rows={3}
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent resize-none'
-          placeholder='Enter payment plan details'
+          placeholder={t('PropertyBuySellForm.paymentPlanPlaceholder', 'Enter payment plan details')}
         />
       </div>
 
       {/* Status */}
       <div>
         <label className='block text-white text-sm font-medium mb-2'>
-          Status <span className='text-red-400'>*</span>
+          {t('PropertyBuySellForm.status', 'Status')} <span className='text-red-400'>*</span>
         </label>
         <select
           name='status'
@@ -177,13 +182,13 @@ const PropertyBuySellForm = ({ onSubmit, onCancel }) => {
           className='w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#E6B325] focus:border-transparent'
         >
           <option value='available' className='bg-gray-800'>
-            Available
+            {t('PropertyBuySellForm.statusAvailable', 'Available')}
           </option>
           <option value='sold' className='bg-gray-800'>
-            Sold
+            {t('PropertyBuySellForm.statusSold', 'Sold')}
           </option>
           <option value='pending' className='bg-gray-800'>
-            Pending
+            {t('PropertyBuySellForm.statusPending', 'Pending')}
           </option>
         </select>
       </div>
@@ -195,13 +200,13 @@ const PropertyBuySellForm = ({ onSubmit, onCancel }) => {
           onClick={onCancel}
           className='px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors'
         >
-          Cancel
+          {t('common.cancel', 'Cancel')}
         </button>
         <button
           type='submit'
           className='px-6 py-2 bg-[#E6B325] hover:bg-[#d4a520] text-black font-semibold rounded-lg transition-colors'
         >
-          Submit
+          {t('common.submit', 'Submit')}
         </button>
       </div>
     </form>

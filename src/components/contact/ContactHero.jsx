@@ -45,7 +45,7 @@ const ContactHero = React.memo(
             <div className='max-w-3xl space-y-4'>
               <h1
                 id='contact-hero-title'
-                className='text-[28px] font-black leading-[1.2] tracking-[-0.015em] text-white sm:text-[36px] md:text-[48px] lg:text-[64px]'
+                className='font-black leading-[1.2] tracking-[-0.015em] text-white text-2xl sm:text-3xl lg:text-5xl'
               >
                 {title}
               </h1>

@@ -377,7 +377,7 @@ export default function RentPage() {
                   onChange={handleSortChange}
                   onFocus={() => setSortDropdownOpen(true)}
                   onBlur={() => setSortDropdownOpen(false)}
-                  className='appearance-none rounded-lg border border-gray-300 dark:border-gray-600 bg-[#fafafa] dark:bg-card-dark shadow-sm focus:border-primary focus:ring-2 focus:ring-primary text-sm pl-4 pr-10 py-0.5 sm:py-2 cursor-pointer w-[110px] sm:min-w-[150px] md:min-w-[180px]'
+                  className='appearance-none rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-card-dark shadow-xs focus:border-primary focus:ring-1 outline-none focus:ring-primary text-sm pl-4 pr-10 py-0.5 sm:py-2 cursor-pointer w-[110px] sm:min-w-[150px] md:min-w-[180px]'
                   aria-label='Sort properties'
                 >
                   <option value='newest'>

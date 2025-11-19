@@ -44,8 +44,8 @@ const accessibility = {
       contactMethods: [
         {
           type: "Email",
-          value: "accessibility@qhomes.ci",
-          link: "mailto:accessibility@qhomes.ci",
+          value: "accessibility@qglobaliving.com",
+          link: "mailto:accessibility@qglobaliving.com",
         },
         {
           type: "Phone",

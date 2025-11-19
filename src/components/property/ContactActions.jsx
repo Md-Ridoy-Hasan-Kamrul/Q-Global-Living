@@ -49,7 +49,7 @@ function ContactActions({ propertyId, propertyTitle }) {
       {/* Book a Viewing Button */}
       <button
         onClick={handleBookViewing}
-        className='w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-3.5 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-sm'
+        className='w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold text-sm xl:text-base py-3.5 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-sm'
         aria-label={t('buy.property.bookViewing')}
       >
         <svg
@@ -71,7 +71,7 @@ function ContactActions({ propertyId, propertyTitle }) {
       {/* Chat on WhatsApp Button */}
       <button
         onClick={handleWhatsAppChat}
-        className='w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3.5 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-sm'
+        className='w-full bg-green-500 hover:bg-green-600 text-white font-semibold text-sm xl:text-base py-3.5 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-sm'
         aria-label={t('buy.property.chatWhatsApp')}
       >
         <svg className='w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
@@ -83,7 +83,7 @@ function ContactActions({ propertyId, propertyTitle }) {
       {/* Reserve with Escrow Button */}
       <button
         onClick={handleEscrowReserve}
-        className='w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3.5 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-sm'
+        className='w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3.5 px-6 text-sm xl:text-base rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-sm'
         aria-label={t('buy.property.reserveEscrow')}
       >
         <svg

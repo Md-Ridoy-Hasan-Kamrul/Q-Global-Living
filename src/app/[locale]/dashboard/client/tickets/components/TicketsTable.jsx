@@ -173,6 +173,8 @@ import React from "react";
 import { MessageSquare } from "lucide-react";
 import ActionButtons from "./ActionButtons";
 import Pagination from "@/components/dashboard/Pagination";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "@/i18n";
 
 function TicketsTable({
   tickets,
@@ -196,6 +198,8 @@ function TicketsTable({
     next: "Next",
   },
 }) {
+     const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       {tickets.length > 0 ? (
@@ -210,22 +214,23 @@ function TicketsTable({
             <thead className="bg-gray-100 border-b border-gray-200">
               <tr>
                 <th className="px-6 py-4 text-left text-base font-semibold text-gray-700">
-                  ID
+                  
+                  {t("dashboard.client.supportTicket.id")}
                 </th>
                 <th className="px-6 py-4 text-left text-base font-semibold text-gray-700">
-                  Subject
+                  {t("dashboard.client.supportTicket.subject")}
                 </th>
                 <th className="px-6 py-4 text-left text-base font-semibold text-gray-700">
-                  Property
+                  {t("dashboard.client.supportTicket.property")}
                 </th>
                 <th className="px-6 py-4 text-left text-base font-semibold text-gray-700">
-                  Replies
+                  {t("dashboard.client.supportTicket.replies")}
                 </th>
                 <th className="px-6 py-4 text-left text-base font-semibold text-gray-700">
-                  Created At
+                  {t("dashboard.client.supportTicket.created")}
                 </th>
                 <th className="px-6 py-4 text-left text-base font-semibold text-gray-700">
-                  Action
+                  {t("dashboard.client.supportTicket.Actions")}
                 </th>
               </tr>
             </thead>

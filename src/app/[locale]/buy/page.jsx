@@ -161,7 +161,7 @@ export default function BuyPage() {
                   onChange={(e) => setSortBy(e.target.value)}
                   onFocus={() => setSortDropdownOpen(true)}
                   onBlur={() => setSortDropdownOpen(false)}
-                  className='appearance-none rounded-lg border border-gray-300 dark:border-gray-600 bg-[#fafafa] dark:bg-card-dark shadow-sm focus:border-primary focus:ring-2 focus:ring-primary text-sm pl-4 pr-10 py-0.5 sm:py-2 cursor-pointer w-[110px] sm:min-w-[180px]'
+                  className='appearance-none rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-card-dark shadow-xs focus:border-primary focus:ring-1 outline-none focus:ring-primary text-sm pl-4 pr-10 py-0.5 sm:py-2 cursor-pointer w-[110px] sm:min-w-[180px]'
                   aria-label='Sort properties'
                 >
                   <option value='newest'>
@@ -246,8 +246,8 @@ export default function BuyPage() {
         </section>
 
         {/* CTA Section */}
-        <section className='w-full px-4 sm:px-6 lg:px-8 pb-16'>
-          <div className='p-6 sm:p-8 rounded-2xl bg-[#fafafa] dark:from-primary/20 dark:to-secondary/20 border border-primary/20 dark:border-primary/30'>
+        <section className='w-full px-4 sm:px-6 lg:px-8 pb-8'>
+          <div className='p-6 sm:p-8 rounded-2xl bg-white/50 dark:from-primary/20 dark:to-secondary/20 border border-gray-200 shadow-sm dark:border-primary/30'>
             <div className='text-center max-w-3xl mx-auto'>
               <h3 className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4'>
                 {t('buy.cta.title', "Can't find what you're looking for?")}

@@ -26,7 +26,7 @@ const FormSkeleton = () => (
       <div className='h-12 w-full bg-charcoal-200 dark:bg-charcoal-700 rounded-lg' />
     </div>
   </div>
-);
+); 
 
 export default function RegisterPage() {
   return (

@@ -18,24 +18,11 @@ export default function ClientDashboardContent() {
     return (
         <div className="space-y-6">
             {/* Page header */}
-            <header className="rounded-lg">
-                <div className="flex items-start justify-between">
-                    <div>
-                        <h1 className="text-4xl font-bold text-slate-900">{t("dashboard.client.profile")}</h1>
-                        <p className="mt-3 text-slate-500 text-lg max-w-2xl">{t("dashboard.client.subtitle")}</p>
-                    </div>
-
-                    {/* <div className="ml-4">
-                        <button
-                            type="button"
-                            onClick={goTo2FA}
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md font-semibold"
-                            aria-label="Go to Two Factor page"
-                        >
-                            Manage 2FA
-                        </button>
-                    </div> */}
-                </div>
+            <header  className="bg-gradient-to-r from-[#1e3a5f] to-[#2d5078] rounded-lg p-6 shadow-lg mb-6">
+                        <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">{t("dashboard.client.profile")}</h1>
+                        <p className="text-sm sm:text-base text-white/80">{t("dashboard.client.subtitle")}</p>
+                 
+                
             </header>
 
             {/* Components: personal details and change password (client-side) */}

@@ -1,52 +1,52 @@
-const services = [
-  {
-    icon: "description",
-    title: "Relocation Planning",
-    description: "Complete visa and logistics support for a smooth transition.",
-  },
-  {
-    icon: "videocam",
-    title: "Virtual & On-Ground Viewings",
-    description:
-      "Explore potential homes from anywhere with our expert guidance.",
-  },
-  {
-    icon: "local_shipping",
-    title: "Moving & Setup Assistance",
-    description: "We handle the heavy lifting, from packing to final setup.",
-  },
-  {
-    icon: "lightbulb",
-    title: "Utilities & Furnishing",
-    description:
-      "Get your home ready with essential services and furniture coordination.",
-  },
-  {
-    icon: "business_center",
-    title: "Corporate Packages",
-    description:
-      "Tailored relocation solutions for your employees and business needs.",
-  },
-  {
-    icon: "school",
-    title: "Local Integration Support",
-    description:
-      "Find the best schools, healthcare, and local amenities with our help.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "@/i18n";
 
 export default function ComprehensiveSection() {
+  const { locale } = useLanguage();
+  const { t } = useTranslation(locale);
+  const services = [
+    {
+      icon: "description",
+      title: t("ConciergeService.ComprehensiveSection.card.relocationPlanning.title"),
+      description: t("ConciergeService.ComprehensiveSection.card.relocationPlanning.description"),
+    },
+    {
+      icon: "videocam",
+      title: t("ConciergeService.ComprehensiveSection.card.virtual.title"),
+      description: t("ConciergeService.ComprehensiveSection.card.virtual.description"),
+    },
+    {
+      icon: "local_shipping",
+      title: t("ConciergeService.ComprehensiveSection.card.moving.title"),
+      description: t("ConciergeService.ComprehensiveSection.card.moving.description"),
+    },
+    {
+      icon: "lightbulb",
+      title: t("ConciergeService.ComprehensiveSection.card.utilities.title"),
+      description: t("ConciergeService.ComprehensiveSection.card.utilities.description"),
+    },
+    {
+      icon: "business_center",
+      title: t("ConciergeService.ComprehensiveSection.card.corporate.title"),
+      description: t("ConciergeService.ComprehensiveSection.card.corporate.description"),
+    },
+    {
+      icon: "school",
+      title: t("ConciergeService.ComprehensiveSection.card.Local.title"),
+      description: t("ConciergeService.ComprehensiveSection.card.Local.description"),
+    },
+  ];
   return (
-    <section className="flex flex-col gap-6 px-4 py-12">
-      <h2 className="text-3xl font-bold font-heading text-center">
-        Our Comprehensive Concierge Services
+    <section className="flex flex-col gap-6 ">
+      <h2 className="text-2xl md:text-3xl font-bold font-heading text-center">
+        {t("ConciergeService.ComprehensiveSection.title")}
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 md:pt-4">
         {services.map((service, index) => (
           <div
             key={index}
-            className="flex flex-1 flex-col gap-4 rounded-xl border border-subtle-light dark:border-subtle-dark bg-transparent p-6 items-start text-left hover:bg-accent/5 transition-colors"
+            className="flex flex-1 flex-col gap-2 md:gap-4 rounded-xl border border-subtle-light dark:border-subtle-dark bg-transparent p-6 items-start text-left "
           >
             <div className="text-accent">
               <span
